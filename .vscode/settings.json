@@ -1,0 +1,30 @@
+{
+  "material-icon-theme.activeIconPack": "react",
+  "files.exclude": {
+    "**/.git": true,
+    ".eslintrc.json": true,
+    ".eslintignore": true,
+  },
+  "material-icon-theme.folders.associations": {
+    "componentes": "react-components",
+    "rotas": "routes",
+    "paginas": "views",
+    "configuracao": "config"
+  },
+  "editor.minimap.enabled": true, // ativa o minimap
+  "editor.wordWrap": "on", // ativa a quebra de linha automatica
+  "editor.renderWhitespace": "boundary", // espaço em branco destacado no limite da linha
+  "editor.cursorSmoothCaretAnimation": "on", //adiciona animação suave ao cursor
+  "editor.suggest.snippetsPreventQuickSuggestions": false, // snippets sugeridos na digitação
+  "editor.insertSpaces": true, // editor insere espaços em vez de tabs
+  "editor.tabSize": 2, // identação é 2 espaços
+  "editor.formatOnSave": true, // formatação automática do código ao salvar o arquivo
+  "editor.formatOnType": true, // formatação automática enquanto digita
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true, // organiza os importes
+    "source.fixAll.eslint": true, // executa correções automáticas do eslint
+    "source.fixAll.tslint": true, // correções automáticas do Tslint
+    "source.fixAll.stylelint": true, // correções automáticas do Stylelint
+    "source.addMissingImports": true // adiciona automaticamente importes ausentes
+  }, // ações automáticas que devem ser executadas ao salvar um arquivo
+}
