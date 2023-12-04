@@ -1,3 +1,3 @@
 export const Teste = () => {
-  return <div>quem esta por ai?</div>;
+  return <h1 className="text-3xl font-bold underline">Hello World!</h1>;
 };
