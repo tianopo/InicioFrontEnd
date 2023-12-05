@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from "react";
-import { ConteudoX } from "../Outros/ConteudoX";
+import { ConteudoX } from "../Tags/ConteudoX";
 
 interface IFlexColProps extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
