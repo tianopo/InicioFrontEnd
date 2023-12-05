@@ -39,7 +39,7 @@
           "trailingComma": "all" // adiciona vírgula ao final de objetos e arrays
         },
         {
-          "usePrettierrc": false // desativa o uso da configuração de prettierrc
+          "usePrettierrc": true // desativa o uso da configuração de prettierrc
         }
       ],
       "jsx-a11y/alt-text": ["error", {

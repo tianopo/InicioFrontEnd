@@ -16,18 +16,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "./",
-    "paths": {
-      "@/*": ["./src/*"],
-    }
+
   },
-  "include": ["src", ".eslintrc.json"],
-  "references": [{ "path": {
-    "compilerOptions": {
-      "composite": true,
-      "module": "ESNext",
-      "moduleResolution": "Node",
-      "allowSyntheticDefaultImports": true
-    },
-    "include": ["src"]
-  }}]
+  "include": ["src", ".eslintrc.json", "package.json"],
 }
