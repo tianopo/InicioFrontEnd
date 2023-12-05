@@ -1,12 +1,12 @@
 import React from "react";
 
-export interface ILinkXProps {
+export interface ILinkX {
   children?: React.ReactNode;
   rota?: string;
   target?: string;
 }
 
-export const LinkX = ({ rota, children, target }: ILinkXProps) => (
+export const LinkX = ({ rota, children, target }: ILinkX) => (
   <a
     href={rota}
     target={target}

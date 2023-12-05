@@ -3,7 +3,7 @@ import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
 import { DivisorX } from "src/componentes/Outros/DivisorX";
 import { LinkX } from "src/componentes/Outros/LinkX";
-import { TextoX } from "src/componentes/Outros/TextoX";
+import { TextoX } from "src/componentes/Tags/TextoX";
 
 export const Teste = () => {
   return (

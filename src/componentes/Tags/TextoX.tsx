@@ -1,6 +1,6 @@
 import React, { HTMLAttributes } from "react";
 
-interface ITextoProps extends HTMLAttributes<HTMLDivElement> {
+interface ITexto extends HTMLAttributes<HTMLDivElement> {
   tipo:
     | "h1"
     | "h2"
@@ -23,6 +23,6 @@ interface ITextoProps extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-export const TextoX = ({ tipo, children, className, ...rest }: ITextoProps) => {
+export const TextoX = ({ tipo, children, className, ...rest }: ITexto) => {
   return React.createElement(tipo, { className, ...rest }, children);
 };

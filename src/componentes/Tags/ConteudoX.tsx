@@ -1,18 +1,23 @@
 import React, { HTMLAttributes } from "react";
 
-interface IConteudoProps extends HTMLAttributes<HTMLDivElement> {
+interface IConteudo extends HTMLAttributes<HTMLDivElement> {
   tipo:
-  | "address"
-  | "article"
-  | "aside"
-  | "footer"
-  | "header"
-  | "main"
-  | "section"
-  | "div";
+    | "address"
+    | "article"
+    | "aside"
+    | "footer"
+    | "header"
+    | "main"
+    | "section"
+    | "div";
   children?: React.ReactNode;
 }
 
-export const ConteudoX = ({ tipo, children, className, ...rest }: IConteudoProps) => {
+export const ConteudoX = ({
+  tipo,
+  children,
+  className,
+  ...rest
+}: IConteudo) => {
   return React.createElement(tipo, { className, ...rest }, children);
 };
