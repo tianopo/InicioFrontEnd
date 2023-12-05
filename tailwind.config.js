@@ -6,6 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: coresX,
+      background: coresX,
+      borderColor: coresX.borda,
+      boxShadow: coresX['box-shadow'],
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
       },
@@ -16,6 +19,7 @@ module.exports = {
         bold: "700",
       },
       fontSize: medidasX,
+      borderWidth: medidasX,
       borderRadius: medidasX,
       gap: medidasX,
       padding: medidasX,

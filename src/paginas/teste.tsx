@@ -1,10 +1,10 @@
-import { Botao } from "src/componentes/Botao";
-import { Flex } from "src/componentes/Flex";
+import { BotaoSubmit } from "src/componentes/BotaoSubmit";
+import { FlexCol } from "src/componentes/Flex/FlexCol";
 
 export const Teste = () => {
   return (
-    <Flex>
-      <Botao> Enviar </Botao>
-    </Flex>
+    <FlexCol>
+      <BotaoSubmit> Enviar </BotaoSubmit>
+    </FlexCol>
   );
 };
