@@ -5,5 +5,5 @@ interface IFlexColProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const FlexCol = ({ children, className }: IFlexColProps) => {
-  return <div className={`flex w-full flex-col ${className}`}> {children}</div >;
+  return <div className={`flex w-full flex-col ${className}`}> {children}</div>;
 };

@@ -6,7 +6,12 @@ interface IBotaoSubmitProps extends HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
 }
 
-export const BotaoSubmit = ({ children, type, disabled, className }: IBotaoSubmitProps) => {
+export const BotaoSubmit = ({
+  children,
+  type,
+  disabled,
+  className,
+}: IBotaoSubmitProps) => {
   return (
     <button
       type={type}
@@ -14,20 +19,20 @@ export const BotaoSubmit = ({ children, type, disabled, className }: IBotaoSubmi
       className={`
     w-full
     rounded-4
-    border-solid
     border-1
+    border-solid
     border-borda
-    ${disabled ? 'opacity-20' : ''}
+    ${disabled ? "opacity-20" : ""}
+    hover:
     bg-primaria
     p-6
     text-20
     font-normal
     text-white
     duration-300
-    ease-in-out
-    hover:${disabled ? '' : 'opacity-80'}
-    active:translate-y-1
+    ease-in-out${disabled ? "" : "opacity-80"}
     shadow-box-shadow
+    active:translate-y-1
     md:w-28
     ${className}
 `}
