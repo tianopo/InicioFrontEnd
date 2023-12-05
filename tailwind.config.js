@@ -1,19 +1,27 @@
 /** @type {import('tailwindcss').Config} */
+const medidasX = require("./src/configuracao/medidasX").medidasX;
+const coresX = require("./src/configuracao/coresX").coresX;
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors: {
-        primaria: "#FFF",
-        secundaria: "#FFF",
-        terciaria: "#FFF",
-        escrita: "#333",
-        placeholder: "#B8B8B8",
-        erro: "#E54B4B",
-        sucesso: "#14591D",
-        borda: "#fff",
-        'box-shadow': "0px 2px 4px 0px rgba(0, 0, 0, 0.15)"
+      colors: coresX,
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"], // se tiver mais de uma fonte importada. ex: font-roboto
       },
+      fontWeight: {
+        low: 400,
+        normal: 500,
+        semibold: 600,
+        bold: 700,
+      },
+      fontSize: medidasX,
+      borderRadius: medidasX,
+      gap: medidasX,
+      padding: medidasX,
+      margin: medidasX,
+      iconSize: medidasX,
+      lineHeight: medidasX,
     },
   },
   plugins: [],

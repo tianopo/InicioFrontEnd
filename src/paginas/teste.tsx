@@ -1,5 +1,10 @@
-import { Botao } from "../componentes/Botao";
+import { Botao } from "src/componentes/Botao";
+import { Flex } from "src/componentes/Flex";
 
 export const Teste = () => {
-  return <Botao>Enviar</Botao>;
+  return (
+    <Flex>
+      <Botao> Enviar </Botao>
+    </Flex>
+  );
 };
