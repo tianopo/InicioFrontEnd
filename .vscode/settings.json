@@ -4,12 +4,15 @@
     "**/.git": true,
     ".eslintrc.json": true,
     ".eslintignore": true,
+    "postcss.config.js": true,
+    ".prettierrc": true,
   },
   "material-icon-theme.folders.associations": {
     "componentes": "react-components",
     "rotas": "routes",
     "paginas": "views",
-    "configuracao": "config"
+    "configuracao": "config",
+    "documentacao": "docs"
   },
   "editor.minimap.enabled": true, // ativa o minimap
   "editor.wordWrap": "on", // ativa a quebra de linha automatica
