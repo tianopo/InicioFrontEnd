@@ -18,5 +18,5 @@
     "baseUrl": "./",
 
   },
-  "include": ["src", ".eslintrc.json", "package.json"],
+  "include": ["src", ".eslintrc.json", "package.json", "tailwind.config.js"],
 }
