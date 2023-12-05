@@ -1,9 +1,9 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 
-interface IFlexColProps {
+interface IFlexColProps extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-export const FlexCol = ({ children }: IFlexColProps) => {
-  return <div className="flex w-full flex-col">{children}</div>;
+export const FlexCol = ({ children, className }: IFlexColProps) => {
+  return <div className={`flex w-full flex-col ${className}`}> {children}</div >;
 };

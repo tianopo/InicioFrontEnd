@@ -1,23 +1,20 @@
-import React from "react";
+import { HTMLAttributes } from "react";
 
-interface IBotaoSubmitProps {
+interface IBotaoOnClickProps extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
-  type?: "button" | "reset" | "submit";
-  disabled?: boolean;
+  onClick: () => void
 }
 
-export const BotaoSubmit = ({ children, type, disabled }: IBotaoSubmitProps) => {
+export const BotaoOnClick = ({ onClick, children, className }: IBotaoOnClickProps) => {
   return (
     <button
-      type={type}
-      disabled={disabled}
+      onClick={onClick}
       className={`
     w-full
     rounded-4
     border-solid
     border-1
     border-borda
-    ${disabled ? 'opacity-20' : ''}
     bg-primaria
     p-6
     text-20
@@ -25,10 +22,11 @@ export const BotaoSubmit = ({ children, type, disabled }: IBotaoSubmitProps) => 
     text-white
     duration-300
     ease-in-out
-    hover:${disabled ? '' : 'opacity-80'}
+    hover:'opacity-80'
     active:translate-y-1
     shadow-box-shadow
     md:w-28
+    ${className}
 `}
     >
       {children}
