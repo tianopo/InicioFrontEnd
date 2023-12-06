@@ -7,7 +7,7 @@ interface IForm extends FormHTMLAttributes<HTMLFormElement> {
 
 export const Form = ({ children, onSubmit }: IForm) => {
   return (
-    <form onSubmit={onSubmit} className="w-full">
+    <form onSubmit={onSubmit} className="w-full" method="POST">
       {children}
     </form>
   );

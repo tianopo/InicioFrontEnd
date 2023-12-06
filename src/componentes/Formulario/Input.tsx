@@ -6,9 +6,11 @@ interface IInput {
   required?: boolean;
   titulo: string;
   placeholder?: string;
+  pattern?: string
+  tipo?: "text" | "tel" | "date" | "email" | "number" | "time" | "datetime-local"
 }
 
-export const Input = ({ disabled, required, titulo, placeholder }: IInput) => {
+export const Input = ({ disabled, required, titulo, placeholder, pattern, tipo = "text" }: IInput) => {
   const palavras = titulo.split(" ")
     .map((palavra, index) =>
       index === 0
@@ -32,7 +34,7 @@ export const Input = ({ disabled, required, titulo, placeholder }: IInput) => {
       </label>
       <input
         id={palavras}
-        type="text"
+        type={"search"}
         disabled={disabled}
         required={required}
         placeholder={placeholder}
@@ -41,6 +43,7 @@ export const Input = ({ disabled, required, titulo, placeholder }: IInput) => {
           rounded-6
           border-1
           text-escrita
+          font-low
           border-solid
           border-borda
           duration-300
