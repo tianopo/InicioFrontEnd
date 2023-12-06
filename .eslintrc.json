@@ -61,7 +61,7 @@
       "@typescript-eslint/no-useless-constructor": 0, // aviso de construtores desnecessários
       "no-unexpected-multiline": 0, // aviso sobre quebra de linhas inesperadas
       "@typescript-eslint/consistent-type-definitions": 0,
-      "no-console": "error", // define aviso para uso de console
+      "no-console": "warn", // define aviso para uso de console
       "react/prop-types": 0, // não é necessário exportar prop-types
       "react/no-unescaped-entities": 0, // renderização segura de HTML
       "@typescript-eslint/no-confusing-void-expression": 0, // desativa o uso de voids confusos
