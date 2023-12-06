@@ -1,18 +1,14 @@
-import { FormHTMLAttributes } from "react"
+import { FormHTMLAttributes } from "react";
 
 interface IForm extends FormHTMLAttributes<HTMLFormElement> {
-  children: React.ReactNode
-  callback: (data: any) => void
+  children: React.ReactNode;
+  callback: () => void;
 }
 
 export const Form = ({ children, callback }: IForm) => {
-
   return (
-    <form
-      onSubmit={callback}
-      className="w-full"
-    >
+    <form onSubmit={callback} className="w-full">
       {children}
     </form>
-  )
-}
+  );
+};
