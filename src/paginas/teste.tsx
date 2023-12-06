@@ -2,6 +2,7 @@ import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
 import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
 import { Checkbox } from "src/componentes/Formulario/CheckBox";
+import { Input } from "src/componentes/Formulario/Input";
 import { DivisorX } from "src/componentes/Outros/DivisorX";
 import { LinkX } from "src/componentes/Outros/LinkX";
 import { TextoX } from "src/componentes/Tags/TextoX";
@@ -18,6 +19,7 @@ export const Teste = () => {
       <TextoX tipo="i">tudo bem</TextoX>
       <TextoX tipo="h6">tudo bem</TextoX>
       <Checkbox nome="coisas">coisas</Checkbox>
+      <Input titulo='cv cvcvxvcxfd  fer rthyhyh ryh'></Input>
     </FlexCol>
   );
 };
