@@ -1,13 +1,13 @@
 import React, { HTMLAttributes } from "react";
 import { ConteudoX } from "../Tags/ConteudoX";
 
-interface IFlexCol extends HTMLAttributes<HTMLDivElement> {
+interface IFlexRow extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-export const FlexCol = ({ children, className }: IFlexCol) => {
+export const FlexRow = ({ children, className }: IFlexRow) => {
   return (
-    <ConteudoX tipo="div" className={`flex w-full flex-row ${className}`}>
+    <ConteudoX tipo="div" className={`flex w-full flex-row items-center ${className}`}>
       {" "}
       {children}
     </ConteudoX>

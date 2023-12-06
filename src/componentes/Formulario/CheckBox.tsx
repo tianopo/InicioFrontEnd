@@ -1,22 +1,25 @@
-import { ConteudoX } from "../Tags/ConteudoX";
+import { FlexRow } from "../Flex/FlexRow";
 
 export interface ICheckbox {
   children?: React.ReactNode;
+  disabled?: boolean
   nome: string
 }
 
-export const Checkbox = ({ children, nome }: ICheckbox) => {
+export const Checkbox = ({ children, nome, disabled }: ICheckbox) => {
 
   return (
-    <ConteudoX tipo="div">
+    <FlexRow className="gap-4">
       <input
         id={nome}
         type="checkbox"
-        className={`form-checkbox h-5 w-5 text-primaria focus:outline-none focus:ring focus:border-primary-300 `}
+        readOnly
+        disabled={disabled}
+        className={`form-checkbox focus:outline-none focus:ring focus:border-borda`}
       />
-      <label htmlFor={nome} className="ml-2 text-sm text-escrita">
+      <label htmlFor={nome} className="ml-2 text-20 text-escrita">
         {children}
       </label>
-    </ConteudoX>
+    </FlexRow>
   );
 };
