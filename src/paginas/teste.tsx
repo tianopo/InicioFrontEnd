@@ -21,7 +21,7 @@ export const Teste = () => {
       <TextoX tipo="h6">tudo bem</TextoX>
       <Checkbox nome="coisas">coisas</Checkbox>
       <Input titulo='Nome' placeholder="olá" required />
-      <Textarea titulo="descricao" required />
+      <Textarea titulo="Descrição" required />
     </FlexCol>
   );
 };

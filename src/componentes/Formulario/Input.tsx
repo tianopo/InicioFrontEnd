@@ -19,7 +19,7 @@ export const Input = ({ disabled, required, titulo, placeholder, tipo = "text" }
     .join("");
 
   return (
-    <FlexCol className="p-10">
+    <FlexCol className="p-10 gap-6">
       <label
         htmlFor={palavras}
         className="block"

@@ -17,12 +17,12 @@ export const Textarea = ({ disabled, required, titulo, placeholder }: ITextarea)
     )
     .join("");
   return (
-    <FlexCol className="p-10">
+    <FlexCol className="p-10 gap-6">
       <label
         htmlFor={palavras}
         className="block"
       >
-        <TextoX tipo="p" className=" text-16 font-normal leading-20 text-gray-700 dark:text-gray-300">
+        <TextoX tipo="p" className=" text-16 font-normal leading-20 text-escrita">
           {titulo}
           {required && (
             <TextoX tipo="span" className="text-erro">
