@@ -1,15 +1,14 @@
 import { FlexCol } from "../Flex/FlexCol";
 import { TextoX } from "../Tags/TextoX";
 
-interface IInput {
+interface ITextarea {
   disabled?: boolean;
   required?: boolean;
   titulo: string;
   placeholder?: string;
-  tipo?: "text" | "tel" | "date" | "email" | "number" | "time" | "datetime-local"
 }
 
-export const Input = ({ disabled, required, titulo, placeholder, tipo = "text" }: IInput) => {
+export const Textarea = ({ disabled, required, titulo, placeholder }: ITextarea) => {
   const palavras = titulo.split(" ")
     .map((palavra, index) =>
       index === 0
@@ -17,14 +16,13 @@ export const Input = ({ disabled, required, titulo, placeholder, tipo = "text" }
         : palavra.charAt(0).toUpperCase() + palavra.slice(1)
     )
     .join("");
-
   return (
     <FlexCol className="p-10">
       <label
         htmlFor={palavras}
         className="block"
       >
-        <TextoX tipo="p" className="text-16 font-normal leading-20 text-escrita">
+        <TextoX tipo="p" className=" text-16 font-normal leading-20 text-gray-700 dark:text-gray-300">
           {titulo}
           {required && (
             <TextoX tipo="span" className="text-erro">
@@ -33,28 +31,30 @@ export const Input = ({ disabled, required, titulo, placeholder, tipo = "text" }
           )}
         </TextoX>
       </label>
-      <input
+      <textarea
         id={palavras}
-        type={tipo}
         disabled={disabled}
+        readOnly={disabled}
         required={required}
         placeholder={placeholder}
+        rows={4}
         className={`
-          w-full
-          rounded-6
-          border-1
-          text-escrita
-          font-low
-          border-solid
-          border-borda
-          duration-300
-          bg-input
-          placeholder:text-placeholder
-          p-8
-          md:w-80
-          ${disabled ? "bg-desabilitado" : ""}
-          `}
+        resize-none
+      w-full
+      rounded-6
+      border-1
+      text-escrita
+      font-low
+      border-solid
+      border-borda
+      duration-300
+      bg-input
+      placeholder:text-placeholder
+      p-8
+      md:w-80
+      ${disabled ? "bg-desabilitado" : ""}
+      `}
       />
-    </ FlexCol>
+    </FlexCol>
   );
 };

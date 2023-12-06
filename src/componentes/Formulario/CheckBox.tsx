@@ -9,7 +9,7 @@ export interface ICheckbox {
 
 export const Checkbox = ({ children, disabled, required, nome }: ICheckbox) => {
   return (
-    <FlexRow className="gap-4">
+    <FlexRow className="gap-4 p-8">
       <input
         id={nome}
         type="checkbox"
