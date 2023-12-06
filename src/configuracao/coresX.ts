@@ -7,5 +7,6 @@ export const coresX = {
   erro: "#E54B4B",
   sucesso: "#14591D",
   borda: "#111",
+  input: "#FFF",
   "box-shadow": "0px 2px 4px 0px rgba(0, 0, 0, 0.15)",
 };
