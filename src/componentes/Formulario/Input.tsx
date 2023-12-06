@@ -18,40 +18,39 @@ export const Input = ({ disabled, required, titulo, placeholder }: IInput) => {
     .join("");
 
   return (
-    <>
+    <FlexCol className="gap-6">
       <label
         htmlFor={palavras}
-        className="block text-14 font-medium leading-20 text-gray-700 dark:text-gray-300"
+        className="block text-16 font-normal leading-20 text-gray-700 dark:text-gray-300"
       >
-        <FlexCol className="items-center justify-between">
-          <TextoX tipo="p" className="text-12 leading-16">
-            {titulo}
-            {required && !disabled && (
-              <TextoX tipo="span" className="text-red-500">
-                *
-              </TextoX>
-            )}
+        {titulo}
+        {required && (
+          <TextoX tipo="span" className="text-erro">
+            *
           </TextoX>
-        </FlexCol>
+        )}
       </label>
       <input
         id={palavras}
         type="text"
-        readOnly
         disabled={disabled}
         required={required}
         placeholder={placeholder}
         className={`
+          w-full
           rounded-6
           border-1
+          text-escrita
           border-solid
           border-borda
+          duration-300
           bg-input
-          placeholder: text-placeholder
+          placeholder:text-placeholder
           p-8
+          md:w-80
           ${disabled ? "bg-desabilitado" : ""}
           `}
       />
-    </>
+    </ FlexCol>
   );
 };

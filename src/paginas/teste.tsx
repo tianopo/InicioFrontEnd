@@ -19,7 +19,7 @@ export const Teste = () => {
       <TextoX tipo="i">tudo bem</TextoX>
       <TextoX tipo="h6">tudo bem</TextoX>
       <Checkbox nome="coisas">coisas</Checkbox>
-      <Input titulo='cv cvcvxvcxfd  fer rthyhyh ryh'></Input>
+      <Input titulo='Nome' placeholder="olá" required></Input>
     </FlexCol>
   );
 };
