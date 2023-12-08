@@ -1,19 +1,15 @@
+import JoditEditor from "jodit-react";
 import { FlexCol } from "../Flex/FlexCol";
 import { TextoX } from "../Tags/TextoX";
 
-interface ITextarea {
+interface IRichInput {
   disabled?: boolean;
   required?: boolean;
   titulo: string;
   placeholder?: string;
 }
 
-export const Textarea = ({
-  disabled,
-  required,
-  titulo,
-  placeholder,
-}: ITextarea) => {
+export const RichInput = ({ titulo, required, placeholder, disabled }: IRichInput) => {
   const palavras = titulo
     .split(" ")
     .map((palavra, index) =>
@@ -22,6 +18,7 @@ export const Textarea = ({
         : palavra.charAt(0).toUpperCase() + palavra.slice(1),
     )
     .join("");
+
   return (
     <FlexCol className="gap-6 p-10">
       <label htmlFor={palavras} className="block">
@@ -37,29 +34,13 @@ export const Textarea = ({
           )}
         </TextoX>
       </label>
-      <textarea
-        id={palavras}
-        disabled={disabled}
-        readOnly={disabled}
-        required={required}
-        placeholder={placeholder}
-        rows={4}
-        className={`
-        w-full
-      resize-none
-      rounded-6
-      border-1
-      border-solid
-      border-borda
-      bg-input
-      p-8
-      font-low
-      text-escrita
-      duration-300
-      placeholder:text-placeholder
-      md:w-80
-      ${disabled ? "bg-desabilitado" : ""}
-      `}
+      <JoditEditor
+        value={''}
+        config={{
+          readonly: false,
+          disabled: disabled,
+        }}
+        onChange={newContent => { }}
       />
     </FlexCol>
   );

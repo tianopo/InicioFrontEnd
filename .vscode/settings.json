@@ -12,7 +12,8 @@
     "rotas": "routes",
     "paginas": "views",
     "configuracao": "config",
-    "documentacao": "docs"
+    "documentacao": "docs",
+    "estilização": "css"
   },
   "typescript.preferences.quoteStyle": "double",
   "editor.minimap.enabled": true, // ativa o minimap
@@ -25,10 +26,10 @@
   "editor.formatOnSave": true, // formatação automática do código ao salvar o arquivo
   "editor.formatOnType": true, // formatação automática enquanto digita
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true, // organiza os importes
-    "source.fixAll.eslint": true, // executa correções automáticas do eslint
-    "source.fixAll.tslint": true, // correções automáticas do Tslint
-    "source.fixAll.stylelint": true, // correções automáticas do Stylelint
-    "source.addMissingImports": true // adiciona automaticamente importes ausentes
+    "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.tslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.addMissingImports": "explicit"
   }, // ações automáticas que devem ser executadas ao salvar um arquivo
 }

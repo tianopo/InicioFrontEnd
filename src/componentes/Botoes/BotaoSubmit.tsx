@@ -2,11 +2,16 @@ import React, { HTMLAttributes } from "react";
 
 interface IBotaoSubmit extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
-  type?: "button" | "reset" | "submit";
   disabled?: boolean;
+  type?: "button" | "reset" | "submit";
 }
 
-export const BotaoSubmit = ({ children, type, disabled, className }: IBotaoSubmit) => {
+export const BotaoSubmit = ({
+  className,
+  children,
+  disabled,
+  type = 'submit',
+}: IBotaoSubmit) => {
   return (
     <button
       type={type}

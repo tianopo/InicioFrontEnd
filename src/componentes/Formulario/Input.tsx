@@ -6,25 +6,39 @@ interface IInput {
   required?: boolean;
   titulo: string;
   placeholder?: string;
-  tipo?: "text" | "tel" | "date" | "email" | "number" | "time" | "datetime-local"
+  tipo?:
+    | "text"
+    | "tel"
+    | "date"
+    | "email"
+    | "number"
+    | "time"
+    | "datetime-local";
 }
 
-export const Input = ({ disabled, required, titulo, placeholder, tipo = "text" }: IInput) => {
-  const palavras = titulo.split(" ")
+export const Input = ({
+  disabled,
+  required,
+  titulo,
+  placeholder,
+  tipo = "text",
+}: IInput) => {
+  const palavras = titulo
+    .split(" ")
     .map((palavra, index) =>
       index === 0
         ? palavra.toLocaleLowerCase()
-        : palavra.charAt(0).toUpperCase() + palavra.slice(1)
+        : palavra.charAt(0).toUpperCase() + palavra.slice(1),
     )
     .join("");
 
   return (
-    <FlexCol className="p-10 gap-6">
-      <label
-        htmlFor={palavras}
-        className="block"
-      >
-        <TextoX tipo="p" className="text-16 font-normal leading-20 text-escrita">
+    <FlexCol className="gap-6 p-10">
+      <label htmlFor={palavras} className="block">
+        <TextoX
+          tipo="p"
+          className="text-16 font-normal leading-20 text-escrita"
+        >
           {titulo}
           {required && (
             <TextoX tipo="span" className="text-erro">
@@ -43,18 +57,18 @@ export const Input = ({ disabled, required, titulo, placeholder, tipo = "text" }
           w-full
           rounded-6
           border-1
-          text-escrita
-          font-low
           border-solid
           border-borda
-          duration-300
           bg-input
-          placeholder:text-placeholder
           p-8
+          font-low
+          text-escrita
+          duration-300
+          placeholder:text-placeholder
           md:w-80
           ${disabled ? "bg-desabilitado" : ""}
           `}
       />
-    </ FlexCol>
+    </FlexCol>
   );
 };

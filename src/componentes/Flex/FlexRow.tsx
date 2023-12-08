@@ -7,7 +7,10 @@ interface IFlexRow extends HTMLAttributes<HTMLDivElement> {
 
 export const FlexRow = ({ children, className }: IFlexRow) => {
   return (
-    <ConteudoX tipo="div" className={`flex w-full flex-row items-center ${className}`}>
+    <ConteudoX
+      tipo="div"
+      className={`flex w-full flex-row items-center ${className}`}
+    >
       {" "}
       {children}
     </ConteudoX>
