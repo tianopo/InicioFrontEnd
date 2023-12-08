@@ -10,7 +10,7 @@ export const BotaoSubmit = ({
   className,
   children,
   disabled,
-  type = 'submit',
+  type = "submit",
 }: IBotaoSubmit) => {
   return (
     <button

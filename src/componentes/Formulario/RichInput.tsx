@@ -1,15 +1,20 @@
 import JoditEditor from "jodit-react";
+import { Controller, useFormContext } from "react-hook-form";
 import { FlexCol } from "../Flex/FlexCol";
 import { TextoX } from "../Tags/TextoX";
+import { IFormUsos } from "./InterfaceForm";
 
-interface IRichInput {
-  disabled?: boolean;
-  required?: boolean;
+interface IRichInput extends IFormUsos {
   titulo: string;
   placeholder?: string;
 }
 
-export const RichInput = ({ titulo, required, placeholder, disabled }: IRichInput) => {
+export const RichInput = ({
+  titulo,
+  required,
+  placeholder,
+  disabled,
+}: IRichInput) => {
   const palavras = titulo
     .split(" ")
     .map((palavra, index) =>
@@ -18,6 +23,11 @@ export const RichInput = ({ titulo, required, placeholder, disabled }: IRichInpu
         : palavra.charAt(0).toUpperCase() + palavra.slice(1),
     )
     .join("");
+  const { control, setValue } = useFormContext();
+
+  const handleBlur = (content: string) => {
+    setValue(palavras, content); // Atualiza o valor no estado do react-hook-form
+  };
 
   return (
     <FlexCol className="gap-6 p-10">
@@ -34,13 +44,22 @@ export const RichInput = ({ titulo, required, placeholder, disabled }: IRichInpu
           )}
         </TextoX>
       </label>
-      <JoditEditor
-        value={''}
-        config={{
-          readonly: false,
-          disabled: disabled,
-        }}
-        onChange={newContent => { }}
+      <Controller
+        name={palavras}
+        control={control}
+        render={({ field: { onChange, value } }) => (
+          <JoditEditor
+            value={value}
+            config={{
+              readonly: false,
+              disabled,
+            }}
+            onBlur={(content) => {
+              handleBlur(content);
+              onChange(content);
+            }}
+          />
+        )}
       />
     </FlexCol>
   );

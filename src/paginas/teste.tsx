@@ -1,4 +1,4 @@
-import { FieldValues, useForm } from "react-hook-form";
+import { FieldValues, FormProvider, useForm } from "react-hook-form";
 import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
 import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
@@ -13,11 +13,12 @@ import { LinkX } from "src/componentes/Outros/LinkX";
 import { TextoX } from "src/componentes/Tags/TextoX";
 
 export const Teste = () => {
-  const { register, handleSubmit } = useForm()
+  const contexto = useForm();
+  const { register, handleSubmit } = contexto;
 
   const onSubmit = (values: FieldValues) => {
-    console.log('valores', values)
-  }
+    console.log("valores", values);
+  };
 
   return (
     <FlexCol className={"bg-blue-400"}>
@@ -28,14 +29,29 @@ export const Teste = () => {
       </LinkX>
       <TextoX tipo="i">tudo bem</TextoX>
       <TextoX tipo="h6">tudo bem</TextoX>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Checkbox titulo="coisas" register={register('coisas')}>coisas</Checkbox>
-        <Input register={register('nome')} titulo="Nome" placeholder="olá" required />
-        <Textarea titulo="Mensagem" register={register('mensagem')} />
-        <DatePickerInput titulo="Data de nascimento" />
-        <RichInput titulo="Mensagem" />
-        <BotaoSubmit> Enviar </BotaoSubmit>
-      </Form>
+      <FormProvider {...contexto}>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <Checkbox titulo="coisas" register={register("coisas")}>
+            coisas
+          </Checkbox>
+          <Input
+            register={register("nome")}
+            titulo="Nome"
+            placeholder="olá"
+            required
+          />
+          <Input
+            register={register("email")}
+            titulo="Email"
+            placeholder="x@x.com"
+            required
+          />
+          <Textarea titulo="Descrição" register={register("descricao")} />
+          <DatePickerInput titulo="Data de nascimento" />
+          <RichInput titulo="Mensagem" />
+          <BotaoSubmit> Enviar </BotaoSubmit>
+        </Form>
+      </FormProvider>
     </FlexCol>
   );
 };

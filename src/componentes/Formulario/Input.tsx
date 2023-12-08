@@ -7,13 +7,13 @@ interface IInput extends IFormUsos {
   titulo: string;
   placeholder?: string;
   tipo?:
-  | "text"
-  | "tel"
-  | "date"
-  | "email"
-  | "number"
-  | "time"
-  | "datetime-local";
+    | "text"
+    | "tel"
+    | "date"
+    | "email"
+    | "number"
+    | "time"
+    | "datetime-local";
 }
 
 export const Input = ({

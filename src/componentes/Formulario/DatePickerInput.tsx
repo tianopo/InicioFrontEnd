@@ -1,17 +1,22 @@
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
+import { Controller, useFormContext } from "react-hook-form";
 import { FlexCol } from "../Flex/FlexCol";
 import { TextoX } from "../Tags/TextoX";
+import { IFormUsos } from "./InterfaceForm";
 
-interface IDatePickerInput {
+interface IDatePickerInput extends IFormUsos {
   titulo: string;
-  disabled?: boolean;
-  required?: boolean;
   placeholder?: string;
 }
 
-export const DatePickerInput = ({ titulo, required, disabled, placeholder }: IDatePickerInput) => {
+export const DatePickerInput = ({
+  titulo,
+  required,
+  disabled,
+  placeholder,
+}: IDatePickerInput) => {
   const palavras = titulo
     .split(" ")
     .map((palavra, index) =>
@@ -20,6 +25,8 @@ export const DatePickerInput = ({ titulo, required, disabled, placeholder }: IDa
         : palavra.charAt(0).toUpperCase() + palavra.slice(1),
     )
     .join("");
+
+  const { control } = useFormContext();
 
   return (
     <FlexCol className="gap-6 p-10">
@@ -36,13 +43,17 @@ export const DatePickerInput = ({ titulo, required, disabled, placeholder }: IDa
           )}
         </TextoX>
       </label>
-      <DatePicker
-        disabled={disabled}
-        required={required}
-        selected={new Date()}
-        placeholderText={placeholder}
-        onChange={(date) => { }}
-        className={`
+      <Controller
+        name={palavras}
+        control={control}
+        render={({ field: { onChange, value } }) => (
+          <DatePicker
+            disabled={disabled}
+            required={required}
+            selected={value}
+            placeholderText={placeholder}
+            onChange={(date: Date) => onChange(date)}
+            className={`
           w-full
           rounded-6
           border-1
@@ -57,6 +68,8 @@ export const DatePickerInput = ({ titulo, required, disabled, placeholder }: IDa
           md:w-80
           ${disabled ? "bg-desabilitado" : ""}
           `}
+          />
+        )}
       />
     </FlexCol>
   );
