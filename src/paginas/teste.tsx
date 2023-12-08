@@ -1,9 +1,10 @@
-import { Form } from "react-router-dom";
+import { FieldValues, useForm } from "react-hook-form";
 import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
 import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
 import { Checkbox } from "src/componentes/Formulario/CheckBox";
 import { DatePickerInput } from "src/componentes/Formulario/DatePickerInput";
+import { Form } from "src/componentes/Formulario/Form";
 import { Input } from "src/componentes/Formulario/Input";
 import { RichInput } from "src/componentes/Formulario/RichInput";
 import { Textarea } from "src/componentes/Formulario/Textarea";
@@ -12,6 +13,12 @@ import { LinkX } from "src/componentes/Outros/LinkX";
 import { TextoX } from "src/componentes/Tags/TextoX";
 
 export const Teste = () => {
+  const { register, handleSubmit } = useForm()
+
+  const onSubmit = (values: FieldValues) => {
+    console.log('valores', values)
+  }
+
   return (
     <FlexCol className={"bg-blue-400"}>
       <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
@@ -21,11 +28,11 @@ export const Teste = () => {
       </LinkX>
       <TextoX tipo="i">tudo bem</TextoX>
       <TextoX tipo="h6">tudo bem</TextoX>
-      <Checkbox nome="coisas">coisas</Checkbox>
-      <Form>
-        <Input titulo="Nome" placeholder="olá" required />
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <Checkbox titulo="coisas" register={register('coisas')}>coisas</Checkbox>
+        <Input register={register('nome')} titulo="Nome" placeholder="olá" required />
+        <Textarea titulo="Mensagem" register={register('mensagem')} />
         <DatePickerInput titulo="Data de nascimento" />
-        <Textarea titulo="Mensagem" required />
         <RichInput titulo="Mensagem" />
         <BotaoSubmit> Enviar </BotaoSubmit>
       </Form>

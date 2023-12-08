@@ -1,19 +1,19 @@
+import { UseFormRegisterReturn } from "react-hook-form";
 import { FlexCol } from "../Flex/FlexCol";
 import { TextoX } from "../Tags/TextoX";
+import { IFormUsos } from "./InterfaceForm";
 
-interface IInput {
-  disabled?: boolean;
-  required?: boolean;
+interface IInput extends IFormUsos {
   titulo: string;
   placeholder?: string;
   tipo?:
-    | "text"
-    | "tel"
-    | "date"
-    | "email"
-    | "number"
-    | "time"
-    | "datetime-local";
+  | "text"
+  | "tel"
+  | "date"
+  | "email"
+  | "number"
+  | "time"
+  | "datetime-local";
 }
 
 export const Input = ({
@@ -21,6 +21,7 @@ export const Input = ({
   required,
   titulo,
   placeholder,
+  register,
   tipo = "text",
 }: IInput) => {
   const palavras = titulo
@@ -53,6 +54,7 @@ export const Input = ({
         disabled={disabled}
         required={required}
         placeholder={placeholder}
+        {...register}
         className={`
           w-full
           rounded-6

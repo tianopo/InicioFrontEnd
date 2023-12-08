@@ -6,7 +6,6 @@ export const RotasApp = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/home" element={<Teste />} />
-
         <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </BrowserRouter>
