@@ -1,10 +1,8 @@
 import { FormHTMLAttributes } from "react";
-import { FieldValues, UseFormRegister } from "react-hook-form";
 
 interface IForm extends FormHTMLAttributes<HTMLFormElement> {
   children: React.ReactNode;
   onSubmit: () => void;
-  register?: UseFormRegister<FieldValues>;
 }
 
 export const Form = ({ children, onSubmit }: IForm) => {

@@ -1,18 +1,12 @@
+import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexRow } from "../Flex/FlexRow";
-import { IFormUsos } from "./InterfaceForm";
 
 export interface ICheckbox extends IFormUsos {
   children?: React.ReactNode;
   titulo: string;
 }
 
-export const Checkbox = ({
-  children,
-  disabled,
-  required,
-  titulo,
-  register,
-}: ICheckbox) => {
+export const Checkbox = ({ children, disabled, required, titulo, register }: ICheckbox) => {
   return (
     <FlexRow className="gap-4 p-8">
       <input

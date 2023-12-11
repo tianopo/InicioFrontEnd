@@ -1,19 +1,13 @@
-import { UseFormRegisterReturn } from "react-hook-form";
+import { useForm } from "react-hook-form";
+import { IValidacaoSchemaTeste, validacaoResolverTeste } from "src/validacoes/formTeste";
+import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
 import { TextoX } from "../Tags/TextoX";
-import { IFormUsos } from "./InterfaceForm";
 
 interface IInput extends IFormUsos {
   titulo: string;
   placeholder?: string;
-  tipo?:
-    | "text"
-    | "tel"
-    | "date"
-    | "email"
-    | "number"
-    | "time"
-    | "datetime-local";
+  tipo?: "text" | "tel" | "date" | "email" | "number" | "time" | "datetime-local";
 }
 
 export const Input = ({
@@ -24,6 +18,9 @@ export const Input = ({
   register,
   tipo = "text",
 }: IInput) => {
+  const {
+    formState: { errors },
+  } = useForm<IValidacaoSchemaTeste>({ resolver: validacaoResolverTeste });
   const palavras = titulo
     .split(" ")
     .map((palavra, index) =>
@@ -36,10 +33,7 @@ export const Input = ({
   return (
     <FlexCol className="gap-6 p-10">
       <label htmlFor={palavras} className="block">
-        <TextoX
-          tipo="p"
-          className="text-16 font-normal leading-20 text-escrita"
-        >
+        <TextoX tipo="p" className="text-16 font-normal leading-20 text-escrita">
           {titulo}
           {required && (
             <TextoX tipo="span" className="text-erro">
@@ -50,11 +44,13 @@ export const Input = ({
       </label>
       <input
         id={palavras}
+        name={palavras}
         type={tipo}
         disabled={disabled}
         required={required}
         placeholder={placeholder}
         {...register}
+        autoComplete="complete"
         className={`
           w-full
           rounded-6

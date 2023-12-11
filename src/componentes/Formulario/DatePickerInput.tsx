@@ -2,21 +2,16 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { Controller, useFormContext } from "react-hook-form";
+import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
 import { TextoX } from "../Tags/TextoX";
-import { IFormUsos } from "./InterfaceForm";
 
 interface IDatePickerInput extends IFormUsos {
   titulo: string;
   placeholder?: string;
 }
 
-export const DatePickerInput = ({
-  titulo,
-  required,
-  disabled,
-  placeholder,
-}: IDatePickerInput) => {
+export const DatePickerInput = ({ titulo, required, disabled, placeholder }: IDatePickerInput) => {
   const palavras = titulo
     .split(" ")
     .map((palavra, index) =>
@@ -31,10 +26,7 @@ export const DatePickerInput = ({
   return (
     <FlexCol className="gap-6 p-10">
       <label htmlFor={palavras} className="block">
-        <TextoX
-          tipo="p"
-          className=" text-16 font-normal leading-20 text-escrita"
-        >
+        <TextoX tipo="p" className=" text-16 font-normal leading-20 text-escrita">
           {titulo}
           {required && (
             <TextoX tipo="span" className="text-erro">
@@ -48,6 +40,7 @@ export const DatePickerInput = ({
         control={control}
         render={({ field: { onChange, value } }) => (
           <DatePicker
+            id={palavras}
             disabled={disabled}
             required={required}
             selected={value}

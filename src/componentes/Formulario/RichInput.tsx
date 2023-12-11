@@ -1,41 +1,35 @@
-import JoditEditor from "jodit-react";
-import { Controller, useFormContext } from "react-hook-form";
-import { FlexCol } from "../Flex/FlexCol";
-import { TextoX } from "../Tags/TextoX";
-import { IFormUsos } from "./InterfaceForm";
+import JoditEditor from 'jodit-react';
+import { Controller, useFormContext } from 'react-hook-form';
+import { IFormUsos } from '../../interfaces/InterfaceForm';
+import { FlexCol } from '../Flex/FlexCol';
+import { TextoX } from '../Tags/TextoX';
 
 interface IRichInput extends IFormUsos {
   titulo: string;
+  required?: boolean;
   placeholder?: string;
+  disabled?: boolean;
 }
 
-export const RichInput = ({
-  titulo,
-  required,
-  placeholder,
-  disabled,
-}: IRichInput) => {
+export const RichInput = ({ titulo, required, placeholder, disabled }: IRichInput) => {
   const palavras = titulo
-    .split(" ")
+    .split(' ')
     .map((palavra, index) =>
       index === 0
         ? palavra.toLocaleLowerCase()
         : palavra.charAt(0).toUpperCase() + palavra.slice(1),
     )
-    .join("");
+    .join('');
   const { control, setValue } = useFormContext();
 
   const handleBlur = (content: string) => {
-    setValue(palavras, content); // Atualiza o valor no estado do react-hook-form
+    setValue(palavras, content);
   };
 
   return (
     <FlexCol className="gap-6 p-10">
       <label htmlFor={palavras} className="block">
-        <TextoX
-          tipo="p"
-          className=" text-16 font-normal leading-20 text-escrita"
-        >
+        <TextoX tipo="p" className=" text-16 font-normal leading-20 text-escrita">
           {titulo}
           {required && (
             <TextoX tipo="span" className="text-erro">
@@ -48,17 +42,19 @@ export const RichInput = ({
         name={palavras}
         control={control}
         render={({ field: { onChange, value } }) => (
-          <JoditEditor
-            value={value}
-            config={{
-              readonly: false,
-              disabled,
-            }}
-            onBlur={(content) => {
-              handleBlur(content);
-              onChange(content);
-            }}
-          />
+          <div>
+            <JoditEditor
+              value={value}
+              config={{
+                readonly: false,
+                disabled,
+              }}
+              onBlur={(content) => {
+                handleBlur(content);
+                onChange(content);
+              }}
+            />
+          </div>
         )}
       />
     </FlexCol>
