@@ -45,6 +45,7 @@ export const Textarea = ({ disabled, required, titulo, placeholder, register }: 
       border-borda
       bg-input
       p-8
+      outline-none
       font-low
       text-escrita
       duration-300

@@ -11,7 +11,7 @@ interface IRichInput extends IFormUsos {
   disabled?: boolean;
 }
 
-export const RichInput = ({ titulo, required, placeholder, disabled }: IRichInput) => {
+export const RichInput = ({ titulo, required, placeholder, disabled, errors }: IRichInput) => {
   const palavras = titulo
     .split(' ')
     .map((palavra, index) =>
@@ -29,7 +29,7 @@ export const RichInput = ({ titulo, required, placeholder, disabled }: IRichInpu
   return (
     <FlexCol className="gap-6 p-10">
       <label htmlFor={palavras} className="block">
-        <TextoX tipo="p" className=" text-16 font-normal leading-20 text-escrita">
+        <TextoX tipo="p" className=" text-16 font-normal leading-20 text-escrita outline-none">
           {titulo}
           {required && (
             <TextoX tipo="span" className="text-erro">
@@ -57,6 +57,11 @@ export const RichInput = ({ titulo, required, placeholder, disabled }: IRichInpu
           </div>
         )}
       />
+      {errors && (
+        <TextoX tipo="span" className="text-erro text-14">
+          {errors}
+        </TextoX>
+      )}
     </FlexCol>
   );
 };

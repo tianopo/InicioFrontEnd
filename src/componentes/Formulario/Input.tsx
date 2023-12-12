@@ -1,5 +1,3 @@
-import { useForm } from "react-hook-form";
-import { IValidacaoSchemaTeste, validacaoResolverTeste } from "src/validacoes/formTeste";
 import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
 import { TextoX } from "../Tags/TextoX";
@@ -16,11 +14,9 @@ export const Input = ({
   titulo,
   placeholder,
   register,
+  errors,
   tipo = "text",
 }: IInput) => {
-  const {
-    formState: { errors },
-  } = useForm<IValidacaoSchemaTeste>({ resolver: validacaoResolverTeste });
   const palavras = titulo
     .split(" ")
     .map((palavra, index) =>
@@ -47,7 +43,6 @@ export const Input = ({
         name={palavras}
         type={tipo}
         disabled={disabled}
-        required={required}
         placeholder={placeholder}
         {...register}
         autoComplete="complete"
@@ -64,9 +59,16 @@ export const Input = ({
           duration-300
           placeholder:text-placeholder
           md:w-80
+          outline-none
+          focus:border-primaria
           ${disabled ? "bg-desabilitado" : ""}
           `}
       />
+      {errors && (
+        <TextoX tipo="span" className="text-erro text-14">
+          {errors}
+        </TextoX>
+      )}
     </FlexCol>
   );
 };

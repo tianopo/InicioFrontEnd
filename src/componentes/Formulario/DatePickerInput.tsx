@@ -11,7 +11,7 @@ interface IDatePickerInput extends IFormUsos {
   placeholder?: string;
 }
 
-export const DatePickerInput = ({ titulo, required, disabled, placeholder }: IDatePickerInput) => {
+export const DatePickerInput = ({ titulo, required, disabled, placeholder, errors }: IDatePickerInput) => {
   const palavras = titulo
     .split(" ")
     .map((palavra, index) =>
@@ -42,7 +42,6 @@ export const DatePickerInput = ({ titulo, required, disabled, placeholder }: IDa
           <DatePicker
             id={palavras}
             disabled={disabled}
-            required={required}
             selected={value}
             placeholderText={placeholder}
             onChange={(date: Date) => onChange(date)}
@@ -59,11 +58,17 @@ export const DatePickerInput = ({ titulo, required, disabled, placeholder }: IDa
           duration-300
           placeholder:text-placeholder
           md:w-80
+          outline-none
           ${disabled ? "bg-desabilitado" : ""}
           `}
           />
         )}
       />
+      {errors && (
+        <TextoX tipo="span" className="text-erro text-14">
+          {errors}
+        </TextoX>
+      )}
     </FlexCol>
   );
 };
