@@ -14,7 +14,7 @@
     "configuracao": "config",
     "documentacao": "docs",
     "estilização": "css",
-    "validacoes": "rules"
+    "validacoes": "rules",
   },
   "typescript.preferences.quoteStyle": "double",
   "editor.minimap.enabled": true, // ativa o minimap

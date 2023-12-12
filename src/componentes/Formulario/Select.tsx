@@ -4,32 +4,28 @@ import { FlexCol } from "../Flex/FlexCol";
 import { Label } from "./Label";
 import { MensagemDeErro } from "./MensagemErro";
 
-interface IInput extends IFormUsos {
+interface ISelect extends IFormUsos {
   titulo: string;
-  placeholder?: string;
-  tipo?: "text" | "tel" | "date" | "email" | "number" | "time" | "datetime-local";
+  opcoes?: string[];
 }
 
-export const Input = ({
+export const Select = ({
   disabled,
   required,
-  titulo,
-  placeholder,
   register,
   errors,
-  tipo = "text",
-}: IInput) => {
+  titulo,
+  opcoes,
+}: ISelect) => {
   const palavras = labelAjustada(titulo);
-  
+
   return (
     <FlexCol className="gap-6 p-10">
       <Label titulo={titulo} palavras={palavras} required={required} />
-      <input
+      <select
         id={palavras}
         name={palavras}
-        type={tipo}
         disabled={disabled}
-        placeholder={placeholder}
         {...register}
         autoComplete="complete"
         className={`
@@ -49,7 +45,13 @@ export const Input = ({
           md:w-80
           ${disabled ? "bg-desabilitado" : ""}
           `}
-      />
+      >
+        {opcoes?.map((opcao, index) => (
+          <option key={index} value={labelAjustada(opcao)}>
+            {opcao}
+          </option>
+        ))}
+      </select>
       <MensagemDeErro errors={errors} />
     </FlexCol>
   );

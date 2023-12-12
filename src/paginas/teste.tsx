@@ -7,6 +7,7 @@ import { DatePickerInput } from "src/componentes/Formulario/DatePickerInput";
 import { Form } from "src/componentes/Formulario/Form";
 import { Input } from "src/componentes/Formulario/Input";
 import { RichInput } from "src/componentes/Formulario/RichInput";
+import { Select } from "src/componentes/Formulario/Select";
 import { Textarea } from "src/componentes/Formulario/Textarea";
 import { DivisorX } from "src/componentes/Outros/DivisorX";
 import { LinkX } from "src/componentes/Outros/LinkX";
@@ -24,6 +25,7 @@ export const Teste = () => {
   const onSubmit = (values: FieldValues) => {
     return values;
   };
+  const opcoes = ["Português", "Inglês", "Espanhol", "Francês"];
 
   return (
     <FlexCol className={"bg-gray-400"}>
@@ -51,20 +53,21 @@ export const Teste = () => {
             errors={errors.email?.message}
             required
           />
-          <Textarea titulo="Descrição" register={register("descricao")} />
+          <Textarea titulo="Descrição" register={register("descricao")} errors={errors.descricao?.message} />
           <DatePickerInput
             titulo="Data de nascimento"
             errors={errors.dataDeNascimento?.message}
             required
           />
-          <RichInput titulo="Mensagem" errors={errors.mensagem?.message} required />
+          <RichInput titulo="Mensagem" register={register("mensagem")} errors={errors.mensagem?.message} required />
+          <Select titulo="Idioma" register={register("idioma")} errors={errors.idioma?.message} opcoes={opcoes} />
           <BotaoSubmit> Enviar </BotaoSubmit>
         </Form>
       </FormProvider>
     </FlexCol>
   );
 };
-// arrumar as configurações de pular linha no prettier
+// implemente o select
 // implementar jotai
 // colocar o @apply nas classes de estilização
 // implementar temas de escuro e claro
