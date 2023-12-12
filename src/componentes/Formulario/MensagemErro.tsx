@@ -1,19 +1,16 @@
 import { TextoX } from "../Tags/TextoX";
 
 interface IMensagemDeErro {
-  errors?: string
+  errors?: string;
 }
 
-export const MensagemDeErro = ({
-  errors,
-}: IMensagemDeErro) => {
-
+export const MensagemDeErro = ({ errors }: IMensagemDeErro) => {
   if (!errors) {
-    return <></>
+    return <></>;
   }
 
   return (
-    <TextoX tipo="span" className="text-12 text-erro font-normal">
+    <TextoX tipo="span" className="text-12 font-normal text-erro">
       {errors}
     </TextoX>
   );

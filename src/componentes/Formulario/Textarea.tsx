@@ -17,7 +17,7 @@ export const Textarea = ({
   register,
   errors,
 }: ITextarea) => {
-  const palavras = labelAjustada(titulo)
+  const palavras = labelAjustada(titulo);
 
   return (
     <FlexCol className="gap-6 p-10">

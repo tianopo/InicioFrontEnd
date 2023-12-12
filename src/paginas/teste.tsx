@@ -22,7 +22,7 @@ export const Teste = () => {
   } = contexto;
 
   const onSubmit = (values: FieldValues) => {
-    console.log("valores", values);
+    return values;
   };
 
   return (
@@ -36,13 +36,7 @@ export const Teste = () => {
       <TextoX tipo="h6">tudo bem</TextoX>
       <FormProvider {...contexto}>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <Checkbox
-            titulo="coisas"
-            register={register("coisas")}
-            errors={errors.coisas?.message}
-          >
-            coisas
-          </Checkbox>
+          <Checkbox titulo="coisas" register={register("coisas")} errors={errors.coisas?.message} />
           <Input
             register={register("nome")}
             titulo="Nome"
@@ -70,9 +64,7 @@ export const Teste = () => {
     </FlexCol>
   );
 };
-// arrume palavras de label para não ter acentuação
 // arrumar as configurações de pular linha no prettier
 // implementar jotai
-// colocar algo mais nas mensagems de erro
 // colocar o @apply nas classes de estilização
 // implementar temas de escuro e claro

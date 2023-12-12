@@ -2,12 +2,11 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { Controller, useFormContext } from "react-hook-form";
+import { labelAjustada } from "src/utils/labelAjustada";
 import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
-import { TextoX } from "../Tags/TextoX";
 import { Label } from "./Label";
 import { MensagemDeErro } from "./MensagemErro";
-import { labelAjustada } from "src/utils/labelAjustada";
 
 interface IDatePickerInput extends IFormUsos {
   titulo: string;
@@ -21,7 +20,7 @@ export const DatePickerInput = ({
   placeholder,
   errors,
 }: IDatePickerInput) => {
-  const palavras = labelAjustada(titulo)
+  const palavras = labelAjustada(titulo);
 
   const { control } = useFormContext();
 

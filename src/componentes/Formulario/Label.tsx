@@ -6,18 +6,10 @@ interface ILabel extends IFormUsos {
   palavras: string;
 }
 
-export const Label = ({
-  required,
-  titulo,
-  palavras,
-}: ILabel) => {
-
+export const Label = ({ required, titulo, palavras }: ILabel) => {
   return (
     <label htmlFor={palavras} className="block">
-      <TextoX
-        tipo="p"
-        className="text-16 font-normal leading-20 text-escrita"
-      >
+      <TextoX tipo="p" className="text-16 font-normal leading-20 text-escrita">
         {titulo}
         {required && (
           <TextoX tipo="span" className="text-erro">

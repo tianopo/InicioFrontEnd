@@ -7,14 +7,7 @@ import { MensagemDeErro } from "./MensagemErro";
 interface IInput extends IFormUsos {
   titulo: string;
   placeholder?: string;
-  tipo?:
-  | "text"
-  | "tel"
-  | "date"
-  | "email"
-  | "number"
-  | "time"
-  | "datetime-local";
+  tipo?: "text" | "tel" | "date" | "email" | "number" | "time" | "datetime-local";
 }
 
 export const Input = ({
@@ -26,7 +19,7 @@ export const Input = ({
   errors,
   tipo = "text",
 }: IInput) => {
-  const palavras = labelAjustada(titulo)
+  const palavras = labelAjustada(titulo);
   return (
     <FlexCol className="gap-6 p-10">
       <Label titulo={titulo} palavras={palavras} required={required} />

@@ -1,11 +1,11 @@
 import JoditEditor from "jodit-react";
 import { Controller, useFormContext } from "react-hook-form";
+import { labelAjustada } from "src/utils/labelAjustada";
 import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
 import { ConteudoX } from "../Tags/ConteudoX";
 import { Label } from "./Label";
 import { MensagemDeErro } from "./MensagemErro";
-import { labelAjustada } from "src/utils/labelAjustada";
 
 interface IRichInput extends IFormUsos {
   titulo: string;
@@ -14,15 +14,9 @@ interface IRichInput extends IFormUsos {
   disabled?: boolean;
 }
 
-export const RichInput = ({
-  titulo,
-  required,
-  placeholder,
-  disabled,
-  errors,
-}: IRichInput) => {
-  const palavras = labelAjustada(titulo)
-    
+export const RichInput = ({ titulo, required, disabled, errors }: IRichInput) => {
+  const palavras = labelAjustada(titulo);
+
   const { control, setValue } = useFormContext();
 
   const handleBlur = (content: string) => {
@@ -41,7 +35,7 @@ export const RichInput = ({
               value={value}
               config={{
                 readonly: false,
-                disabled
+                disabled,
               }}
               onBlur={(content) => {
                 handleBlur(content);

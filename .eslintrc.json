@@ -1,91 +1,105 @@
 {
-    "env": {
-      "browser": true,
-      "es2021": true,
-      "node": true
-    },
-    "extends": [
-      "plugin:react/recommended",
-      "plugin:react-hooks/recommended",
-      "standard",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended"
-    ],
-    "overrides": [],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": "latest",
-      "sourceType": "module",
-      "project": "./tsconfig.json"
-    },
-    "plugins": [
-      "react",
-      "react-hooks",
-      "@typescript-eslint",
-      "jsx-a11y",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "warn",
-        {
-          "printWidth": 100, //limita a largura da linha em 100 caracteres
-          "tabWidth": 2, // tabulação é 2 espaços
-          "singleQuote": false, // uso de aspas simples ao invés de duplas
-          "arrowParens": "always", //inclui parenteses ao redor dos parâmetros de '=>'
-          "endOfLine": "auto", // adapta automaticamente as quebras de linha em LF no Unix, CRLF no windows
-          "trailingComma": "all" // adiciona vírgula ao final de objetos e arrays
-        },
-        {
-          "usePrettierrc": true // desativa o uso da configuração de prettierrc
-        }
-      ],
-      "jsx-a11y/alt-text": ["error", {
-        "elements": ["img", "object", "area", "input[type='image']"],
-        "img": ["Image"]
-      }], // exige atributos alt em elementos
-      "max-lines": ["error", { "max": 200 }], // máx 200 linhas e skipBlankLines e skipComments são falsos
-      "no-duplicate-imports": "error", // sem duplicação nos importes
-      "no-duplicate-case": "error", // sem duplicar o resultado em um switch
-      "no-empty-pattern": "error", // desestruturação não pode ficar vazia: var {} = a;-> erro
-      "react-hooks/rules-of-hooks": "error", // Erro quando a regra de hooks não são seguidas
-      "react-hooks/exhaustive-deps": "warn", // aviso se as dependências dos Hooks de efeito não são fornecidas de maneira exaustiva
-      "no-undef": 1, // aviso de variáveis não declaradas
-      "no-use-before-define": "off", // não será emitido aviso em var sendo usadas antes de declarar
-      "react/react-in-jsx-scope": 0, // desativa aviso sobre a importação React usando JSX tsconfig
-      "@typescript-eslint/no-empty-function": 1, // avisa sobre funções vazias
-      "@typescript-eslint/no-explicit-any": 2, // define aviso se encontrar o tipo 'any'
-      "@typescript-eslint/prefer-nullish-coalescing": 0, // desativa o aviso de ?? em vez de ||
-      "@typescript-eslint/strict-boolean-expressions": 0, // desativa expressões boleanas estritas
-      "@typescript-eslint/restrict-template-expressions": 0, // `${123}` desativa este erro
-      "@typescript-eslint/no-useless-constructor": 0, // aviso de construtores desnecessários
-      "no-unexpected-multiline": 0, // aviso sobre quebra de linhas inesperadas
-      "@typescript-eslint/consistent-type-definitions": 0,
-      "no-console": "warn", // define aviso para uso de console
-      "react/prop-types": 0, // não é necessário exportar prop-types
-      "react/no-unescaped-entities": 0, // renderização segura de HTML
-      "@typescript-eslint/no-confusing-void-expression": 0, // desativa o uso de voids confusos
-      "no-unused-vars": 1, // avisa sobre variáveis declaradas, mas não usadas
-      
-      "@typescript-eslint/no-unused-vars": [
-        1,
-        {
-          "argsIgnorePattern": "^_",
-          "varsIgnorePattern": "^_",
-          "ignoreRestSiblings": true
-        } // argumentos da função e var iniciados em _ devem ser ignorados
-      ],
-      "no-restricted-syntax": [
-        1,
-        {
-          "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(warn|error)$/]",
-          "message": "Remova os console.log's"
-        }
-      ]
-    },
-    "settings": {
-      "react": {
-        "version": "detect"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "standard",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "jsx-a11y",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "printWidth": 100, //limita a largura da linha em 100 caracteres
+        "tabWidth": 2, // tabulação é 2 espaços
+        "singleQuote": false, // uso de aspas simples ao invés de duplas
+        "arrowParens": "always", //inclui parenteses ao redor dos parâmetros de '=>'
+        "endOfLine": "auto", // adapta automaticamente as quebras de linha em LF no Unix, CRLF no windows
+        "trailingComma": "all" // adiciona vírgula ao final de objetos e arrays
+      },
+      {
+        "usePrettierrc": true // desativa o uso da configuração de prettierrc
       }
+    ],
+    "jsx-a11y/alt-text": [
+      "error",
+      {
+        "elements": [
+          "img",
+          "object",
+          "area",
+          "input[type='image']"
+        ],
+        "img": [
+          "Image"
+        ]
+      }
+    ], // exige atributos alt em elementos
+    "max-lines": [
+      "error",
+      {
+        "max": 200
+      }
+    ], // máx 200 linhas e skipBlankLines e skipComments são falsos
+    "no-duplicate-imports": "error", // sem duplicação nos importes
+    "no-duplicate-case": "error", // sem duplicar o resultado em um switch
+    "no-empty-pattern": "error", // desestruturação não pode ficar vazia: var {} = a;-> erro
+    "react-hooks/rules-of-hooks": "error", // Erro quando a regra de hooks não são seguidas
+    "react-hooks/exhaustive-deps": "warn", // aviso se as dependências dos Hooks de efeito não são fornecidas de maneira exaustiva
+    "no-undef": 0, // aviso de variáveis não declaradas como React
+    "no-use-before-define": "off", // não será emitido aviso em var sendo usadas antes de declarar
+    "react/react-in-jsx-scope": 0, // desativa aviso sobre a importação React usando JSX tsconfig
+    "@typescript-eslint/no-empty-function": 1, // avisa sobre funções vazias
+    "@typescript-eslint/no-explicit-any": 2, // define aviso se encontrar o tipo 'any'
+    "@typescript-eslint/prefer-nullish-coalescing": 0, // desativa o aviso de ?? em vez de ||
+    "@typescript-eslint/strict-boolean-expressions": 0, // desativa expressões boleanas estritas
+    "@typescript-eslint/restrict-template-expressions": 0, // `${123}` desativa este erro
+    "@typescript-eslint/no-useless-constructor": 0, // aviso de construtores desnecessários
+    "no-unexpected-multiline": 0, // aviso sobre quebra de linhas inesperadas
+    "@typescript-eslint/consistent-type-definitions": 0,
+    "no-console": "warn", // define aviso para uso de console
+    "react/prop-types": 0, // não é necessário exportar prop-types
+    "react/no-unescaped-entities": 0, // renderização segura de HTML
+    "@typescript-eslint/no-confusing-void-expression": 0, // desativa o uso de voids confusos
+    "no-unused-vars": 1, // avisa sobre variáveis declaradas, mas não usadas
+    "@typescript-eslint/no-unused-vars": [
+      1,
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      } // argumentos da função e var iniciados em _ devem ser ignorados
+    ],
+    "no-restricted-syntax": [
+      1,
+      {
+        "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(warn|error)$/]",
+        "message": "Remova os console.log's"
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     }
   }
+}

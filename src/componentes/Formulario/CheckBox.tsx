@@ -2,24 +2,15 @@ import { labelAjustada } from "src/utils/labelAjustada";
 import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
 import { FlexRow } from "../Flex/FlexRow";
-import { TextoX } from "../Tags/TextoX";
 import { Label } from "./Label";
 import { MensagemDeErro } from "./MensagemErro";
 
 export interface ICheckbox extends IFormUsos {
-  children?: React.ReactNode;
   titulo: string;
 }
 
-export const Checkbox = ({
-  children,
-  disabled,
-  required,
-  errors,
-  titulo,
-  register,
-}: ICheckbox) => {
-  const palavras = labelAjustada(titulo)
+export const Checkbox = ({ disabled, required, errors, titulo, register }: ICheckbox) => {
+  const palavras = labelAjustada(titulo);
 
   return (
     <FlexCol>

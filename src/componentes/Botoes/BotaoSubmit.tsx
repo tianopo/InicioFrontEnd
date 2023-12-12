@@ -6,12 +6,7 @@ interface IBotaoSubmit extends HTMLAttributes<HTMLDivElement> {
   type?: "button" | "reset" | "submit";
 }
 
-export const BotaoSubmit = ({
-  className,
-  children,
-  disabled,
-  type = "submit",
-}: IBotaoSubmit) => {
+export const BotaoSubmit = ({ className, children, disabled, type = "submit" }: IBotaoSubmit) => {
   return (
     <button
       type={type}

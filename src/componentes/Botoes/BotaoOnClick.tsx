@@ -5,11 +5,7 @@ interface IBotaoOnClick extends HTMLAttributes<HTMLDivElement> {
   onClick: () => void;
 }
 
-export const BotaoOnClick = ({
-  onClick,
-  children,
-  className,
-}: IBotaoOnClick) => {
+export const BotaoOnClick = ({ onClick, children, className }: IBotaoOnClick) => {
   return (
     <button
       onClick={onClick}
