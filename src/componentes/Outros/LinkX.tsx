@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export interface ILinkX {
   children?: React.ReactNode;
@@ -7,11 +8,11 @@ export interface ILinkX {
 }
 
 export const LinkX = ({ rota, children, target }: ILinkX) => (
-  <a
-    href={rota}
+  <Link
+    to={rota!}
     target={target}
     className="font-normal text-primaria transition duration-300 ease-in-out hover:opacity-80"
   >
     {children}
-  </a>
+  </Link>
 );

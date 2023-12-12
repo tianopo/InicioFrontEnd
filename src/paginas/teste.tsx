@@ -52,7 +52,7 @@ export const Teste = () => {
           />
           <Input
             register={register("email")}
-            titulo="Email"
+            titulo="E-mail"
             placeholder="x@x.com"
             errors={errors.email?.message}
             required
@@ -70,7 +70,6 @@ export const Teste = () => {
     </FlexCol>
   );
 };
-// ajeitar labels
 // arrume palavras de label para não ter acentuação
 // arrumar as configurações de pular linha no prettier
 // implementar jotai

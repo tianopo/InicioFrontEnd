@@ -1,3 +1,4 @@
+import { labelAjustada } from "src/utils/labelAjustada";
 import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
 import { FlexRow } from "../Flex/FlexRow";
@@ -18,14 +19,7 @@ export const Checkbox = ({
   titulo,
   register,
 }: ICheckbox) => {
-  const palavras = titulo
-    .split(" ")
-    .map((palavra, index) =>
-      index === 0
-        ? palavra.toLocaleLowerCase()
-        : palavra.charAt(0).toUpperCase() + palavra.slice(1),
-    )
-    .join("");
+  const palavras = labelAjustada(titulo)
 
   return (
     <FlexCol>

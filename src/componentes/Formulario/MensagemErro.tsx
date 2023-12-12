@@ -13,7 +13,7 @@ export const MensagemDeErro = ({
   }
 
   return (
-    <TextoX tipo="span" className="text-14 text-erro">
+    <TextoX tipo="span" className="text-12 text-erro font-normal">
       {errors}
     </TextoX>
   );

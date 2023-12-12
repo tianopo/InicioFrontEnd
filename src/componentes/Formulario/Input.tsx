@@ -1,3 +1,4 @@
+import { labelAjustada } from "src/utils/labelAjustada";
 import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
 import { Label } from "./Label";
@@ -25,15 +26,7 @@ export const Input = ({
   errors,
   tipo = "text",
 }: IInput) => {
-  const palavras = titulo
-    .split(" ")
-    .map((palavra, index) =>
-      index === 0
-        ? palavra.toLocaleLowerCase()
-        : palavra.charAt(0).toUpperCase() + palavra.slice(1),
-    )
-    .join("");
-
+  const palavras = labelAjustada(titulo)
   return (
     <FlexCol className="gap-6 p-10">
       <Label titulo={titulo} palavras={palavras} required={required} />

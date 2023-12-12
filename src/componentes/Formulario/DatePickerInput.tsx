@@ -7,6 +7,7 @@ import { FlexCol } from "../Flex/FlexCol";
 import { TextoX } from "../Tags/TextoX";
 import { Label } from "./Label";
 import { MensagemDeErro } from "./MensagemErro";
+import { labelAjustada } from "src/utils/labelAjustada";
 
 interface IDatePickerInput extends IFormUsos {
   titulo: string;
@@ -20,14 +21,7 @@ export const DatePickerInput = ({
   placeholder,
   errors,
 }: IDatePickerInput) => {
-  const palavras = titulo
-    .split(" ")
-    .map((palavra, index) =>
-      index === 0
-        ? palavra.toLocaleLowerCase()
-        : palavra.charAt(0).toUpperCase() + palavra.slice(1),
-    )
-    .join("");
+  const palavras = labelAjustada(titulo)
 
   const { control } = useFormContext();
 
