@@ -5,6 +5,8 @@ import { Controller, useFormContext } from "react-hook-form";
 import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
 import { TextoX } from "../Tags/TextoX";
+import { Label } from "./Label";
+import { MensagemDeErro } from "./MensagemErro";
 
 interface IDatePickerInput extends IFormUsos {
   titulo: string;
@@ -31,19 +33,7 @@ export const DatePickerInput = ({
 
   return (
     <FlexCol className="gap-6 p-10">
-      <label htmlFor={palavras} className="block">
-        <TextoX
-          tipo="p"
-          className=" text-16 font-normal leading-20 text-escrita"
-        >
-          {titulo}
-          {required && (
-            <TextoX tipo="span" className="text-erro">
-              *
-            </TextoX>
-          )}
-        </TextoX>
-      </label>
+      <Label titulo={titulo} palavras={palavras} required={required} />
       <Controller
         name={palavras}
         control={control}
@@ -73,11 +63,7 @@ export const DatePickerInput = ({
           />
         )}
       />
-      {errors && (
-        <TextoX tipo="span" className="text-14 text-erro">
-          {errors}
-        </TextoX>
-      )}
+      <MensagemDeErro errors={errors} />
     </FlexCol>
   );
 };

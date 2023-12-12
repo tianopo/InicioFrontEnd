@@ -2,6 +2,8 @@ import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
 import { FlexRow } from "../Flex/FlexRow";
 import { TextoX } from "../Tags/TextoX";
+import { Label } from "./Label";
+import { MensagemDeErro } from "./MensagemErro";
 
 export interface ICheckbox extends IFormUsos {
   children?: React.ReactNode;
@@ -36,25 +38,9 @@ export const Checkbox = ({
           {...register}
           className={`form-checkbox outline-none focus:border-borda focus:outline-none focus:ring`}
         />
-        <label htmlFor={palavras} className="block">
-          <TextoX
-            tipo="p"
-            className="text-16 font-normal leading-20 text-escrita"
-          >
-            {titulo}
-            {required && (
-              <TextoX tipo="span" className="text-erro">
-                *
-              </TextoX>
-            )}
-          </TextoX>
-        </label>
+        <Label titulo={titulo} palavras={palavras} required={required} />
       </FlexRow>
-      {errors && (
-        <TextoX tipo="span" className="text-14 text-erro">
-          {errors}
-        </TextoX>
-      )}
+      <MensagemDeErro errors={errors} />
     </FlexCol>
   );
 };

@@ -1,18 +1,19 @@
 import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
-import { TextoX } from "../Tags/TextoX";
+import { Label } from "./Label";
+import { MensagemDeErro } from "./MensagemErro";
 
 interface IInput extends IFormUsos {
   titulo: string;
   placeholder?: string;
   tipo?:
-    | "text"
-    | "tel"
-    | "date"
-    | "email"
-    | "number"
-    | "time"
-    | "datetime-local";
+  | "text"
+  | "tel"
+  | "date"
+  | "email"
+  | "number"
+  | "time"
+  | "datetime-local";
 }
 
 export const Input = ({
@@ -35,19 +36,7 @@ export const Input = ({
 
   return (
     <FlexCol className="gap-6 p-10">
-      <label htmlFor={palavras} className="block">
-        <TextoX
-          tipo="p"
-          className="text-16 font-normal leading-20 text-escrita"
-        >
-          {titulo}
-          {required && (
-            <TextoX tipo="span" className="text-erro">
-              *
-            </TextoX>
-          )}
-        </TextoX>
-      </label>
+      <Label titulo={titulo} palavras={palavras} required={required} />
       <input
         id={palavras}
         name={palavras}
@@ -74,11 +63,7 @@ export const Input = ({
           ${disabled ? "bg-desabilitado" : ""}
           `}
       />
-      {errors && (
-        <TextoX tipo="span" className="text-14 text-erro">
-          {errors}
-        </TextoX>
-      )}
+      <MensagemDeErro errors={errors} />
     </FlexCol>
   );
 };

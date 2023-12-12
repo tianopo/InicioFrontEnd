@@ -1,6 +1,7 @@
 import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
-import { TextoX } from "../Tags/TextoX";
+import { Label } from "./Label";
+import { MensagemDeErro } from "./MensagemErro";
 
 interface ITextarea extends IFormUsos {
   titulo: string;
@@ -13,6 +14,7 @@ export const Textarea = ({
   titulo,
   placeholder,
   register,
+  errors,
 }: ITextarea) => {
   const palavras = titulo
     .split(" ")
@@ -24,19 +26,7 @@ export const Textarea = ({
     .join("");
   return (
     <FlexCol className="gap-6 p-10">
-      <label htmlFor={palavras} className="block">
-        <TextoX
-          tipo="p"
-          className=" text-16 font-normal leading-20 text-escrita"
-        >
-          {titulo}
-          {required && (
-            <TextoX tipo="span" className="text-erro">
-              *
-            </TextoX>
-          )}
-        </TextoX>
-      </label>
+      <Label titulo={titulo} palavras={palavras} required={required} />
       <textarea
         id={palavras}
         disabled={disabled}
@@ -63,6 +53,7 @@ export const Textarea = ({
       ${disabled ? "bg-desabilitado" : ""}
       `}
       />
+      <MensagemDeErro errors={errors} />
     </FlexCol>
   );
 };

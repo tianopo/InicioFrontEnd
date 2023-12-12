@@ -63,7 +63,7 @@ export const Teste = () => {
             errors={errors.dataDeNascimento?.message}
             required
           />
-          <RichInput titulo="Mensagem" errors={errors.mensagem?.message} />
+          <RichInput titulo="Mensagem" errors={errors.mensagem?.message} required />
           <BotaoSubmit> Enviar </BotaoSubmit>
         </Form>
       </FormProvider>
