@@ -11,9 +11,13 @@ export const validacaoYupPortugues: Yup.LocaleObject = {
     lowercase: "${path} está em maiúsculo?",
     uppercase: "${path} está em minúsculo?",
     min: ({ min, path }) =>
-      `${path} deve ter no mínimo ${min} ${min === 1 ? "caractere" : "caracteres"}`,
+      `${path} deve ter no mínimo ${min} ${
+        min === 1 ? "caractere" : "caracteres"
+      }`,
     max: ({ max, path }) =>
-      `${path} deve ter no máximo ${max} ${max === 1 ? "caractere" : "caracteres"}`,
+      `${path} deve ter no máximo ${max} ${
+        max === 1 ? "caractere" : "caracteres"
+      }`,
     trim: "${path} não tem espaços em branco?",
     url: "${path} tem um formato de URL válido?",
   },
@@ -48,7 +52,8 @@ export const validacaoYupPortugues: Yup.LocaleObject = {
     oneOf: "${path} é um dos seguintes valores: ${values}",
     notType: ({ path, type, value, originalValue }) => {
       const isCast = originalValue != null && originalValue !== value;
-      let msg = `${path} é um \`${type}\`, ` + `mas o valor final foi: \`${value}\`.`;
+      let msg =
+        `${path} é um \`${type}\`, ` + `mas o valor final foi: \`${value}\`.`;
       if (isCast) {
         msg += ` O valor original é \`${originalValue}\`.`;
       }
@@ -67,9 +72,13 @@ export const yupEnglishLocale: Yup.LocaleObject = {
     lowercase: "${path} is in uppercase?",
     uppercase: "${path} is in lowercase?",
     min: ({ min, path }) =>
-      `${path} must have at least ${min} ${min === 1 ? "character" : "characters"}`,
+      `${path} must have at least ${min} ${
+        min === 1 ? "character" : "characters"
+      }`,
     max: ({ max, path }) =>
-      `${path} must have at most ${max} ${max === 1 ? "character" : "characters"}`,
+      `${path} must have at most ${max} ${
+        max === 1 ? "character" : "characters"
+      }`,
     trim: "${path} has no white spaces?",
     url: "${path} has a valid URL format?",
   },
@@ -104,7 +113,9 @@ export const yupEnglishLocale: Yup.LocaleObject = {
     oneOf: "${path} must be one of the following values: ${values}",
     notType: ({ path, type, value, originalValue }) => {
       const isCast = originalValue != null && originalValue !== value;
-      let msg = `${path} must be a \`${type}\`, ` + `but the final value was: \`${value}\`.`;
+      let msg =
+        `${path} must be a \`${type}\`, ` +
+        `but the final value was: \`${value}\`.`;
       if (isCast) {
         msg += ` The original value is \`${originalValue}\`.`;
       }

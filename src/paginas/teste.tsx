@@ -14,7 +14,7 @@ import { TextoX } from "src/componentes/Tags/TextoX";
 import { useValidacaoTeste } from "src/hooks/validacoes/formTeste";
 
 export const Teste = () => {
-  const { contexto } = useValidacaoTeste()
+  const { contexto } = useValidacaoTeste();
   const {
     formState: { errors },
     register,
@@ -36,13 +36,33 @@ export const Teste = () => {
       <TextoX tipo="h6">tudo bem</TextoX>
       <FormProvider {...contexto}>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <Checkbox titulo="coisas" register={register("coisas")} errors={errors.coisas?.message}>
+          <Checkbox
+            titulo="coisas"
+            register={register("coisas")}
+            errors={errors.coisas?.message}
+          >
             coisas
           </Checkbox>
-          <Input register={register("nome")} titulo="Nome" placeholder="olá" errors={errors.nome?.message} required />
-          <Input register={register("email")} titulo="Email" placeholder="x@x.com" errors={errors.email?.message} required />
+          <Input
+            register={register("nome")}
+            titulo="Nome"
+            placeholder="olá"
+            errors={errors.nome?.message}
+            required
+          />
+          <Input
+            register={register("email")}
+            titulo="Email"
+            placeholder="x@x.com"
+            errors={errors.email?.message}
+            required
+          />
           <Textarea titulo="Descrição" register={register("descricao")} />
-          <DatePickerInput titulo="Data de nascimento" errors={errors.dataDeNascimento?.message} required />
+          <DatePickerInput
+            titulo="Data de nascimento"
+            errors={errors.dataDeNascimento?.message}
+            required
+          />
           <RichInput titulo="Mensagem" errors={errors.mensagem?.message} />
           <BotaoSubmit> Enviar </BotaoSubmit>
         </Form>
@@ -50,7 +70,7 @@ export const Teste = () => {
     </FlexCol>
   );
 };
-// arrumar RichInput para validacoes
+// ajeitar labels
 // arrume palavras de label para não ter acentuação
 // arrumar as configurações de pular linha no prettier
 // implementar jotai

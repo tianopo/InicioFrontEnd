@@ -4,5 +4,5 @@ export interface IFormUsos {
   disabled?: boolean;
   required?: boolean;
   register?: UseFormRegisterReturn<string>;
-  errors?: string
+  errors?: string;
 }

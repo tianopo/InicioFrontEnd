@@ -1,8 +1,8 @@
-import JoditEditor from 'jodit-react';
-import { Controller, useFormContext } from 'react-hook-form';
-import { IFormUsos } from '../../interfaces/InterfaceForm';
-import { FlexCol } from '../Flex/FlexCol';
-import { TextoX } from '../Tags/TextoX';
+import JoditEditor from "jodit-react";
+import { Controller, useFormContext } from "react-hook-form";
+import { IFormUsos } from "../../interfaces/InterfaceForm";
+import { FlexCol } from "../Flex/FlexCol";
+import { TextoX } from "../Tags/TextoX";
 
 interface IRichInput extends IFormUsos {
   titulo: string;
@@ -11,15 +11,21 @@ interface IRichInput extends IFormUsos {
   disabled?: boolean;
 }
 
-export const RichInput = ({ titulo, required, placeholder, disabled, errors }: IRichInput) => {
+export const RichInput = ({
+  titulo,
+  required,
+  placeholder,
+  disabled,
+  errors,
+}: IRichInput) => {
   const palavras = titulo
-    .split(' ')
+    .split(" ")
     .map((palavra, index) =>
       index === 0
         ? palavra.toLocaleLowerCase()
         : palavra.charAt(0).toUpperCase() + palavra.slice(1),
     )
-    .join('');
+    .join("");
   const { control, setValue } = useFormContext();
 
   const handleBlur = (content: string) => {
@@ -29,7 +35,10 @@ export const RichInput = ({ titulo, required, placeholder, disabled, errors }: I
   return (
     <FlexCol className="gap-6 p-10">
       <label htmlFor={palavras} className="block">
-        <TextoX tipo="p" className=" text-16 font-normal leading-20 text-escrita outline-none">
+        <TextoX
+          tipo="p"
+          className=" text-16 font-normal leading-20 text-escrita outline-none"
+        >
           {titulo}
           {required && (
             <TextoX tipo="span" className="text-erro">
@@ -58,7 +67,7 @@ export const RichInput = ({ titulo, required, placeholder, disabled, errors }: I
         )}
       />
       {errors && (
-        <TextoX tipo="span" className="text-erro text-14">
+        <TextoX tipo="span" className="text-14 text-erro">
           {errors}
         </TextoX>
       )}

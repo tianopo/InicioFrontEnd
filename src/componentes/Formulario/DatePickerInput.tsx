@@ -11,7 +11,13 @@ interface IDatePickerInput extends IFormUsos {
   placeholder?: string;
 }
 
-export const DatePickerInput = ({ titulo, required, disabled, placeholder, errors }: IDatePickerInput) => {
+export const DatePickerInput = ({
+  titulo,
+  required,
+  disabled,
+  placeholder,
+  errors,
+}: IDatePickerInput) => {
   const palavras = titulo
     .split(" ")
     .map((palavra, index) =>
@@ -26,7 +32,10 @@ export const DatePickerInput = ({ titulo, required, disabled, placeholder, error
   return (
     <FlexCol className="gap-6 p-10">
       <label htmlFor={palavras} className="block">
-        <TextoX tipo="p" className=" text-16 font-normal leading-20 text-escrita">
+        <TextoX
+          tipo="p"
+          className=" text-16 font-normal leading-20 text-escrita"
+        >
           {titulo}
           {required && (
             <TextoX tipo="span" className="text-erro">
@@ -55,17 +64,17 @@ export const DatePickerInput = ({ titulo, required, disabled, placeholder, error
           p-8
           font-low
           text-escrita
+          outline-none
           duration-300
           placeholder:text-placeholder
           md:w-80
-          outline-none
           ${disabled ? "bg-desabilitado" : ""}
           `}
           />
         )}
       />
       {errors && (
-        <TextoX tipo="span" className="text-erro text-14">
+        <TextoX tipo="span" className="text-14 text-erro">
           {errors}
         </TextoX>
       )}

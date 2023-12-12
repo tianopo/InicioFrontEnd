@@ -8,7 +8,14 @@ export interface ICheckbox extends IFormUsos {
   titulo: string;
 }
 
-export const Checkbox = ({ children, disabled, required, errors, titulo, register }: ICheckbox) => {
+export const Checkbox = ({
+  children,
+  disabled,
+  required,
+  errors,
+  titulo,
+  register,
+}: ICheckbox) => {
   const palavras = titulo
     .split(" ")
     .map((palavra, index) =>
@@ -27,10 +34,13 @@ export const Checkbox = ({ children, disabled, required, errors, titulo, registe
           readOnly
           disabled={disabled}
           {...register}
-          className={`form-checkbox focus:border-borda focus:outline-none focus:ring outline-none`}
+          className={`form-checkbox outline-none focus:border-borda focus:outline-none focus:ring`}
         />
         <label htmlFor={palavras} className="block">
-          <TextoX tipo="p" className="text-16 font-normal leading-20 text-escrita">
+          <TextoX
+            tipo="p"
+            className="text-16 font-normal leading-20 text-escrita"
+          >
             {titulo}
             {required && (
               <TextoX tipo="span" className="text-erro">
@@ -41,7 +51,7 @@ export const Checkbox = ({ children, disabled, required, errors, titulo, registe
         </label>
       </FlexRow>
       {errors && (
-        <TextoX tipo="span" className="text-erro text-14">
+        <TextoX tipo="span" className="text-14 text-erro">
           {errors}
         </TextoX>
       )}

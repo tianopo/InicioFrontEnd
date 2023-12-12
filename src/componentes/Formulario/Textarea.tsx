@@ -7,7 +7,13 @@ interface ITextarea extends IFormUsos {
   placeholder?: string;
 }
 
-export const Textarea = ({ disabled, required, titulo, placeholder, register }: ITextarea) => {
+export const Textarea = ({
+  disabled,
+  required,
+  titulo,
+  placeholder,
+  register,
+}: ITextarea) => {
   const palavras = titulo
     .split(" ")
     .map((palavra, index) =>
@@ -19,7 +25,10 @@ export const Textarea = ({ disabled, required, titulo, placeholder, register }: 
   return (
     <FlexCol className="gap-6 p-10">
       <label htmlFor={palavras} className="block">
-        <TextoX tipo="p" className=" text-16 font-normal leading-20 text-escrita">
+        <TextoX
+          tipo="p"
+          className=" text-16 font-normal leading-20 text-escrita"
+        >
           {titulo}
           {required && (
             <TextoX tipo="span" className="text-erro">
@@ -45,9 +54,9 @@ export const Textarea = ({ disabled, required, titulo, placeholder, register }: 
       border-borda
       bg-input
       p-8
-      outline-none
       font-low
       text-escrita
+      outline-none
       duration-300
       placeholder:text-placeholder
       md:w-80
