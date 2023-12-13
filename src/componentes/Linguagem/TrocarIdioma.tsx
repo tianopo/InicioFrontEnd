@@ -1,6 +1,7 @@
 import { CaretDown, CaretRight } from "@phosphor-icons/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { LocalStorage } from "src/utils/localStorage";
 import { CX } from "../Tags/ConteudoX";
 import { TX } from "../Tags/TextoX";
 
@@ -19,19 +20,30 @@ export const TrocarIdioma = () => {
       flag: "/flags/fr.svg",
     },
   ];
+
+  const obterIdiomaInicial = () => {
+    const idiomaSalvo = localStorage.get("idioma");
+    return idiomaSalvo || opcoes[0].valor;
+  }
+  const localStorage = new LocalStorage();
   const { t, i18n } = useTranslation();
-  const [idiomaSelecionado, setIdiomaSelecionado] = useState(opcoes[0].valor);
+  const [idiomaSelecionado, setIdiomaSelecionado] = useState(obterIdiomaInicial());
   const [menuAberto, setMenuAberto] = useState(false);
+
 
   const handleChangeIdioma = (novoIdioma: string) => {
     setIdiomaSelecionado(novoIdioma);
     i18n.changeLanguage(novoIdioma);
     setMenuAberto(false);
+    localStorage.set("idioma", novoIdioma);
   };
+
+  useEffect(() => {
+    i18n.changeLanguage(idiomaSelecionado);
+  }, [idiomaSelecionado, i18n]);
 
   return (
     <CX tipo="div">
-      <TX tipo="span">{t("selecioneSeuIdioma")}</TX>
       <CX
         tipo="div"
         className="relative inline-block duration-300 w-auto">
