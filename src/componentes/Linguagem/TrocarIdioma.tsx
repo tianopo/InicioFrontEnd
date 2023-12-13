@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LocalStorage } from "src/utils/localStorage";
 import { CX } from "../Tags/ConteudoX";
-import { TX } from "../Tags/TextoX";
 
 export const TrocarIdioma = () => {
   const opcoes = [
@@ -26,7 +25,7 @@ export const TrocarIdioma = () => {
     return idiomaSalvo || opcoes[0].valor;
   }
   const localStorage = new LocalStorage();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [idiomaSelecionado, setIdiomaSelecionado] = useState(obterIdiomaInicial());
   const [menuAberto, setMenuAberto] = useState(false);
 
@@ -50,6 +49,7 @@ export const TrocarIdioma = () => {
         <button
           type="button"
           onClick={() => setMenuAberto(!menuAberto)}
+          onBlur={() => setTimeout(() => { setMenuAberto(!menuAberto) }, 100)}
           className={`
             flex
             w-16
