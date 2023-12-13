@@ -60,16 +60,21 @@ export const TrocarIdioma = () => {
           {menuAberto ? <CaretDown /> : <CaretRight />}
         </button>
         {menuAberto && (
-          <div className="origin-top-right absolute right-0 mt-2 w-40 rounded-6 shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-            <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+          <div className="absolute right-0 mt-2 w-40 origin-top-right rounded-6 bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+            <div
+              className="py-1"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="options-menu"
+            >
               {opcoes.map((opcao) => (
                 <button
                   key={opcao.valor}
-                  className="p-4 hover:bg-gray-10 flex items-center"
+                  className="hover:bg-gray-10 flex items-center p-4"
                   onClick={() => handleChangeIdioma(opcao.valor)}
                 >
                   {opcao.nome}
-                  <img src={opcao.flag} alt={opcao.nome} className="w-12 h-12 ml-2" />
+                  <img src={opcao.flag} alt={opcao.nome} className="ml-2 h-12 w-12" />
                 </button>
               ))}
             </div>
