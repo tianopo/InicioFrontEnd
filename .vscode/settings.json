@@ -15,6 +15,7 @@
     "documentacao": "docs",
     "estilização": "css",
     "validacoes": "rules",
+    "idiomas": "i18n"
   },
   "typescript.preferences.quoteStyle": "double",
   "editor.minimap.enabled": true, // ativa o minimap

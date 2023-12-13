@@ -1,4 +1,5 @@
 import { FieldValues, FormProvider } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
 import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
@@ -9,6 +10,7 @@ import { Input } from "src/componentes/Formulario/Input";
 import { RichInput } from "src/componentes/Formulario/RichInput";
 import { Select } from "src/componentes/Formulario/Select";
 import { Textarea } from "src/componentes/Formulario/Textarea";
+import { Idioma } from "src/componentes/Linguagem/Idioma";
 import { DivisorX } from "src/componentes/Outros/DivisorX";
 import { LinkX } from "src/componentes/Outros/LinkX";
 import { TextoX } from "src/componentes/Tags/TextoX";
@@ -16,6 +18,7 @@ import { useValidacaoTeste } from "src/hooks/validacoes/formTeste";
 
 export const Teste = () => {
   const { contexto } = useValidacaoTeste();
+  const { t } = useTranslation();
   const {
     formState: { errors },
     register,
@@ -61,13 +64,16 @@ export const Teste = () => {
           />
           <RichInput titulo="Mensagem" register={register("mensagem")} errors={errors.mensagem?.message} required />
           <Select titulo="Idioma" register={register("idioma")} errors={errors.idioma?.message} opcoes={opcoes} />
-          <BotaoSubmit> Enviar </BotaoSubmit>
+          <Idioma />
+          <BotaoSubmit>{t("botãoEnviar")}</BotaoSubmit>
         </Form>
       </FormProvider>
     </FlexCol>
   );
 };
-// implemente o select
-// implementar jotai
-// colocar o @apply nas classes de estilização
+// implementar novos idiomas
+// colocar o @apply nas classes de estilização como padronização de classes iguais e criação de classes para textoX e conteudoX
 // implementar temas de escuro e claro
+// fazer cabecalho, sidebar e footer
+// carregamento de componentes para performance como do facebook
+// documentar o projeto
