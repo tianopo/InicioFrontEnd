@@ -7,32 +7,30 @@ export const Idioma = () => {
     {
       nome: "Português",
       valor: "ptbr",
-      flag: "/flags/br.svg"
+      flag: "/flags/br.svg",
     },
     {
       nome: "Inglês",
       valor: "en",
-      flag: "/flags/us.svg"
+      flag: "/flags/us.svg",
     },
     {
       nome: "Francês",
       valor: "fr",
-      flag: "/flags/fr.svg"
+      flag: "/flags/fr.svg",
     },
-  ]
-  const { t, i18n } = useTranslation()
-  const handleChangeIdioma = (e: { target: { value: string; }; }) => {
+  ];
+  const { t, i18n } = useTranslation();
+  const handleChangeIdioma = (e: { target: { value: string } }) => {
     const novoIdioma = e.target.value;
     i18n.changeLanguage(novoIdioma);
   };
 
   return (
     <ConteudoX tipo="div">
-      <TextoX tipo="span">
-        {t('selecioneSeuIdioma')}
-      </TextoX>
+      <TextoX tipo="span">{t("selecioneSeuIdioma")}</TextoX>
       <select onChange={handleChangeIdioma}>
-        {opcoes.map(opcao => (
+        {opcoes.map((opcao) => (
           <option key={opcao.valor} value={opcao.valor}>
             {opcao.nome}
             <img key={opcao.valor} src={opcao.flag} alt={opcao.nome} className="" />

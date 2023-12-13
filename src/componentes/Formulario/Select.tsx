@@ -9,14 +9,7 @@ interface ISelect extends IFormUsos {
   opcoes?: string[];
 }
 
-export const Select = ({
-  disabled,
-  required,
-  register,
-  errors,
-  titulo,
-  opcoes,
-}: ISelect) => {
+export const Select = ({ disabled, required, register, errors, titulo, opcoes }: ISelect) => {
   const palavras = labelAjustada(titulo);
 
   return (

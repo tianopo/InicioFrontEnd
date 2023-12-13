@@ -20,7 +20,7 @@ export const Input = ({
   tipo = "text",
 }: IInput) => {
   const palavras = labelAjustada(titulo);
-  
+
   return (
     <FlexCol className="gap-6 p-10">
       <Label titulo={titulo} palavras={palavras} required={required} />

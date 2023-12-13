@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import './idiomas/tradutor';
+import "./idiomas/tradutor";
 import "./index.css";
 import { RotasApp } from "./rotas/rotasApp";
 

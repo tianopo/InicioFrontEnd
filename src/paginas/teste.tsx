@@ -56,14 +56,28 @@ export const Teste = () => {
             errors={errors.email?.message}
             required
           />
-          <Textarea titulo="Descrição" register={register("descricao")} errors={errors.descricao?.message} />
+          <Textarea
+            titulo="Descrição"
+            register={register("descricao")}
+            errors={errors.descricao?.message}
+          />
           <DatePickerInput
             titulo="Data de nascimento"
             errors={errors.dataDeNascimento?.message}
             required
           />
-          <RichInput titulo="Mensagem" register={register("mensagem")} errors={errors.mensagem?.message} required />
-          <Select titulo="Idioma" register={register("idioma")} errors={errors.idioma?.message} opcoes={opcoes} />
+          <RichInput
+            titulo="Mensagem"
+            register={register("mensagem")}
+            errors={errors.mensagem?.message}
+            required
+          />
+          <Select
+            titulo="Idioma"
+            register={register("idioma")}
+            errors={errors.idioma?.message}
+            opcoes={opcoes}
+          />
           <Idioma />
           <BotaoSubmit>{t("botãoEnviar")}</BotaoSubmit>
         </Form>

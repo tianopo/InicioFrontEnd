@@ -20,7 +20,7 @@ export const useValidacaoTeste = () => {
     descricao: Yup.string().optional().max(5000).label("Descrição"),
     dataDeNascimento: Yup.string().required().label("Data de Nascimento"),
     mensagem: Yup.string().required().label("Mensagem"),
-    idioma: Yup.string().optional().label("Idioma")
+    idioma: Yup.string().optional().label("Idioma"),
   });
 
   const contexto = useForm<IValidacaoSchema>({
