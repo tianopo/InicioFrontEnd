@@ -9,5 +9,6 @@ export const coresX = {
   borda: "#111",
   input: "#FFF",
   desabilitado: "#A8A8A8",
+  selecionado: "#A4A4A4",
   "box-shadow": "0px 2px 4px 0px rgba(0, 0, 0, 0.15)",
 };
