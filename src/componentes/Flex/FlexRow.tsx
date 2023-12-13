@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from "react";
-import { ConteudoX } from "../Tags/ConteudoX";
+import { CX } from "../Tags/ConteudoX";
 
 interface IFlexRow extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
@@ -7,9 +7,9 @@ interface IFlexRow extends HTMLAttributes<HTMLDivElement> {
 
 export const FlexRow = ({ children, className }: IFlexRow) => {
   return (
-    <ConteudoX tipo="div" className={`flex w-full flex-row items-center ${className}`}>
+    <CX tipo="div" className={`flex w-full flex-row items-center ${className}`}>
       {" "}
       {children}
-    </ConteudoX>
+    </CX>
   );
 };

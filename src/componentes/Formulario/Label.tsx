@@ -1,5 +1,5 @@
 import { IFormUsos } from "../../interfaces/InterfaceForm";
-import { TextoX } from "../Tags/TextoX";
+import { TX } from "../Tags/TextoX";
 
 interface ILabel extends IFormUsos {
   titulo: string;
@@ -9,14 +9,14 @@ interface ILabel extends IFormUsos {
 export const Label = ({ required, titulo, palavras }: ILabel) => {
   return (
     <label htmlFor={palavras} className="block">
-      <TextoX tipo="p" className="text-16 font-normal leading-20 text-escrita">
+      <TX tipo="p" className="text-16 font-normal leading-20 text-escrita">
         {titulo}
         {required && (
-          <TextoX tipo="span" className="text-erro">
+          <TX tipo="span" className="text-erro">
             *
-          </TextoX>
+          </TX>
         )}
-      </TextoX>
+      </TX>
     </label>
   );
 };

@@ -3,7 +3,7 @@ import { Controller, useFormContext } from "react-hook-form";
 import { labelAjustada } from "src/utils/labelAjustada";
 import { IFormUsos } from "../../interfaces/InterfaceForm";
 import { FlexCol } from "../Flex/FlexCol";
-import { ConteudoX } from "../Tags/ConteudoX";
+import { CX } from "../Tags/ConteudoX";
 import { Label } from "./Label";
 import { MensagemDeErro } from "./MensagemErro";
 
@@ -30,7 +30,7 @@ export const RichInput = ({ titulo, required, disabled, errors }: IRichInput) =>
         name={palavras}
         control={control}
         render={({ field: { onChange, value } }) => (
-          <ConteudoX tipo="div" className="md:w-80">
+          <CX tipo="div" className="md:w-80">
             <JoditEditor
               value={value}
               config={{
@@ -42,7 +42,7 @@ export const RichInput = ({ titulo, required, disabled, errors }: IRichInput) =>
                 onChange(content);
               }}
             />
-          </ConteudoX>
+          </CX>
         )}
       />
       <MensagemDeErro errors={errors} />

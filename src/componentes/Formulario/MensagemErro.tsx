@@ -1,4 +1,4 @@
-import { TextoX } from "../Tags/TextoX";
+import { TX } from "../Tags/TextoX";
 
 interface IMensagemDeErro {
   errors?: string;
@@ -10,8 +10,8 @@ export const MensagemDeErro = ({ errors }: IMensagemDeErro) => {
   }
 
   return (
-    <TextoX tipo="span" className="text-12 font-normal text-erro">
+    <TX tipo="span" className="text-12 font-normal text-erro">
       {errors}
-    </TextoX>
+    </TX>
   );
 };

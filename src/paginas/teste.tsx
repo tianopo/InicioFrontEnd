@@ -10,10 +10,10 @@ import { Input } from "src/componentes/Formulario/Input";
 import { RichInput } from "src/componentes/Formulario/RichInput";
 import { Select } from "src/componentes/Formulario/Select";
 import { Textarea } from "src/componentes/Formulario/Textarea";
-import { Idioma } from "src/componentes/Linguagem/Idioma";
+import { TrocarIdioma } from "src/componentes/Linguagem/TrocarIdioma";
 import { DivisorX } from "src/componentes/Outros/DivisorX";
 import { LinkX } from "src/componentes/Outros/LinkX";
-import { TextoX } from "src/componentes/Tags/TextoX";
+import { TX } from "src/componentes/Tags/TextoX";
 import { useValidacaoTeste } from "src/hooks/validacoes/formTeste";
 
 export const Teste = () => {
@@ -37,8 +37,8 @@ export const Teste = () => {
       <LinkX rota="./home">
         <h1>olá</h1>
       </LinkX>
-      <TextoX tipo="i">tudo bem</TextoX>
-      <TextoX tipo="h6">tudo bem</TextoX>
+      <TX tipo="i">tudo bem</TX>
+      <TX tipo="h6">tudo bem</TX>
       <FormProvider {...contexto}>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Checkbox titulo="coisas" register={register("coisas")} errors={errors.coisas?.message} />
@@ -56,6 +56,7 @@ export const Teste = () => {
             errors={errors.email?.message}
             required
           />
+          <TrocarIdioma />
           <Textarea
             titulo="Descrição"
             register={register("descricao")}
@@ -78,7 +79,6 @@ export const Teste = () => {
             errors={errors.idioma?.message}
             opcoes={opcoes}
           />
-          <Idioma />
           <BotaoSubmit>{t("botãoEnviar")}</BotaoSubmit>
         </Form>
       </FormProvider>
@@ -91,3 +91,4 @@ export const Teste = () => {
 // fazer cabecalho, sidebar e footer
 // carregamento de componentes para performance como do facebook
 // documentar o projeto
+// faça com que não consiga abrir o código ou copiar
