@@ -30,7 +30,7 @@ export const TrocarIdioma = () => {
   const [idiomaSelecionado, setIdiomaSelecionado] = useState(obterIdiomaInicial());
   const [menuAberto, setMenuAberto] = useState(false);
 
-  const handleChangeIdioma = (novoIdioma: string) => {
+  const alternarIdioma = (novoIdioma: string) => {
     setIdiomaSelecionado(novoIdioma);
     i18n.changeLanguage(novoIdioma);
     setMenuAberto(false);
@@ -96,7 +96,7 @@ export const TrocarIdioma = () => {
                 hover:rounded-6
                 hover:bg-selecionado
                 "
-                onClick={() => handleChangeIdioma(opcao.valor)}
+                onClick={() => alternarIdioma(opcao.valor)}
               >
                 <img src={opcao.flag} alt={opcao.valor} className="h-8 w-8" />
               </button>
