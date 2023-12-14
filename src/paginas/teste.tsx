@@ -2,6 +2,7 @@ import { FieldValues, FormProvider } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
 import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
+import { TrocarIdioma } from "src/componentes/Botoes/TrocarIdioma";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
 import { Checkbox } from "src/componentes/Formulario/CheckBox";
 import { DatePickerInput } from "src/componentes/Formulario/DatePickerInput";
@@ -10,7 +11,6 @@ import { Input } from "src/componentes/Formulario/Input";
 import { RichInput } from "src/componentes/Formulario/RichInput";
 import { Select } from "src/componentes/Formulario/Select";
 import { Textarea } from "src/componentes/Formulario/Textarea";
-import { TrocarIdioma } from "src/componentes/Linguagem/TrocarIdioma";
 import { DivisorX } from "src/componentes/Outros/DivisorX";
 import { LinkX } from "src/componentes/Outros/LinkX";
 import { TX } from "src/componentes/Tags/TextoX";
@@ -35,7 +35,7 @@ export const Teste = () => {
       <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
       <DivisorX />
       <LinkX rota="./home">
-        <h1>olá</h1>
+        <TX tipo="h1">olá</TX>
       </LinkX>
       <TX tipo="i">tudo bem</TX>
       <TX tipo="h6">tudo bem</TX>
@@ -86,6 +86,7 @@ export const Teste = () => {
   );
 };
 // implementar temas de escuro e claro
+// implementar arquivos de export apenas para importar direto deste arquivo
 // colocar o @apply nas classes de estilização como padronização de classes iguais
 // fazer cabecalho, sidebar e footer
 // carregamento de componentes para performance como do facebook

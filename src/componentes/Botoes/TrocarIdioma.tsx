@@ -24,6 +24,7 @@ export const TrocarIdioma = () => {
     const idiomaSalvo = localStorage.get("idioma");
     return idiomaSalvo || opcoes[0].valor;
   };
+
   const localStorage = new LocalStorage();
   const { i18n } = useTranslation();
   const [idiomaSelecionado, setIdiomaSelecionado] = useState(obterIdiomaInicial());

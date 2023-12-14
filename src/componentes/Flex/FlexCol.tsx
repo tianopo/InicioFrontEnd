@@ -7,7 +7,7 @@ interface IFlexCol extends HTMLAttributes<HTMLDivElement> {
 
 export const FlexCol = ({ children, className }: IFlexCol) => {
   return (
-    <CX tipo="div" className={`flex w-full flex-col ${className}`}>
+    <CX tipo="div" className={`flex flex-col ${className}`}>
       {" "}
       {children}
     </CX>

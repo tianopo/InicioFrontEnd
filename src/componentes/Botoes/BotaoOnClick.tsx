@@ -2,7 +2,7 @@ import React, { HTMLAttributes } from "react";
 
 interface IBotaoOnClick extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const BotaoOnClick = ({ onClick, children, className }: IBotaoOnClick) => {
