@@ -40,6 +40,7 @@ export const Textarea = ({
       bg-input
       p-8
       font-low
+      font-primaria
       text-escrita
       outline-none
       duration-300

@@ -24,5 +24,5 @@ interface ITX extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const TX = ({ tipo, children, className, ...rest }: ITX) => {
-  return React.createElement(tipo, { className: `w-fit ${className}`, ...rest }, children);
+  return React.createElement(tipo, { className: `w-fit font-primaria ${className}`, ...rest }, children);
 };

@@ -30,6 +30,7 @@ export const Select = ({ disabled, required, register, errors, titulo, opcoes }:
           bg-input
           p-8
           font-low
+          font-primaria
           text-escrita
           outline-none
           duration-300

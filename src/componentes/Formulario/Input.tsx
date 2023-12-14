@@ -40,6 +40,7 @@ export const Input = ({
           border-borda
           bg-input
           p-8
+          font-primaria
           font-low
           text-escrita
           outline-none

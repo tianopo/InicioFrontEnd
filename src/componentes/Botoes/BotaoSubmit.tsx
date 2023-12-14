@@ -20,6 +20,7 @@ export const BotaoSubmit = ({ className, children, disabled, type = "submit" }: 
     ${disabled ? "opacity-20" : ""}
     hover:
     bg-primaria
+    font-primaria
     p-6
     text-20
     font-normal

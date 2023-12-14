@@ -9,6 +9,7 @@ export const TrocarTema = () => {
     { tema: "estrela", icone: <Star size="20px" weight="fill" /> },
     { tema: "nuvem", icone: <Cloud size="20px" weight="fill" /> },
   ];
+  // falta apenas inserir cores de acordo com o tema escolhido
   const localStorage = new LocalStorage();
 
   const obterTemaInicial = () => {
@@ -33,6 +34,7 @@ export const TrocarTema = () => {
         hover:rounded-6
         hover:bg-selecionado
         border-1
+        p-4
         rounded-6
       "
       onClick={() => {

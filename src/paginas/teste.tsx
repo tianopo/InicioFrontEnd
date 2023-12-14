@@ -90,6 +90,8 @@ export const Teste = () => {
 // implementar temas de escuro e claro
 // separação de inputs para implementar label, inputs e mensagem de erros em uma só
 // carregamento de componentes para performance como do facebook
+// separação de display inline e display block
+// fazer envio de solicitação de e-mail
 // implementar arquivos de export apenas para importar direto deste arquivo em ordem alfabética
 // colocar o @apply nas classes de estilização como padronização de classes iguais
 // fazer cabecalho, sidebar e footer

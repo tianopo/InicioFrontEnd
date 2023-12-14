@@ -19,6 +19,7 @@ export const BotaoOnClick = ({ onClick, children, className }: IBotaoOnClick) =>
         p-6
         text-20
         font-normal
+        font-primaria
         text-white
         shadow-box-shadow
         duration-300

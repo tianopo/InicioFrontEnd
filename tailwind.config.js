@@ -10,7 +10,9 @@ module.exports = {
       borderColor: coresX.borda,
       boxShadow: coresX['box-shadow'],
       fontFamily: {
-        roboto: ["Roboto", "sans-serif"],
+        primaria: ["Roboto", "sans-serif"],
+        secundaria: ["Roboto", "sans-serif"],
+        terciaria: ["Roboto", "sans-serif"],
       },
       fontWeight: {
         low: "400",
