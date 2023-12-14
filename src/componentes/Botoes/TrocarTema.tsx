@@ -1,8 +1,15 @@
+import { Cloud, Moon, Star, Sun } from "@phosphor-icons/react";
 import { useState } from "react";
-import { BotaoOnClick } from "./BotaoOnClick";
+import { LocalStorage } from "src/utils/localStorage";
 
 export const TrocarTema = () => {
-  const opcoes = ["claro", "escuro"];
+  const opcoes = [
+    { tema: "claro", icone: <Sun size="20px" weight="fill" /> },
+    { tema: "escuro", icone: <Moon size="20px" weight="fill" /> },
+    { tema: "estrela", icone: <Star size="20px" weight="fill" /> },
+    { tema: "nuvem", icone: <Cloud size="20px" weight="fill" /> },
+  ];
+  const localStorage = new LocalStorage();
 
   const obterTemaInicial = () => {
     const temaSalvo = localStorage.get("tema");
@@ -11,9 +18,33 @@ export const TrocarTema = () => {
 
   const [temaSelecionado, setTemaSelecionado] = useState(obterTemaInicial());
 
-  return (
-    <BotaoOnClick>
+  const alternarTema = (novoTema: string) => {
+    localStorage.set("tema", novoTema);
+    setTemaSelecionado(novoTema);
+  };
 
-    </BotaoOnClick>
+  return (
+    <>
+      <button
+        type="button"
+        className="
+        w-10
+        flex
+        justify-center
+        hover:rounded-6
+        hover:bg-selecionado
+        border-1
+        rounded-6
+      "
+        onClick={() => {
+          const proximoTemaIndex = (
+            opcoes.findIndex(
+              (opcao) => opcao.tema === temaSelecionado) + 1) % opcoes.length;
+          alternarTema(opcoes[proximoTemaIndex].tema);
+        }}
+      >
+        {opcoes.find((opcao) => opcao.tema === temaSelecionado)?.icone}
+      </button>
+    </>
   );
 };

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
 import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
 import { TrocarIdioma } from "src/componentes/Botoes/TrocarIdioma";
+import { TrocarTema } from "src/componentes/Botoes/TrocarTema";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
 import { Checkbox } from "src/componentes/Formulario/CheckBox";
 import { DatePickerInput } from "src/componentes/Formulario/DatePickerInput";
@@ -57,6 +58,7 @@ export const Teste = () => {
             required
           />
           <TrocarIdioma />
+          <TrocarTema />
           <Textarea
             titulo="Descrição"
             register={register("descricao")}
@@ -86,9 +88,11 @@ export const Teste = () => {
   );
 };
 // implementar temas de escuro e claro
-// implementar arquivos de export apenas para importar direto deste arquivo
+// separação de inputs para implementar label, inputs e mensagem de erros em uma só
+// carregamento de componentes para performance como do facebook
+// implementar arquivos de export apenas para importar direto deste arquivo em ordem alfabética
 // colocar o @apply nas classes de estilização como padronização de classes iguais
 // fazer cabecalho, sidebar e footer
-// carregamento de componentes para performance como do facebook
 // documentar o projeto
 // faça com que não consiga abrir o código ou copiar
+// alteração de porta
