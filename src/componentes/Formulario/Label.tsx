@@ -8,7 +8,7 @@ interface ILabel extends IFormUsos {
 
 export const Label = ({ required, titulo, palavras }: ILabel) => {
   return (
-    <label htmlFor={palavras} className="block">
+    <label htmlFor={palavras} className="block w-fit">
       <TX tipo="p" className="text-16 font-normal leading-20 text-escrita">
         {titulo}
         {required && (
