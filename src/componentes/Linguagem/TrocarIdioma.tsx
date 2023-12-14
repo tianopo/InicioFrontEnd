@@ -23,12 +23,11 @@ export const TrocarIdioma = () => {
   const obterIdiomaInicial = () => {
     const idiomaSalvo = localStorage.get("idioma");
     return idiomaSalvo || opcoes[0].valor;
-  }
+  };
   const localStorage = new LocalStorage();
   const { i18n } = useTranslation();
   const [idiomaSelecionado, setIdiomaSelecionado] = useState(obterIdiomaInicial());
   const [menuAberto, setMenuAberto] = useState(false);
-
 
   const handleChangeIdioma = (novoIdioma: string) => {
     setIdiomaSelecionado(novoIdioma);
@@ -43,25 +42,26 @@ export const TrocarIdioma = () => {
 
   return (
     <CX tipo="div">
-      <CX
-        tipo="div"
-        className="relative inline-block duration-300 w-auto">
+      <CX tipo="div" className="relative inline-block w-auto duration-300">
         <button
           type="button"
           onClick={() => setMenuAberto(!menuAberto)}
-          onBlur={() => setTimeout(() => { setMenuAberto(!menuAberto) }, 100)}
+          onBlur={() =>
+            setTimeout(() => {
+              setMenuAberto(false);
+            }, 100)
+          }
           className={`
             flex
-            w-16
+            items-center
+            justify-between
             rounded-6
             border-1
             border-solid
             border-borda
             bg-input
-            pr-4
             pl-6
-            items-center
-            justify-between
+            pr-4
             font-low
             text-escrita
             outline-none
@@ -73,35 +73,34 @@ export const TrocarIdioma = () => {
             alt={`Bandeira de ${opcoes.find((opcao) => opcao.valor === idiomaSelecionado)?.valor}`}
             className="h-8 w-8"
           />
-          {menuAberto ? <CaretDown size={'16'} /> : <CaretRight size={'16'} />}
+          {menuAberto ? <CaretDown size={"16"} /> : <CaretRight size={"16"} />}
         </button>
         {menuAberto && (
-          <CX
-            tipo="div"
+          <div
             className="
           absolute
-          w-full
+          w-16
           rounded-6
           bg-white
           shadow-lg
-          ">
+          "
+          >
             {opcoes.map((opcao) => (
               <button
                 key={opcao.valor}
                 className="
-                hover:bg-selecionado
-                hover:rounded-6
                 flex
-                justify-center
-                px-6
                 w-full
+                justify-center
+                hover:rounded-6
+                hover:bg-selecionado
                 "
                 onClick={() => handleChangeIdioma(opcao.valor)}
               >
                 <img src={opcao.flag} alt={opcao.valor} className="h-8 w-8" />
               </button>
             ))}
-          </CX>
+          </div>
         )}
       </CX>
     </CX>

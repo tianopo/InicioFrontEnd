@@ -85,9 +85,8 @@ export const Teste = () => {
     </FlexCol>
   );
 };
-// implementar novos idiomas
-// colocar o @apply nas classes de estilização como padronização de classes iguais e criação de classes para textoX e conteudoX
 // implementar temas de escuro e claro
+// colocar o @apply nas classes de estilização como padronização de classes iguais
 // fazer cabecalho, sidebar e footer
 // carregamento de componentes para performance como do facebook
 // documentar o projeto
