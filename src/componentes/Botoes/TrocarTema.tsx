@@ -24,10 +24,9 @@ export const TrocarTema = () => {
   };
 
   return (
-    <>
-      <button
-        type="button"
-        className="
+    <button
+      type="button"
+      className="
         w-10
         flex
         justify-center
@@ -36,15 +35,14 @@ export const TrocarTema = () => {
         border-1
         rounded-6
       "
-        onClick={() => {
-          const proximoTemaIndex = (
-            opcoes.findIndex(
-              (opcao) => opcao.tema === temaSelecionado) + 1) % opcoes.length;
-          alternarTema(opcoes[proximoTemaIndex].tema);
-        }}
-      >
-        {opcoes.find((opcao) => opcao.tema === temaSelecionado)?.icone}
-      </button>
-    </>
+      onClick={() => {
+        const proximoTemaIndex = (
+          opcoes.findIndex(
+            (opcao) => opcao.tema === temaSelecionado) + 1) % opcoes.length;
+        alternarTema(opcoes[proximoTemaIndex].tema);
+      }}
+    >
+      {opcoes.find((opcao) => opcao.tema === temaSelecionado)?.icone}
+    </button>
   );
 };
