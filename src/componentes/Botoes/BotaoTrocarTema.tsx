@@ -1,8 +1,8 @@
-import { Cloud, Moon, Star, Sun } from "@phosphor-icons/react";
-import { useState } from "react";
+// BotaoTrocarTema.tsx
+import React from "react";
 import { useTema } from "src/hooks/configuracao/useTema";
 import { ITema } from "src/interfaces/ITema";
-import { LocalStorage } from "src/utils/localStorage";
+import { Cloud, Moon, Star, Sun } from "@phosphor-icons/react";
 
 export const BotaoTrocarTema = () => {
   const opcoes: { tema: keyof ITema; icone: JSX.Element }[] = [
@@ -11,18 +11,12 @@ export const BotaoTrocarTema = () => {
     { tema: "estrela", icone: <Star size="20px" weight="fill" /> },
     { tema: "nuvem", icone: <Cloud size="20px" weight="fill" /> },
   ];
-  // falta apenas inserir cores de acordo com o tema escolhido
-  const localStorage = new LocalStorage();
 
-  const obterTemaInicial = () => localStorage.get("tema") || opcoes[0];
-
-  const [temaSelecionado, setTemaSelecionado] = useState(obterTemaInicial());
-  const { setTemaFinal } = useTema()
+  const { tema: temaSelecionado, setTema } = useTema();
 
   const alternarTema = (novoTema: keyof ITema) => {
-    localStorage.set("tema", novoTema);
-    setTemaSelecionado(novoTema);
-    setTemaFinal(novoTema)
+    localStorage.setItem("tema", novoTema);
+    setTema(novoTema);
   };
 
   return (
@@ -39,9 +33,7 @@ export const BotaoTrocarTema = () => {
         rounded-6
       "
       onClick={() => {
-        const proximoTemaIndex = (
-          opcoes.findIndex(
-            (opcao) => opcao.tema === temaSelecionado) + 1) % opcoes.length;
+        const proximoTemaIndex = (opcoes.findIndex((opcao) => opcao.tema === temaSelecionado) + 1) % opcoes.length;
         alternarTema(opcoes[proximoTemaIndex].tema);
       }}
     >

@@ -1,3 +1,4 @@
+// BotaoOnClick.tsx
 import React, { HTMLAttributes } from "react";
 import { useTema } from "src/hooks/configuracao/useTema";
 
@@ -7,13 +8,13 @@ interface IBotaoOnClick extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const BotaoOnClick = ({ onClick, children, className }: IBotaoOnClick) => {
-  const { temaFinal } = useTema()
+  const { tema } = useTema();
 
   return (
     <button
       onClick={onClick}
       className={`
-        teste-${temaFinal}
+        teste-${tema}
         ${className}
       `}
     >

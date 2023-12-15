@@ -1,13 +1,10 @@
-import { useState } from "react";
-import { LocalStorage } from "src/utils/localStorage";
+import { useContext } from "react";
+import { TemaContext } from "src/configuracao/TemaContext";
 
 export const useTema = () => {
-  const localStorage = new LocalStorage();
-  const temaInicial = localStorage.get("tema") || "claro";
-  const [temaFinal, setTemaFinal] = useState(temaInicial);
-  const tema = (classe: string) => `${classe}-${temaFinal}`
-
-  console.log(tema("bg-primaria"))
-
-  return { tema, setTemaFinal, temaFinal };
+  const context = useContext(TemaContext);
+  if (!context) {
+    throw new Error("useTema deve ser utilizado dentro de ProvedorTema");
+  }
+  return context;
 };
