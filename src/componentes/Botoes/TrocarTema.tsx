@@ -4,7 +4,7 @@ import { Itema } from "src/interfaces/ITema";
 import { LocalStorage } from "src/utils/localStorage";
 
 export const TrocarTema = () => {
-  const opcoes: { tema: keyof Itema;  icone: JSX.Element }[] = [
+  const opcoes: { tema: keyof Itema; icone: JSX.Element }[] = [
     { tema: "claro", icone: <Sun size="20px" weight="fill" /> },
     { tema: "escuro", icone: <Moon size="20px" weight="fill" /> },
     { tema: "estrela", icone: <Star size="20px" weight="fill" /> },
@@ -13,10 +13,7 @@ export const TrocarTema = () => {
   // falta apenas inserir cores de acordo com o tema escolhido
   const localStorage = new LocalStorage();
 
-  const obterTemaInicial = () => {
-    const temaSalvo = localStorage.get("tema");
-    return temaSalvo || opcoes[0];
-  };
+  const obterTemaInicial = () => localStorage.get("tema") || opcoes[0];
 
   const [temaSelecionado, setTemaSelecionado] = useState(obterTemaInicial());
 
