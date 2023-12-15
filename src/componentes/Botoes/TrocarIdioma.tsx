@@ -79,12 +79,13 @@ export const TrocarIdioma = () => {
         {menuAberto && (
           <div
             className="
-          absolute
-          w-16
-          rounded-6
-          bg-white
-          shadow-lg
-          "
+            mt-4
+            absolute
+            w-16
+            rounded-6
+            bg-white
+            shadow-lg
+            "
           >
             {opcoes.map((opcao) => (
               <button
