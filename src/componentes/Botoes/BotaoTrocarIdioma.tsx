@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { LocalStorage } from "src/utils/localStorage";
 import { CX } from "../Tags/ConteudoX";
 
-export const TrocarIdioma = () => {
+export const BotaoTrocarIdioma = () => {
   const opcoes = [
     {
       valor: "ptbr",

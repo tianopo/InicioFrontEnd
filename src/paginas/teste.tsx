@@ -2,8 +2,8 @@ import { FieldValues, FormProvider } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
 import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
-import { TrocarIdioma } from "src/componentes/Botoes/TrocarIdioma";
-import { TrocarTema } from "src/componentes/Botoes/TrocarTema";
+import { BotaoTrocarIdioma } from "src/componentes/Botoes/BotaoTrocarIdioma";
+import { BotaoTrocarTema } from "src/componentes/Botoes/BotaoTrocarTema";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
 import { Checkbox } from "src/componentes/Formulario/CheckBox";
 import { DatePickerInput } from "src/componentes/Formulario/DatePickerInput";
@@ -57,8 +57,8 @@ export const Teste = () => {
             errors={errors.email?.message}
             required
           />
-          <TrocarIdioma />
-          <TrocarTema />
+          <BotaoTrocarIdioma />
+          <BotaoTrocarTema />
           <Textarea
             titulo="Descrição"
             register={register("descricao")}

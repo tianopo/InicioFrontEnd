@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ITema } from "src/interfaces/ITema";
 import { LocalStorage } from "src/utils/localStorage";
 
-export const TrocarTema = () => {
+export const BotaoTrocarTema = () => {
   const opcoes: { tema: keyof ITema; icone: JSX.Element }[] = [
     { tema: "claro", icone: <Sun size="20px" weight="fill" /> },
     { tema: "escuro", icone: <Moon size="20px" weight="fill" /> },
