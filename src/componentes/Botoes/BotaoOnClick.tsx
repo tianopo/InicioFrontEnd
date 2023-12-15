@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from "react";
-import { LocalStorage } from "src/utils/localStorage";
+import { useTema } from "src/hooks/configuracao/useTema";
 
 interface IBotaoOnClick extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
@@ -7,13 +7,13 @@ interface IBotaoOnClick extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const BotaoOnClick = ({ onClick, children, className }: IBotaoOnClick) => {
-  const localStorage = new LocalStorage();
-  const tema = localStorage.get("tema") || "claro";
+  const { temaFinal } = useTema()
+
   return (
     <button
       onClick={onClick}
       className={`
-        teste-${tema}
+        teste-${temaFinal}
         ${className}
       `}
     >

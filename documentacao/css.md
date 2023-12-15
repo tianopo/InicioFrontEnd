@@ -6,3 +6,5 @@ o terceiro nome é o tema que será usado: primario, secundario, terciario
 exemplo de como ficaria:
 input_fundo-primario
 navbar_borda-terciario
+
+e na classeName fica: `input_fundo-${tema}`
