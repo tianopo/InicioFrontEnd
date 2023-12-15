@@ -1,0 +1,55 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@tailwind",
+      "description": "Use a diretiva '@tailwind' para inserir os estilos 'base', 'components', 'utilities' e 'screens' do Tailwind no seu CSS.",
+      "references": [
+        {
+          "name": "Documentação Tailwind",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#tailwind"
+        }
+      ]
+    },
+    {
+      "name": "@apply",
+      "description": "A diretiva '@apply' é usada para incorporar qualquer classe utilitária existente no seu próprio CSS personalizado. Isso é útil quando você identifica um padrão comum de utilitários no seu HTML que gostaria de extrair para um novo componente.",
+      "references": [
+        {
+          "name": "Documentação Tailwind",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#apply"
+        }
+      ]
+    },
+    {
+      "name": "@responsive",
+      "description": "Você pode gerar variantes responsivas para suas próprias classes ao envolver suas definições na diretiva '@responsive':\ncss\n'@responsive {\n .alert {\n background-color: #E53E3E;\n }\n}\n\n'",
+      "references": [
+        {
+          "name": "Documentação Tailwind",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#responsive"
+        }
+      ]
+    },
+    {
+      "name": "@screen",
+      "description": "A diretiva '@screen' permite que você crie consultas de mídia que referenciam seus pontos de interrupção pelo nome em vez de duplicar seus valores em seu próprio CSS:\n'css\n@screen sm {\n /* ... */\n}\n'\n…é transformada para:\n'css\n@media (min-width: 640px) {\n /* ... */\n}\n'\n",
+      "references": [
+        {
+          "name": "Documentação Tailwind",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#screen"
+        }
+      ]
+    },
+    {
+      "name": "@variants",
+      "description": "Gere 'hover', 'focus', 'active' e outras variantes de suas próprias utilidades ao envolver suas definições na diretiva '@variants':\n'css\n@variants hover, focus {\n .btn-brand {\n background-color: #3182CE;\n }\n}\n'",
+      "references": [
+        {
+          "name": "Documentação Tailwind",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#variants"
+        }
+      ]
+    }
+  ]
+}
