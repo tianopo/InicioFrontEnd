@@ -1,6 +1,11 @@
 export const coresX = {
   
-  primaria: "#A2C",
+  primaria: {
+    claro: "#A2C",
+    escuro: "#829eab",
+    estrela: "#FFD700",
+    nuvem: "#87CEEB",
+  },
   secundaria: "#FFF",
   terciaria: "#FFF",
   escrita: "#333",

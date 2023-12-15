@@ -1,10 +1,10 @@
 import { Cloud, Moon, Star, Sun } from "@phosphor-icons/react";
 import { useState } from "react";
-import { Itema } from "src/interfaces/ITema";
+import { ITema } from "src/interfaces/ITema";
 import { LocalStorage } from "src/utils/localStorage";
 
 export const TrocarTema = () => {
-  const opcoes: { tema: keyof Itema; icone: JSX.Element }[] = [
+  const opcoes: { tema: keyof ITema; icone: JSX.Element }[] = [
     { tema: "claro", icone: <Sun size="20px" weight="fill" /> },
     { tema: "escuro", icone: <Moon size="20px" weight="fill" /> },
     { tema: "estrela", icone: <Star size="20px" weight="fill" /> },
@@ -17,7 +17,7 @@ export const TrocarTema = () => {
 
   const [temaSelecionado, setTemaSelecionado] = useState(obterTemaInicial());
 
-  const alternarTema = (novoTema: string) => {
+  const alternarTema = (novoTema: keyof ITema) => {
     localStorage.set("tema", novoTema);
     setTemaSelecionado(novoTema);
   };

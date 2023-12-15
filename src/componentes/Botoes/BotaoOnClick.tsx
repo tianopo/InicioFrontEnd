@@ -1,4 +1,5 @@
 import React, { HTMLAttributes } from "react";
+import { LocalStorage } from "src/utils/localStorage";
 
 interface IBotaoOnClick extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
@@ -6,27 +7,13 @@ interface IBotaoOnClick extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const BotaoOnClick = ({ onClick, children, className }: IBotaoOnClick) => {
+  const localStorage = new LocalStorage();
+  const tema = localStorage.get("tema") || "claro";
   return (
     <button
       onClick={onClick}
       className={`
-        w-full
-        rounded-4
-        border-1
-        border-solid
-        border-borda
-        bg-primaria
-        p-6
-        text-20
-        font-normal
-        font-primaria
-        text-white
-        shadow-box-shadow
-        duration-300
-        ease-in-out
-        hover:opacity-80
-        active:translate-y-1
-        md:w-28
+        teste-${tema}
         ${className}
       `}
     >

@@ -1,4 +1,4 @@
-export interface Itema {
+export interface ITema {
   claro: string
   escuro: string
   estrela: string

@@ -95,6 +95,7 @@ export const Teste = () => {
 // fazer envio de solicitação de e-mail
 // implementar arquivos de export apenas para importar direto deste arquivo em ordem alfabética
 // colocar o @apply nas classes de estilização como padronização de classes iguais
+// criar envio de e-mail
 // fazer cabecalho, sidebar e footer
 // documentar o projeto
 // faça com que não consiga abrir o código ou copiar
