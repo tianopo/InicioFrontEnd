@@ -1,4 +1,4 @@
-import { IFormUsos } from "../../interfaces/InterfaceForm";
+import { IFormUsos } from "../../interfaces/IFormUsos";
 import { TX } from "../Tags/TextoX";
 
 interface ILabel extends IFormUsos {

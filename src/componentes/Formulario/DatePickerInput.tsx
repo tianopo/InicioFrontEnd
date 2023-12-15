@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Controller, useFormContext } from "react-hook-form";
 import { labelAjustada } from "src/utils/labelAjustada";
-import { IFormUsos } from "../../interfaces/InterfaceForm";
+import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
 import { Label } from "./Label";
 import { MensagemDeErro } from "./MensagemErro";

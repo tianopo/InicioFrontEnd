@@ -1,7 +1,7 @@
 import JoditEditor from "jodit-react";
 import { Controller, useFormContext } from "react-hook-form";
 import { labelAjustada } from "src/utils/labelAjustada";
-import { IFormUsos } from "../../interfaces/InterfaceForm";
+import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
 import { CX } from "../Tags/ConteudoX";
 import { Label } from "./Label";

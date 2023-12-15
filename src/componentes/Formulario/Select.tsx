@@ -1,5 +1,5 @@
 import { labelAjustada } from "src/utils/labelAjustada";
-import { IFormUsos } from "../../interfaces/InterfaceForm";
+import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
 import { Label } from "./Label";
 import { MensagemDeErro } from "./MensagemErro";
