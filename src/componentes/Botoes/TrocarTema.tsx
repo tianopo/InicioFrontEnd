@@ -1,9 +1,10 @@
 import { Cloud, Moon, Star, Sun } from "@phosphor-icons/react";
 import { useState } from "react";
+import { Itema } from "src/interfaces/ITema";
 import { LocalStorage } from "src/utils/localStorage";
 
 export const TrocarTema = () => {
-  const opcoes = [
+  const opcoes: { tema: keyof Itema;  icone: JSX.Element }[] = [
     { tema: "claro", icone: <Sun size="20px" weight="fill" /> },
     { tema: "escuro", icone: <Moon size="20px" weight="fill" /> },
     { tema: "estrela", icone: <Star size="20px" weight="fill" /> },
