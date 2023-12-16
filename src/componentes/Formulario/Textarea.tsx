@@ -1,3 +1,4 @@
+import { useTema } from "src/hooks/configuracao/useTema";
 import { labelAjustada } from "src/utils/labelAjustada";
 import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
@@ -18,6 +19,7 @@ export const Textarea = ({
   errors,
 }: ITextarea) => {
   const palavras = labelAjustada(titulo);
+  const { tema } = useTema();
 
   return (
     <FlexCol className="gap-6 p-10">
@@ -32,22 +34,19 @@ export const Textarea = ({
         {...register}
         className={`
         w-full
-      resize-none
-      rounded-6
-      border-1
-      border-solid
-      border-borda
-      bg-input
-      p-8
-      font-low
-      font-primaria
-      text-escrita
-      outline-none
-      duration-300
-      placeholder:text-placeholder
-      md:w-80
-      ${disabled ? "bg-desabilitado" : ""}
-      `}
+        input_padrao-${tema}
+        rounded-6
+        border-1
+        border-solid
+        p-8
+        font-low
+        font-primaria
+        outline-none
+        duration-300
+        md:w-80
+        resize-none
+        ${disabled ? "opacity-80" : ""}
+        `}
       />
       <MensagemDeErro errors={errors} />
     </FlexCol>

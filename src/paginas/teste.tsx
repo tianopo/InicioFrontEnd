@@ -9,7 +9,6 @@ import { Checkbox } from "src/componentes/Formulario/CheckBox";
 import { DatePickerInput } from "src/componentes/Formulario/DatePickerInput";
 import { Form } from "src/componentes/Formulario/Form";
 import { Input } from "src/componentes/Formulario/Input";
-import { RichInput } from "src/componentes/Formulario/RichInput";
 import { Select } from "src/componentes/Formulario/Select";
 import { Textarea } from "src/componentes/Formulario/Textarea";
 import { DivisorX } from "src/componentes/Outros/DivisorX";
@@ -69,7 +68,7 @@ export const Teste = () => {
             errors={errors.dataDeNascimento?.message}
             required
           />
-          <RichInput
+          <Textarea
             titulo="Mensagem"
             register={register("mensagem")}
             errors={errors.mensagem?.message}

@@ -2,6 +2,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { Controller, useFormContext } from "react-hook-form";
+import { useTema } from "src/hooks/configuracao/useTema";
 import { labelAjustada } from "src/utils/labelAjustada";
 import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
@@ -21,7 +22,7 @@ export const DatePickerInput = ({
   errors,
 }: IDatePickerInput) => {
   const palavras = labelAjustada(titulo);
-
+  const { tema } = useTema();
   const { control } = useFormContext();
 
   return (
@@ -38,20 +39,18 @@ export const DatePickerInput = ({
             placeholderText={placeholder}
             onChange={(date: Date) => onChange(date)}
             className={`
-          w-full
-          rounded-6
-          border-1
-          border-solid
-          border-borda
-          bg-input
-          p-8
-          font-low
-          text-escrita
-          outline-none
-          duration-300
-          placeholder:text-placeholder
-          md:w-80
-          ${disabled ? "bg-desabilitado" : ""}
+            w-full
+            input_padrao-${tema}
+            rounded-6
+            border-1
+            border-solid
+            p-8
+            font-low
+            font-primaria
+            outline-none
+            duration-300
+            md:w-80
+            ${disabled ? "opacity-80" : ""}
           `}
           />
         )}

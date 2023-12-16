@@ -1,3 +1,4 @@
+import { useTema } from "src/hooks/configuracao/useTema";
 import { labelAjustada } from "src/utils/labelAjustada";
 import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
@@ -20,6 +21,7 @@ export const Input = ({
   tipo = "text",
 }: IInput) => {
   const palavras = labelAjustada(titulo);
+  const { tema } = useTema();
 
   return (
     <FlexCol className="gap-6 p-10">
@@ -34,21 +36,17 @@ export const Input = ({
         autoComplete="complete"
         className={`
           w-full
+          input_padrao-${tema}
           rounded-6
           border-1
           border-solid
-          border-borda
-          bg-input
           p-8
-          font-primaria
           font-low
-          text-escrita
+          font-primaria
           outline-none
           duration-300
-          placeholder:text-placeholder
-          focus:border-primaria
           md:w-80
-          ${disabled ? "bg-desabilitado" : ""}
+          ${disabled ? "opacity-80" : ""}
           `}
       />
       <MensagemDeErro errors={errors} />

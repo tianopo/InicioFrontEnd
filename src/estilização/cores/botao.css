@@ -32,7 +32,7 @@
   @apply border-borda-nuvem text-icone-nuvem hover:bg-selecionado-nuvem;
 }
 
-/* BotaoTrocarTema - botão */
+/* BotaoTrocarTema */
 .botao_trocar_tema-claro {
   @apply hover:bg-hover-claro border-borda-claro;
 }
