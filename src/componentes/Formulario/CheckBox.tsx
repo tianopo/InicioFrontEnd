@@ -21,7 +21,10 @@ export const Checkbox = ({ disabled, required, errors, titulo, register }: IChec
           readOnly
           disabled={disabled}
           {...register}
-          className={`form-checkbox outline-none focus:border-borda focus:outline-none focus:ring`}
+          className={`
+          outline-none
+          focus:outline-none
+          `}
         />
         <Label titulo={titulo} palavras={palavras} required={required} />
       </FlexRow>
