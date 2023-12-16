@@ -6,13 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: coresX,
-      background: coresX,
-      borderColor: coresX.borda,
       boxShadow: coresX['box-shadow'],
       fontFamily: {
-        primaria: ["Roboto", "sans-serif"],
-        secundaria: ["Roboto", "sans-serif"],
-        terciaria: ["Roboto", "sans-serif"],
+        primaria: ["Roboto"],
+        secundaria: ["Roboto"],
+        terciaria: ["Roboto"],
       },
       fontWeight: {
         low: "400",

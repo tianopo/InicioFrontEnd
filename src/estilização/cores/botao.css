@@ -1,0 +1,50 @@
+/* BotaoOnClick e BotaoSubmit */
+.botao_padrao-claro {
+  @apply border-borda-claro bg-primaria-claro text-black shadow-box-shadow;
+}
+
+.botao_padrao-escuro {
+  @apply border-borda-escuro bg-primaria-escuro text-black shadow-box-shadow;
+}
+
+.botao_padrao-estrela {
+  @apply border-borda-estrela bg-primaria-estrela text-black shadow-box-shadow;
+}
+
+.botao_padrao-nuvem {
+  @apply border-borda-nuvem bg-primaria-nuvem text-black shadow-box-shadow;
+}
+
+/* BotaoTrocarIdioma */
+.botao_trocar_idioma-claro {
+  @apply border-borda-claro text-icone-claro hover:bg-selecionado-claro;
+}
+
+.botao_trocar_idioma-escuro {
+  @apply border-borda-escuro text-icone-escuro hover:bg-selecionado-escuro;
+}
+
+.botao_trocar_idioma-estrela {
+  @apply border-borda-estrela text-icone-estrela hover:bg-selecionado-estrela;
+}
+
+.botao_trocar_idioma-nuvem {
+  @apply border-borda-nuvem text-icone-nuvem hover:bg-selecionado-nuvem;
+}
+
+/* BotaoTrocarTema - botão */
+.botao_trocar_tema-claro {
+  @apply hover:bg-hover-claro border-borda-claro;
+}
+
+.botao_trocar_tema-escuro {
+  @apply hover:bg-hover-escuro border-borda-escuro;
+}
+
+.botao_trocar_tema-estrela {
+  @apply hover:bg-hover-estrela border-borda-estrela;
+}
+
+.botao_trocar_tema-nuvem {
+  @apply hover:bg-hover-nuvem border-borda-nuvem;
+}

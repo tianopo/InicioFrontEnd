@@ -32,7 +32,7 @@ export const Teste = () => {
   const opcoes = ["Português", "Inglês", "Espanhol", "Francês"];
 
   return (
-    <FlexCol className={"bg-gray-400"}>
+    <FlexCol>
       <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
       <DivisorX />
       <LinkX rota="./home">

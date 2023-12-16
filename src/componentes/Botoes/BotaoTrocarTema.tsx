@@ -1,18 +1,17 @@
 // BotaoTrocarTema.tsx
-import React from "react";
+import { Cloud, Moon, Star, Sun } from "@phosphor-icons/react";
 import { useTema } from "src/hooks/configuracao/useTema";
 import { ITema } from "src/interfaces/ITema";
-import { Cloud, Moon, Star, Sun } from "@phosphor-icons/react";
 
 export const BotaoTrocarTema = () => {
+  const { tema: temaSelecionado, setTema } = useTema();
   const opcoes: { tema: keyof ITema; icone: JSX.Element }[] = [
-    { tema: "claro", icone: <Sun size="20px" weight="fill" /> },
-    { tema: "escuro", icone: <Moon size="20px" weight="fill" /> },
-    { tema: "estrela", icone: <Star size="20px" weight="fill" /> },
-    { tema: "nuvem", icone: <Cloud size="20px" weight="fill" /> },
+    { tema: "claro", icone: <Sun size="20px" weight="fill" className="text-icone-claro" /> },
+    { tema: "escuro", icone: <Moon size="20px" weight="fill" className="text-icone-escuro" /> },
+    { tema: "estrela", icone: <Star size="20px" weight="fill" className="text-icone-estrela" /> },
+    { tema: "nuvem", icone: <Cloud size="20px" weight="fill" className="text-icone-nuvem" /> },
   ];
 
-  const { tema: temaSelecionado, setTema } = useTema();
 
   const alternarTema = (novoTema: keyof ITema) => {
     localStorage.setItem("tema", novoTema);
@@ -22,18 +21,18 @@ export const BotaoTrocarTema = () => {
   return (
     <button
       type="button"
-      className="
-        w-10
+      className={`
         flex
+        w-10
         justify-center
-        hover:rounded-6
-        hover:bg-selecionado
+        rounded-6
         border-1
         p-4
-        rounded-6
-      "
+        botao_trocar_tema-${temaSelecionado}
+      `}
       onClick={() => {
-        const proximoTemaIndex = (opcoes.findIndex((opcao) => opcao.tema === temaSelecionado) + 1) % opcoes.length;
+        const proximoTemaIndex =
+          (opcoes.findIndex((opcao) => opcao.tema === temaSelecionado) + 1) % opcoes.length;
         alternarTema(opcoes[proximoTemaIndex].tema);
       }}
     >

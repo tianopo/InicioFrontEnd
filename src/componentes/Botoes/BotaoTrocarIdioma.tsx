@@ -1,6 +1,7 @@
 import { CaretDown, CaretRight } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useTema } from "src/hooks/configuracao/useTema";
 import { LocalStorage } from "src/utils/localStorage";
 import { CX } from "../Tags/ConteudoX";
 
@@ -26,6 +27,7 @@ export const BotaoTrocarIdioma = () => {
   };
 
   const localStorage = new LocalStorage();
+  const { tema } = useTema();
   const { i18n } = useTranslation();
   const [idiomaSelecionado, setIdiomaSelecionado] = useState(obterIdiomaInicial());
   const [menuAberto, setMenuAberto] = useState(false);
@@ -53,20 +55,16 @@ export const BotaoTrocarIdioma = () => {
             }, 100)
           }
           className={`
+            botao_trocar_idioma-${tema}
             flex
             items-center
             justify-between
             rounded-6
             border-1
             border-solid
-            border-borda
-            bg-input
             pl-6
             pr-4
-            font-low
-            text-escrita
             outline-none
-            placeholder:text-placeholder
           `}
         >
           <img
@@ -79,8 +77,8 @@ export const BotaoTrocarIdioma = () => {
         {menuAberto && (
           <div
             className="
-            mt-4
             absolute
+            mt-4
             w-16
             rounded-6
             bg-white
@@ -90,13 +88,13 @@ export const BotaoTrocarIdioma = () => {
             {opcoes.map((opcao) => (
               <button
                 key={opcao.valor}
-                className="
+                className={`
                 flex
                 w-full
                 justify-center
                 hover:rounded-6
-                hover:bg-selecionado
-                "
+                botao_trocar_idioma-${tema}
+                `}
                 onClick={() => alternarIdioma(opcao.valor)}
               >
                 <img src={opcao.flag} alt={opcao.valor} className="h-8 w-8" />
