@@ -59,12 +59,12 @@ export const Teste = () => {
             required
           />
           <BotaoTrocarIdioma />
-          <BotaoTrocarTema />
           <Textarea
             titulo="Descrição"
             register={register("descricao")}
             errors={errors.descricao?.message}
           />
+          <BotaoTrocarTema />
           <DatePickerInput
             titulo="Data de nascimento"
             errors={errors.dataDeNascimento?.message}

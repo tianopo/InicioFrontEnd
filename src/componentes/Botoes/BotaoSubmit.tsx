@@ -1,6 +1,8 @@
 // BotaoSubmit.tsx
 import React, { HTMLAttributes } from "react";
 import { useTema } from "src/hooks/configuracao/useTema";
+import { useLoading } from "src/hooks/useLoading";
+import { SkeletonX } from "../Outros/SkeletonX";
 
 interface IBotaoSubmit extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
@@ -9,16 +11,23 @@ interface IBotaoSubmit extends HTMLAttributes<HTMLDivElement> {
 
 export const BotaoSubmit = ({ className, children, disabled }: IBotaoSubmit) => {
   const { tema } = useTema();
-  console.log(`botao_padrao-${tema}`);
+  const { loading } = useLoading();
+
   return (
-    <button
-      disabled={disabled}
-      className={`
-      botao-padrao
-      botao_padrao-${tema}
-      ${className}`}
-    >
-      {children}
-    </button>
+    <>
+      {loading ? (
+        <SkeletonX className="botao" />
+      ) : (
+        <button
+          disabled={disabled}
+          className={`
+          botao
+          botao-${tema}
+          ${className}`}
+          >
+          {children}
+        </button>
+      )}
+    </>
   );
 };

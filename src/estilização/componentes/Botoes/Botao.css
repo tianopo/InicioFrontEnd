@@ -1,20 +1,20 @@
-.botao-padrao {
+.botao {
   @apply w-full rounded-4 border-1 border-solid p-6 font-primaria text-20 font-normal duration-300 ease-in-out hover:opacity-80 active:translate-y-1 md:w-28;
 }
 
 /* Cor */
-.botao_padrao-claro {
+.botao-claro {
   @apply border-borda-claro bg-primaria-claro text-black shadow-box-shadow;
 }
 
-.botao_padrao-escuro {
+.botao-escuro {
   @apply border-borda-escuro bg-primaria-escuro text-black shadow-box-shadow;
 }
 
-.botao_padrao-estrela {
+.botao-estrela {
   @apply border-borda-estrela bg-primaria-estrela text-black shadow-box-shadow;
 }
 
-.botao_padrao-nuvem {
+.botao-nuvem {
   @apply border-borda-nuvem bg-primaria-nuvem text-black shadow-box-shadow;
 }
