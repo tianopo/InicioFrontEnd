@@ -9,4 +9,19 @@
 @import "personalizacao/componentes/Botoes/Botao.css";
 @import "personalizacao/componentes/Botoes/BotaoTrocarIdioma.css";
 @import "personalizacao/componentes/Botoes/BotaoTrocarTema.css";
+
+@import "personalizacao/componentes/Flex/Flex.css";
+
+@import "personalizacao/componentes/Formulario/Checkbox.css";
+@import "personalizacao/componentes/Formulario/Form.css";
+@import "personalizacao/componentes/Formulario/Input.css";
+@import "personalizacao/componentes/Formulario/Label.css";
+@import "personalizacao/componentes/Formulario/MensagemErro.css";
+
+@import "personalizacao/componentes/Outros/Divisor.css";
+@import "personalizacao/componentes/Outros/Link.css";
+
+@import "personalizacao/componentes/Tags/Conteudo.css";
+@import "personalizacao/componentes/Tags/Texto.css";
+
 /* Importe personalizações de páginas */

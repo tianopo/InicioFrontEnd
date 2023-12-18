@@ -5,7 +5,7 @@ import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
 import { BotaoTrocarIdioma } from "src/componentes/Botoes/BotaoTrocarIdioma";
 import { BotaoTrocarTema } from "src/componentes/Botoes/BotaoTrocarTema";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
-import { Checkbox } from "src/componentes/Formulario/CheckBox";
+import { Checkbox } from "src/componentes/Formulario/Checkbox";
 import { DatePickerInput } from "src/componentes/Formulario/DatePickerInput";
 import { Form } from "src/componentes/Formulario/Form";
 import { Input } from "src/componentes/Formulario/Input";
