@@ -28,7 +28,6 @@ export const Textarea = ({
         id={palavras}
         disabled={disabled}
         readOnly={disabled}
-        required={required}
         placeholder={placeholder}
         rows={4}
         {...register}

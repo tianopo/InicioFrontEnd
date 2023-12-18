@@ -1,3 +1,4 @@
+import { useTema } from "src/hooks/configuracao/useTema";
 import { IFormUsos } from "../../interfaces/IFormUsos";
 import { TX } from "../Tags/TextoX";
 
@@ -7,12 +8,14 @@ interface ILabel extends IFormUsos {
 }
 
 export const Label = ({ required, titulo, palavras }: ILabel) => {
+  const { tema } = useTema();
+
   return (
     <label htmlFor={palavras} className="block w-fit">
-      <TX tipo="p" className="text-16 font-normal leading-20 text-escrita">
+      <TX tipo="p" className={`text-16 font-normal leading-20 label-${tema}`}>
         {titulo}
         {required && (
-          <TX tipo="span" className="text-erro">
+          <TX tipo="span" className={`label_required-${tema}`}>
             *
           </TX>
         )}
