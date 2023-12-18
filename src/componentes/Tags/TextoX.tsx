@@ -1,4 +1,5 @@
 import React, { HTMLAttributes } from "react";
+import { useTema } from "src/hooks/configuracao/useTema";
 
 interface ITX extends HTMLAttributes<HTMLDivElement> {
   tipo:
@@ -24,5 +25,6 @@ interface ITX extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const TX = ({ tipo, children, className, ...rest }: ITX) => {
-  return React.createElement(tipo, { className: `w-fit font-primaria ${className}`, ...rest }, children);
+  const { tema } = useTema();
+  return React.createElement(tipo, { className: `w-fit texto-${tema} ${className}`, ...rest }, children);
 };

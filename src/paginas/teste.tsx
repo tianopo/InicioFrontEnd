@@ -14,11 +14,13 @@ import { Textarea } from "src/componentes/Formulario/Textarea";
 import { DivisorX } from "src/componentes/Outros/DivisorX";
 import { LinkX } from "src/componentes/Outros/LinkX";
 import { TX } from "src/componentes/Tags/TextoX";
+import { useTema } from "src/hooks/configuracao/useTema";
 import { useValidacaoTeste } from "src/hooks/validacoes/formTeste";
 
 export const Teste = () => {
   const { contexto } = useValidacaoTeste();
   const { t } = useTranslation();
+  const { tema } = useTema();
   const {
     formState: { errors },
     register,
@@ -31,7 +33,7 @@ export const Teste = () => {
   const opcoes = ["Português", "Inglês", "Espanhol", "Francês"];
 
   return (
-    <FlexCol>
+    <FlexCol className={`home-${tema}`}>
       <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
       <DivisorX />
       <LinkX rota="./home">

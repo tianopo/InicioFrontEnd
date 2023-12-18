@@ -1,0 +1,15 @@
+.home-claro {
+  @apply bg-fundo-claro;
+}
+
+.home-escuro {
+  @apply bg-fundo-escuro;
+}
+
+.home-estrela {
+  @apply bg-fundo-estrela;
+}
+
+.home-nuvem {
+  @apply bg-fundo-nuvem;
+}
