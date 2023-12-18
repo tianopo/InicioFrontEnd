@@ -1,9 +1,13 @@
+/* Importe cores de componentes */
 @import "cores/componentes/Botao.css";
 @import "cores/componentes/Formulario.css";
 @import "cores/componentes/Outros.css";
 @import "cores/componentes/Tags.css";
-
+/* Importe cores de páginas */
 @import "cores/paginas/Home.css";
 
+/* Importe personalizações de componentes */
 @import "personalizacao/componentes/Botoes/Botao.css";
 @import "personalizacao/componentes/Botoes/BotaoTrocarIdioma.css";
+@import "personalizacao/componentes/Botoes/BotaoTrocarTema.css";
+/* Importe personalizações de páginas */
