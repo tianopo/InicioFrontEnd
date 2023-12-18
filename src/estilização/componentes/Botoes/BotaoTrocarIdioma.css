@@ -22,7 +22,7 @@
   @apply flex w-full justify-center hover:rounded-6;
 }
 
-/* BotaoTrocarIdioma - cor */
+/* Cor */
 .botao_trocar_idioma-claro {
   @apply border-borda-claro text-icone-claro hover:bg-selecionado-claro;
 }

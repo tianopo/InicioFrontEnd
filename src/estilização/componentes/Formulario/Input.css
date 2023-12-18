@@ -1,0 +1,28 @@
+.input {
+  @apply w-full rounded-6 border-1 border-solid p-8 font-primaria font-low outline-none duration-300 md:w-80;
+}
+
+/* Cor */
+.input-claro {
+  @apply border-borda-claro bg-input-claro text-escrita-claro placeholder:text-placeholder-claro focus:border-primaria-claro;
+}
+
+.input-escuro {
+  @apply border-borda-escuro bg-input-escuro text-escrita-escuro placeholder:text-placeholder-escuro focus:border-primaria-escuro;
+}
+
+.input-estrela {
+  @apply border-borda-estrela bg-input-estrela text-escrita-estrela placeholder:text-placeholder-estrela focus:border-primaria-estrela;
+}
+
+.input-nuvem {
+  @apply border-borda-nuvem bg-input-nuvem text-escrita-nuvem placeholder:text-placeholder-nuvem focus:border-primaria-nuvem;
+}
+
+.input_container {
+  @apply gap-6 p-10;
+}
+
+.input_textarea {
+  @apply resize-none;
+}

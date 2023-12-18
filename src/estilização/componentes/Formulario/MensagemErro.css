@@ -1,0 +1,20 @@
+.mensagem_erro {
+  @apply text-12 font-normal;
+}
+
+/* Cor */
+.label_required-claro {
+  @apply text-erro-claro;
+}
+
+.label_required-escuro {
+  @apply text-erro-escuro;
+}
+
+.label_required-estrela {
+  @apply text-erro-estrela;
+}
+
+.label_required-nuvem {
+  @apply text-erro-nuvem;
+}

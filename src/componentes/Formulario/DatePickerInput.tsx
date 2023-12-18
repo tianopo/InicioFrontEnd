@@ -39,17 +39,8 @@ export const DatePickerInput = ({
             placeholderText={placeholder}
             onChange={(date: Date) => onChange(date)}
             className={`
-            w-full
-            input_padrao-${tema}
-            rounded-6
-            border-1
-            border-solid
-            p-8
-            font-primaria
-            font-low
-            outline-none
-            duration-300
-            md:w-80
+            input
+            input-${tema}
             ${disabled ? "opacity-80" : ""}
           `}
           />

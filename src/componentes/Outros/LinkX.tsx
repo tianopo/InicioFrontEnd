@@ -14,7 +14,7 @@ export const LinkX = ({ rota, children, target }: ILinkX) => {
     <Link
       to={rota!}
       target={target}
-      className={`w-fit font-normal transition duration-300 ease-in-out hover:opacity-80 link-${tema}`}
+      className={`link link-${tema}`}
     >
       {children}
     </Link>

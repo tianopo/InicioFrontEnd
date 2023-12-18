@@ -1,27 +1,21 @@
-/* Importe cores de componentes */
-@import "cores/componentes/Formulario.css";
-@import "cores/componentes/Outros.css";
-@import "cores/componentes/Tags.css";
-/* Importe cores de páginas */
-@import "cores/paginas/Home.css";
+/* # Importe de componentes */
+@import "componentes/Botoes/Botao.css";
+@import "componentes/Botoes/BotaoTrocarIdioma.css";
+@import "componentes/Botoes/BotaoTrocarTema.css";
 
-/* Importe personalizações de componentes */
-@import "personalizacao/componentes/Botoes/Botao.css";
-@import "personalizacao/componentes/Botoes/BotaoTrocarIdioma.css";
-@import "personalizacao/componentes/Botoes/BotaoTrocarTema.css";
+@import "componentes/Flex/Flex.css";
 
-@import "personalizacao/componentes/Flex/Flex.css";
+@import "componentes/Formulario/Checkbox.css";
+@import "componentes/Formulario/Form.css";
+@import "componentes/Formulario/Input.css";
+@import "componentes/Formulario/Label.css";
+@import "componentes/Formulario/MensagemErro.css";
 
-@import "personalizacao/componentes/Formulario/Checkbox.css";
-@import "personalizacao/componentes/Formulario/Form.css";
-@import "personalizacao/componentes/Formulario/Input.css";
-@import "personalizacao/componentes/Formulario/Label.css";
-@import "personalizacao/componentes/Formulario/MensagemErro.css";
+@import "componentes/Outros/Divisor.css";
+@import "componentes/Outros/Link.css";
 
-@import "personalizacao/componentes/Outros/Divisor.css";
-@import "personalizacao/componentes/Outros/Link.css";
+@import "componentes/Tags/Conteudo.css";
+@import "componentes/Tags/Texto.css";
 
-@import "personalizacao/componentes/Tags/Conteudo.css";
-@import "personalizacao/componentes/Tags/Texto.css";
-
-/* Importe personalizações de páginas */
+/* # Importe de páginas */
+@import "paginas/Home.css";

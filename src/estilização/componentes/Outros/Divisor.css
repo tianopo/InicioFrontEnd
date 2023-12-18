@@ -1,0 +1,20 @@
+.divisor {
+  @apply w-full border-1;
+}
+
+/* Cor */
+.divisor-claro {
+  @apply border-borda-claro;
+}
+
+.divisor-escuro {
+  @apply border-borda-escuro;
+}
+
+.divisor-estrela {
+  @apply border-borda-estrela;
+}
+
+.divisor-nuvem {
+  @apply border-borda-nuvem;
+}

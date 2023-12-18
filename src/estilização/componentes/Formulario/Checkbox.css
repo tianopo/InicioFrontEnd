@@ -1,0 +1,7 @@
+.checkbox_flex_row {
+  @apply gap-4 p-8;
+}
+
+.checkbox_input {
+  @apply outline-none focus:outline-none;
+}

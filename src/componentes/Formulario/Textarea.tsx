@@ -22,7 +22,7 @@ export const Textarea = ({
   const { tema } = useTema();
 
   return (
-    <FlexCol className="gap-6 p-10">
+    <FlexCol className="input_container">
       <Label titulo={titulo} palavras={palavras} required={required} />
       <textarea
         id={palavras}
@@ -32,18 +32,9 @@ export const Textarea = ({
         rows={4}
         {...register}
         className={`
-        w-full
-        input_padrao-${tema}
-        resize-none
-        rounded-6
-        border-1
-        border-solid
-        p-8
-        font-primaria
-        font-low
-        outline-none
-        duration-300
-        md:w-80
+        input-${tema}
+        input_textarea
+        input
         ${disabled ? "opacity-80" : ""}
         `}
       />

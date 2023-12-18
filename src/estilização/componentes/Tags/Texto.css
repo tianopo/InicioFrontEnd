@@ -1,4 +1,8 @@
-/* TextoX */
+.texto {
+  @apply w-fit;
+}
+
+/* Cor */
 .texto-claro {
   @apply text-escrita-claro;
 }

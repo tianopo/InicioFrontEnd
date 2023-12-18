@@ -90,7 +90,6 @@ export const Teste = () => {
 };
 // Botão de troca de tema inicial aparece vazio
 // ver bug de trocar idioma
-// separação de inputs para implementar label, inputs e mensagem de erros em uma só
 // carregamento de componentes para performance como do facebook
 // separação de display inline e display block
 // fazer envio de solicitação de e-mail

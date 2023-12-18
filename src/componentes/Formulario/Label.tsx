@@ -12,7 +12,7 @@ export const Label = ({ required, titulo, palavras }: ILabel) => {
 
   return (
     <label htmlFor={palavras} className="block w-fit">
-      <TX tipo="p" className={`text-16 font-normal leading-20 label-${tema}`}>
+      <TX tipo="p" className={`label label-${tema}`}>
         {titulo}
         {required && (
           <TX tipo="span" className={`label_required-${tema}`}>

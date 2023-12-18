@@ -1,0 +1,20 @@
+.label {
+  @apply text-16 font-normal leading-20;
+}
+
+/* Cor */
+.label-claro {
+  @apply text-escrita-claro;
+}
+
+.label-escuro {
+  @apply text-escrita-escuro;
+}
+
+.label-estrela {
+  @apply text-escrita-estrela;
+}
+
+.label-nuvem {
+  @apply text-escrita-nuvem;
+}
