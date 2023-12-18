@@ -44,65 +44,44 @@ export const BotaoTrocarIdioma = () => {
   }, [idiomaSelecionado, i18n]);
 
   return (
-    <CX tipo="div">
-      <CX tipo="div" className="relative inline-block w-auto duration-300">
-        <button
-          type="button"
-          onClick={() => setMenuAberto(!menuAberto)}
-          onBlur={() =>
-            setTimeout(() => {
-              setMenuAberto(false);
-            }, 100)
-          }
-          className={`
-            botao_trocar_idioma-${tema}
-            flex
-            items-center
-            justify-between
-            rounded-6
-            border-1
-            border-solid
-            pl-6
-            pr-4
-            outline-none
-          `}
-        >
-          <img
-            src={opcoes.find((opcao) => opcao.valor === idiomaSelecionado)?.flag}
-            alt={`Bandeira de ${opcoes.find((opcao) => opcao.valor === idiomaSelecionado)?.valor}`}
-            className="h-8 w-8"
-          />
-          {menuAberto ? <CaretDown size={"16"} /> : <CaretRight size={"16"} />}
-        </button>
-        {menuAberto && (
-          <div
-            className="
-            absolute
-            mt-4
-            w-16
-            rounded-6
-            bg-white
-            shadow-lg
-            "
-          >
-            {opcoes.map((opcao) => (
-              <button
-                key={opcao.valor}
-                className={`
-                flex
-                w-full
-                justify-center
-                hover:rounded-6
+    <CX tipo="div" className="botao_trocar_idioma-div_principal">
+      <button
+        type="button"
+        onClick={() => setMenuAberto(!menuAberto)}
+        onBlur={() =>
+          setTimeout(() => {
+            setMenuAberto(false);
+          }, 100)
+        }
+        className={`
+          botao_trocar_idioma-button_principal
+          botao_trocar_idioma-${tema}
+        `}
+      >
+        <img
+          src={opcoes.find((opcao) => opcao.valor === idiomaSelecionado)?.flag}
+          alt={`Bandeira de ${opcoes.find((opcao) => opcao.valor === idiomaSelecionado)?.valor}`}
+          className="botao_trocar_idioma-image"
+        />
+        {menuAberto ?
+          <CaretDown className="botao_trocar_idioma-caret" /> : <CaretRight className="botao_trocar_idioma-caret" />}
+      </button>
+      {menuAberto && (
+        <div className="botao_trocar_idioma-div_menu">
+          {opcoes.map((opcao) => (
+            <button
+              key={opcao.valor}
+              className={`
+                botao_trocar_idioma-button_menu
                 botao_trocar_idioma-${tema}
                 `}
-                onClick={() => alternarIdioma(opcao.valor)}
-              >
-                <img src={opcao.flag} alt={opcao.valor} className="h-8 w-8" />
-              </button>
-            ))}
-          </div>
-        )}
-      </CX>
+              onClick={() => alternarIdioma(opcao.valor)}
+            >
+              <img src={opcao.flag} alt={opcao.valor} className="botao_trocar_idioma-image" />
+            </button>
+          ))}
+        </div>
+      )}
     </CX>
   );
 };

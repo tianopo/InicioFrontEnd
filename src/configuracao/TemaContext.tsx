@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import { LocalStorage } from "src/utils/localStorage";
 
 interface TemaContextProps {
   tema: string;
@@ -8,12 +9,9 @@ interface TemaContextProps {
 export const TemaContext = createContext<TemaContextProps | undefined>(undefined);
 
 export const ProvedorTema: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const temaInicial = localStorage.getItem("tema") || "claro";
+  const localStorage = new LocalStorage();
+  const temaInicial = localStorage.get("tema") || "claro";
   const [tema, setTema] = useState(temaInicial);
 
-  return (
-    <TemaContext.Provider value={{ tema, setTema }}>
-      {children}
-    </TemaContext.Provider>
-  );
+  return <TemaContext.Provider value={{ tema, setTema }}>{children}</TemaContext.Provider>;
 };
