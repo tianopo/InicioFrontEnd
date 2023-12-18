@@ -15,7 +15,6 @@
   @apply border-borda-nuvem bg-input-nuvem text-escrita-nuvem placeholder:text-placeholder-nuvem focus:border-primaria-nuvem;
 }
 
-
 /* Label Padrão - Label */
 .label-claro {
   @apply text-escrita-claro;
@@ -32,7 +31,6 @@
 .label-nuvem {
   @apply text-escrita-nuvem;
 }
-
 
 /* Label Padrão - Required e Mensagem de Erro */
 .label_required-claro {

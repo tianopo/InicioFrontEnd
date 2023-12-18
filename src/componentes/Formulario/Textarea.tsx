@@ -34,16 +34,16 @@ export const Textarea = ({
         className={`
         w-full
         input_padrao-${tema}
+        resize-none
         rounded-6
         border-1
         border-solid
         p-8
-        font-low
         font-primaria
+        font-low
         outline-none
         duration-300
         md:w-80
-        resize-none
         ${disabled ? "opacity-80" : ""}
         `}
       />

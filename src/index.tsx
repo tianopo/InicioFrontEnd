@@ -10,5 +10,5 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <ProvedorTema>
       <RotasApp />
     </ProvedorTema>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

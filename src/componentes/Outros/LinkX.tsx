@@ -10,11 +10,13 @@ export interface ILinkX {
 export const LinkX = ({ rota, children, target }: ILinkX) => {
   const { tema } = useTema();
 
-  return <Link
-    to={rota!}
-    target={target}
-    className={`w-fit font-normal transition duration-300 ease-in-out hover:opacity-80 link-${tema}`}
-  >
-    {children}
-  </Link>
-}
+  return (
+    <Link
+      to={rota!}
+      target={target}
+      className={`w-fit font-normal transition duration-300 ease-in-out hover:opacity-80 link-${tema}`}
+    >
+      {children}
+    </Link>
+  );
+};

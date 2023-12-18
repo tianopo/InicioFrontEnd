@@ -41,8 +41,8 @@ export const Input = ({
           border-1
           border-solid
           p-8
-          font-low
           font-primaria
+          font-low
           outline-none
           duration-300
           md:w-80

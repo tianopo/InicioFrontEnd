@@ -63,8 +63,11 @@ export const BotaoTrocarIdioma = () => {
           alt={`Bandeira de ${opcoes.find((opcao) => opcao.valor === idiomaSelecionado)?.valor}`}
           className="botao_trocar_idioma-image"
         />
-        {menuAberto ?
-          <CaretDown className="botao_trocar_idioma-caret" /> : <CaretRight className="botao_trocar_idioma-caret" />}
+        {menuAberto ? (
+          <CaretDown className="botao_trocar_idioma-caret" />
+        ) : (
+          <CaretRight className="botao_trocar_idioma-caret" />
+        )}
       </button>
       {menuAberto && (
         <div className="botao_trocar_idioma-div_menu">

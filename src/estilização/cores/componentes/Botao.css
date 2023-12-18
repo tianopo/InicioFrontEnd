@@ -34,17 +34,17 @@
 
 /* BotaoTrocarTema */
 .botao_trocar_tema-claro {
-  @apply hover:bg-hover-claro border-borda-claro;
+  @apply border-borda-claro hover:bg-hover-claro;
 }
 
 .botao_trocar_tema-escuro {
-  @apply hover:bg-hover-escuro border-borda-escuro;
+  @apply border-borda-escuro hover:bg-hover-escuro;
 }
 
 .botao_trocar_tema-estrela {
-  @apply hover:bg-hover-estrela border-borda-estrela;
+  @apply border-borda-estrela hover:bg-hover-estrela;
 }
 
 .botao_trocar_tema-nuvem {
-  @apply hover:bg-hover-nuvem border-borda-nuvem;
+  @apply border-borda-nuvem hover:bg-hover-nuvem;
 }

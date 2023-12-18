@@ -12,7 +12,6 @@ export const BotaoTrocarTema = () => {
     { tema: "nuvem", icone: <Cloud size="20px" weight="fill" className="text-icone-nuvem" /> },
   ];
 
-
   const alternarTema = (novoTema: keyof ITema) => {
     localStorage.setItem("tema", novoTema);
     setTema(novoTema);
