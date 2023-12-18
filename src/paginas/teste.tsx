@@ -13,7 +13,6 @@ import { Select } from "src/componentes/Formulario/Select";
 import { Textarea } from "src/componentes/Formulario/Textarea";
 import { DivisorX } from "src/componentes/Outros/DivisorX";
 import { LinkX } from "src/componentes/Outros/LinkX";
-import { SkeletonX } from "src/componentes/Outros/SkeletonX";
 import { TX } from "src/componentes/Tags/TextoX";
 import { useTema } from "src/hooks/configuracao/useTema";
 import { useValidacaoTeste } from "src/hooks/validacoes/formTeste";
@@ -77,7 +76,6 @@ export const Teste = () => {
             errors={errors.mensagem?.message}
             required
           />
-          <SkeletonX />
           <Select
             titulo="Idioma"
             register={register("idioma")}

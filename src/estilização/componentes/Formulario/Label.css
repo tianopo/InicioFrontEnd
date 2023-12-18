@@ -1,4 +1,8 @@
 .label {
+  @apply block w-fit;
+}
+
+.label-texto {
   @apply text-16 font-normal leading-20;
 }
 

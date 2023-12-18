@@ -15,7 +15,7 @@ export const Select = ({ disabled, required, register, errors, titulo, opcoes }:
   const { tema } = useTema();
 
   return (
-    <FlexCol className="input_container">
+    <FlexCol className="input_container w-fit">
       <Label titulo={titulo} palavras={palavras} required={required} />
       <select
         id={palavras}

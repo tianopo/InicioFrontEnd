@@ -1,5 +1,7 @@
 import React, { HTMLAttributes } from "react";
-import { useTema } from "src/hooks/configuracao/useTema";
+import { useLoading } from "src/hooks/useLoading";
+import { CX } from "./ConteudoX";
+import { SkeletonX } from "../Outros/SkeletonX";
 
 interface ITX extends HTMLAttributes<HTMLDivElement> {
   tipo:
@@ -25,10 +27,9 @@ interface ITX extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const TX = ({ tipo, children, className, ...rest }: ITX) => {
-  const { tema } = useTema();
   return React.createElement(
     tipo,
-    { className: `texto texto-${tema} ${className}`, ...rest },
+    { className: `texto ${className}`, ...rest },
     children,
   );
 };

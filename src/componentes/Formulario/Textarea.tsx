@@ -22,7 +22,7 @@ export const Textarea = ({
   const { tema } = useTema();
 
   return (
-    <FlexCol className="input_container">
+    <FlexCol className="input_container w-fit">
       <Label titulo={titulo} palavras={palavras} required={required} />
       <textarea
         id={palavras}

@@ -1,5 +1,7 @@
 import { useTema } from "src/hooks/configuracao/useTema";
+import { useLoading } from "src/hooks/useLoading";
 import { IFormUsos } from "../../interfaces/IFormUsos";
+import { SkeletonX } from "../Outros/SkeletonX";
 import { TX } from "../Tags/TextoX";
 
 interface ILabel extends IFormUsos {
@@ -9,17 +11,25 @@ interface ILabel extends IFormUsos {
 
 export const Label = ({ required, titulo, palavras }: ILabel) => {
   const { tema } = useTema();
+  const { loading } = useLoading();
 
   return (
-    <label htmlFor={palavras} className="block w-fit">
-      <TX tipo="p" className={`label label-${tema}`}>
-        {titulo}
-        {required && (
-          <TX tipo="span" className={`label_required-${tema}`}>
-            *
-          </TX>
+    <>
+      {
+        loading ? (
+          <SkeletonX className="label-texto" />
+        ) : (
+          <label htmlFor={palavras} className="label">
+            <TX tipo="p" className={`label-texto label-${tema}`}>
+              {titulo}
+              {required && (
+                <TX tipo="span" className={`label_required-${tema}`}>
+                  *
+                </TX>
+              )}
+            </TX>
+          </label>
         )}
-      </TX>
-    </label>
+    </>
   );
 };

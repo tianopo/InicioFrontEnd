@@ -1,7 +1,9 @@
 import { useTema } from "src/hooks/configuracao/useTema";
+import { useLoading } from "src/hooks/useLoading";
 import { labelAjustada } from "src/utils/labelAjustada";
 import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
+import { SkeletonX } from "../Outros/SkeletonX";
 import { Label } from "./Label";
 import { MensagemDeErro } from "./MensagemErro";
 
@@ -22,24 +24,29 @@ export const Input = ({
 }: IInput) => {
   const palavras = labelAjustada(titulo);
   const { tema } = useTema();
+  const { loading } = useLoading();
 
   return (
-    <FlexCol className="input_container">
+    <FlexCol className="input_container w-fit">
       <Label titulo={titulo} palavras={palavras} required={required} />
-      <input
-        id={palavras}
-        name={palavras}
-        type={tipo}
-        disabled={disabled}
-        placeholder={placeholder}
-        {...register}
-        autoComplete="complete"
-        className={`
-        input
-        input-${tema}
-          ${disabled ? "opacity-80" : ""}
+      {loading ? (
+        <SkeletonX className="input" />
+      ) : (
+        <input
+          id={palavras}
+          name={palavras}
+          type={tipo}
+          disabled={disabled}
+          placeholder={placeholder}
+          {...register}
+          autoComplete="complete"
+          className={`
+            input
+            input-${tema}
+            ${disabled ? "opacity-80" : ""}
           `}
-      />
+        />
+      )}
       <MensagemDeErro errors={errors} />
     </FlexCol>
   );
