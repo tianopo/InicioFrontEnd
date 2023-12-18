@@ -11,7 +11,7 @@
 }
 
 .botao_trocar_idioma-caret {
-  @apply h-8 w-8;
+  @apply h-4 w-4;
 }
 
 .botao_trocar_idioma-div_menu {

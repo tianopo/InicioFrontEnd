@@ -1,0 +1,35 @@
+/* DivisorX */
+.divisor-claro {
+  @apply border-borda-claro;
+}
+
+.divisor-escuro {
+  @apply border-borda-escuro;
+}
+
+.divisor-estrela {
+  @apply border-borda-estrela;
+}
+
+.divisor-nuvem {
+  @apply border-borda-nuvem;
+}
+
+
+/* LinkX */
+
+.link-claro {
+  @apply border-primaria-claro;
+}
+
+.link-escuro {
+  @apply border-primaria-escuro;
+}
+
+.link-estrela {
+  @apply border-primaria-estrela;
+}
+
+.link-nuvem {
+  @apply border-primaria-nuvem;
+}
