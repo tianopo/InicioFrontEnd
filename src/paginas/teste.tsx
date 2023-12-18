@@ -13,6 +13,7 @@ import { Select } from "src/componentes/Formulario/Select";
 import { Textarea } from "src/componentes/Formulario/Textarea";
 import { DivisorX } from "src/componentes/Outros/DivisorX";
 import { LinkX } from "src/componentes/Outros/LinkX";
+import { SkeletonX } from "src/componentes/Outros/SkeletonX";
 import { TX } from "src/componentes/Tags/TextoX";
 import { useTema } from "src/hooks/configuracao/useTema";
 import { useValidacaoTeste } from "src/hooks/validacoes/formTeste";
@@ -76,6 +77,7 @@ export const Teste = () => {
             errors={errors.mensagem?.message}
             required
           />
+          <SkeletonX />
           <Select
             titulo="Idioma"
             register={register("idioma")}
@@ -88,10 +90,8 @@ export const Teste = () => {
     </FlexCol>
   );
 };
-// Botão de troca de tema inicial aparece vazio
-// ver bug de trocar idioma
+
 // carregamento de componentes para performance como do facebook
-// separação de display inline e display block
 // fazer envio de solicitação de e-mail
 // implementar arquivos de export apenas para importar direto deste arquivo em ordem alfabética
 // colocar o @apply nas classes de estilização como padronização de classes iguais
