@@ -88,8 +88,6 @@ export const Teste = () => {
     </FlexCol>
   );
 };
-// implementar temas de escuro e claro
-// configurar cores do projeto
 // Botão de troca de tema inicial aparece vazio
 // ver bug de trocar idioma
 // separação de inputs para implementar label, inputs e mensagem de erros em uma só

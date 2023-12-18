@@ -21,3 +21,20 @@
 .botao_trocar_idioma-button_menu {
   @apply flex w-full justify-center hover:rounded-6;
 }
+
+/* BotaoTrocarIdioma - cor */
+.botao_trocar_idioma-claro {
+  @apply border-borda-claro text-icone-claro hover:bg-selecionado-claro;
+}
+
+.botao_trocar_idioma-escuro {
+  @apply border-borda-escuro text-icone-escuro hover:bg-selecionado-escuro;
+}
+
+.botao_trocar_idioma-estrela {
+  @apply border-borda-estrela text-icone-estrela hover:bg-selecionado-estrela;
+}
+
+.botao_trocar_idioma-nuvem {
+  @apply border-borda-nuvem text-icone-nuvem hover:bg-selecionado-nuvem;
+}
