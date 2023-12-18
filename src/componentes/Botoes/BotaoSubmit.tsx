@@ -14,20 +14,8 @@ export const BotaoSubmit = ({ className, children, disabled }: IBotaoSubmit) => 
     <button
       disabled={disabled}
       className={`
+      botao-padrao
       botao_padrao-${tema}
-      w-full
-      rounded-4
-      border-1
-      border-solid
-      p-6
-      font-primaria
-      text-20
-      font-normal
-      duration-300
-      ease-in-out
-      hover:opacity-80
-      active:translate-y-1
-      md:w-28
       ${className}`}
     >
       {children}
