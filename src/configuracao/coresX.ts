@@ -54,10 +54,10 @@ export const coresX = {
     nuvem: "#4682B4",
   },
   input: {
-    claro: "#F4F4F4",
-    escuro: "#333",
-    estrela: "#FFFAF0",
-    nuvem: "#F0F8FF",
+    claro: "#EDEDED",
+    escuro: "#222",
+    estrela: "#FDDDB0",
+    nuvem: "#C0D9E4",
   },
   placeholder: {
     claro: "#888",
