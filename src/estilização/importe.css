@@ -1,2 +1,4 @@
-@import "cores/botao.css";
-@import "cores/formulario.css";
+@import "cores/Botao.css";
+@import "cores/Formulario.css";
+@import "personalizacao/componentes/Botoes/Botao.css";
+@import "personalizacao/componentes/Botoes/BotaoTrocarIdioma.css";

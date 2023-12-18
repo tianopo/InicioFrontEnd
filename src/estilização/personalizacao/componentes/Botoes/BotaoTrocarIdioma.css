@@ -1,0 +1,23 @@
+.botao_trocar_idioma-div_principal {
+  @apply relative inline-block w-auto duration-300;
+}
+
+.botao_trocar_idioma-button_principal {
+  @apply flex items-center justify-between rounded-6 border-1 border-solid pl-6 pr-4 outline-none;
+}
+
+.botao_trocar_idioma-image {
+  @apply h-8 w-8;
+}
+
+.botao_trocar_idioma-caret {
+  @apply h-8 w-8;
+}
+
+.botao_trocar_idioma-div_menu {
+  @apply absolute mt-4 w-16 rounded-6 bg-white shadow-lg;
+}
+
+.botao_trocar_idioma-button_menu {
+  @apply flex w-full justify-center hover:rounded-6;
+}
