@@ -14,7 +14,6 @@ import { Select } from "src/componentes/Formulario/Select";
 import { Textarea } from "src/componentes/Formulario/Textarea";
 import { DivisorX } from "src/componentes/Outros/DivisorX";
 import { LinkX } from "src/componentes/Outros/LinkX";
-import { SkeletonX } from "src/componentes/Outros/SkeletonX";
 import { TX } from "src/componentes/Tags/TextoX";
 import { useTema } from "src/hooks/configuracao/useTema";
 import { useValidacaoTeste } from "src/hooks/validacoes/formTeste";
@@ -62,7 +61,6 @@ export const Teste = () => {
             errors={errors.email?.message}
             required
           />
-          <SkeletonX />
           <BotaoTrocarIdioma />
           <Textarea
             titulo="Descrição"
@@ -94,12 +92,13 @@ export const Teste = () => {
   );
 };
 
-// carregamento de componentes para performance como do facebook
 // fazer envio de solicitação de e-mail
 // implementar arquivos de export apenas para importar direto deste arquivo em ordem alfabética
-// colocar o @apply nas classes de estilização como padronização de classes iguais
-// criar envio de e-mail
+// fazer o radio e ajustar o checkbox
 // fazer cabecalho, sidebar e footer
 // documentar o projeto
 // faça com que não consiga abrir o código ou copiar
 // alteração de porta
+// segurança da informação, injeção, etc
+// construir site
+// conferir vite, preços, como funciona para hospedagem e venda de dominio
