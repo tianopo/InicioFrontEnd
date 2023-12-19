@@ -102,3 +102,4 @@ export const Teste = () => {
 // segurança da informação, injeção, etc
 // construir site
 // conferir vite, preços, como funciona para hospedagem e venda de dominio
+// checar em outros navegadores
