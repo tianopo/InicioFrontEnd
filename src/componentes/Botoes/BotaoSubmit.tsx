@@ -16,7 +16,7 @@ export const BotaoSubmit = ({ className, children, disabled }: IBotaoSubmit) => 
   return (
     <>
       {loading ? (
-        <SkeletonX className="botao" />
+        <SkeletonX className="skeleton_botao" />
       ) : (
         <button
           disabled={disabled}

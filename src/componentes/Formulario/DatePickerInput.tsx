@@ -29,10 +29,10 @@ export const DatePickerInput = ({
   const { loading } = useLoading();
 
   return (
-    <FlexCol className="gap-6 p-10 w-fit">
+    <FlexCol className="gap-6 p-10">
       <Label titulo={titulo} palavras={palavras} required={required} />
       {loading ? (
-        <SkeletonX className="input" />
+        <SkeletonX className="skeleton_input" />
       ) : (
         <>
           <Controller

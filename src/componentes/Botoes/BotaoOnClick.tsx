@@ -15,7 +15,7 @@ export const BotaoOnClick = ({ onClick, children, className }: IBotaoOnClick) =>
   return (
     <>
       {loading ? (
-        <SkeletonX className="botao" />
+        <SkeletonX className="skeleton_botao" />
       ) : (
         <button
           onClick={onClick}

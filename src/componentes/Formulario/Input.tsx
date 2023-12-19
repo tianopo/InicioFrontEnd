@@ -27,10 +27,10 @@ export const Input = ({
   const { loading } = useLoading();
 
   return (
-    <FlexCol className="input_container w-fit">
+    <FlexCol className="input_container">
       <Label titulo={titulo} palavras={palavras} required={required} />
       {loading ? (
-        <SkeletonX className="input" />
+        <SkeletonX className="skeleton_input" />
       ) : (
         <input
           id={palavras}

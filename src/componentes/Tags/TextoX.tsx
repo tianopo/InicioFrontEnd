@@ -1,6 +1,5 @@
 import React, { HTMLAttributes } from "react";
 import { useLoading } from "src/hooks/useLoading";
-import { CX } from "./ConteudoX";
 import { SkeletonX } from "../Outros/SkeletonX";
 
 interface ITX extends HTMLAttributes<HTMLDivElement> {
@@ -27,6 +26,12 @@ interface ITX extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const TX = ({ tipo, children, className, ...rest }: ITX) => {
+  const { loading } = useLoading();
+
+  if (loading) {
+    return <SkeletonX className="skeleton_texto" />;
+  }
+
   return React.createElement(
     tipo,
     { className: `texto ${className}`, ...rest },

@@ -49,7 +49,7 @@ export const BotaoTrocarIdioma = () => {
   return (
     <CX tipo="div" className="botao_trocar_idioma-div_principal">
       {loading ? (
-        <SkeletonX className="botao_trocar_idioma-image" />
+        <SkeletonX className="skeleton_botao_trocar_idioma " />
       ) : (
         <>
           <button

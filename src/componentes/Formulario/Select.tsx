@@ -3,9 +3,9 @@ import { useLoading } from "src/hooks/useLoading";
 import { labelAjustada } from "src/utils/labelAjustada";
 import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
+import { SkeletonX } from "../Outros/SkeletonX";
 import { Label } from "./Label";
 import { MensagemDeErro } from "./MensagemErro";
-import { SkeletonX } from "../Outros/SkeletonX";
 
 interface ISelect extends IFormUsos {
   titulo: string;
@@ -18,10 +18,10 @@ export const Select = ({ disabled, required, register, errors, titulo, opcoes }:
   const { loading } = useLoading();
 
   return (
-    <FlexCol className="input_container w-fit">
+    <FlexCol className="input_container">
       <Label titulo={titulo} palavras={palavras} required={required} />
       {loading ? (
-        <SkeletonX className="input" />
+        <SkeletonX className="skeleton_input" />
       ) : (
         <select
           id={palavras}

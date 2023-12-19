@@ -23,7 +23,7 @@ export const BotaoTrocarTema = () => {
   return (
     <>
       {loading ? (
-        <SkeletonX className="botao_trocar_tema-button" />
+        <SkeletonX className="skeleton_botao_trocar_tema" />
       ) : (
         <button
           type="button"

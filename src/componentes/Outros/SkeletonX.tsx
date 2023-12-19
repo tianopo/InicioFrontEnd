@@ -1,15 +1,14 @@
 import { HTMLAttributes } from "react";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 interface ISkeletonX extends HTMLAttributes<HTMLDivElement> {
   count?: number
 }
 
-export const SkeletonX = ({ className, count = 1 }: ISkeletonX) => {
+export const SkeletonX = ({ className }: ISkeletonX) => {
 
   return (
-    <SkeletonTheme baseColor="#E0E0E0" highlightColor="#F0F0F0">
-      <Skeleton count={count} className={`${className}`} />
-    </SkeletonTheme>
+    <div className={`skeleton_div-primaria`}>
+      <div className={`${className} bg-gray-300 rounded`}></div>
+    </div>
   );
 };

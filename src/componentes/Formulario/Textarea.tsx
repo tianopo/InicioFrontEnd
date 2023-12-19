@@ -27,10 +27,10 @@ export const Textarea = ({
   const { loading } = useLoading();
 
   return (
-    <FlexCol className={`input_container w-fit`}>
+    <FlexCol className={`input_container`}>
       <Label titulo={titulo} palavras={palavras} required={required} />
       {loading ? (
-        <SkeletonX className={`input h-${rows * 8}`} />
+        <SkeletonX className={`skeleton_textarea`} />
       ) : (
         <textarea
           id={palavras}

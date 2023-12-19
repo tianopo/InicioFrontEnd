@@ -5,6 +5,7 @@ import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
 import { BotaoTrocarIdioma } from "src/componentes/Botoes/BotaoTrocarIdioma";
 import { BotaoTrocarTema } from "src/componentes/Botoes/BotaoTrocarTema";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
+import { FlexRow } from "src/componentes/Flex/FlexRow";
 import { Checkbox } from "src/componentes/Formulario/Checkbox";
 import { DatePickerInput } from "src/componentes/Formulario/DatePickerInput";
 import { Form } from "src/componentes/Formulario/Form";
@@ -13,6 +14,7 @@ import { Select } from "src/componentes/Formulario/Select";
 import { Textarea } from "src/componentes/Formulario/Textarea";
 import { DivisorX } from "src/componentes/Outros/DivisorX";
 import { LinkX } from "src/componentes/Outros/LinkX";
+import { SkeletonX } from "src/componentes/Outros/SkeletonX";
 import { TX } from "src/componentes/Tags/TextoX";
 import { useTema } from "src/hooks/configuracao/useTema";
 import { useValidacaoTeste } from "src/hooks/validacoes/formTeste";
@@ -36,11 +38,13 @@ export const Teste = () => {
     <FlexCol className={`home-${tema}`}>
       <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
       <DivisorX />
+      <TX tipo="h1">olá</TX>
       <LinkX rota="./home">
-        <TX tipo="h1">olá</TX>
       </LinkX>
-      <TX tipo="i">tudo bem</TX>
-      <TX tipo="h6">tudo bem</TX>
+      <FlexRow>
+        <TX tipo="i">tudo bem</TX>
+        <TX tipo="h6">tudo bem</TX>
+      </FlexRow>
       <FormProvider {...contexto}>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Checkbox titulo="coisas" register={register("coisas")} errors={errors.coisas?.message} />
@@ -58,6 +62,7 @@ export const Teste = () => {
             errors={errors.email?.message}
             required
           />
+          <SkeletonX />
           <BotaoTrocarIdioma />
           <Textarea
             titulo="Descrição"
