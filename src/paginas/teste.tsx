@@ -1,26 +1,10 @@
 import axios from "axios";
 import { FormProvider } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
-import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
-import { BotaoTrocarIdioma } from "src/componentes/Botoes/BotaoTrocarIdioma";
-import { BotaoTrocarTema } from "src/componentes/Botoes/BotaoTrocarTema";
-import { FlexCol } from "src/componentes/Flex/FlexCol";
-import { FlexRow } from "src/componentes/Flex/FlexRow";
-import { Checkbox } from "src/componentes/Formulario/Checkbox";
-import { DatePickerInput } from "src/componentes/Formulario/DatePickerInput";
+import { BotaoOnClick, BotaoSubmit, BotaoTrocarIdioma, BotaoTrocarTema, Checkbox, DatePickerInput, DivisorX, FlexCol, FlexRow, Input, LinkX, Select, TX, Textarea } from "src/componentes";
 import { Form } from "src/componentes/Formulario/Form";
-import { Input } from "src/componentes/Formulario/Input";
-import { Select } from "src/componentes/Formulario/Select";
-import { Textarea } from "src/componentes/Formulario/Textarea";
-import { DivisorX } from "src/componentes/Outros/DivisorX";
-import { LinkX } from "src/componentes/Outros/LinkX";
-import { TX } from "src/componentes/Tags/TextoX";
-import { useTema } from "src/hooks/configuracao/useTema";
-import { useValidacaoTeste } from "src/hooks/validacoes/formTeste";
-import { checkboxFormatada } from "src/utils/formatacao/checkboxFormatada";
-import { dataFormatada } from "src/utils/formatacao/dataFormatada";
-
+import { useTema, useValidacaoTeste } from "src/hooks";
+import { checkboxFormatada, dataFormatada } from "src/utils";
 export const Teste = () => {
   const { contexto } = useValidacaoTeste();
   const { t } = useTranslation();

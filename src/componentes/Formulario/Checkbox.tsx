@@ -1,7 +1,7 @@
-import { labelFormatada } from "src/utils/formatacao/labelFormatada";
-import { IFormUsos } from "../../interfaces/IFormUsos";
-import { FlexCol } from "../Flex/FlexCol";
+import { IFormUsos } from "src/interfaces";
+import { labelFormatada } from "src/utils";
 import { FlexRow } from "../Flex/FlexRow";
+import { FlexCol } from "../Flex/FlexCol";
 import { Label } from "./Label";
 import { MensagemDeErro } from "./MensagemErro";
 

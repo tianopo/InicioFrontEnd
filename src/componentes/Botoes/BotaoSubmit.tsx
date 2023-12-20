@@ -1,6 +1,6 @@
 // BotaoSubmit.tsx
 import React, { HTMLAttributes } from "react";
-import { useTema } from "src/hooks/configuracao/useTema";
+import { useTema } from "src/hooks";
 
 interface IBotaoSubmit extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;

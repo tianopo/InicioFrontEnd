@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import { LocalStorage } from "src/utils/localStorage";
+import { LocalStorage } from "src/utils";
 
 interface TemaContextProps {
   tema: string;

@@ -1,9 +1,8 @@
 import { CaretDown, CaretRight } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useTema } from "src/hooks/configuracao/useTema";
-import { useLoading } from "src/hooks/useLoading";
-import { LocalStorage } from "src/utils/localStorage";
+import { useTema } from "src/hooks";
+import { LocalStorage } from "src/utils";
 import { CX } from "../Tags/ConteudoX";
 
 export const BotaoTrocarIdioma = () => {

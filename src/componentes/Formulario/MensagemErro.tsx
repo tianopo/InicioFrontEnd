@@ -1,4 +1,4 @@
-import { useTema } from "src/hooks/configuracao/useTema";
+import { useTema } from "src/hooks";
 import { TX } from "../Tags/TextoX";
 
 interface IMensagemDeErro {

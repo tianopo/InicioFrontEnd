@@ -1,7 +1,7 @@
 // BotaoTrocarTema.tsx
 import { Cloud, Moon, Star, Sun } from "@phosphor-icons/react";
-import { useTema } from "src/hooks/configuracao/useTema";
-import { ITema } from "src/interfaces/ITema";
+import { useTema } from "src/hooks";
+import { ITema } from "src/interfaces";
 
 export const BotaoTrocarTema = () => {
   const { tema: temaSelecionado, setTema } = useTema();

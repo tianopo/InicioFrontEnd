@@ -1,6 +1,6 @@
 import { useTema } from "src/hooks/configuracao/useTema";
-import { labelFormatada } from "src/utils/formatacao/labelFormatada";
-import { IFormUsos } from "../../interfaces/IFormUsos";
+import { IFormUsos } from "src/interfaces";
+import { labelFormatada } from "src/utils";
 import { FlexCol } from "../Flex/FlexCol";
 import { Label } from "./Label";
 import { MensagemDeErro } from "./MensagemErro";
