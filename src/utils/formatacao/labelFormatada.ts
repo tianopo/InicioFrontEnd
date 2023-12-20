@@ -1,5 +1,5 @@
 // ############ Adapta o título de uma label para o Input em qualquer língua
-export const labelAjustada = (texto: string) => {
+export const labelFormatada = (texto: string) => {
   return texto
     .normalize("NFD") // converte para caracteres não acentuados
     .replace(/[\u0300-\u036f]/g, "") // substitui todos os caracteres que não foram retirados a acentuação nessa faixa do unicode

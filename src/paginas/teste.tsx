@@ -1,4 +1,5 @@
-import { FieldValues, FormProvider } from "react-hook-form";
+import axios from "axios";
+import { FormProvider } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
 import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
@@ -17,7 +18,8 @@ import { LinkX } from "src/componentes/Outros/LinkX";
 import { TX } from "src/componentes/Tags/TextoX";
 import { useTema } from "src/hooks/configuracao/useTema";
 import { useValidacaoTeste } from "src/hooks/validacoes/formTeste";
-import { enviarEmailParaServidor } from "src/utils/email";
+import { checkboxFormatada } from "src/utils/formatacao/checkboxFormatada";
+import { dataFormatada } from "src/utils/formatacao/dataFormatada";
 
 export const Teste = () => {
   const { contexto } = useValidacaoTeste();
@@ -27,16 +29,48 @@ export const Teste = () => {
     formState: { errors },
     register,
     handleSubmit,
+    watch,
+    reset
   } = contexto;
 
-  const onSubmit = (values: FieldValues) => {
-    return values;
+  const onSubmit = async () => {
+    try {
+      /* aceita apenas name, email e message */
+      const formData = watch();
+      const { coisas, mensagem, email, dataDeNascimento, nome, descricao, idioma } = formData;
+
+      const dados = {
+        accessKey: 'dedff74d-dd09-4652-addf-c4b323291771',
+        subject: `Contato de ${nome}`,
+        message: `
+        Nome: ${nome} <br>
+        E-mail: ${email} <br>
+        Mensagem: ${mensagem} <br> 
+        Coisas: ${checkboxFormatada(coisas)} <br>
+        Data de Nascimento: ${dataFormatada(new Date(dataDeNascimento))} <br>
+        Descrição: ${descricao} <br>
+        Idioma: ${idioma} <br>
+        `,
+      }
+
+      const response = await axios.post('https://api.staticforms.xyz/submit', dados, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.data.success) {
+        reset()
+      }
+    } catch (error) {
+      console.error('Erro ao enviar o formulário:', error);
+    }
   };
   const opcoes = ["Português", "Inglês", "Espanhol", "Francês"];
 
   return (
     <FlexCol className={`home-${tema}`}>
-      <BotaoOnClick onClick={enviarEmailParaServidor}> Gosto </BotaoOnClick>
+      <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
       <DivisorX />
       <TX tipo="h1">olá</TX>
       <LinkX rota="./home">
@@ -93,7 +127,6 @@ export const Teste = () => {
   );
 };
 
-// fazer envio de solicitação de e-mail
 // implementar arquivos de export apenas para importar direto deste arquivo em ordem alfabética
 // fazer o radio e ajustar o checkbox
 // fazer cabecalho, sidebar e footer

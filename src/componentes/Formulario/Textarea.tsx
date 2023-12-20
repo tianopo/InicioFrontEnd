@@ -1,5 +1,5 @@
 import { useTema } from "src/hooks/configuracao/useTema";
-import { labelAjustada } from "src/utils/labelAjustada";
+import { labelFormatada } from "src/utils/formatacao/labelFormatada";
 import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
 import { Label } from "./Label";
@@ -20,7 +20,7 @@ export const Textarea = ({
   errors,
   rows = 4,
 }: ITextarea) => {
-  const palavras = labelAjustada(titulo);
+  const palavras = labelFormatada(titulo);
   const { tema } = useTema();
 
   return (
@@ -28,6 +28,7 @@ export const Textarea = ({
       <Label titulo={titulo} palavras={palavras} required={required} />
       <textarea
         id={palavras}
+        name={palavras}
         disabled={disabled}
         readOnly={disabled}
         placeholder={placeholder}

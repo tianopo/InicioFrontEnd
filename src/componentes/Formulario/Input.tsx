@@ -1,5 +1,5 @@
 import { useTema } from "src/hooks/configuracao/useTema";
-import { labelAjustada } from "src/utils/labelAjustada";
+import { labelFormatada } from "src/utils/formatacao/labelFormatada";
 import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
 import { Label } from "./Label";
@@ -20,7 +20,7 @@ export const Input = ({
   errors,
   tipo = "text",
 }: IInput) => {
-  const palavras = labelAjustada(titulo);
+  const palavras = labelFormatada(titulo);
   const { tema } = useTema();
 
   return (

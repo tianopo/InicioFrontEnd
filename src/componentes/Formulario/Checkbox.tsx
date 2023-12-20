@@ -1,4 +1,4 @@
-import { labelAjustada } from "src/utils/labelAjustada";
+import { labelFormatada } from "src/utils/formatacao/labelFormatada";
 import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
 import { FlexRow } from "../Flex/FlexRow";
@@ -10,13 +10,14 @@ export interface ICheckbox extends IFormUsos {
 }
 
 export const Checkbox = ({ disabled, required, errors, titulo, register }: ICheckbox) => {
-  const palavras = labelAjustada(titulo);
+  const palavras = labelFormatada(titulo);
 
   return (
     <FlexCol>
       <FlexRow className="checkbox_flex_row">
         <input
           id={titulo}
+          name={palavras}
           type="checkbox"
           readOnly
           disabled={disabled}

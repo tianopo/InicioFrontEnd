@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Controller, useFormContext } from "react-hook-form";
 import { useTema } from "src/hooks/configuracao/useTema";
-import { labelAjustada } from "src/utils/labelAjustada";
+import { labelFormatada } from "src/utils/formatacao/labelFormatada";
 import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
 import { Label } from "./Label";
@@ -21,7 +21,7 @@ export const DatePickerInput = ({
   placeholder,
   errors,
 }: IDatePickerInput) => {
-  const palavras = labelAjustada(titulo);
+  const palavras = labelFormatada(titulo);
   const { tema } = useTema();
   const { control } = useFormContext();
 
@@ -34,6 +34,7 @@ export const DatePickerInput = ({
         render={({ field: { onChange, value } }) => (
           <DatePicker
             id={palavras}
+            name={palavras}
             disabled={disabled}
             selected={value}
             placeholderText={placeholder}

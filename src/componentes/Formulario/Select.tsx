@@ -1,5 +1,5 @@
 import { useTema } from "src/hooks/configuracao/useTema";
-import { labelAjustada } from "src/utils/labelAjustada";
+import { labelFormatada } from "src/utils/formatacao/labelFormatada";
 import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexCol } from "../Flex/FlexCol";
 import { Label } from "./Label";
@@ -11,7 +11,7 @@ interface ISelect extends IFormUsos {
 }
 
 export const Select = ({ disabled, required, register, errors, titulo, opcoes }: ISelect) => {
-  const palavras = labelAjustada(titulo);
+  const palavras = labelFormatada(titulo);
   const { tema } = useTema();
 
   return (
@@ -30,7 +30,7 @@ export const Select = ({ disabled, required, register, errors, titulo, opcoes }:
         `}
       >
         {opcoes?.map((opcao, index) => (
-          <option key={index} value={labelAjustada(opcao)}>
+          <option key={index} value={labelFormatada(opcao)}>
             {opcao}
           </option>
         ))}
