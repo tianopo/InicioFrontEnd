@@ -1,7 +1,23 @@
 import axios from "axios";
 import { FormProvider } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { BotaoOnClick, BotaoSubmit, BotaoTrocarIdioma, BotaoTrocarTema, Checkbox, DatePickerInput, DivisorX, FlexCol, FlexRow, Input, LinkX, Radio, Select, TX, Textarea } from "src/componentes";
+import {
+  BotaoOnClick,
+  BotaoSubmit,
+  BotaoTrocarIdioma,
+  BotaoTrocarTema,
+  Checkbox,
+  DatePickerInput,
+  DivisorX,
+  FlexCol,
+  FlexRow,
+  Input,
+  LinkX,
+  Radio,
+  Select,
+  TX,
+  Textarea,
+} from "src/componentes";
 import { Form } from "src/componentes/Formulario/Form";
 import { useTema, useValidacaoTeste } from "src/hooks";
 import { checkboxFormatada, dataFormatada } from "src/utils";
@@ -14,17 +30,18 @@ export const Teste = () => {
     register,
     handleSubmit,
     watch,
-    reset
+    reset,
   } = contexto;
-
+  // retirar consoles
   const onSubmit = async () => {
     try {
       /* aceita apenas name, email e message */
       const formData = watch();
-      const { coisas, mensagem, email, dataDeNascimento, nome, descricao, idioma, contato } = formData;
+      const { coisas, mensagem, email, dataDeNascimento, nome, descricao, idioma, contato } =
+        formData;
 
       const dados = {
-        accessKey: 'dedff74d-dd09-4652-addf-c4b323291771',
+        accessKey: "dedff74d-dd09-4652-addf-c4b323291771",
         subject: `Contato de ${nome}`,
         message: `
         Nome: ${nome} <br>
@@ -36,20 +53,20 @@ export const Teste = () => {
         Descrição: ${descricao} <br>
         Idioma: ${idioma} <br>
         `,
-      }
+      };
 
-      const response = await axios.post('https://api.staticforms.xyz/submit', dados, {
+      const response = await axios.post("https://api.staticforms.xyz/submit", dados, {
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
       });
 
       if (response.data.success) {
-        reset()
-        console.log()
+        reset();
+        console.log();
       }
     } catch (error) {
-      console.error('Erro ao enviar o formulário:', error);
+      console.error("Erro ao enviar o formulário:", error);
     }
   };
   const opcoes = ["Português", "Inglês", "Espanhol", "Francês"];
@@ -59,8 +76,7 @@ export const Teste = () => {
       <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
       <DivisorX />
       <TX tipo="h1">olá</TX>
-      <LinkX rota="./home">
-      </LinkX>
+      <LinkX rota="./home"></LinkX>
       <FlexRow>
         <TX tipo="i">tudo bem</TX>
         <TX tipo="h6">tudo bem</TX>

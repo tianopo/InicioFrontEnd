@@ -18,7 +18,12 @@ export const Radio = ({ disabled, errors, register, opcoes, titulo, required }: 
   return (
     <FlexCol>
       <TX tipo="h4" className="label-texto">
-        {titulo} {required && <TX tipo="span" className={`label_required-${tema}`}>*</TX>}
+        {titulo}{" "}
+        {required && (
+          <TX tipo="span" className={`label_required-${tema}`}>
+            *
+          </TX>
+        )}
       </TX>
       {opcoes.map((opcao) => {
         const palavras = labelFormatada(opcao);
@@ -42,4 +47,4 @@ export const Radio = ({ disabled, errors, register, opcoes, titulo, required }: 
       <MensagemDeErro errors={errors} />
     </FlexCol>
   );
-}
+};

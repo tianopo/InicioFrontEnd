@@ -1,2 +1,2 @@
-export * from './IFormUsos';
-export * from './ITema';
+export * from "./IFormUsos";
+export * from "./ITema";

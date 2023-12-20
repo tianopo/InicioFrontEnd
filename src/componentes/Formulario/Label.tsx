@@ -15,7 +15,12 @@ export const Label = ({ required, titulo, palavras }: ILabel) => {
     <FlexRow>
       <label htmlFor={palavras} className="label">
         <TX tipo="p" className={`label-texto label-${tema}`}>
-          {titulo} {required && <TX tipo="span" className={`label_required-${tema}`}>*</TX>}
+          {titulo}{" "}
+          {required && (
+            <TX tipo="span" className={`label_required-${tema}`}>
+              *
+            </TX>
+          )}
         </TX>
       </label>
     </FlexRow>

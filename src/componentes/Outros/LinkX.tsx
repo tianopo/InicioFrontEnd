@@ -11,11 +11,7 @@ export const LinkX = ({ rota, children, target }: ILinkX) => {
   const { tema } = useTema();
 
   return (
-    <Link
-      to={rota!}
-      target={target}
-      className={`link link-${tema}`}
-    >
+    <Link to={rota!} target={target} className={`link link-${tema}`}>
       {children}
     </Link>
   );

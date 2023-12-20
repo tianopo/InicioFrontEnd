@@ -3,5 +3,5 @@
 }
 
 .checkbox_input {
-  @apply outline-none focus:outline-none accent-primaria-claro w-4 h-4;
+  @apply h-4 w-4 accent-primaria-claro outline-none focus:outline-none;
 }
