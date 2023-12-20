@@ -17,6 +17,7 @@ import { LinkX } from "src/componentes/Outros/LinkX";
 import { TX } from "src/componentes/Tags/TextoX";
 import { useTema } from "src/hooks/configuracao/useTema";
 import { useValidacaoTeste } from "src/hooks/validacoes/formTeste";
+import { enviarEmailParaServidor } from "src/utils/email";
 
 export const Teste = () => {
   const { contexto } = useValidacaoTeste();
@@ -35,7 +36,7 @@ export const Teste = () => {
 
   return (
     <FlexCol className={`home-${tema}`}>
-      <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
+      <BotaoOnClick onClick={enviarEmailParaServidor}> Gosto </BotaoOnClick>
       <DivisorX />
       <TX tipo="h1">olá</TX>
       <LinkX rota="./home">
