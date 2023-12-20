@@ -6,6 +6,7 @@ export interface IValidacaoSchema {
   coisas?: boolean;
   nome: string;
   email: string;
+  contato: string;
   descricao?: string;
   dataDeNascimento: string;
   mensagem: string;
@@ -17,6 +18,7 @@ export const useValidacaoTeste = () => {
     coisas: Yup.boolean().optional().label("Coisas"),
     nome: Yup.string().required().min(1).label("Nome"),
     email: Yup.string().email().required().label("E-mail"),
+    contato: Yup.string().required().label("Contato"),
     descricao: Yup.string().optional().max(5000).label("Descrição"),
     dataDeNascimento: Yup.string().required().label("Data de Nascimento"),
     mensagem: Yup.string().required().label("Mensagem"),

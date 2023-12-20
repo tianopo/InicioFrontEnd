@@ -1,7 +1,7 @@
 import axios from "axios";
 import { FormProvider } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { BotaoOnClick, BotaoSubmit, BotaoTrocarIdioma, BotaoTrocarTema, Checkbox, DatePickerInput, DivisorX, FlexCol, FlexRow, Input, LinkX, Select, TX, Textarea } from "src/componentes";
+import { BotaoOnClick, BotaoSubmit, BotaoTrocarIdioma, BotaoTrocarTema, Checkbox, DatePickerInput, DivisorX, FlexCol, FlexRow, Input, LinkX, Radio, Select, TX, Textarea } from "src/componentes";
 import { Form } from "src/componentes/Formulario/Form";
 import { useTema, useValidacaoTeste } from "src/hooks";
 import { checkboxFormatada, dataFormatada } from "src/utils";
@@ -21,7 +21,7 @@ export const Teste = () => {
     try {
       /* aceita apenas name, email e message */
       const formData = watch();
-      const { coisas, mensagem, email, dataDeNascimento, nome, descricao, idioma } = formData;
+      const { coisas, mensagem, email, dataDeNascimento, nome, descricao, idioma, contato } = formData;
 
       const dados = {
         accessKey: 'dedff74d-dd09-4652-addf-c4b323291771',
@@ -29,7 +29,8 @@ export const Teste = () => {
         message: `
         Nome: ${nome} <br>
         E-mail: ${email} <br>
-        Mensagem: ${mensagem} <br> 
+        Contato: ${contato} <br>
+        Mensagem: ${mensagem} <br>
         Coisas: ${checkboxFormatada(coisas)} <br>
         Data de Nascimento: ${dataFormatada(new Date(dataDeNascimento))} <br>
         Descrição: ${descricao} <br>
@@ -45,6 +46,7 @@ export const Teste = () => {
 
       if (response.data.success) {
         reset()
+        console.log()
       }
     } catch (error) {
       console.error('Erro ao enviar o formulário:', error);
@@ -78,6 +80,13 @@ export const Teste = () => {
             titulo="E-mail"
             placeholder="x@x.com"
             errors={errors.email?.message}
+            required
+          />
+          <Radio
+            register={register("contato")}
+            titulo="Contato"
+            errors={errors.email?.message}
+            opcoes={["Whatsapp", "Telefone", "Recado"]}
             required
           />
           <BotaoTrocarIdioma />

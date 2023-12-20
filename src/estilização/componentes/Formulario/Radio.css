@@ -1,0 +1,7 @@
+.radio {
+  @apply h-5 w-5 accent-primaria-claro;
+}
+
+.radio_flex_row {
+  @apply gap-6 py-4 w-fit;
+}

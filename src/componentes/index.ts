@@ -13,6 +13,7 @@ export * from './Formulario/Form';
 export * from './Formulario/Input';
 export * from './Formulario/Label';
 export * from './Formulario/MensagemErro';
+export * from './Formulario/Radio';
 export * from './Formulario/Select';
 export * from './Formulario/Textarea';
 
