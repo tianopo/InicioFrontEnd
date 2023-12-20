@@ -65,12 +65,6 @@ export const coresX = {
     estrela: "#996515",
     nuvem: "#4682B4",
   },
-  desabilitado: {
-    claro: "#EFEFEF",
-    escuro: "#444",
-    estrela: "#FFFACD",
-    nuvem: "#B0C4DE",
-  },
   selecionado: {
     claro: "#8FB9C6",
     escuro: "#526A77",
