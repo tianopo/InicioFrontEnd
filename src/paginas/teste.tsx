@@ -111,7 +111,6 @@ export const Teste = () => {
   );
 };
 
-// implementar arquivos de export apenas para importar direto deste arquivo em ordem alfabética
 // fazer o radio e ajustar o checkbox
 // fazer cabecalho, sidebar e footer
 // documentar o projeto
