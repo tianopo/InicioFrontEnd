@@ -4,7 +4,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
 
-@import "estilização/importe.css";
+@import "estilização/Index.css";
 
 * {
   box-sizing: border-box;

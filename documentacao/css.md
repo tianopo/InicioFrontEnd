@@ -1,2 +1,2 @@
-
-quando tiver um back-end, retirar o express
+em Sistema de herança, na página já vem o tema principal já estilizado para a página.
+Se por acaso a cor do tema for diferente, você cria uma cor para aquela propriedade no respectivo css dela e cria quantidade de tema para a classe, invoca o tema e acabou.

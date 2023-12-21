@@ -17,6 +17,8 @@ export * from "./Formulario/Radio";
 export * from "./Formulario/Select";
 export * from "./Formulario/Textarea";
 
+export * from "./Pagina/Header";
+
 export * from "./Outros/DivisorX";
 export * from "./Outros/LinkX";
 

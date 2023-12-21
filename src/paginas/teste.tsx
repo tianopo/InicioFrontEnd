@@ -11,6 +11,7 @@ import {
   DivisorX,
   FlexCol,
   FlexRow,
+  Header,
   Input,
   LinkX,
   Radio,
@@ -70,9 +71,11 @@ export const Teste = () => {
     }
   };
   const opcoes = ["Português", "Inglês", "Espanhol", "Francês"];
+  const nav = [{ texto: "inicio", rota: "#" }, { texto: "contato", rota: "#" }, { texto: "contato", rota: "#" }, { texto: "contato", rota: "#" }, { texto: "contato", rota: "#" }]
 
   return (
     <FlexCol className={`home-${tema}`}>
+      <Header imagem="/flags/fr.svg" alt="Bandeira da França" titulo="Matheus Henrique de Abreu" navbar={nav} tema idioma />
       <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
       <DivisorX />
       <TX tipo="h1">olá</TX>
@@ -136,12 +139,15 @@ export const Teste = () => {
   );
 };
 
-// fazer o radio e ajustar o checkbox
-// fazer cabecalho, sidebar e footer
+// fazer cabecalho, sidebar, footer e sections(banner, secao protótipa)
+// ver sobre herança de cores
+// retirar depreciation
+// arquitetura base do projeto
 // documentar o projeto
 // faça com que não consiga abrir o código ou copiar
 // alteração de porta
 // segurança da informação, injeção, etc
 // construir site
+// revisar com jest e outras coisas
 // conferir vite, preços, como funciona para hospedagem e venda de dominio
 // checar em outros navegadores

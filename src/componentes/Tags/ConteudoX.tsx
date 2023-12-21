@@ -6,5 +6,5 @@ interface ICX extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const CX = ({ tipo, children, className, ...rest }: ICX) => {
-  return React.createElement(tipo, { className: `conteudo ${className}`, ...rest }, children);
+  return React.createElement(tipo, { className: `${className}`, ...rest }, children);
 };
