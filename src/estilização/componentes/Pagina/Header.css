@@ -1,3 +1,43 @@
-.teste-nhjbjhbhj {
-  @apply w-full;
+.header {
+  @apply p-12 flex flex-row justify-between border-b-1 fixed w-full rounded-b-6;
+}
+
+.header-claro {
+  @apply bg-fundo-claro border-borda-claro;
+}
+
+.header-escuro {
+  @apply bg-fundo-escuro border-borda-escuro;
+}
+
+.header-nuvem {
+  @apply bg-fundo-nuvem border-borda-nuvem;
+}
+
+.header-estrela {
+  @apply bg-fundo-estrela border-borda-estrela;
+}
+
+.header_flex {
+  @apply gap-4;
+}
+
+.header_imagem {
+  @apply h-12 w-10 p-2 border-1 rounded-20;
+}
+
+.header_imagem-claro {
+  @apply border-borda-claro bg-primaria-claro;
+}
+
+.header_imagem-escuro {
+  @apply border-borda-escuro bg-primaria-escuro;
+}
+
+.header_imagem-estrela {
+  @apply border-borda-estrela bg-primaria-estrela;
+}
+
+.header_imagem-nuvem {
+  @apply border-borda-nuvem bg-primaria-nuvem;
 }

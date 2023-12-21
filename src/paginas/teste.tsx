@@ -4,8 +4,6 @@ import { useTranslation } from "react-i18next";
 import {
   BotaoOnClick,
   BotaoSubmit,
-  BotaoTrocarIdioma,
-  BotaoTrocarTema,
   Checkbox,
   DatePickerInput,
   DivisorX,
@@ -17,7 +15,7 @@ import {
   Radio,
   Select,
   TX,
-  Textarea,
+  Textarea
 } from "src/componentes";
 import { Form } from "src/componentes/Formulario/Form";
 import { useTema, useValidacaoTeste } from "src/hooks";
@@ -71,11 +69,11 @@ export const Teste = () => {
     }
   };
   const opcoes = ["Português", "Inglês", "Espanhol", "Francês"];
-  const nav = [{ texto: "inicio", rota: "#" }, { texto: "contato", rota: "#" }, { texto: "contato", rota: "#" }, { texto: "contato", rota: "#" }, { texto: "contato", rota: "#" }]
+  const nav = [{ texto: "inicio", rota: "#" }, { texto: "contatocontato", rota: "#" }, { texto: "contato", rota: "#" }, { texto: "contato", rota: "#" }, { texto: "contato", rota: "#" }]
 
   return (
     <FlexCol className={`home-${tema}`}>
-      <Header imagem="/flags/fr.svg" alt="Bandeira da França" titulo="Matheus Henrique de Abreu" navbar={nav} tema idioma />
+      <Header imagem="/flags/fr.svg" alt="Bandeira da França" titulo="Matheus Henrique de Abreu" navbar={nav} temaCor idioma />
       <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
       <DivisorX />
       <TX tipo="h1">olá</TX>
@@ -108,13 +106,11 @@ export const Teste = () => {
             opcoes={["Whatsapp", "Telefone", "Recado"]}
             required
           />
-          <BotaoTrocarIdioma />
           <Textarea
             titulo="Descrição"
             register={register("descricao")}
             errors={errors.descricao?.message}
           />
-          <BotaoTrocarTema />
           <DatePickerInput
             titulo="Data de nascimento"
             errors={errors.dataDeNascimento?.message}

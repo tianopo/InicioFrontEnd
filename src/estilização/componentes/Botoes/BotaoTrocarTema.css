@@ -1,5 +1,5 @@
 .botao_trocar_tema-button {
-  @apply flex w-10 justify-center rounded-6 border-1 p-4;
+  @apply flex w-10 h-fit justify-center rounded-6 border-1 p-4;
 }
 
 /* Cor */
