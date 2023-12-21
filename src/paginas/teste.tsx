@@ -139,7 +139,7 @@ export const Teste = () => {
   );
 };
 
-// fazer cabecalho, sidebar, footer e sections(banner, secao protótipa)
+// fazer cabecalho, modal, sidebar, footer e sections(banner, secao protótipa)
 // ver sobre herança de cores
 // retirar depreciation
 // arquitetura base do projeto

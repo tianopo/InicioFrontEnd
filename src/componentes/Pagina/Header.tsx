@@ -25,7 +25,7 @@ export const Header = ({ imagem, alt, titulo, navbar, idioma, tema }: IHeader) =
         {imagem && alt && <img src={imagem} alt={alt} className="h-12 w-10 p-2 border-1 rounded-20 border-borda-claro" />}
         {titulo && <TX tipo="h1" className="font-bold text-20">{titulo}</TX>}
       </FlexRow>
-      <FlexRow className="gap-4">
+      <FlexRow className="gap-4 md:flex hidden">
         {navbar.map((nav: { texto: string, rota: string }, key: number) => (
           <LinkX key={key} rota={nav.rota}>
             <TX tipo="p" className="font-bold text-16 p-12 hover:text-primaria-claro">{nav.texto.toUpperCase()}</TX>
