@@ -1,7 +1,23 @@
-.radio {
-  @apply h-5 w-5 accent-primaria-claro;
-}
-
 .radio_flex_row {
   @apply w-fit gap-6 py-4;
+}
+
+.radio {
+  @apply h-5 w-5;
+}
+
+.radio-claro {
+  @apply accent-primaria-claro;
+}
+
+.radio-escuro {
+  @apply accent-primaria-escuro;
+}
+
+.radio-estrela {
+  @apply accent-primaria-estrela;
+}
+
+.radio-nuvem {
+  @apply accent-primaria-nuvem border-white;
 }

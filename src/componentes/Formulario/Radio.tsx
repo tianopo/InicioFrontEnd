@@ -37,7 +37,8 @@ export const Radio = ({ disabled, errors, register, opcoes, titulo, required }: 
               value={opcao}
               readOnly
               disabled={disabled}
-              className="radio"
+              checked
+              className={`radio radio-${tema}`}
               {...register}
             />
             <Label titulo={opcao} palavras={labelFormatada(opcao)} />
