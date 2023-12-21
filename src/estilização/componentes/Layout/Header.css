@@ -1,5 +1,5 @@
 .header {
-  @apply p-12 flex flex-row justify-between border-b-1 fixed w-full rounded-b-6;
+  @apply p-12 flex flex-row justify-between border-b-1 fixed w-full rounded-b-6 z-50 float-right;
 }
 
 .header-claro {
@@ -40,4 +40,32 @@
 
 .header_imagem-nuvem {
   @apply border-borda-nuvem bg-primaria-nuvem;
+}
+
+.header_titulo {
+  @apply font-bold text-20;
+}
+
+.navbar_desktop {
+  @apply header_flex md:flex hidden;
+}
+
+.navbar_texto {
+  @apply font-bold text-16 p-12;
+}
+
+.navbar_texto-claro {
+  @apply hover:text-primaria-claro;
+}
+
+.navbar_texto-escuro {
+  @apply hover:text-primaria-escuro;
+}
+
+.navbar_texto-estrela {
+  @apply hover:text-primaria-estrela;
+}
+
+.navbar_texto-nuvem {
+  @apply hover:text-primaria-nuvem;
 }

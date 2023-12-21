@@ -69,11 +69,9 @@ export const Teste = () => {
     }
   };
   const opcoes = ["Português", "Inglês", "Espanhol", "Francês"];
-  const nav = [{ texto: "inicio", rota: "#" }, { texto: "contatocontato", rota: "#" }, { texto: "contato", rota: "#" }, { texto: "contato", rota: "#" }, { texto: "contato", rota: "#" }]
 
   return (
     <FlexCol className={`home-${tema}`}>
-      <Header imagem="/flags/fr.svg" alt="Bandeira da França" titulo="Matheus Henrique de Abreu" navbar={nav} temaCor idioma />
       <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
       <DivisorX />
       <TX tipo="h1">olá</TX>

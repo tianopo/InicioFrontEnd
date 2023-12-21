@@ -17,10 +17,12 @@ export * from "./Formulario/Radio";
 export * from "./Formulario/Select";
 export * from "./Formulario/Textarea";
 
-export * from "./Pagina/Header";
+export * from "./Layout/Header";
+export * from "./Layout/Layout";
 
 export * from "./Outros/DivisorX";
 export * from "./Outros/LinkX";
 
 export * from "./Tags/ConteudoX";
 export * from "./Tags/TextoX";
+
