@@ -10,7 +10,6 @@ import { TX } from "../Tags/TextoX";
 
 interface IHeader {
   imagem?: string;
-  alt?: string;
   titulo?: string;
   navbar?: {
     texto: string;
@@ -20,7 +19,7 @@ interface IHeader {
   temaCor?: boolean;
 }
 
-export const Header = ({ imagem, alt, titulo, navbar, idioma, temaCor }: IHeader) => {
+export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => {
   const [menuAberto, setMenuAberto] = useState(false);
   const { tema } = useTema() ?? {};
 
@@ -28,7 +27,7 @@ export const Header = ({ imagem, alt, titulo, navbar, idioma, temaCor }: IHeader
     <>
       <CX tipo="header" className={`header header-${tema}`}>
         <FlexRow className="header_flex">
-          {imagem && alt && <img src={imagem} alt={alt} className={`header_imagem header_imagem-${tema}`} />}
+          {imagem && <img src={imagem} alt={titulo} className={`header_imagem header_imagem-${tema}`} />}
           {titulo && <TX tipo="h1" className="header_titulo">{titulo}</TX>}
         </FlexRow>
         {navbar && (

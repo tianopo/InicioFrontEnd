@@ -17,12 +17,12 @@ import {
   Textarea
 } from "src/componentes";
 import { Form } from "src/componentes/Formulario/Form";
-import { useTema, useValidacaoTeste } from "src/hooks";
+import { useValidacaoTeste } from "src/hooks";
 import { checkboxFormatada, dataFormatada } from "src/utils";
 export const Teste = () => {
   const { contexto } = useValidacaoTeste();
   const { t } = useTranslation();
-  const { tema } = useTema();
+
   const {
     formState: { errors },
     register,
@@ -70,7 +70,7 @@ export const Teste = () => {
   const opcoes = ["Português", "Inglês", "Espanhol", "Francês"];
 
   return (
-    <FlexCol className={`home-${tema}`}>
+    <FlexCol className="w-full">
       <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
       <DivisorX />
       <TX tipo="h1">olá</TX>
@@ -132,9 +132,11 @@ export const Teste = () => {
   );
 };
 
-// fazer cabecalho, modal, sidebar, footer e sections(banner, secao protótipa)
+// fazer modal, sidebar, footer e sections(banner, secao protótipa)
 // ver sobre herança de cores
 // retirar depreciation
+// CSS ficando criptografado no devtools
+// deixar apenas cores no CSS
 // arquitetura base do projeto
 // documentar o projeto
 // faça com que não consiga abrir o código ou copiar

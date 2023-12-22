@@ -19,6 +19,7 @@ export * from "./Formulario/Textarea";
 
 export * from "./Layout/Header";
 export * from "./Layout/Layout";
+export * from "./Layout/Sidebar";
 
 export * from "./Outros/DivisorX";
 export * from "./Outros/LinkX";
