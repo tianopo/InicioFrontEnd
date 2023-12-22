@@ -60,7 +60,7 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
                   <SignOut size={24} />
                 </FlexRow>
               )}
-              {idioma && <BotaoTrocarIdioma />}
+              {idioma && <BotaoTrocarIdioma direcao="bottom" />}
               {temaCor && <BotaoTrocarTema />}
             </FlexRow>
           </FlexCol>

@@ -5,7 +5,11 @@ import { useTema } from "src/hooks";
 import { LocalStorage } from "src/utils";
 import { CX } from "../Tags/ConteudoX";
 
-export const BotaoTrocarIdioma = () => {
+interface IBotaoTrocarIdioma {
+  direcao?: string
+}
+
+export const BotaoTrocarIdioma = ({ direcao }: IBotaoTrocarIdioma) => {
   const opcoes = [
     {
       valor: "ptbr",
@@ -70,7 +74,7 @@ export const BotaoTrocarIdioma = () => {
         )}
       </button>
       {menuAberto && (
-        <div className="botao_trocar_idioma-div_menu">
+        <div className={`botao_trocar_idioma-div_menu ${direcao}-10`}>
           {opcoes.map((opcao) => (
             <button
               key={opcao.valor}
