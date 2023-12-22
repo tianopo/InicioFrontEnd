@@ -1,16 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Header } from "./componentes";
+import { RouterProvider } from "react-router-dom";
 import { ProvedorTema } from "./configuracao/TemaContext";
 import "./idiomas/tradutor";
 import "./index.css";
-import { RotasApp } from "./rotas/rotasApp";
+import { browserRouter } from "./rotas/rotasApp";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ProvedorTema>
-      <Header imagem="/flags/fr.svg" alt="Bandeira da França" titulo="Matheus Henrique de Abreu" temaCor idioma />
-      <RotasApp />
+      <RouterProvider router={browserRouter} />
     </ProvedorTema>
   </React.StrictMode>,
 );

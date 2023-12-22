@@ -1,15 +1,17 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { Teste } from "../paginas/teste";
+import { createBrowserRouter } from "react-router-dom";
+import { Layout } from "src/componentes";
 import { Inicio } from "src/paginas/index/Inicio";
+import { Teste } from "../paginas/teste";
 
-export const RotasApp = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/teste" element={<Teste />} />
-        <Route path="/inicio" element={<Inicio />} />
-        <Route path="*" element={<Navigate to="/teste" />} />
-      </Routes>
-    </BrowserRouter>
-  );
-};
+export const browserRouter = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      { path: "/teste", element: <Teste /> },
+      { path: "/inicio", element: <Inicio /> },
+
+      { path: "*", element: <Teste /> },
+    ],
+  },
+])
+

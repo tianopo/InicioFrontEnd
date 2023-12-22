@@ -9,7 +9,6 @@ import {
   DivisorX,
   FlexCol,
   FlexRow,
-  Header,
   Input,
   LinkX,
   Radio,

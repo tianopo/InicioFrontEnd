@@ -4,17 +4,17 @@
 
 /* Cor */
 .link-claro {
-  @apply text-escrita-claro hover:text-primaria-claro;
+  @apply text-escrita-claro hover:text-hover-claro;
 }
 
 .link-escuro {
-  @apply text-escrita-escuro hover:text-primaria-escuro;
+  @apply text-escrita-escuro hover:text-hover-escuro;
 }
 
 .link-estrela {
-  @apply text-escrita-estrela hover:text-primaria-estrela;
+  @apply text-escrita-estrela hover:text-hover-estrela;
 }
 
 .link-nuvem {
-  @apply text-escrita-nuvem hover:text-primaria-nuvem;
+  @apply text-escrita-nuvem hover:text-hover-nuvem;
 }

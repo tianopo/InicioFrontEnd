@@ -22,7 +22,7 @@ interface IHeader {
 
 export const Header = ({ imagem, alt, titulo, navbar, idioma, temaCor }: IHeader) => {
   const [menuAberto, setMenuAberto] = useState(false);
-  const { tema } = useTema();
+  const { tema } = useTema() ?? {};
 
   return (
     <>
@@ -33,10 +33,10 @@ export const Header = ({ imagem, alt, titulo, navbar, idioma, temaCor }: IHeader
         </FlexRow>
         {navbar && (
           <>
-            <FlexRow className={`navbar_desktop`}>
+            <FlexRow className={`header_flex md:flex hidden`}>
               {navbar.map((nav: { texto: string, rota: string }, key: number) => (
                 <LinkX key={key} rota={nav.rota}>
-                  <TX tipo="p" className="navbar_texto">{nav.texto.toUpperCase()}</TX>
+                  <TX tipo="p" className="font-bold text-16 p-12">{nav.texto.toUpperCase()}</TX>
                 </LinkX>
               ))}
             </FlexRow>
@@ -50,14 +50,14 @@ export const Header = ({ imagem, alt, titulo, navbar, idioma, temaCor }: IHeader
                       setMenuAberto(false);
                     }, 100)
                   }
-                  className="border-1 rounded-6 border-borda-claro hover:bg-hover-claro"
+                  className={`border-1 rounded-6 navbar_mobile_botao-${tema}`}
                 >
-                  <Article className="text-borda-claro w-7 h-7 font-bold" />
+                  <Article className={`w-7 h-7 font-bold navbar_mobile_article-${tema}`} />
                 </button>
                 {menuAberto && (
-                  <div className="absolute w-auto duration-300 right-0 bg-white rounded-6">
+                  <div className={`absolute w-auto duration-300 right-0 rounded-6 border-1 menu_mobile-${tema}`}>
                     {navbar.map((nav: { texto: string, rota: string }, key: number) => (
-                      <div key={key} className="hover:bg-fundo-claro">
+                      <div key={key} className={`menu_navbar-${tema} p-8`}>
                         <LinkX rota={nav.rota}>
                           <TX tipo="p" className="navbar_texto">{nav.texto.toUpperCase()}</TX>
                         </LinkX>

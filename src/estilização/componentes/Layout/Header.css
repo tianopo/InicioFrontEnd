@@ -1,5 +1,5 @@
 .header {
-  @apply p-12 flex flex-row justify-between border-b-1 fixed w-full rounded-b-6 z-50 float-right;
+  @apply p-12 flex flex-row justify-between border-b-1 fixed w-full rounded-b-6 z-50;
 }
 
 .header-claro {
@@ -46,14 +46,6 @@
   @apply font-bold text-20;
 }
 
-.navbar_desktop {
-  @apply header_flex md:flex hidden;
-}
-
-.navbar_texto {
-  @apply font-bold text-16 p-12;
-}
-
 .navbar_texto-claro {
   @apply hover:text-primaria-claro;
 }
@@ -68,4 +60,68 @@
 
 .navbar_texto-nuvem {
   @apply hover:text-primaria-nuvem;
+}
+
+.navbar_mobile_botao-claro {
+  @apply border-borda-claro hover:bg-hover-claro;
+}
+
+.navbar_mobile_botao-escuro {
+  @apply border-borda-escuro hover:bg-hover-escuro;
+}
+
+.navbar_mobile_botao-estrela {
+  @apply border-borda-estrela hover:bg-hover-estrela;
+}
+
+.navbar_mobile_botao-nuvem {
+  @apply border-borda-nuvem hover:bg-hover-nuvem;
+}
+
+.navbar_mobile_article-claro {
+  @apply text-borda-claro;
+}
+
+.navbar_mobile_article-escuro {
+  @apply text-borda-escuro;
+}
+
+.navbar_mobile_article-estrela {
+  @apply text-borda-estrela;
+}
+
+.navbar_mobile_article-nuvem {
+  @apply text-borda-nuvem;
+}
+
+.menu_mobile-claro {
+  @apply bg-fundo-claro border-borda-claro;
+}
+
+.menu_mobile-escuro {
+  @apply bg-fundo-escuro border-borda-escuro;
+}
+
+.menu_mobile-estrela {
+  @apply bg-fundo-estrela border-borda-estrela;
+}
+
+.menu_mobile-nuvem {
+  @apply bg-fundo-nuvem border-borda-nuvem;
+}
+
+.menu_navbar-claro {
+  @apply hover:bg-selecionado-claro;
+}
+
+.menu_navbar-escuro {
+  @apply hover:bg-selecionado-escuro;
+}
+
+.menu_navbar-estrela {
+  @apply hover:bg-selecionado-estrela;
+}
+
+.menu_navbar-nuvem {
+  @apply hover:bg-selecionado-nuvem;
 }

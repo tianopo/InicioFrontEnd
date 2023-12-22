@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom"
 import { Header } from "./Header"
 
 export const Layout = () => {
@@ -6,6 +7,7 @@ export const Layout = () => {
   return (
     <>
       <Header imagem="/flags/fr.svg" alt="Bandeira da França" navbar={nav} titulo="Matheus Henrique de Abreu" temaCor idioma />
+      <Outlet />
     </>
   )
 }
