@@ -1,21 +1,21 @@
 .sidebar_bg-claro {
-  @apply bg-fundo_secundario-claro;
+  @apply bg-fundo_secundario-claro border-borda-claro;
 }
 
 .sidebar_bg-escuro {
-  @apply bg-fundo_secundario-escuro;
+  @apply bg-fundo_secundario-escuro border-borda-escuro;
 }
 
 .sidebar_bg-estrela {
-  @apply bg-fundo_secundario-estrela;
+  @apply bg-fundo_secundario-estrela border-borda-estrela;
 }
 
 .sidebar_bg-nuvem {
-  @apply bg-fundo_secundario-nuvem;
+  @apply bg-fundo_secundario-nuvem border-borda-nuvem;
 }
 
 .sidebar_mobile {
-  @apply fixed z-20 h-full w-10 items-center gap-12 rounded-r-6 p-8 md:hidden;
+  @apply fixed z-20 h-full w-10 items-center gap-12 rounded-r-6 p-8 border-1;
 }
 
 .sidebar_mobile-botao {
@@ -27,7 +27,7 @@
 }
 
 .sidebar_desktop {
-  @apply fixed z-20 h-full items-center gap-12 rounded-r-6 p-8;
+  @apply fixed z-20 h-full items-center gap-12 rounded-r-6 p-8 border-1;
 }
 
 .sidebar_x {

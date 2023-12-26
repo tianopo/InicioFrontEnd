@@ -33,6 +33,7 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
         className={`
       sidebar_bg-${tema}
       sidebar_mobile
+      md:hidden
       `}
       >
         <button
