@@ -146,3 +146,5 @@ export const Teste = () => {
 // revisar com jest e outras coisas
 // conferir vite, preços, como funciona para hospedagem e venda de dominio
 // checar em outros navegadores
+// mapear o que o cliente precisa enviar
+// checar contratos

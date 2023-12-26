@@ -29,33 +29,48 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
 
   return (
     <>
-      <FlexCol className="w-10 md:hidden bg-gray-800 p-8 h-full text-escrita-escuro fixed z-20 rounded-r-6 gap-12 items-center">
+      <FlexCol className={`
+      sidebar_bg-${tema}
+      sidebar_mobile
+      `}>
         <button
           onClick={() => setMenuAberto(!menuAberto)}
-          className={`border-1 rounded-6 navbar_mobile_botao-${tema}`}
+          className={`
+          navbar_mobile_botao-${tema}
+          sidebar_mobile-botao
+          `}
         >
-          <Article className={`w-7 h-7 font-bold navbar_mobile_article-${tema}`} />
+          <Article className={`
+          navbar_mobile_article-${tema}
+          sidebar_mobile-icone
+          `}
+          />
         </button>
       </FlexCol>
-      <FlexCol className={`md:w-52 md:flex ${menuAberto ? 'flex w-full' : 'hidden'} bg-gray-800 p-8 h-full text-escrita-escuro fixed z-20 rounded-r-6 gap-12 items-center`}>
-        {menuAberto && <X className="w-20 h-20 cursor-pointer self-end" onClick={() => setMenuAberto(!menuAberto)} />}
+      <FlexCol className={`
+      sidebar_bg-${tema}
+      ${menuAberto ? 'flex w-full' : 'hidden'}
+      sidebar_desktop
+      md:w-52 md:flex
+      `}>
+        {menuAberto && <X className="sidebar_x" onClick={() => setMenuAberto(!menuAberto)} />}
         {imagem && <img src={imagem} alt={titulo} className={`h-10 w-10`} />}
-        {titulo && <TX tipo="h2" className="text-2xl font-bold text-center">{titulo}</TX>}
+        {titulo && <TX tipo="h2" className="sidebar_titulo">{titulo}</TX>}
         {(imagem || titulo) && <DivisorX />}
-        <FlexCol className="w-full justify-start">
+        <FlexCol className="sidebar_flex-1">
           {navbar &&
             navbar.map((nav: { texto: string, rota: string }, key) => (
               <LinkX key={key} rota={nav.rota}>
-                <TX tipo="p" className="font-bold text-16 p-12 text-escrita-escuro">{nav.texto.toUpperCase()}</TX>
+                <TX tipo="p" className={`sidebar_navbar`}>{nav.texto.toUpperCase()}</TX>
               </LinkX>
             ))}
         </FlexCol>
         {(temaCor || idioma || sair) && (
-          <FlexCol className="w-full h-full justify-end gap-12">
+          <FlexCol className="sidebar_flex-2">
             <DivisorX />
             <FlexRow className="justify-between">
               {sair && (
-                <FlexRow className="gap-4 rounded-6 cursor-pointer hover:bg-selecionado-claro">
+                <FlexRow className={`sidebar_hover-${tema} sidebar_flex-3`}>
                   <TX tipo="p">Sair</TX>
                   <SignOut size={24} />
                 </FlexRow>
@@ -66,7 +81,7 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
           </FlexCol>
         )}
       </FlexCol>
-      <CX tipo="div" className="w-72"></CX>
+      <CX tipo="div" className="md:w-72 w-16"></CX>
     </>
   )
 }

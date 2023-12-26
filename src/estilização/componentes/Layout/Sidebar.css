@@ -1,0 +1,71 @@
+.sidebar_bg-claro {
+  @apply bg-fundo_secundario-claro;
+}
+
+.sidebar_bg-escuro {
+  @apply bg-fundo_secundario-escuro;
+}
+
+.sidebar_bg-estrela {
+  @apply bg-fundo_secundario-estrela;
+}
+
+.sidebar_bg-nuvem {
+  @apply bg-fundo_secundario-nuvem;
+}
+
+.sidebar_mobile {
+  @apply w-10 md:hidden p-8 h-full fixed z-20 rounded-r-6 gap-12 items-center;
+}
+
+.sidebar_mobile-botao {
+  @apply border-1 rounded-6;
+}
+
+.sidebar_mobile-icone {
+  @apply w-7 h-7 font-bold;
+}
+
+.sidebar_desktop {
+  @apply p-8 h-full fixed z-20 rounded-r-6 gap-12 items-center;
+}
+
+.sidebar_x {
+  @apply w-20 h-20 cursor-pointer self-end;
+}
+
+.sidebar_flex-1 {
+  @apply w-full justify-start;
+}
+
+.sidebar_titulo {
+  @apply text-2xl font-bold text-center text-white;
+}
+
+.sidebar_navbar {
+  @apply font-bold text-16 p-12 text-white;
+}
+
+.sidebar_flex-2 {
+  @apply w-full h-full justify-end gap-12;
+}
+
+.sidebar_flex-3 {
+  @apply gap-4 rounded-6 cursor-pointer;
+}
+
+.sidebar_hover-claro {
+  @apply hover:bg-selecionado-claro;
+}
+
+.sidebar_hover-escuro {
+  @apply hover:bg-selecionado-escuro;
+}
+
+.sidebar_hover-estrela {
+  @apply hover:bg-selecionado-estrela;
+}
+
+.sidebar_hover-nuvem {
+  @apply hover:bg-selecionado-nuvem;
+}

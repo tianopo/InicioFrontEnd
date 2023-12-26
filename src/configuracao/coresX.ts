@@ -23,6 +23,12 @@ export const coresX = {
     estrela: "#FFFAF0",
     nuvem: "#F0F8FF",
   },
+  fundo_secundario: {
+    claro: "#282828",
+    escuro: "#000",
+    estrela: "#D8C4B7",
+    nuvem: "#A9C8FF",
+  },
   escrita: {
     claro: "#000",
     escuro: "#FFF",
