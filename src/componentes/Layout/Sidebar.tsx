@@ -29,7 +29,7 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
 
   return (
     <>
-      <FlexCol className="md:w-10 md:hidden flex bg-gray-800 p-8 h-full text-escrita-escuro fixed z-20 rounded-r-6 gap-12 items-center">
+      <FlexCol className="w-10 md:hidden bg-gray-800 p-8 h-full text-escrita-escuro fixed z-20 rounded-r-6 gap-12 items-center">
         <button
           onClick={() => setMenuAberto(!menuAberto)}
           className={`border-1 rounded-6 navbar_mobile_botao-${tema}`}
@@ -60,13 +60,13 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
                   <SignOut size={24} />
                 </FlexRow>
               )}
-              {idioma && <BotaoTrocarIdioma direcao="bottom" />}
               {temaCor && <BotaoTrocarTema />}
+              {idioma && <BotaoTrocarIdioma menuBottom />}
             </FlexRow>
           </FlexCol>
         )}
       </FlexCol>
-      <CX tipo="div" className="h-52 md:w-52 w-10"></CX>
+      <CX tipo="div" className="w-72"></CX>
     </>
   )
 }

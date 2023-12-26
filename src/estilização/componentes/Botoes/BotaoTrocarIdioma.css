@@ -22,6 +22,10 @@
   @apply flex w-full justify-center hover:rounded-6;
 }
 
+.menu_bottom {
+  @apply bottom-10
+}
+
 /* Cor */
 .botao_trocar_idioma-claro {
   @apply border-borda-claro text-icone-claro hover:bg-selecionado-claro;

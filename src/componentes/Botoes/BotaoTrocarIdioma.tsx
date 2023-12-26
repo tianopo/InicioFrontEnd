@@ -6,10 +6,10 @@ import { LocalStorage } from "src/utils";
 import { CX } from "../Tags/ConteudoX";
 
 interface IBotaoTrocarIdioma {
-  direcao?: string
+  menuBottom?: boolean
 }
 
-export const BotaoTrocarIdioma = ({ direcao }: IBotaoTrocarIdioma) => {
+export const BotaoTrocarIdioma = ({ menuBottom }: IBotaoTrocarIdioma) => {
   const opcoes = [
     {
       valor: "ptbr",
@@ -74,7 +74,9 @@ export const BotaoTrocarIdioma = ({ direcao }: IBotaoTrocarIdioma) => {
         )}
       </button>
       {menuAberto && (
-        <div className={`botao_trocar_idioma-div_menu ${direcao}-10`}>
+        <div className={`botao_trocar_idioma-div_menu
+        ${menuBottom ? "menu_bottom" : ""}`}
+        >
           {opcoes.map((opcao) => (
             <button
               key={opcao.valor}

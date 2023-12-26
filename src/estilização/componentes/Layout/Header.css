@@ -1,5 +1,5 @@
 .header {
-  @apply p-12 flex flex-row justify-between border-b-1 fixed w-full rounded-b-6 z-10;
+  @apply p-12 flex flex-row justify-between border-b-1 fixed w-full h-20 rounded-b-6 z-10;
 }
 
 .header-claro {
