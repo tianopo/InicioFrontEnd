@@ -16,27 +16,36 @@ interface IFooter {
 
 export const Footer = ({ titulo, description, icones }: IFooter) => {
   return (
-    <footer className="w-full h-fit flex flex-col gap-12 items-center bg-fundo_secundario-claro px-36 py-24 bg-box-shadow">
-      <Flex className="justify-between w-full p-16 text-white md:flex-row flex-col gap-12">
+    <footer className="flex h-fit w-full flex-col items-center gap-16 bg-box-shadow bg-fundo_secundario-claro px-36 py-24">
+      <Flex className="w-full flex-col justify-between gap-12 p-16 text-white md:flex-row">
         <FlexCol className="w-full gap-12">
-          <TX tipo="p" className="text-24 font-bold">{titulo}</TX>
-          <TX tipo="p" className="text-16">{description}</TX>
+          <TX tipo="p" className="text-24 font-bold">
+            {titulo}
+          </TX>
+          <TX tipo="p" className="text-16">
+            {description}
+          </TX>
         </FlexCol>
-        <FlexCol className="md:items-end items-start w-full">
-          <TX tipo="p" className="text-24 font-bold">Redes Sociais</TX>
+        <FlexCol className="w-full items-start md:items-end">
+          <TX tipo="p" className="text-24 font-bold">
+            Redes Sociais
+          </TX>
           <FlexRow className="gap-12">
             {icones?.map(({ imagem, rota }, key) => (
               <LinkX rota={rota} target="blank" key={key}>
-                <img src={imagem} alt="icone de rede social" className="w-6 h-6" />
+                <img src={imagem} alt="icone de rede social" className="h-6 w-6" />
               </LinkX>
             ))}
           </FlexRow>
         </FlexCol>
       </Flex>
       <DivisorX />
-      <TX tipo="p" className="text-12 text-white font-semibold">
-        © Copyright {new Date().getFullYear()}. Made by <LinkX rota="https://github.com/tianopo" target="blank">tianopo</LinkX>
+      <TX tipo="p" className="text-12 font-semibold text-white">
+        © Copyright {new Date().getFullYear()}. Made by{" "}
+        <LinkX rota="https://github.com/tianopo" target="blank">
+          tianopo
+        </LinkX>
       </TX>
     </footer>
   );
-}
+};

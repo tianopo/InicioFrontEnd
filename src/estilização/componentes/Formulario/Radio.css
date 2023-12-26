@@ -19,5 +19,5 @@
 }
 
 .radio-nuvem {
-  @apply accent-primaria-nuvem border-white;
+  @apply border-white accent-primaria-nuvem;
 }

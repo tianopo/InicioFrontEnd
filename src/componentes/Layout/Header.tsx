@@ -1,4 +1,4 @@
-import { Article } from '@phosphor-icons/react';
+import { Article } from "@phosphor-icons/react";
 import { useState } from "react";
 import { useTema } from "src/hooks";
 import { BotaoTrocarIdioma } from "../Botoes/BotaoTrocarIdioma";
@@ -27,25 +27,36 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
     <>
       <CX tipo="header" className={`header header-${tema}`}>
         <FlexRow className="header_flex">
-          {imagem && <img src={imagem} alt={titulo} className={`
+          {imagem && (
+            <img
+              src={imagem}
+              alt={titulo}
+              className={`
           header_imagem-${tema}
           header_imagem
           `}
-          />}
-          {titulo && <TX tipo="h1" className="header_titulo">{titulo}</TX>}
+            />
+          )}
+          {titulo && (
+            <TX tipo="h1" className="header_titulo">
+              {titulo}
+            </TX>
+          )}
         </FlexRow>
         {navbar && (
           <>
-            <FlexRow className={`header_flex md:flex hidden`}>
-              {navbar.map((nav: { texto: string, rota: string }, key: number) => (
+            <FlexRow className={`header_flex hidden md:flex`}>
+              {navbar.map((nav: { texto: string; rota: string }, key: number) => (
                 <LinkX key={key} rota={nav.rota}>
-                  <TX tipo="p" className="font-bold text-16 p-12">{nav.texto.toUpperCase()}</TX>
+                  <TX tipo="p" className="p-12 text-16 font-bold">
+                    {nav.texto.toUpperCase()}
+                  </TX>
                 </LinkX>
               ))}
             </FlexRow>
 
-            <FlexRow className={`md:hidden flex items-center justify-center px-4`}>
-              <CX tipo="div" className="relative inline-block w-auto duration-300 pt-3">
+            <FlexRow className={`flex items-center justify-center px-4 md:hidden`}>
+              <CX tipo="div" className="relative inline-block w-auto pt-3 duration-300">
                 <button
                   onClick={() => setMenuAberto(!menuAberto)}
                   onBlur={() =>
@@ -53,16 +64,20 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
                       setMenuAberto(false);
                     }, 100)
                   }
-                  className={`navbar_mobile_botao-${tema} border-1 rounded-6`}
+                  className={`navbar_mobile_botao-${tema} rounded-6 border-1`}
                 >
-                  <Article className={`w-7 h-7 font-bold navbar_mobile_article-${tema}`} />
+                  <Article className={`h-7 w-7 font-bold navbar_mobile_article-${tema}`} />
                 </button>
                 {menuAberto && (
-                  <div className={`absolute w-auto duration-300 right-0 rounded-6 border-1 menu_mobile-${tema}`}>
+                  <div
+                    className={`absolute right-0 w-auto rounded-6 border-1 duration-300 menu_mobile-${tema}`}
+                  >
                     {navbar.map(({ texto, rota }, key: number) => (
                       <div key={key} className={`menu_navbar-${tema} p-8`}>
                         <LinkX rota={rota}>
-                          <TX tipo="p" className="navbar_texto">{texto.toUpperCase()}</TX>
+                          <TX tipo="p" className="navbar_texto">
+                            {texto.toUpperCase()}
+                          </TX>
                         </LinkX>
                       </div>
                     ))}

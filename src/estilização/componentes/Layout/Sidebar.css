@@ -15,23 +15,23 @@
 }
 
 .sidebar_mobile {
-  @apply w-10 md:hidden p-8 h-full fixed z-20 rounded-r-6 gap-12 items-center;
+  @apply fixed z-20 h-full w-10 items-center gap-12 rounded-r-6 p-8 md:hidden;
 }
 
 .sidebar_mobile-botao {
-  @apply border-1 rounded-6;
+  @apply rounded-6 border-1;
 }
 
 .sidebar_mobile-icone {
-  @apply w-7 h-7 font-bold;
+  @apply h-7 w-7 font-bold;
 }
 
 .sidebar_desktop {
-  @apply p-8 h-full fixed z-20 rounded-r-6 gap-12 items-center;
+  @apply fixed z-20 h-full items-center gap-12 rounded-r-6 p-8;
 }
 
 .sidebar_x {
-  @apply w-20 h-20 cursor-pointer self-end;
+  @apply h-20 w-20 cursor-pointer self-end;
 }
 
 .sidebar_flex-1 {
@@ -39,19 +39,19 @@
 }
 
 .sidebar_titulo {
-  @apply text-2xl font-bold text-center text-white;
+  @apply text-center text-2xl font-bold text-white;
 }
 
 .sidebar_navbar {
-  @apply font-bold text-16 p-12 text-white;
+  @apply p-12 text-16 font-bold text-white;
 }
 
 .sidebar_flex-2 {
-  @apply w-full h-full justify-end gap-12;
+  @apply h-full w-full justify-end gap-12;
 }
 
 .sidebar_flex-3 {
-  @apply gap-4 rounded-6 cursor-pointer;
+  @apply cursor-pointer gap-4 rounded-6;
 }
 
 .sidebar_hover-claro {

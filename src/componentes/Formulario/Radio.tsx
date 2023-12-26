@@ -25,29 +25,27 @@ export const Radio = ({ disabled, errors, register, opcoes, titulo, required }: 
           </TX>
         )}
       </TX>
-      {
-        opcoes.map((opcao) => {
-          const palavras = labelFormatada(opcao);
+      {opcoes.map((opcao) => {
+        const palavras = labelFormatada(opcao);
 
-          return (
-            <FlexRow key={opcao} className="radio_flex_row">
-              <input
-                id={palavras}
-                name={palavras}
-                type="radio"
-                value={opcao}
-                readOnly
-                disabled={disabled}
-                checked
-                className={`radio radio-${tema}`}
-                {...register}
-              />
-              <Label titulo={opcao} palavras={labelFormatada(opcao)} />
-            </FlexRow>
-          );
-        })
-      }
+        return (
+          <FlexRow key={opcao} className="radio_flex_row">
+            <input
+              id={palavras}
+              name={palavras}
+              type="radio"
+              value={opcao}
+              readOnly
+              disabled={disabled}
+              checked
+              className={`radio radio-${tema}`}
+              {...register}
+            />
+            <Label titulo={opcao} palavras={labelFormatada(opcao)} />
+          </FlexRow>
+        );
+      })}
       <MensagemDeErro errors={errors} />
-    </FlexCol >
+    </FlexCol>
   );
 };

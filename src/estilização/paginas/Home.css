@@ -1,15 +1,15 @@
 .home-claro {
-  @apply bg-fundo-claro text-escrita-claro border-borda-claro;
+  @apply border-borda-claro bg-fundo-claro text-escrita-claro;
 }
 
 .home-escuro {
-  @apply bg-fundo-escuro text-escrita-escuro border-borda-escuro;
+  @apply border-borda-escuro bg-fundo-escuro text-escrita-escuro;
 }
 
 .home-estrela {
-  @apply bg-fundo-estrela text-escrita-estrela border-borda-estrela;
+  @apply border-borda-estrela bg-fundo-estrela text-escrita-estrela;
 }
 
 .home-nuvem {
-  @apply bg-fundo-nuvem text-escrita-nuvem border-borda-nuvem;
+  @apply border-borda-nuvem bg-fundo-nuvem text-escrita-nuvem;
 }

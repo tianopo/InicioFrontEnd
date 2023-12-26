@@ -12,7 +12,7 @@ export interface ICheckbox extends IFormUsos {
 
 export const Checkbox = ({ disabled, required, errors, titulo, register }: ICheckbox) => {
   const palavras = labelFormatada(titulo);
-  const { tema } = useTema()
+  const { tema } = useTema();
 
   return (
     <FlexCol>

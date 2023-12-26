@@ -1,21 +1,21 @@
 .header {
-  @apply p-12 flex flex-row justify-between border-b-1 fixed w-full h-20 rounded-b-6 z-10;
+  @apply fixed z-10 flex h-20 w-full flex-row justify-between rounded-b-6 border-b-1 p-12;
 }
 
 .header-claro {
-  @apply bg-fundo-claro border-borda-claro;
+  @apply border-borda-claro bg-fundo-claro;
 }
 
 .header-escuro {
-  @apply bg-fundo-escuro border-borda-escuro;
+  @apply border-borda-escuro bg-fundo-escuro;
 }
 
 .header-nuvem {
-  @apply bg-fundo-nuvem border-borda-nuvem;
+  @apply border-borda-nuvem bg-fundo-nuvem;
 }
 
 .header-estrela {
-  @apply bg-fundo-estrela border-borda-estrela;
+  @apply border-borda-estrela bg-fundo-estrela;
 }
 
 .header_flex {
@@ -23,7 +23,7 @@
 }
 
 .header_imagem {
-  @apply h-12 w-10 p-2 border-1 rounded-20;
+  @apply h-12 w-10 rounded-20 border-1 p-2;
 }
 
 .header_imagem-claro {
@@ -43,7 +43,7 @@
 }
 
 .header_titulo {
-  @apply font-bold text-20;
+  @apply text-20 font-bold;
 }
 
 .navbar_texto-claro {
@@ -95,19 +95,19 @@
 }
 
 .menu_mobile-claro {
-  @apply bg-fundo-claro border-borda-claro;
+  @apply border-borda-claro bg-fundo-claro;
 }
 
 .menu_mobile-escuro {
-  @apply bg-fundo-escuro border-borda-escuro;
+  @apply border-borda-escuro bg-fundo-escuro;
 }
 
 .menu_mobile-estrela {
-  @apply bg-fundo-estrela border-borda-estrela;
+  @apply border-borda-estrela bg-fundo-estrela;
 }
 
 .menu_mobile-nuvem {
-  @apply bg-fundo-nuvem border-borda-nuvem;
+  @apply border-borda-nuvem bg-fundo-nuvem;
 }
 
 .menu_navbar-claro {

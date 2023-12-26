@@ -13,5 +13,4 @@ export const browserRouter = createBrowserRouter([
       { path: "*", element: <Teste /> },
     ],
   },
-])
-
+]);

@@ -6,7 +6,7 @@ import { LocalStorage } from "src/utils";
 import { CX } from "../Tags/ConteudoX";
 
 interface IBotaoTrocarIdioma {
-  menuBottom?: boolean
+  menuBottom?: boolean;
 }
 
 export const BotaoTrocarIdioma = ({ menuBottom }: IBotaoTrocarIdioma) => {
@@ -74,7 +74,8 @@ export const BotaoTrocarIdioma = ({ menuBottom }: IBotaoTrocarIdioma) => {
         )}
       </button>
       {menuAberto && (
-        <div className={`botao_trocar_idioma-div_menu
+        <div
+          className={`botao_trocar_idioma-div_menu
         ${menuBottom ? "menu_bottom" : ""}`}
         >
           {opcoes.map((opcao) => (
