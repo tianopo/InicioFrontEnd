@@ -59,9 +59,9 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
         {(imagem || titulo) && <DivisorX />}
         <FlexCol className="sidebar_flex-1">
           {navbar &&
-            navbar.map((nav: { texto: string, rota: string }, key) => (
-              <LinkX key={key} rota={nav.rota}>
-                <TX tipo="p" className={`sidebar_navbar`}>{nav.texto.toUpperCase()}</TX>
+            navbar.map(({ texto, rota }, key) => (
+              <LinkX key={key} rota={rota}>
+                <TX tipo="p" className={`sidebar_navbar`}>{texto.toUpperCase()}</TX>
               </LinkX>
             ))}
         </FlexCol>

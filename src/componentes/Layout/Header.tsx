@@ -59,10 +59,10 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
                 </button>
                 {menuAberto && (
                   <div className={`absolute w-auto duration-300 right-0 rounded-6 border-1 menu_mobile-${tema}`}>
-                    {navbar.map((nav: { texto: string, rota: string }, key: number) => (
+                    {navbar.map(({ texto, rota }, key: number) => (
                       <div key={key} className={`menu_navbar-${tema} p-8`}>
-                        <LinkX rota={nav.rota}>
-                          <TX tipo="p" className="navbar_texto">{nav.texto.toUpperCase()}</TX>
+                        <LinkX rota={rota}>
+                          <TX tipo="p" className="navbar_texto">{texto.toUpperCase()}</TX>
                         </LinkX>
                       </div>
                     ))}
