@@ -27,7 +27,11 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
     <>
       <CX tipo="header" className={`header header-${tema}`}>
         <FlexRow className="header_flex">
-          {imagem && <img src={imagem} alt={titulo} className={`header_imagem header_imagem-${tema}`} />}
+          {imagem && <img src={imagem} alt={titulo} className={`
+          header_imagem-${tema}
+          header_imagem
+          `}
+          />}
           {titulo && <TX tipo="h1" className="header_titulo">{titulo}</TX>}
         </FlexRow>
         {navbar && (
@@ -49,7 +53,7 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
                       setMenuAberto(false);
                     }, 100)
                   }
-                  className={`border-1 rounded-6 navbar_mobile_botao-${tema}`}
+                  className={`navbar_mobile_botao-${tema} border-1 rounded-6`}
                 >
                   <Article className={`w-7 h-7 font-bold navbar_mobile_article-${tema}`} />
                 </button>
