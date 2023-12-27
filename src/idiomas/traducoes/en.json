@@ -1,5 +1,8 @@
 {
   "translation": {
-    "botãoEnviar": "Send"
+    "botãoEnviar": "Send",
+    "footer": {
+      "redesSociais": "Social Media"
+    }
   }
 }

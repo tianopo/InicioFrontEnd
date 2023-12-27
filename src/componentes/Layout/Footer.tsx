@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useTema } from "src/hooks";
 import { Flex } from "../Flex/Flex";
@@ -22,13 +23,15 @@ interface IFooter {
 
 export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
   const { tema } = useTema();
+  const { t: tradutor } = useTranslation()
+  const t = ((palavra: string) => tradutor(`footer.${palavra}`))
 
   return (
     <footer className={`footer-${tema} footer`}>
       <Flex className="md:flex-row footer_flex-1">
         {(titulo || description) &&
-          <FlexCol className="w-full gap-12">
-            <TX tipo="p" className="text-24 font-bold">
+          <FlexCol className="footer_flex-2">
+            <TX tipo="p" className="footer_titulo">
               {titulo}
             </TX>
             <TX tipo="p" className="text-16">
@@ -37,9 +40,9 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
           </FlexCol>
         }
         {nav &&
-          <Flex className="md:px-8 md:flex-col  w-full px-0 gap-10flex-row">
+          <Flex className="md:px-8 md:flex-col footer_flex-3">
             {nav?.map(({ texto, rota }, key: number) => (
-              <FlexCol key={key} className="md:items-center hover:underline w-full items-start font-semibold text-20">
+              <FlexCol key={key} className="md:items-center footer_flex-4">
                 <Link to={rota} target="blank">
                   {texto}
                 </Link>
@@ -48,9 +51,9 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
           </Flex>
         }
         {icones &&
-          <FlexCol className=" w-1/2 items-start md:items-end">
-            <TX tipo="p" className="text-24 font-bold">
-              Redes Sociais
+          <FlexCol className="md:items-end footer_flex-5">
+            <TX tipo="p" className="footer_redes">
+              {t("redesSociais")}
             </TX>
             <FlexRow className="gap-12">
               {icones?.map(({ imagem, rota }, key) => (
@@ -63,7 +66,7 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
         }
       </Flex>
       <DivisorX />
-      <TX tipo="p" className="text-10 font-semibold text-white">
+      <TX tipo="p" className="footer_assinatura">
         © Copyright {new Date().getFullYear()}. Made by{" "}
         <LinkX rota="https://github.com/tianopo" target="blank">
           tianopo
