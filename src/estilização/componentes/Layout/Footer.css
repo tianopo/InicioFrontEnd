@@ -1,0 +1,15 @@
+.footer-claro {
+  @apply bg-fundo_secundario-claro border-borda-claro;
+}
+
+.footer-escuro {
+  @apply bg-fundo_secundario-escuro border-borda-escuro;
+}
+
+.footer-estrela {
+  @apply bg-fundo_secundario-estrela border-borda-estrela;
+}
+
+.footer-nuvem {
+  @apply bg-fundo_secundario-nuvem border-borda-nuvem;
+}

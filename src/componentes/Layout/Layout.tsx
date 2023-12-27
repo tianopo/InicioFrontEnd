@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { useTema } from "src/hooks";
 import { Flex } from "../Flex/Flex";
+import { FlexCol } from "../Flex/FlexCol";
+import { CX } from "../Tags/ConteudoX";
 import { Footer } from "./Footer";
 import { Sidebar } from "./Sidebar";
 
@@ -20,14 +22,17 @@ export const Layout = () => {
   ];
 
   return (
-    <Flex className={`home-${tema} w-full flex-col`}>
+    <Flex className={`home-${tema}`}>
       <Sidebar imagem="/flags/fr.svg" navbar={nav} titulo="Software" temaCor idioma />
-      <Outlet />
-      <Footer
-        titulo="Matheus Henrique de Abreu"
-        description="Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto aleatório. Tem raízes numa peça de literatura clássica em Latim, de 45 AC, tornando-o com mais de 2000 anos."
-        icones={icones}
-      />
-    </Flex>
+      <CX tipo="div" className="ml-52"></CX>
+      <FlexCol className="w-full">
+        <Outlet />
+        <Footer
+          titulo="Matheus Henrique de Abreu"
+          description="Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto aleatório. Tem raízes numa peça de literatura clássica em Latim, de 45 AC, tornando-o com mais de 2000 anos."
+          icones={icones}
+        />
+      </FlexCol>
+    </Flex >
   );
 };

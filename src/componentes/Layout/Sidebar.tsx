@@ -8,7 +8,6 @@ import { FlexCol } from "../Flex/FlexCol";
 import { FlexRow } from "../Flex/FlexRow";
 import { DivisorX } from "../Outros/DivisorX";
 import { LinkX } from "../Outros/LinkX";
-import { CX } from "../Tags/ConteudoX";
 import { TX } from "../Tags/TextoX";
 
 interface ISidebar {
@@ -93,7 +92,6 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
           </FlexCol>
         )}
       </FlexCol>
-      <CX tipo="div" className="w-16 md:w-72"></CX>
     </>
   );
 };

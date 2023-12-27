@@ -1,3 +1,4 @@
+import { useTema } from "src/hooks";
 import { Flex } from "../Flex/Flex";
 import { FlexCol } from "../Flex/FlexCol";
 import { FlexRow } from "../Flex/FlexRow";
@@ -15,8 +16,10 @@ interface IFooter {
 }
 
 export const Footer = ({ titulo, description, icones }: IFooter) => {
+  const { tema } = useTema();
+
   return (
-    <footer className="flex h-fit w-full flex-col items-center gap-14 bg-box-shadow bg-fundo_secundario-claro px-36 py-24">
+    <footer className={`footer-${tema} flex h-fit w-full flex-col items-center gap-14 bg-box-shadow px-36 py-24 border-t-1`}>
       <Flex className="w-full flex-col justify-between gap-12 p-16 text-white md:flex-row">
         <FlexCol className="w-full gap-12">
           <TX tipo="p" className="text-24 font-bold">
