@@ -130,7 +130,7 @@ export const Teste = () => {
   );
 };
 
-// fazer modal, sidebar, footer e sections(banner, secao protótipa)
+// sections(banner, cards secao protótipa)
 // ver sobre herança de cores
 // retirar depreciation
 // CSS ficando criptografado no devtools
