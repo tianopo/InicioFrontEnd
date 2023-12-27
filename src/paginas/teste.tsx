@@ -1,6 +1,6 @@
 import axios from "axios";
+import { t } from "i18next";
 import { FormProvider } from "react-hook-form";
-import { useTranslation } from "react-i18next";
 import {
   BotaoOnClick,
   BotaoSubmit,
@@ -21,7 +21,6 @@ import { useValidacaoTeste } from "src/hooks";
 import { checkboxFormatada, dataFormatada } from "src/utils";
 export const Teste = () => {
   const { contexto } = useValidacaoTeste();
-  const { t } = useTranslation();
 
   const {
     formState: { errors },
@@ -30,10 +29,9 @@ export const Teste = () => {
     watch,
     reset,
   } = contexto;
-  // retirar consoles
+
   const onSubmit = async () => {
     try {
-      /* aceita apenas name, email e message */
       const formData = watch();
       const { coisas, mensagem, email, dataDeNascimento, nome, descricao, idioma, contato } =
         formData;

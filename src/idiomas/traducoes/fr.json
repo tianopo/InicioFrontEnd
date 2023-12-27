@@ -2,7 +2,9 @@
   "translation": {
     "botãoEnviar": "Envoyer",
     "footer": {
-      "redesSociais": "Réseaux Sociaux"
+      "redesSociais": "Réseaux Sociaux",
+      "feitoPor": "Fabriqué par",
+      "direitoAutoral": "Copyright"
     }
   }
 }

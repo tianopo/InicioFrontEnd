@@ -2,7 +2,9 @@
   "translation": {
     "botãoEnviar": "Enviar",
     "footer": {
-      "redesSociais": "Redes Sociais"
+      "redesSociais": "Redes Sociais",
+      "feitoPor": "Feito por",
+      "direitoAutoral": "Direito Autoral"
     }
   }
 }

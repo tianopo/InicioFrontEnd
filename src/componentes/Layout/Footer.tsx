@@ -23,8 +23,8 @@ interface IFooter {
 
 export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
   const { tema } = useTema();
-  const { t: tradutor } = useTranslation()
-  const t = ((palavra: string) => tradutor(`footer.${palavra}`))
+  const { t: tradutor } = useTranslation();
+  const t = ((t: string) => tradutor(`footer.${t}`))
 
   return (
     <footer className={`footer-${tema} footer`}>
@@ -67,7 +67,7 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
       </Flex>
       <DivisorX />
       <TX tipo="p" className="footer_assinatura">
-        © Copyright {new Date().getFullYear()}. Made by{" "}
+        © {t("direitoAutoral")} {new Date().getFullYear()}. {t("feitoPor")}{" "}
         <LinkX rota="https://github.com/tianopo" target="blank">
           tianopo
         </LinkX>
