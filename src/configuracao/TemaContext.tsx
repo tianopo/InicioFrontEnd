@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { ReactNode, createContext, useState } from "react";
 import { LocalStorage } from "src/utils";
 
 interface TemaContextProps {
@@ -8,7 +8,7 @@ interface TemaContextProps {
 
 export const TemaContext = createContext<TemaContextProps | undefined>(undefined);
 
-export const ProvedorTema: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const ProvedorTema: React.FC<{ children: ReactNode }> = ({ children }) => {
   const localStorage = new LocalStorage();
   const temaInicial = localStorage.get("tema") || "claro";
   const [tema, setTema] = useState(temaInicial);

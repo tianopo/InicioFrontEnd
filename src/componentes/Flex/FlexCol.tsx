@@ -1,8 +1,8 @@
-import React, { HTMLAttributes } from "react";
+import React, { HTMLAttributes, ReactNode } from "react";
 import { CX } from "../Tags/ConteudoX";
 
 interface IFlexCol extends HTMLAttributes<HTMLDivElement> {
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 export const FlexCol = ({ children, className }: IFlexCol) => {

@@ -1,7 +1,7 @@
-import { FormHTMLAttributes } from "react";
+import { FormHTMLAttributes, ReactNode } from "react";
 
 interface IForm extends FormHTMLAttributes<HTMLFormElement> {
-  children: React.ReactNode;
+  children: ReactNode;
   onSubmit?: () => void;
 }
 

@@ -1,8 +1,8 @@
-import React, { HTMLAttributes } from "react";
+import React, { HTMLAttributes, ReactNode } from "react";
 import { useTema } from "src/hooks";
 
 interface IBotaoOnClick extends HTMLAttributes<HTMLDivElement> {
-  children?: React.ReactNode;
+  children?: ReactNode;
   onClick?: () => void;
 }
 

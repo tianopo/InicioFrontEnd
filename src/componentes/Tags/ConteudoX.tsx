@@ -1,8 +1,8 @@
-import React, { HTMLAttributes } from "react";
+import React, { HTMLAttributes, ReactNode } from "react";
 
 interface ICX extends HTMLAttributes<HTMLDivElement> {
   tipo: "address" | "article" | "aside" | "footer" | "header" | "main" | "section" | "div";
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 export const CX = ({ tipo, children, className, ...rest }: ICX) => {

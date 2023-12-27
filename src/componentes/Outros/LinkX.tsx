@@ -1,9 +1,9 @@
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useTema } from "src/hooks/configuracao/useTema";
 
 export interface ILinkX extends HTMLAttributes<HTMLDivElement> {
-  children?: React.ReactNode;
+  children?: ReactNode;
   rota?: string;
   target?: string;
 }
