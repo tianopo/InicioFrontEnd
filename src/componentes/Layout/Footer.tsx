@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useTema } from "src/hooks";
 import { Flex } from "../Flex/Flex";
 import { FlexCol } from "../Flex/FlexCol";
@@ -13,37 +14,56 @@ interface IFooter {
     imagem: string;
     rota: string;
   }[];
+  nav?: {
+    texto: string;
+    rota: string;
+  }[];
 }
 
-export const Footer = ({ titulo, description, icones }: IFooter) => {
+export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
   const { tema } = useTema();
 
   return (
-    <footer className={`footer-${tema} flex h-fit w-full flex-col items-center gap-14 bg-box-shadow px-36 py-24 border-t-1`}>
-      <Flex className="w-full flex-col justify-between gap-12 p-16 text-white md:flex-row">
-        <FlexCol className="w-full gap-12">
-          <TX tipo="p" className="text-24 font-bold">
-            {titulo}
-          </TX>
-          <TX tipo="p" className="text-16">
-            {description}
-          </TX>
-        </FlexCol>
-        <FlexCol className="w-full items-start md:items-end">
-          <TX tipo="p" className="text-24 font-bold">
-            Redes Sociais
-          </TX>
-          <FlexRow className="gap-12">
-            {icones?.map(({ imagem, rota }, key) => (
-              <LinkX rota={rota} target="blank" key={key}>
-                <img src={imagem} alt="icone de rede social" className="h-6 w-6" />
-              </LinkX>
+    <footer className={`footer-${tema} footer`}>
+      <Flex className="md:flex-row footer_flex-1">
+        {(titulo || description) &&
+          <FlexCol className="w-full gap-12">
+            <TX tipo="p" className="text-24 font-bold">
+              {titulo}
+            </TX>
+            <TX tipo="p" className="text-16">
+              {description}
+            </TX>
+          </FlexCol>
+        }
+        {nav &&
+          <Flex className="md:px-8 md:flex-col  w-full px-0 gap-10flex-row">
+            {nav?.map(({ texto, rota }, key: number) => (
+              <FlexCol key={key} className="md:items-center hover:underline w-full items-start font-semibold text-20">
+                <Link to={rota} target="blank">
+                  {texto}
+                </Link>
+              </FlexCol>
             ))}
-          </FlexRow>
-        </FlexCol>
+          </Flex>
+        }
+        {icones &&
+          <FlexCol className=" w-1/2 items-start md:items-end">
+            <TX tipo="p" className="text-24 font-bold">
+              Redes Sociais
+            </TX>
+            <FlexRow className="gap-12">
+              {icones?.map(({ imagem, rota }, key) => (
+                <LinkX rota={rota} target="blank" key={key}>
+                  <img src={imagem} alt="icone de rede social" className="h-6 w-6" />
+                </LinkX>
+              ))}
+            </FlexRow>
+          </FlexCol>
+        }
       </Flex>
       <DivisorX />
-      <TX tipo="p" className="text-12 font-semibold text-white">
+      <TX tipo="p" className="text-10 font-semibold text-white">
         © Copyright {new Date().getFullYear()}. Made by{" "}
         <LinkX rota="https://github.com/tianopo" target="blank">
           tianopo

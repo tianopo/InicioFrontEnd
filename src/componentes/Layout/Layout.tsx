@@ -20,17 +20,19 @@ export const Layout = () => {
     { imagem: "/sociais/github.png", rota: "https://github.com/tianopo" },
     { imagem: "/sociais/linkedin.png", rota: "https://www.linkedin.com/in/matheustianopo/" },
   ];
+  const footer = ['imagem', 'texto', 'coisas', 'agora']
 
   return (
     <Flex className={`home-${tema}`}>
       <Sidebar imagem="/flags/fr.svg" navbar={nav} titulo="Software" temaCor idioma />
-      <CX tipo="div" className="ml-52"></CX>
+      <CX tipo="div" className="ml-40 md:ml-52"></CX>
       <FlexCol className="w-full">
         <Outlet />
         <Footer
           titulo="Matheus Henrique de Abreu"
           description="Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto aleatório. Tem raízes numa peça de literatura clássica em Latim, de 45 AC, tornando-o com mais de 2000 anos."
           icones={icones}
+          nav={nav}
         />
       </FlexCol>
     </Flex >

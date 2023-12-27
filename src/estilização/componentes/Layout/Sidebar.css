@@ -43,7 +43,7 @@
 }
 
 .sidebar_navbar {
-  @apply p-12 text-16 font-bold text-white;
+  @apply p-12 text-16 font-bold text-white hover:underline;
 }
 
 .sidebar_flex-2 {
