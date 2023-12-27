@@ -17,8 +17,10 @@ export * from "./Formulario/Radio";
 export * from "./Formulario/Select";
 export * from "./Formulario/Textarea";
 
+export * from "./Layout/Footer";
 export * from "./Layout/Header";
 export * from "./Layout/Layout";
+export * from "./Layout/Section";
 export * from "./Layout/Sidebar";
 
 export * from "./Outros/DivisorX";
@@ -26,3 +28,4 @@ export * from "./Outros/LinkX";
 
 export * from "./Tags/ConteudoX";
 export * from "./Tags/TextoX";
+
