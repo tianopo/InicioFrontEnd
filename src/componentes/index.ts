@@ -21,6 +21,7 @@ export * from "./Layout/Footer";
 export * from "./Layout/Header";
 export * from "./Layout/Layout";
 export * from "./Layout/Section";
+export * from "./Layout/Section/SectionBanner";
 export * from "./Layout/Sidebar";
 
 export * from "./Outros/DivisorX";
