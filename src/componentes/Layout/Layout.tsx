@@ -23,7 +23,7 @@ export const Layout = () => {
   const footer = ['imagem', 'texto', 'coisas', 'agora']
 
   return (
-    <Flex className={`home-${tema}`}>
+    <Flex className={`home-${tema} absolute`}>
       <Sidebar imagem="/flags/fr.svg" navbar={nav} titulo="Software" temaCor idioma />
       <CX tipo="div" className="ml-40 md:ml-52"></CX>
       <FlexCol className="w-full">
