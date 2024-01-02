@@ -15,7 +15,7 @@
 }
 
 .footer {
-  @apply flex h-fit w-full flex-col items-center gap-16 bg-box-shadow px-36 py-24 border-t-1;
+  @apply flex h-fit w-full flex-col items-center gap-16 shadow-xl px-36 py-24 border-t-1;
 }
 
 .footer_flex-1 {

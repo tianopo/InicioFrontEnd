@@ -83,5 +83,4 @@ export const coresX = {
     estrela: "#FFE7B3",
     nuvem: "#B0E2FF",
   },
-  "box-shadow": "0px 2px 4px 0px rgba(0, 0, 0, 0.15)",
 };

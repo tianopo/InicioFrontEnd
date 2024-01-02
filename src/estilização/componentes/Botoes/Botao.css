@@ -1,20 +1,20 @@
 .botao {
-  @apply w-full rounded-4 border-1 border-solid p-6 text-20 font-normal duration-300 ease-in-out hover:opacity-80 active:translate-y-1 md:w-fit;
+  @apply w-full rounded-4 border-1 border-solid p-10 text-20 font-normal duration-300 ease-in-out hover:opacity-80 active:translate-y-1 md:w-fit shadow-xl;
 }
 
 /* Cor */
 .botao-claro {
-  @apply border-borda-claro bg-primaria-claro text-black shadow-box-shadow;
+  @apply border-borda-claro bg-primaria-claro text-black;
 }
 
 .botao-escuro {
-  @apply border-borda-escuro bg-primaria-escuro text-black shadow-box-shadow;
+  @apply border-borda-escuro bg-primaria-escuro text-black;
 }
 
 .botao-estrela {
-  @apply border-borda-estrela bg-primaria-estrela text-black shadow-box-shadow;
+  @apply border-borda-estrela bg-primaria-estrela text-black;
 }
 
 .botao-nuvem {
-  @apply border-borda-nuvem bg-primaria-nuvem text-black shadow-box-shadow;
+  @apply border-borda-nuvem bg-primaria-nuvem text-black;
 }

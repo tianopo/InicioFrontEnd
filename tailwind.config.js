@@ -6,7 +6,6 @@ module.exports = {
   theme: {
     extend: {
       colors: coresX,
-      boxShadow: coresX['box-shadow'],
       fontFamily: {
         primaria: ["Roboto"],
         secundaria: ["Roboto"],
