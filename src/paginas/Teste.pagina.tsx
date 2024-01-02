@@ -129,8 +129,6 @@ export const Teste = () => {
   );
 };
 
-// sections(banner, cards secao protótipa)
-// ver sobre herança de cores
 // retirar depreciation
 // CSS ficando criptografado no devtools
 // deixar apenas cores no CSS

@@ -1,8 +1,9 @@
 import axios from "axios";
+import { t } from "i18next";
 import { FormProvider } from "react-hook-form";
+import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
 import { Form } from "src/componentes/Formulario/Form";
 import { Input } from "src/componentes/Formulario/Input";
-import { Radio } from "src/componentes/Formulario/Radio";
 import { Textarea } from "src/componentes/Formulario/Textarea";
 import { useInicio } from "src/hooks";
 import { Section } from "../Section";
@@ -42,6 +43,7 @@ export const SectionContato = ({ titulo, descricao, botao, children }: ISectionC
 
       if (response.data.success) {
         reset();
+        console.log(nome, email, contato, mensagem)
       }
     } catch (error) {
       console.error("Erro ao enviar o formulário:", error);
@@ -49,14 +51,14 @@ export const SectionContato = ({ titulo, descricao, botao, children }: ISectionC
   };
 
   return (
-    <Section divisao={2}>
+    <Section divisao={2} className="items-center p-10">
       <div>
         <FormProvider {...contexto}>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Input
               register={register("nome")}
               titulo="Nome"
-              placeholder="olá"
+              placeholder="João da Silva"
               errors={errors.nome?.message}
               required
             />
@@ -67,24 +69,26 @@ export const SectionContato = ({ titulo, descricao, botao, children }: ISectionC
               errors={errors.email?.message}
               required
             />
-            <Radio
+            <Input
               register={register("contato")}
               titulo="Contato"
-              errors={errors.email?.message}
-              opcoes={["Whatsapp", "Telefone", "Recado"]}
+              placeholder="(XX) XXXXX-XXXX"
+              errors={errors.contato?.message}
               required
             />
             <Textarea
               titulo="Mensagem"
               register={register("mensagem")}
+              placeholder="Escreva a sua mensagem..."
               errors={errors.mensagem?.message}
               required
             />
+            <BotaoSubmit className="m-10">{t("botãoEnviar")}</BotaoSubmit>
           </Form>
         </FormProvider>
       </div>
       <div>
-        <img src="/flags/br.svg" alt="{titulo}" className="rounded-full w-16 h-16 bg-cover" />
+        <img src="/flags/br.svg" alt="{titulo}" className="rounded-full w-fit h-fit" />
       </div>
     </Section>
   )
