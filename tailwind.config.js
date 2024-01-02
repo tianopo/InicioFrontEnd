@@ -20,7 +20,6 @@ module.exports = {
       fontSize: medidasX,
       borderWidth: medidasX,
       borderRadius: medidasX,
-      padding: medidasX,
       margin: medidasX,
       iconSize: medidasX,
       lineHeight: medidasX,

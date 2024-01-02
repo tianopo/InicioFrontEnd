@@ -48,7 +48,7 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
             <FlexRow className={`header_flex hidden md:flex`}>
               {navbar.map((nav: { texto: string; rota: string }, key: number) => (
                 <LinkX key={key} rota={nav.rota}>
-                  <TX tipo="p" className="p-12 text-16 font-bold">
+                  <TX tipo="p" className="p-3 text-16 font-bold">
                     {nav.texto.toUpperCase()}
                   </TX>
                 </LinkX>
@@ -56,7 +56,7 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
             </FlexRow>
 
             <FlexRow className={`flex items-center justify-center px-4 md:hidden`}>
-              <CX tipo="div" className="relative inline-block w-auto pt-3 duration-300">
+              <CX tipo="div" className="relative inline-block w-auto pt-1 duration-300">
                 <button
                   onClick={() => setMenuAberto(!menuAberto)}
                   onBlur={() =>
@@ -73,7 +73,7 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
                     className={`absolute right-0 w-auto rounded-6 border-1 duration-300 menu_mobile-${tema}`}
                   >
                     {navbar.map(({ texto, rota }, key: number) => (
-                      <div key={key} className={`menu_navbar-${tema} p-8`}>
+                      <div key={key} className={`menu_navbar-${tema} p-2`}>
                         <LinkX rota={rota}>
                           <TX tipo="p" className="navbar_texto">
                             {texto.toUpperCase()}

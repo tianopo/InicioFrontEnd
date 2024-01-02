@@ -15,7 +15,7 @@
 }
 
 .sidebar_mobile {
-  @apply fixed z-20 h-full w-10 items-center gap-3 rounded-r-6 p-8 border-1;
+  @apply fixed z-20 h-full w-10 items-center gap-3 rounded-r-6 p-2 border-1;
 }
 
 .sidebar_mobile-botao {
@@ -27,7 +27,7 @@
 }
 
 .sidebar_desktop {
-  @apply fixed z-20 h-full items-center gap-3 rounded-r-6 p-8 border-1;
+  @apply fixed z-20 h-full items-center gap-3 rounded-r-6 p-2 border-1;
 }
 
 .sidebar_x {
@@ -43,7 +43,7 @@
 }
 
 .sidebar_navbar {
-  @apply p-12 text-16 font-bold text-white hover:underline;
+  @apply p-3 text-16 font-bold text-white hover:underline;
 }
 
 .sidebar_flex-2 {

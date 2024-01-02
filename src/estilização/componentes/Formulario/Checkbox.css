@@ -1,5 +1,5 @@
 .checkbox_flex_row {
-  @apply gap-1 p-8;
+  @apply gap-1 p-2;
 }
 
 .checkbox_input {

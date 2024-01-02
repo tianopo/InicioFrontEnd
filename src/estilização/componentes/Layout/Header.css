@@ -1,5 +1,5 @@
 .header {
-  @apply fixed z-10 flex h-20 w-full flex-row justify-between rounded-b-6 border-b-1 p-12;
+  @apply fixed z-10 flex h-20 w-full flex-row justify-between rounded-b-6 border-b-1 p-3;
 }
 
 .header-claro {
@@ -23,7 +23,7 @@
 }
 
 .header_imagem {
-  @apply h-12 w-10 rounded-20 border-1 p-2;
+  @apply h-12 w-10 rounded-20 border-1 p-0.5;
 }
 
 .header_imagem-claro {
