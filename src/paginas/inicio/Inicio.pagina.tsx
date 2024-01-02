@@ -24,6 +24,9 @@ export const Inicio = () => {
         botao="Tente seu orçamento por aqui"
         card={card}
       />
+      <SectionCard
+        card={card}
+      />
     </FlexCol>
   );
 };
