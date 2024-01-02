@@ -19,7 +19,7 @@ export const SectionCard = ({ titulo, descricao, botao, card }: ISectionCard) =>
       <Flex className="gap-6 flex-wrap justify-center">
         {card?.map(({ titulo, descricao, imagem, botao = false }, key) => (
           <FlexCol key={key} className="bg-white w-72 h-fit p-3 items-center gap-1.5 rounded-10 shadow-xl">
-            {imagem && <img src={imagem} alt="foto" className="rounded-full w-16 h-16 bg-cover" />}
+            {imagem && <img src={imagem} alt={titulo} className="rounded-full w-16 h-16 bg-cover" />}
             {titulo && <h5 className="font-bold text-20">{titulo}</h5>}
             {descricao &&
               <p className="text-16 text-center">

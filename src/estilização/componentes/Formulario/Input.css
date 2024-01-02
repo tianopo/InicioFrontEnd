@@ -20,7 +20,7 @@
 }
 
 .input_container {
-  @apply gap-1.5 p-10;
+  @apply gap-1.5 p-2.5;
 }
 
 .input_textarea {

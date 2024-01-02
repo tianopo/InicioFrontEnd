@@ -59,7 +59,6 @@ export const Teste = () => {
 
       if (response.data.success) {
         reset();
-        console.log();
       }
     } catch (error) {
       console.error("Erro ao enviar o formulário:", error);

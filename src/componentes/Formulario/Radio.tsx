@@ -16,7 +16,7 @@ export const Radio = ({ disabled, errors, register, opcoes, titulo, required }: 
   const { tema } = useTema();
 
   return (
-    <FlexCol>
+    <FlexCol className="input_container">
       <TX tipo="h4" className={`label-texto label-${tema}`}>
         {titulo}{" "}
         {required && (
