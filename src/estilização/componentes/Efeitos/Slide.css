@@ -1,0 +1,27 @@
+@keyframes slideIn {
+  from {
+    transform: translateY(100vh);
+  }
+
+  to {
+    transform: translateY(15vh);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.slideIn {
+  animation: slideIn 0.5s normal both;
+}
+
+.slideOut {
+  animation: slideOut 0.5s normal both;
+}

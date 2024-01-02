@@ -3,6 +3,8 @@
 @import "componentes/Botoes/BotaoTrocarIdioma.css";
 @import "componentes/Botoes/BotaoTrocarTema.css";
 
+@import "componentes/Efeitos/Slide.css";
+
 @import "componentes/Flex/Flex.css";
 
 @import "componentes/Formulario/Checkbox.css";
