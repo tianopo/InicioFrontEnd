@@ -1,4 +1,4 @@
-import { SectionBanner, SectionCard } from "src/componentes";
+import { FlexCol, SectionBanner, SectionCard } from "src/componentes";
 
 export const Inicio = () => {
   const card = [
@@ -7,11 +7,11 @@ export const Inicio = () => {
     { titulo: "Área comercial", descricao: "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.", imagem: "/flags/br.svg" },
     { titulo: "Área comercial", descricao: "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.", imagem: "/flags/br.svg" },
     { titulo: "Área comercial", descricao: "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.", imagem: "/flags/br.svg" },
-    
+
   ]
 
   return (
-    <>
+    <FlexCol className="gap-32">
       <SectionBanner
         imagem="/flags/br.svg"
         titulo="Fábrica de Software"
@@ -24,6 +24,6 @@ export const Inicio = () => {
         botao="Tente seu orçamento por aqui"
         card={card}
       />
-    </>
+    </FlexCol>
   );
 };

@@ -1,14 +1,14 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import { CX } from "src/componentes";
 
-interface ISection {
+interface ISection extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
   divisao?: number;
 }
 /* Consegue dividir em até dois lados por seção */
-export const Section = ({ children, divisao }: ISection) => {
+export const Section = ({ children, divisao, className }: ISection) => {
   return (
-    <CX tipo="section" className={`grid grid-cols-1 ${"md:grid-cols-" + divisao} gap-8`}>
+    <CX tipo="section" className={`grid grid-cols-1 ${"md:grid-cols-" + divisao} gap-2 ${className}`}>
       {children}
     </CX>
   )

@@ -55,7 +55,7 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
             <TX tipo="p" className="footer_redes">
               {t("redesSociais")}
             </TX>
-            <FlexRow className="gap-12">
+            <FlexRow className="gap-3">
               {icones?.map(({ imagem, rota }, key) => (
                 <LinkX rota={rota} target="blank" key={key}>
                   <img src={imagem} alt="icone de rede social" className="h-6 w-6" />

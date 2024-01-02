@@ -19,7 +19,7 @@
 }
 
 .header_flex {
-  @apply gap-4;
+  @apply gap-1;
 }
 
 .header_imagem {

@@ -1,5 +1,5 @@
 .radio_flex_row {
-  @apply w-fit gap-6 py-4;
+  @apply w-fit gap-1.5 py-4;
 }
 
 .radio {
