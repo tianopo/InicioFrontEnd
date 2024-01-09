@@ -1,14 +1,38 @@
-import { FlexCol, SectionBanner, SectionCard, SectionContato } from "src/componentes";
+import { FlexCol, SectionBanner, SectionCard } from "src/componentes";
 
 export const Inicio = () => {
   const card = [
-    { titulo: "Área comercial", descricao: "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.", imagem: "/flags/br.svg" },
-    { titulo: "Área comercial", descricao: "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.", imagem: "/flags/br.svg" },
-    { titulo: "Área comercial", descricao: "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.", imagem: "/flags/br.svg" },
-    { titulo: "Área comercial", descricao: "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.", imagem: "/flags/br.svg" },
-    { titulo: "Área comercial", descricao: "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.", imagem: "/flags/br.svg" },
-
-  ]
+    {
+      titulo: "Área comercial",
+      descricao:
+        "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.",
+      imagem: "/flags/br.svg",
+    },
+    {
+      titulo: "Área comercial",
+      descricao:
+        "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.",
+      imagem: "/flags/br.svg",
+    },
+    {
+      titulo: "Área comercial",
+      descricao:
+        "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.",
+      imagem: "/flags/br.svg",
+    },
+    {
+      titulo: "Área comercial",
+      descricao:
+        "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.",
+      imagem: "/flags/br.svg",
+    },
+    {
+      titulo: "Área comercial",
+      descricao:
+        "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.",
+      imagem: "/flags/br.svg",
+    },
+  ];
 
   return (
     <FlexCol className="gap-32">
@@ -24,12 +48,7 @@ export const Inicio = () => {
         botao="Tente seu orçamento por aqui"
         card={card}
       />
-      <SectionCard
-        card={card}
-      />
-      <SectionContato
-
-      />
+      <SectionCard card={card} />
     </FlexCol>
   );
 };

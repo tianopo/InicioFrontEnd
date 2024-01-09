@@ -24,12 +24,12 @@ interface IFooter {
 export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
   const { tema } = useTema();
   const { t: tradutor } = useTranslation();
-  const t = ((t: string) => tradutor(`footer.${t}`))
+  const t = (t: string) => tradutor(`footer.${t}`);
 
   return (
     <footer className={`footer-${tema} footer`}>
-      <Flex className="md:flex-row footer_flex-1">
-        {(titulo || description) &&
+      <Flex className="footer_flex-1 md:flex-row">
+        {(titulo || description) && (
           <FlexCol className="footer_flex-2">
             <TX tipo="p" className="footer_titulo">
               {titulo}
@@ -38,20 +38,20 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
               {description}
             </TX>
           </FlexCol>
-        }
-        {nav &&
-          <Flex className="md:px-8 md:flex-col footer_flex-3">
+        )}
+        {nav && (
+          <Flex className="footer_flex-3 md:flex-col md:px-8">
             {nav?.map(({ texto, rota }, key: number) => (
-              <FlexCol key={key} className="md:items-center footer_flex-4">
+              <FlexCol key={key} className="footer_flex-4 md:items-center">
                 <Link to={rota} target="blank">
                   {texto}
                 </Link>
               </FlexCol>
             ))}
           </Flex>
-        }
-        {icones &&
-          <FlexCol className="md:items-end footer_flex-5">
+        )}
+        {icones && (
+          <FlexCol className="footer_flex-5 md:items-end">
             <TX tipo="p" className="footer_redes">
               {t("redesSociais")}
             </TX>
@@ -63,7 +63,7 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
               ))}
             </FlexRow>
           </FlexCol>
-        }
+        )}
       </Flex>
       <DivisorX />
       <TX tipo="p" className="footer_assinatura">

@@ -32,4 +32,3 @@ export * from "./Outros/LinkX";
 
 export * from "./Tags/ConteudoX";
 export * from "./Tags/TextoX";
-

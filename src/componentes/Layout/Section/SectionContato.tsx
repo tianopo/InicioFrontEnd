@@ -1,4 +1,3 @@
-import axios from "axios";
 import { t } from "i18next";
 import { FormProvider } from "react-hook-form";
 import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
@@ -13,48 +12,13 @@ export const SectionContato = ({ titulo, descricao, botao, children }: ISectionC
   const {
     formState: { errors },
     register,
-    handleSubmit,
-    watch,
-    reset,
   } = contexto;
-
-  const onSubmit = async () => {
-    try {
-      const formData = watch();
-      const { mensagem, email, nome, contato } =
-        formData;
-
-      const dados = {
-        accessKey: "dedff74d-dd09-4652-addf-c4b323291771",
-        subject: `Contato de ${nome}`,
-        message: `
-        Nome: ${nome} <br>
-        E-mail: ${email} <br>
-        Contato: ${contato} <br>
-        Mensagem: ${mensagem} <br>
-        `,
-      };
-
-      const response = await axios.post("https://api.staticforms.xyz/submit", dados, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      if (response.data.success) {
-        reset();
-        console.log(nome, email, contato, mensagem)
-      }
-    } catch (error) {
-      console.error("Erro ao enviar o formulário:", error);
-    }
-  };
 
   return (
     <Section divisao={2} className="items-center p-10">
-      <div>
+      <div className="w-full">
         <FormProvider {...contexto}>
-          <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form>
             <Input
               register={register("nome")}
               titulo="Nome"
@@ -65,6 +29,7 @@ export const SectionContato = ({ titulo, descricao, botao, children }: ISectionC
             <Input
               register={register("email")}
               titulo="E-mail"
+              tipo="email"
               placeholder="x@x.com"
               errors={errors.email?.message}
               required
@@ -73,6 +38,7 @@ export const SectionContato = ({ titulo, descricao, botao, children }: ISectionC
               register={register("contato")}
               titulo="Contato"
               placeholder="(XX) XXXXX-XXXX"
+              tipo="tel"
               errors={errors.contato?.message}
               required
             />
@@ -84,19 +50,21 @@ export const SectionContato = ({ titulo, descricao, botao, children }: ISectionC
               required
             />
             <BotaoSubmit className="m-10">{t("botãoEnviar")}</BotaoSubmit>
+            <input type="hidden" name="_captcha" value="false"></input>
+            <input type="hidden" name="_next" value={window.location.href}></input>
           </Form>
         </FormProvider>
       </div>
-      <div>
-        <img src="/flags/br.svg" alt="{titulo}" className="rounded-full w-fit h-fit" />
+      <div className="hidden md:visible">
+        <img src="/flags/br.svg" alt={titulo} className="h-fit w-fit rounded-full" />
       </div>
     </Section>
-  )
-}
+  );
+};
 
 interface ISectionContato {
-  titulo?: string
-  descricao?: string
-  botao?: string
-  children?: string
+  titulo?: string;
+  descricao?: string;
+  botao?: string;
+  children?: string;
 }

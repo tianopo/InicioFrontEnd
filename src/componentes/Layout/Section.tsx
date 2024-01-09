@@ -8,8 +8,11 @@ interface ISection extends HTMLAttributes<HTMLDivElement> {
 /* Consegue dividir em até dois lados por seção */
 export const Section = ({ children, divisao, className }: ISection) => {
   return (
-    <CX tipo="section" className={`grid ${"grid-cols-" + divisao} gap-2 ${className}`}>
+    <CX
+      tipo="section"
+      className={`grid ${divisao ? "md:grid-cols-2 grid-cols-1" : "grid-cols-1"} gap-2 ${className}`}
+    >
       {children}
     </CX>
-  )
-}
+  );
+};

@@ -1,21 +1,21 @@
 .footer-claro {
-  @apply bg-fundo_secundario-claro border-borda-claro;
+  @apply border-borda-claro bg-fundo_secundario-claro;
 }
 
 .footer-escuro {
-  @apply bg-fundo_secundario-escuro border-borda-escuro;
+  @apply border-borda-escuro bg-fundo_secundario-escuro;
 }
 
 .footer-estrela {
-  @apply bg-fundo_secundario-estrela border-borda-estrela;
+  @apply border-borda-estrela bg-fundo_secundario-estrela;
 }
 
 .footer-nuvem {
-  @apply bg-fundo_secundario-nuvem border-borda-nuvem;
+  @apply border-borda-nuvem bg-fundo_secundario-nuvem;
 }
 
 .footer {
-  @apply flex h-fit w-full flex-col items-center gap-4 shadow-xl px-36 py-24 border-t-1;
+  @apply flex h-fit w-full flex-col items-center gap-4 border-t-1 px-36 py-24 shadow-xl;
 }
 
 .footer_flex-1 {
@@ -35,11 +35,11 @@
 }
 
 .footer_flex-3 {
-  @apply w-full px-0 gap-2.5 flex-row;
+  @apply w-full flex-row gap-2.5 px-0;
 }
 
 .footer_flex-4 {
-  @apply hover:underline w-full items-start font-semibold text-20;
+  @apply w-full items-start text-20 font-semibold hover:underline;
 }
 
 .footer_flex-5 {

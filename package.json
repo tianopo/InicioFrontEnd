@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "license": "MIT",
+  "type": "module",
   "description": "",
   "scripts": {
     "dev": "react-scripts start",

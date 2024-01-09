@@ -20,7 +20,7 @@ export const Layout = () => {
     { imagem: "/sociais/github.png", rota: "https://github.com/tianopo" },
     { imagem: "/sociais/linkedin.png", rota: "https://www.linkedin.com/in/matheustianopo/" },
   ];
-  const footer = ['imagem', 'texto', 'coisas', 'agora']
+  const footer = ["imagem", "texto", "coisas", "agora"];
 
   return (
     <Flex className={`home-${tema} absolute`}>
@@ -35,6 +35,6 @@ export const Layout = () => {
           nav={nav}
         />
       </FlexCol>
-    </Flex >
+    </Flex>
   );
 };
