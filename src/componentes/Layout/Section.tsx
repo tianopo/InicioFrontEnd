@@ -10,7 +10,7 @@ export const Section = ({ children, divisao, className }: ISection) => {
   return (
     <CX
       tipo="section"
-      className={`grid ${divisao ? "md:grid-cols-2 grid-cols-1" : "grid-cols-1"} gap-2 ${className}`}
+      className={`grid w-full ${divisao ? "md:grid-cols-2 grid-cols-1" : "grid-cols-1"} gap-2 ${className}`}
     >
       {children}
     </CX>

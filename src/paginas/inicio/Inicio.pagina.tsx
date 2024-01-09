@@ -1,4 +1,4 @@
-import { FlexCol, SectionBanner, SectionCard } from "src/componentes";
+import { FlexCol, SectionBanner, SectionCard, SectionContato } from "src/componentes";
 
 export const Inicio = () => {
   const card = [
@@ -49,6 +49,7 @@ export const Inicio = () => {
         card={card}
       />
       <SectionCard card={card} />
+      <SectionContato />
     </FlexCol>
   );
 };

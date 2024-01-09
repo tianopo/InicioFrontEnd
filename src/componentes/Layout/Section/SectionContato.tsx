@@ -55,7 +55,7 @@ export const SectionContato = ({ titulo, descricao, botao, children }: ISectionC
           </Form>
         </FormProvider>
       </div>
-      <div className="hidden md:visible">
+      <div className="hidden md:inline">
         <img src="/flags/br.svg" alt={titulo} className="h-fit w-fit rounded-full" />
       </div>
     </Section>

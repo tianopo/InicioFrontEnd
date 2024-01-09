@@ -6,10 +6,10 @@ export const SectionBanner = ({ children, imagem, titulo, descricao, botao }: IS
   return (
     <Section>
       <div className="relative h-96 bg-cover" style={{ backgroundImage: `url('${imagem}')` }}>
-        <div className="absolute inset-0 flex flex-col items-start justify-center gap-3 p-12 text-center text-white">
+        <div className="absolute inset-0 flex flex-col items-start justify-center gap-3 p-12 text-center text-white min-w-0">
           {imagem && <img src="/flags/br.svg" alt={titulo} className="h-8 w-12" />}
           {titulo && <h1 className="mb-4 text-justify text-36 font-bold">{titulo}</h1>}
-          {descricao && <p className="mb-6 text-justify text-18">{descricao}</p>}
+          {descricao && <p className="mb-6 text-justify text-18 text-ellipsis overflow-hidden md:whitespace-break-spaces whitespace-pre-line max-w-full">{descricao}</p>}
           {botao && (
             <BotaoOnClick className="bg-blue-500 text-white hover:bg-blue-700">
               {botao}

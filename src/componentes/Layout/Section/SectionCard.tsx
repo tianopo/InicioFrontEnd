@@ -6,10 +6,10 @@ import { Section } from "../Section";
 
 export const SectionCard = ({ titulo, descricao, botao, card }: ISectionCard) => {
   return (
-    <Section>
+    <Section className="p-4">
       <div className="pb-6 text-center">
         {titulo && <h1 className="mb-4 gap-5 text-36 font-bold">{titulo}</h1>}
-        {descricao && <p className="mb-6 text-18">{descricao}</p>}
+        {descricao && <p className="mb-6 text-18 text-ellipsis overflow-hidden whitespace-break-spaces">{descricao}</p>}
         {botao && (
           <BotaoOnClick className="bg-blue-500 text-white hover:bg-blue-700">{botao}</BotaoOnClick>
         )}
