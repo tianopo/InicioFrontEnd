@@ -67,7 +67,7 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
       md:w-52
       `}
       >
-        {menuAberto && <X className="h-20 w-20 cursor-pointer self-end" onClick={() => setMenuAberto(!menuAberto)} />}
+        {menuAberto && <X className="h-40 w-10 cursor-pointer self-end" onClick={() => setMenuAberto(!menuAberto)} />}
         {imagem && <img src={imagem} alt={titulo} className={`h-20 w-20`} />}
         {titulo && (
           <TX tipo="h2" className="text-center text-2xl font-bold text-white">

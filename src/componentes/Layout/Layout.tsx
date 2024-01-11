@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { useTema } from "src/hooks";
 import { CX } from "../Tags/ConteudoX";
-import { Footer } from "./Footer";
 import { Sidebar } from "./Sidebar";
+import { Footer } from "./Footer";
 
 export const Layout = () => {
   const { tema } = useTema();
@@ -21,7 +21,7 @@ export const Layout = () => {
 
 
   return (
-    <CX tipo="div" className="grid grid-cols-1 w-screen">
+    <CX tipo="div" className={`grid grid-cols-1 w-screen home-${tema}`}>
       <Sidebar imagem="/projeto/logo.svg" navbar={nav} titulo="Fábrica de Software" temaCor idioma />
       <Outlet />
       <Footer
