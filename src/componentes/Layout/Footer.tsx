@@ -45,8 +45,8 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
         gap-3
         p-4
         text-white
-        md:flex-row"
-      >
+        md:flex-row
+        ">
         {(titulo || description) && (
           <FlexCol className="w-full gap-3">
             <TX tipo="p" className="text-24 font-bold">
@@ -58,7 +58,7 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
           </FlexCol>
         )}
         {nav && (
-          <Flex className="w-full flex-row gap-2.5 px-0 md:flex-col md:px-8">
+          <Flex className="w-full gap-2.5 px-0 flex-col md:px-8">
             {nav?.map(({ texto, rota }, key: number) => (
               <FlexCol key={key} className="
                 w-full
@@ -66,8 +66,8 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
                 text-20
                 font-semibold
                 hover:underline
-                md:items-center"
-              >
+                md:items-center
+                ">
                 <Link to={rota} target="blank">
                   {texto}
                 </Link>
