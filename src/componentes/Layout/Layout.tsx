@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
 import { useTema } from "src/hooks";
 import { CX } from "../Tags/ConteudoX";
-import { Sidebar } from "./Sidebar";
 import { Footer } from "./Footer";
+import { Sidebar } from "./Sidebar";
+import { Flex } from "../Flex/Flex";
 
 export const Layout = () => {
   const { tema } = useTema();
@@ -21,15 +22,17 @@ export const Layout = () => {
 
 
   return (
-    <CX tipo="div" className={`grid grid-cols-1 w-screen home-${tema}`}>
+    <Flex className={`home-${tema}`}>
       <Sidebar imagem="/projeto/logo.svg" navbar={nav} titulo="Fábrica de Software" temaCor idioma />
-      <Outlet />
-      <Footer
-        titulo="Matheus Henrique de Abreu"
-        description="Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto aleatório. Tem raízes numa peça de literatura clássica em Latim, de 45 AC, tornando-o com mais de 2000 anos."
-        icones={icones}
-        nav={nav}
-      />
-    </CX>
+      <CX tipo="div" className="">
+        <Outlet />
+        <Footer
+          titulo="Matheus Henrique de Abreu"
+          description="Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto aleatório. Tem raízes numa peça de literatura clássica em Latim, de 45 AC, tornando-o com mais de 2000 anos."
+          icones={icones}
+          nav={nav}
+        />
+      </CX>
+    </Flex>
   );
 };

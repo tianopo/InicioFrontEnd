@@ -77,7 +77,7 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
         )}
         {icones && (
           <FlexCol className="w-1/2 items-start text-end md:items-end">
-            <TX tipo="p" className="text-24 font-bold">
+            <TX tipo="p" className="text-24 font-bold whitespace-nowrap">
               {t("redesSociais")}
             </TX>
             <FlexRow className="gap-3">

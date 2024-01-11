@@ -7,7 +7,6 @@ import { BotaoTrocarTema } from "../Botoes/BotaoTrocarTema";
 import { FlexCol } from "../Flex/FlexCol";
 import { FlexRow } from "../Flex/FlexRow";
 import { DivisorX } from "../Outros/DivisorX";
-import { LinkX } from "../Outros/LinkX";
 import { TX } from "../Tags/TextoX";
 
 interface ISidebar {
@@ -33,6 +32,7 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
       sidebar_bg-${tema}
       z-20
       fixed
+      top-0
       w-10
       items-center
       gap-3
@@ -56,15 +56,18 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
       sidebar_bg-${tema}
       ${menuAberto ? "flex w-full" : "hidden"}
       fixed
+      md:sticky
+      top-0
+      left-0
       z-20
-      h-full
+      h-screen
       items-center
       gap-3
       rounded-r-6
       border-1
       p-2
       md:flex
-      md:w-52
+      md:fit
       `}
       >
         {menuAberto && <X className="h-40 w-10 cursor-pointer self-end" onClick={() => setMenuAberto(!menuAberto)} />}
@@ -78,7 +81,7 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
         <FlexCol className="w-full justify-start">
           {navbar &&
             navbar.map(({ texto, rota }, key) => (
-              <LinkX key={key} rota={rota}>
+              <a key={key} href={rota}>
                 <TX tipo="p" className={`
                 p-3
                 text-16
@@ -88,7 +91,7 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
                 `}>
                   {texto.toUpperCase()}
                 </TX>
-              </LinkX>
+              </a>
             ))}
         </FlexCol>
         {(temaCor || idioma || sair) && (
