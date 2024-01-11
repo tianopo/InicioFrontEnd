@@ -15,7 +15,7 @@ export const SectionBanner = ({ id, children, imagem, titulo, descricao, botao, 
           {titulo && <h1 className="mb-4 text-justify text-36 font-bold">{titulo}</h1>}
           {descricao && <p className="mb-6 text-justify text-18 text-ellipsis overflow-hidden md:whitespace-break-spaces whitespace-pre-line max-w-full">{descricao}</p>}
           {botao && rota && (
-            <BotaoOnClick className="bg-blue-500 text-white hover:bg-blue-700" onClick={handleButtonClick}>
+            <BotaoOnClick className="text-white" onClick={handleButtonClick}>
               {botao}
             </BotaoOnClick>
           )}

@@ -2,6 +2,9 @@ import { PlusCircle } from "@phosphor-icons/react";
 import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
 import { Flex } from "src/componentes/Flex/Flex";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
+import { CX } from "src/componentes/Tags/ConteudoX";
+import { TX } from "src/componentes/Tags/TextoX";
+import { useTema } from "src/hooks";
 import { Section } from "../Section";
 
 interface ISectionCard {
@@ -23,30 +26,31 @@ interface ICard {
 
 export const SectionCard = ({ id, titulo, descricao, botao, card, rota }: ISectionCard) => {
   const rotaClick = () => { window.location.href = rota || ""; }
+  const { tema } = useTema()
 
   return (
     <Section className="p-4" id={id}>
-      <div className="pb-6 text-center">
+      <CX tipo="div" className="pb-6 text-center section_card-">
         {titulo && <h1 className="mb-4 gap-5 text-36 font-bold">{titulo}</h1>}
         {descricao && <p className="mb-6 text-18 text-ellipsis overflow-hidden whitespace-break-spaces">{descricao}</p>}
         {botao && rota && (
-          <BotaoOnClick className="bg-blue-500 text-white hover:bg-blue-700" onClick={rotaClick}>{botao}</BotaoOnClick>
+          <BotaoOnClick className="text-white" onClick={rotaClick}>{botao}</BotaoOnClick>
         )}
-      </div>
+      </CX>
       <Flex className="flex-wrap justify-center gap-6">
         {card?.map(({ titulo, descricao, imagem, rota, botao = false }: ICard, key) => (
           <FlexCol
             key={key}
-            className="h-fit w-72 items-center gap-1.5 rounded-10 bg-white p-3 shadow-xl"
+            className={`h-fit w-72 items-center gap-1.5 rounded-10 section_card-${tema} p-3 shadow-xl`}
           >
             {imagem && (
               <img src={imagem} alt={titulo} className="h-16 w-16 rounded-full bg-cover" />
             )}
-            {titulo && <h5 className="text-20 font-bold">{titulo}</h5>}
-            {descricao && <p className="text-center text-16">{descricao}</p>}
+            {titulo && <TX tipo="h5" className="text-20 font-bold text-white">{titulo}</TX>}
+            {descricao && <TX tipo="p" className="text-center text-16 text-white">{descricao}</TX>}
             {botao && rota && (
               <button className="hover:opacity-50" onClick={() => { window.location.href = rota }}>
-                <PlusCircle size={24} />
+                <PlusCircle size={24} className="text-white" />
               </button>
             )}
           </FlexCol>

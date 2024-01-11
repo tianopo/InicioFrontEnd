@@ -1,0 +1,15 @@
+.section_card-claro {
+  @apply bg-fundo_secundario-claro;
+}
+
+.section_card-escuro {
+  @apply bg-fundo_secundario-escuro;
+}
+
+.section_card-estrela {
+  @apply bg-fundo_secundario-estrela;
+}
+
+.section_card-nuvem {
+  @apply bg-fundo_secundario-nuvem;
+}
