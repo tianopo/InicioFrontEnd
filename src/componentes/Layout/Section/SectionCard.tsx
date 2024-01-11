@@ -4,14 +4,18 @@ import { Flex } from "src/componentes/Flex/Flex";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
 import { Section } from "../Section";
 
-export const SectionCard = ({ titulo, descricao, botao, card }: ISectionCard) => {
+export const SectionCard = ({ id, titulo, descricao, botao, card, rota }: ISectionCard) => {
+  const handleButtonClick = () => {
+    window.location.href = rota || "";
+  };
+
   return (
-    <Section className="p-4">
+    <Section className="p-4" id={id}>
       <div className="pb-6 text-center">
         {titulo && <h1 className="mb-4 gap-5 text-36 font-bold">{titulo}</h1>}
         {descricao && <p className="mb-6 text-18 text-ellipsis overflow-hidden whitespace-break-spaces">{descricao}</p>}
-        {botao && (
-          <BotaoOnClick className="bg-blue-500 text-white hover:bg-blue-700">{botao}</BotaoOnClick>
+        {botao && rota && (
+          <BotaoOnClick className="bg-blue-500 text-white hover:bg-blue-700" onClick={handleButtonClick}>{botao}</BotaoOnClick>
         )}
       </div>
       <Flex className="flex-wrap justify-center gap-6">
@@ -38,9 +42,11 @@ export const SectionCard = ({ titulo, descricao, botao, card }: ISectionCard) =>
 };
 
 interface ISectionCard {
+  id?: string
   titulo?: string;
   descricao?: string;
   botao?: string;
+  rota?: string;
   card?: {
     imagem?: string;
     titulo?: string;

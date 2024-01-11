@@ -14,46 +14,6 @@
   @apply border-borda-nuvem bg-fundo_secundario-nuvem;
 }
 
-.sidebar_mobile {
-  @apply fixed z-20 h-full w-10 items-center gap-3 rounded-r-6 border-1 p-2;
-}
-
-.sidebar_mobile-botao {
-  @apply rounded-6 border-1;
-}
-
-.sidebar_mobile-icone {
-  @apply h-7 w-7 font-bold;
-}
-
-.sidebar_desktop {
-  @apply fixed z-20 h-full items-center gap-3 rounded-r-6 border-1 p-2;
-}
-
-.sidebar_x {
-  @apply h-20 w-20 cursor-pointer self-end;
-}
-
-.sidebar_flex-1 {
-  @apply w-full justify-start;
-}
-
-.sidebar_titulo {
-  @apply text-center text-2xl font-bold text-white;
-}
-
-.sidebar_navbar {
-  @apply p-3 text-16 font-bold text-white hover:underline;
-}
-
-.sidebar_flex-2 {
-  @apply h-full w-full justify-end gap-3;
-}
-
-.sidebar_flex-3 {
-  @apply cursor-pointer gap-1 rounded-6;
-}
-
 .sidebar_hover-claro {
   @apply hover:bg-selecionado-claro;
 }

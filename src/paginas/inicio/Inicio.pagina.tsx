@@ -1,55 +1,61 @@
 import { FlexCol, SectionBanner, SectionCard, SectionContato } from "src/componentes";
+import { SectionDuvidas } from "./SectionDuvidas";
 
 export const Inicio = () => {
   const card = [
     {
-      titulo: "Área comercial",
+      titulo: "Teste",
       descricao:
-        "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.",
-      imagem: "/flags/br.svg",
+        "Este card é apenas uma demonstração de como possivelmente poderá ficar o seu site",
+      imagem: "/projeto/foto.png",
     },
     {
-      titulo: "Área comercial",
+      titulo: "Teste",
       descricao:
-        "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.",
-      imagem: "/flags/br.svg",
+        "Este card é apenas uma demonstração de como possivelmente poderá ficar o seu site",
+      imagem: "/projeto/foto.png",
     },
     {
-      titulo: "Área comercial",
+      titulo: "Teste",
       descricao:
-        "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.",
-      imagem: "/flags/br.svg",
+        "Este card é apenas uma demonstração de como possivelmente poderá ficar o seu site",
+      imagem: "/projeto/foto.png",
     },
     {
-      titulo: "Área comercial",
+      titulo: "Teste",
       descricao:
-        "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.",
-      imagem: "/flags/br.svg",
+        "Este card é apenas uma demonstração de como possivelmente poderá ficar o seu site",
+      imagem: "/projeto/foto.png",
     },
     {
-      titulo: "Área comercial",
+      titulo: "Teste",
       descricao:
-        "Atuar em áreas comerciais requer uma compreensão profunda do mercado em que a empresa está inserida, bem como do produto ou serviço oferecido.",
-      imagem: "/flags/br.svg",
+        "Este card é apenas uma demonstração de como possivelmente poderá ficar o seu site",
+      imagem: "/projeto/foto.png",
     },
   ];
 
   return (
     <FlexCol className="gap-32">
       <SectionBanner
-        imagem="/flags/br.svg"
+        imagem="/projeto/banner.webp"
         titulo="Fábrica de Software"
-        descricao="A fábrica de software é um centro especializado que utiliza processos industriais e metodologias ágeis para desenvolver soluções de software inovadoras e personalizadas, atendendo às necessidades específicas dos clientes."
-        botao="Tente seu orçamento por aqui"
+        descricao="A fábrica de software é um site modelo para demonstração de como ficaria o site one page institucional do cliente"
+        botao="Tente seu orçamento de site por aqui"
+        rota="https://wa.me/5512982435638"
+        id="inicio"
       />
       <SectionCard
         titulo="Fábrica de Software"
         descricao="A fábrica de software é um centro especializado que utiliza processos industriais e metodologias ágeis para desenvolver soluções de software inovadoras e personalizadas, atendendo às necessidades específicas dos clientes."
-        botao="Tente seu orçamento por aqui"
+        botao="Tente seu orçamento de site por aqui"
+        rota="https://wa.me/5512982435638"
         card={card}
+        id="card1"
       />
-      <SectionCard card={card} />
-      <SectionContato />
+      <SectionDuvidas id="duvidas" />
+      <SectionCard card={card} id="card2" />
+      <SectionContato id="contato" />
     </FlexCol>
   );
 };

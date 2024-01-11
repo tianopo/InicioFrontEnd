@@ -27,11 +27,29 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
   const t = (t: string) => tradutor(`footer.${t}`);
 
   return (
-    <footer className={`footer-${tema} footer`}>
-      <Flex className="footer_flex-1 md:flex-row">
+    <footer className={`
+      footer-${tema}
+      flex
+      h-fit
+      w-full
+      flex-col
+      items-center
+      gap-4
+      border-t-1
+      shadow-xl
+    `}>
+      <Flex className="
+        w-full
+        flex-col
+        justify-between
+        gap-3
+        p-4
+        text-white
+        md:flex-row"
+      >
         {(titulo || description) && (
-          <FlexCol className="footer_flex-2">
-            <TX tipo="p" className="footer_titulo">
+          <FlexCol className="w-full gap-3">
+            <TX tipo="p" className="text-24 font-bold">
               {titulo}
             </TX>
             <TX tipo="p" className="text-16">
@@ -40,9 +58,16 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
           </FlexCol>
         )}
         {nav && (
-          <Flex className="footer_flex-3 md:flex-col md:px-8">
+          <Flex className="w-full flex-row gap-2.5 px-0 md:flex-col md:px-8">
             {nav?.map(({ texto, rota }, key: number) => (
-              <FlexCol key={key} className="footer_flex-4 md:items-center">
+              <FlexCol key={key} className="
+                w-full
+                items-start
+                text-20
+                font-semibold
+                hover:underline
+                md:items-center"
+              >
                 <Link to={rota} target="blank">
                   {texto}
                 </Link>
@@ -51,8 +76,8 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
           </Flex>
         )}
         {icones && (
-          <FlexCol className="footer_flex-5 md:items-end">
-            <TX tipo="p" className="footer_redes">
+          <FlexCol className="w-1/2 items-start text-end md:items-end">
+            <TX tipo="p" className="text-24 font-bold">
               {t("redesSociais")}
             </TX>
             <FlexRow className="gap-3">
@@ -66,7 +91,7 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
         )}
       </Flex>
       <DivisorX />
-      <TX tipo="p" className="footer_assinatura">
+      <TX tipo="p" className="text-10 font-semibold text-white">
         © {t("direitoAutoral")} {new Date().getFullYear()}. {t("feitoPor")}{" "}
         <LinkX rota="https://github.com/tianopo" target="blank">
           tianopo

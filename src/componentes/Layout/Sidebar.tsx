@@ -31,22 +31,23 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
       <FlexCol
         className={`
       sidebar_bg-${tema}
-      sidebar_mobile
+      z-20
+      fixed
+      w-10
+      items-center
+      gap-3
+      rounded-r-6
+      border-1
+      p-2
       md:hidden
       `}
       >
         <button
           onClick={() => setMenuAberto(!menuAberto)}
-          className={`
-          navbar_mobile_botao-${tema}
-          sidebar_mobile-botao
-          `}
+          className={`navbar_mobile_botao-${tema} rounded-6 border-1`}
         >
           <Article
-            className={`
-          navbar_mobile_article-${tema}
-          sidebar_mobile-icone
-          `}
+            className={`navbar_mobile_article-${tema} h-7 w-7 font-bold`}
           />
         </button>
       </FlexCol>
@@ -54,34 +55,53 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
         className={`
       sidebar_bg-${tema}
       ${menuAberto ? "flex w-full" : "hidden"}
-      sidebar_desktop
-      md:flex md:w-52
+      fixed
+      z-20
+      h-full
+      items-center
+      gap-3
+      rounded-r-6
+      border-1
+      p-2
+      md:flex
+      md:w-52
       `}
       >
-        {menuAberto && <X className="sidebar_x" onClick={() => setMenuAberto(!menuAberto)} />}
-        {imagem && <img src={imagem} alt={titulo} className={`h-10 w-10`} />}
+        {menuAberto && <X className="h-20 w-20 cursor-pointer self-end" onClick={() => setMenuAberto(!menuAberto)} />}
+        {imagem && <img src={imagem} alt={titulo} className={`h-20 w-20`} />}
         {titulo && (
-          <TX tipo="h2" className="sidebar_titulo">
+          <TX tipo="h2" className="text-center text-2xl font-bold text-white">
             {titulo}
           </TX>
         )}
         {(imagem || titulo) && <DivisorX />}
-        <FlexCol className="sidebar_flex-1">
+        <FlexCol className="w-full justify-start">
           {navbar &&
             navbar.map(({ texto, rota }, key) => (
               <LinkX key={key} rota={rota}>
-                <TX tipo="p" className={`sidebar_navbar`}>
+                <TX tipo="p" className={`
+                p-3
+                text-16
+                font-bold
+                text-white
+                hover:underline
+                `}>
                   {texto.toUpperCase()}
                 </TX>
               </LinkX>
             ))}
         </FlexCol>
         {(temaCor || idioma || sair) && (
-          <FlexCol className="sidebar_flex-2">
+          <FlexCol className="h-full w-full justify-end gap-3">
             <DivisorX />
             <FlexRow className="justify-between">
               {sair && (
-                <FlexRow className={`sidebar_hover-${tema} sidebar_flex-3`}>
+                <FlexRow className={`
+                sidebar_hover-${tema}
+                cursor-pointer
+                gap-1
+                rounded-6`
+                }>
                   <TX tipo="p">Sair</TX>
                   <SignOut size={24} />
                 </FlexRow>

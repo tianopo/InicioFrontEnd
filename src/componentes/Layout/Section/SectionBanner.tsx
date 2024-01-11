@@ -2,16 +2,20 @@ import { ReactNode } from "react";
 import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
 import { Section } from "../Section";
 
-export const SectionBanner = ({ children, imagem, titulo, descricao, botao }: ISectionBanner) => {
+export const SectionBanner = ({ id, children, imagem, titulo, descricao, botao, rota }: ISectionBanner) => {
+  const handleButtonClick = () => {
+    window.location.href = rota || "";
+  };
+
   return (
-    <Section>
+    <Section id={id}>
       <div className="relative h-96 bg-cover" style={{ backgroundImage: `url('${imagem}')` }}>
         <div className="absolute inset-0 flex flex-col items-start justify-center gap-3 p-12 text-center text-white min-w-0">
-          {imagem && <img src="/flags/br.svg" alt={titulo} className="h-8 w-12" />}
+          <img src="/projeto/logo.svg" alt={titulo} className="h-20 w-24" />
           {titulo && <h1 className="mb-4 text-justify text-36 font-bold">{titulo}</h1>}
           {descricao && <p className="mb-6 text-justify text-18 text-ellipsis overflow-hidden md:whitespace-break-spaces whitespace-pre-line max-w-full">{descricao}</p>}
-          {botao && (
-            <BotaoOnClick className="bg-blue-500 text-white hover:bg-blue-700">
+          {botao && rota && (
+            <BotaoOnClick className="bg-blue-500 text-white hover:bg-blue-700" onClick={handleButtonClick}>
               {botao}
             </BotaoOnClick>
           )}
@@ -23,9 +27,11 @@ export const SectionBanner = ({ children, imagem, titulo, descricao, botao }: IS
 };
 
 interface ISectionBanner {
+  id?: string
   children?: ReactNode;
   imagem: string;
   titulo?: string;
   descricao?: string;
   botao?: string;
+  rota?: string
 }

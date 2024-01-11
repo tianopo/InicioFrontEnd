@@ -7,7 +7,7 @@ import { Textarea } from "src/componentes/Formulario/Textarea";
 import { useInicio } from "src/hooks";
 import { Section } from "../Section";
 
-export const SectionContato = ({ titulo, descricao, botao, children }: ISectionContato) => {
+export const SectionContato = ({ id, titulo, descricao, botao, children }: ISectionContato) => {
   const { contexto } = useInicio();
   const {
     formState: { errors },
@@ -56,13 +56,14 @@ export const SectionContato = ({ titulo, descricao, botao, children }: ISectionC
         </FormProvider>
       </div>
       <div className="hidden md:inline">
-        <img src="/flags/br.svg" alt={titulo} className="h-fit w-fit rounded-full" />
+        <img src="/projeto/banner.webp" alt={titulo} className="h-fit w-fit rounded-full" />
       </div>
     </Section>
   );
 };
 
 interface ISectionContato {
+  id?: string;
   titulo?: string;
   descricao?: string;
   botao?: string;
