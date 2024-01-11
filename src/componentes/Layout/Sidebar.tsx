@@ -67,7 +67,7 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
       border-1
       p-2
       md:flex
-      md:fit
+      md:w-1/3
       `}
       >
         {menuAberto && <X className="h-40 w-10 cursor-pointer self-end" onClick={() => setMenuAberto(!menuAberto)} />}
