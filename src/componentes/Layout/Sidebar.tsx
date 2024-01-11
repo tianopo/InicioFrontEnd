@@ -9,13 +9,15 @@ import { FlexRow } from "../Flex/FlexRow";
 import { DivisorX } from "../Outros/DivisorX";
 import { TX } from "../Tags/TextoX";
 
+interface INavbar {
+  texto: string;
+  rota: string;
+}
+
 interface ISidebar {
   imagem?: string;
   titulo?: string;
-  navbar?: {
-    texto: string;
-    rota: string;
-  }[];
+  navbar?: INavbar[];
   idioma?: boolean;
   temaCor?: boolean;
   sair?: boolean;
@@ -65,12 +67,12 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
       gap-3
       rounded-r-6
       border-1
-      p-2
+      p-4
       md:flex
       md:w-1/3
       `}
       >
-        {menuAberto && <X className="h-40 w-10 cursor-pointer self-end" onClick={() => setMenuAberto(!menuAberto)} />}
+        {menuAberto && <X className="h-40 w-10 cursor-pointer self-end text-white" onClick={() => setMenuAberto(!menuAberto)} />}
         {imagem && <img src={imagem} alt={titulo} className={`h-20 w-20`} />}
         {titulo && (
           <TX tipo="h2" className="text-center text-2xl font-bold text-white">

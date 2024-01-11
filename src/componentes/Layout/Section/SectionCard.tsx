@@ -4,10 +4,25 @@ import { Flex } from "src/componentes/Flex/Flex";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
 import { Section } from "../Section";
 
+interface ISectionCard {
+  id?: string;
+  titulo?: string;
+  descricao?: string;
+  botao?: string;
+  rota?: string;
+  card?: ICard[];
+}
+
+interface ICard {
+  imagem?: string;
+  titulo?: string;
+  descricao?: string;
+  botao?: boolean;
+  rota?: string;
+}
+
 export const SectionCard = ({ id, titulo, descricao, botao, card, rota }: ISectionCard) => {
-  const handleButtonClick = () => {
-    window.location.href = rota || "";
-  };
+  const rotaClick = () => { window.location.href = rota || ""; }
 
   return (
     <Section className="p-4" id={id}>
@@ -15,11 +30,11 @@ export const SectionCard = ({ id, titulo, descricao, botao, card, rota }: ISecti
         {titulo && <h1 className="mb-4 gap-5 text-36 font-bold">{titulo}</h1>}
         {descricao && <p className="mb-6 text-18 text-ellipsis overflow-hidden whitespace-break-spaces">{descricao}</p>}
         {botao && rota && (
-          <BotaoOnClick className="bg-blue-500 text-white hover:bg-blue-700" onClick={handleButtonClick}>{botao}</BotaoOnClick>
+          <BotaoOnClick className="bg-blue-500 text-white hover:bg-blue-700" onClick={rotaClick}>{botao}</BotaoOnClick>
         )}
       </div>
       <Flex className="flex-wrap justify-center gap-6">
-        {card?.map(({ titulo, descricao, imagem, botao = false }, key) => (
+        {card?.map(({ titulo, descricao, imagem, rota, botao = false }: ICard, key) => (
           <FlexCol
             key={key}
             className="h-fit w-72 items-center gap-1.5 rounded-10 bg-white p-3 shadow-xl"
@@ -29,8 +44,8 @@ export const SectionCard = ({ id, titulo, descricao, botao, card, rota }: ISecti
             )}
             {titulo && <h5 className="text-20 font-bold">{titulo}</h5>}
             {descricao && <p className="text-center text-16">{descricao}</p>}
-            {botao && (
-              <button className="hover:opacity-50">
+            {botao && rota && (
+              <button className="hover:opacity-50" onClick={() => { window.location.href = rota }}>
                 <PlusCircle size={24} />
               </button>
             )}
@@ -40,17 +55,3 @@ export const SectionCard = ({ id, titulo, descricao, botao, card, rota }: ISecti
     </Section>
   );
 };
-
-interface ISectionCard {
-  id?: string
-  titulo?: string;
-  descricao?: string;
-  botao?: string;
-  rota?: string;
-  card?: {
-    imagem?: string;
-    titulo?: string;
-    descricao?: string;
-    botao?: boolean;
-  }[];
-}

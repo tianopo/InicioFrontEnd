@@ -35,6 +35,25 @@ export const Inicio = () => {
     },
   ];
 
+  const card2 = [
+    {
+      titulo: "Teste",
+      descricao:
+        "Este card é apenas uma demonstração de como possivelmente poderá ficar o seu site",
+      imagem: "/projeto/foto.png",
+      botao: true,
+      rota: "https://wa.me/5512982435638"
+    },
+    {
+      titulo: "Teste",
+      descricao:
+        "Este card é apenas uma demonstração de como possivelmente poderá ficar o seu site",
+      imagem: "/projeto/foto.png",
+      botao: true,
+      rota: "https://wa.me/5512982435638"
+    },
+  ];
+
   return (
     <FlexCol className="gap-32">
       <SectionBanner
@@ -54,7 +73,7 @@ export const Inicio = () => {
         id="card1"
       />
       <SectionDuvidas id="duvidas" />
-      <SectionCard card={card} id="card2" />
+      <SectionCard card={card2} id="card2" rota="https://wa.me/5512982435638" />
       <SectionContato id="contato" />
     </FlexCol>
   );

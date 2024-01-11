@@ -68,7 +68,7 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
                 hover:underline
                 md:items-center
                 ">
-                <Link to={rota} target="blank">
+                <Link to={rota}>
                   {texto}
                 </Link>
               </FlexCol>
