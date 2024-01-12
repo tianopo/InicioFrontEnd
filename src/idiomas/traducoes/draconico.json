@@ -1,7 +1,11 @@
 {
   "translation": {
     "contato": {
-      "botaoEnviar": "Sulrak"
+      "botaoEnviar": "Sulrak",
+      "name": "Gorthar",
+      "email": "email",
+      "contact": "Roar 123",
+      "message": "Flame and Conquer!"
     },
     "footer": {
       "redesSociais": "Zahkrii",

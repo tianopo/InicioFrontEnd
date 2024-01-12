@@ -97,10 +97,10 @@ export const SectionDuvidas = ({ id }: ISectionDuvidas) => {
       </CX>
       <CX tipo="div">
         <TX tipo="p" className="duvidas_pergunta">
-          Há outros custos adicionais?
+          {t("perguntaCustoAdicional")}
         </TX>
         <TX tipo="p" className="text-20 font-normal">
-          Ao optar por contratar diretamente comigo mediante um contrato, existem escolhas de custos adicionais.
+          {t("respostaCustoAdicional")}
         </TX>
         <table className={`duvidas_tabela section_card-${tema}`}>
           <thead>

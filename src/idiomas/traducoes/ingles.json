@@ -1,7 +1,11 @@
 {
   "translation": {
     "contato": {
-      "botaoEnviar": "Send"
+      "botaoEnviar": "Send",
+      "name": "name",
+      "email": "email",
+      "contact": "contact",
+      "message": "message"
     },
     "footer": {
       "redesSociais": "Social Media",

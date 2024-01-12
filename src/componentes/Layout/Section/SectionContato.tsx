@@ -27,14 +27,14 @@ export const SectionContato = ({ id, titulo }: ISectionContato) => {
           <Form>
             <Input
               register={register("nome")}
-              titulo="Nome"
+              titulo={t("nome")}
               placeholder="João da Silva"
               errors={errors.nome?.message}
               required
             />
             <Input
               register={register("email")}
-              titulo="E-mail"
+              titulo={t("email")}
               tipo="email"
               placeholder="x@x.com"
               errors={errors.email?.message}
@@ -42,14 +42,14 @@ export const SectionContato = ({ id, titulo }: ISectionContato) => {
             />
             <Input
               register={register("contato")}
-              titulo="Contato"
+              titulo={t("contato")}
               placeholder="(XX) XXXXX-XXXX"
               tipo="tel"
               errors={errors.contato?.message}
               required
             />
             <Textarea
-              titulo="Mensagem"
+              titulo={t("mensagem")}
               register={register("mensagem")}
               placeholder="Escreva a sua mensagem..."
               errors={errors.mensagem?.message}
