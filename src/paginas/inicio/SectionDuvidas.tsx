@@ -9,8 +9,9 @@ export const SectionDuvidas = ({ id }: ISectionDuvidas) => {
   const { tema } = useTema();
 
   return (
-    <Section className="px-4" id={id}>
+    <Section className="px-4">
       <TX
+        id={id}
         tipo="h3"
         className="text-32 font-bold"
         style={{ textShadow: "0px 0px 10px rgba(255, 255, 255, 0.8)" }}

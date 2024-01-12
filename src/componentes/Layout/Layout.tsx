@@ -9,7 +9,7 @@ export const Layout = () => {
   const { tema } = useTema();
 
   const nav = [
-    { texto: "inicio", rota: "#inicio" },
+    { texto: "inicio", rota: "#" },
     { texto: "Cards", rota: "#card1" },
     { texto: "Dúvidas", rota: "#duvidas" },
     { texto: "Cards", rota: "#card2" },

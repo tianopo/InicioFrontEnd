@@ -62,7 +62,6 @@ export const Inicio = () => {
         descricao="A fábrica de software é um site modelo para demonstração de como ficaria o site one page institucional do cliente"
         botao="Tente seu orçamento de site por aqui"
         rota="https://wa.me/5512982435638"
-        id="inicio"
       />
       <SectionCard
         titulo="Fábrica de Software"

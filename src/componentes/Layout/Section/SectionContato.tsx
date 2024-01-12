@@ -15,8 +15,8 @@ export const SectionContato = ({ id }: ISectionContato) => {
   } = contexto;
 
   return (
-    <Section id={id} divisao={2} className="items-center p-10">
-      <div className="w-full">
+    <Section divisao={2} className="items-center p-10">
+      <div className="w-full" id={id}>
         <TX tipo="h4" className="w-full text-start text-32 font-bold md:text-end">
           Contato
         </TX>

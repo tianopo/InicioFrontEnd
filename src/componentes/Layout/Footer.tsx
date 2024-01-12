@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import { useTema } from "src/hooks";
 import { Flex } from "../Flex/Flex";
 import { FlexCol } from "../Flex/FlexCol";
@@ -75,7 +74,19 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
                 md:items-center
                 "
               >
-                <Link to={rota}>{texto}</Link>
+                <a key={key} href={rota}>
+                  <TX
+                    tipo="p"
+                    className={`
+                    text-16
+                    font-bold
+                    text-white
+                    hover:underline
+                    `}
+                  >
+                    {texto.toUpperCase()}
+                  </TX>
+                </a>
               </FlexCol>
             ))}
           </Flex>

@@ -31,8 +31,8 @@ export const SectionCard = ({ id, titulo, descricao, botao, card, rota }: ISecti
   const { tema } = useTema();
 
   return (
-    <Section className="p-4" id={id}>
-      <CX tipo="div" className="section_card- pb-6 text-center">
+    <Section className="p-4">
+      <CX tipo="div" className="section_card- pb-6 text-center" id={id}>
         {titulo && <h1 className="mb-4 gap-5 text-36 font-bold">{titulo}</h1>}
         {descricao && (
           <p className="mb-6 overflow-hidden text-ellipsis whitespace-break-spaces text-18">

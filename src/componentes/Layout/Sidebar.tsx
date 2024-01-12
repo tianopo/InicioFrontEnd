@@ -86,7 +86,7 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
         <FlexCol className="w-full justify-start">
           {navbar &&
             navbar.map(({ texto, rota }, key) => (
-              <a key={key} href={rota}>
+              <a key={key} href={rota} onClick={menuAberto ? () => setMenuAberto(!menuAberto) : undefined}>
                 <TX
                   tipo="p"
                   className={`
@@ -123,7 +123,7 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
             </FlexRow>
           </FlexCol>
         )}
-      </FlexCol>
+      </FlexCol >
     </>
   );
 };
