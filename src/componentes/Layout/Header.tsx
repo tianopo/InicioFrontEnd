@@ -25,7 +25,9 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
 
   return (
     <>
-      <CX tipo="header" className={`
+      <CX
+        tipo="header"
+        className={`
       fixed
       z-10
       flex
@@ -37,7 +39,8 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
       border-b-1
       p-3
       header-${tema}
-      `}>
+      `}
+      >
         <FlexRow className="gap-1">
           {imagem && (
             <img
@@ -61,7 +64,7 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
         </FlexRow>
         {navbar && (
           <>
-            <FlexRow className={`gap-1 hidden md:flex`}>
+            <FlexRow className={`hidden gap-1 md:flex`}>
               {navbar.map((nav: { texto: string; rota: string }, key: number) => (
                 <LinkX key={key} rota={nav.rota}>
                   <TX tipo="p" className="p-3 text-16 font-bold">
@@ -82,12 +85,14 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
                   }
                   className={`navbar_mobile_botao-${tema} rounded-6 border-1`}
                 >
-                  <Article className={`
+                  <Article
+                    className={`
                   h-7
                   w-7
                   font-bold
                   navbar_mobile_article-${tema}
-                  `} />
+                  `}
+                  />
                 </button>
                 {menuAberto && (
                   <div
@@ -99,11 +104,12 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
                     border-1
                     duration-300
                     menu_mobile-${tema}
-                    `}>
+                    `}
+                  >
                     {navbar.map(({ texto, rota }, key: number) => (
                       <div key={key} className={`menu_navbar-${tema} p-2`}>
                         <LinkX rota={rota}>
-                          <TX tipo="p" className="text-24 fontbold">
+                          <TX tipo="p" className="fontbold text-24">
                             {texto.toUpperCase()}
                           </TX>
                         </LinkX>

@@ -25,16 +25,24 @@ interface ICard {
 }
 
 export const SectionCard = ({ id, titulo, descricao, botao, card, rota }: ISectionCard) => {
-  const rotaClick = () => { window.location.href = rota || ""; }
-  const { tema } = useTema()
+  const rotaClick = () => {
+    window.location.href = rota || "";
+  };
+  const { tema } = useTema();
 
   return (
     <Section className="p-4" id={id}>
-      <CX tipo="div" className="pb-6 text-center section_card-">
+      <CX tipo="div" className="section_card- pb-6 text-center">
         {titulo && <h1 className="mb-4 gap-5 text-36 font-bold">{titulo}</h1>}
-        {descricao && <p className="mb-6 text-18 text-ellipsis overflow-hidden whitespace-break-spaces">{descricao}</p>}
+        {descricao && (
+          <p className="mb-6 overflow-hidden text-ellipsis whitespace-break-spaces text-18">
+            {descricao}
+          </p>
+        )}
         {botao && rota && (
-          <BotaoOnClick className="text-white" onClick={rotaClick}>{botao}</BotaoOnClick>
+          <BotaoOnClick className="text-white" onClick={rotaClick}>
+            {botao}
+          </BotaoOnClick>
         )}
       </CX>
       <Flex className="flex-wrap justify-center gap-6">
@@ -46,10 +54,23 @@ export const SectionCard = ({ id, titulo, descricao, botao, card, rota }: ISecti
             {imagem && (
               <img src={imagem} alt={titulo} className="h-16 w-16 rounded-full bg-cover" />
             )}
-            {titulo && <TX tipo="h5" className="text-20 font-bold text-white">{titulo}</TX>}
-            {descricao && <TX tipo="p" className="text-center text-16 text-white">{descricao}</TX>}
+            {titulo && (
+              <TX tipo="h5" className="text-20 font-bold text-white">
+                {titulo}
+              </TX>
+            )}
+            {descricao && (
+              <TX tipo="p" className="text-center text-16 text-white">
+                {descricao}
+              </TX>
+            )}
             {botao && rota && (
-              <button className="hover:opacity-50" onClick={() => { window.location.href = rota }}>
+              <button
+                className="hover:opacity-50"
+                onClick={() => {
+                  window.location.href = rota;
+                }}
+              >
                 <PlusCircle size={24} className="text-white" />
               </button>
             )}

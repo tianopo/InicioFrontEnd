@@ -17,7 +17,9 @@ export const SectionContato = ({ id }: ISectionContato) => {
   return (
     <Section id={id} divisao={2} className="items-center p-10">
       <div className="w-full">
-        <TX tipo="h4" className="text-32 font-bold text-start md:text-end w-full">Contato</TX>
+        <TX tipo="h4" className="w-full text-start text-32 font-bold md:text-end">
+          Contato
+        </TX>
         <FormProvider {...contexto}>
           <Form>
             <Input
@@ -57,7 +59,11 @@ export const SectionContato = ({ id }: ISectionContato) => {
         </FormProvider>
       </div>
       <div className="hidden md:inline">
-        <img src="/projeto/banner.webp" alt="Imagem da Empresa" className="h-fit w-fit rounded-full" />
+        <img
+          src="/projeto/banner.webp"
+          alt="Imagem da Empresa"
+          className="h-fit w-fit rounded-full"
+        />
       </div>
     </Section>
   );

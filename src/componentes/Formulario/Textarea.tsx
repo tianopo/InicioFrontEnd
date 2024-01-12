@@ -36,8 +36,8 @@ export const Textarea = ({
         {...register}
         className={`
           input-${tema}
-          resize-none
           input
+          resize-none
           ${disabled ? "opacity-80" : ""}
           `}
       />

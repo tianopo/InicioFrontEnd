@@ -23,13 +23,13 @@
 }
 
 .duvidas_tabela {
-  @apply min-w-full divide-y m-4 rounded-6;
+  @apply m-4 min-w-full divide-y rounded-6;
 }
 
 .duvidas_th {
-  @apply py-3 px-6 text-left text-20 font-normal text-white;
+  @apply px-6 py-3 text-left text-20 font-normal text-white;
 }
 
 .duvidas_td {
-  @apply py-4 px-6 text-16 font-normal text-white;
+  @apply px-6 py-4 text-16 font-normal text-white;
 }

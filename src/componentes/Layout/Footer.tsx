@@ -27,7 +27,8 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
   const t = (t: string) => tradutor(`footer.${t}`);
 
   return (
-    <footer className={`
+    <footer
+      className={`
       footer-${tema}
       flex
       h-fit
@@ -37,8 +38,10 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
       gap-4
       border-t-1
       shadow-xl
-    `}>
-      <Flex className="
+    `}
+    >
+      <Flex
+        className="
         w-full
         flex-col
         justify-between
@@ -46,7 +49,8 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
         p-4
         text-white
         md:flex-row
-        ">
+        "
+      >
         {(titulo || description) && (
           <FlexCol className="w-full gap-3">
             <TX tipo="p" className="text-24 font-bold">
@@ -58,26 +62,27 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
           </FlexCol>
         )}
         {nav && (
-          <Flex className="w-full gap-2.5 px-0 flex-col md:px-8">
+          <Flex className="w-full flex-col gap-2.5 px-0 md:px-8">
             {nav?.map(({ texto, rota }, key: number) => (
-              <FlexCol key={key} className="
+              <FlexCol
+                key={key}
+                className="
                 w-full
                 items-start
                 text-20
                 font-semibold
                 hover:underline
                 md:items-center
-                ">
-                <Link to={rota}>
-                  {texto}
-                </Link>
+                "
+              >
+                <Link to={rota}>{texto}</Link>
               </FlexCol>
             ))}
           </Flex>
         )}
         {icones && (
           <FlexCol className="w-1/2 items-start text-end md:items-end">
-            <TX tipo="p" className="text-24 font-bold whitespace-nowrap">
+            <TX tipo="p" className="whitespace-nowrap text-24 font-bold">
               {t("redesSociais")}
             </TX>
             <FlexRow className="gap-3">
