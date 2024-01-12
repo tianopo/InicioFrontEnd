@@ -23,7 +23,7 @@
 }
 
 .duvidas_tabela {
-  @apply min-w-full divide-y m-4;
+  @apply min-w-full divide-y m-4 rounded-6;
 }
 
 .duvidas_th {

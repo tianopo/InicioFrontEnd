@@ -72,7 +72,7 @@ export const SectionDuvidas = ({ id }: ISectionDuvidas) => {
             </tr>
             <tr>
               <td className="duvidas_td">Total</td>
-              <td className="duvidas_tdtext-white">R$269,90</td>
+              <td className="duvidas_td">R$269,90</td>
             </tr>
           </tbody>
         </table>

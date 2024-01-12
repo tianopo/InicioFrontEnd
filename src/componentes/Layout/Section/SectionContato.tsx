@@ -1,13 +1,13 @@
 import { t } from "i18next";
-import { FormProvider } from "react-hook-form";
+import { Form, FormProvider } from "react-hook-form";
 import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
-import { Form } from "src/componentes/Formulario/Form";
 import { Input } from "src/componentes/Formulario/Input";
 import { Textarea } from "src/componentes/Formulario/Textarea";
+import { TX } from "src/componentes/Tags/TextoX";
 import { useInicio } from "src/hooks";
 import { Section } from "../Section";
 
-export const SectionContato = ({ id, titulo, descricao, botao, children }: ISectionContato) => {
+export const SectionContato = ({ id }: ISectionContato) => {
   const { contexto } = useInicio();
   const {
     formState: { errors },
@@ -15,8 +15,9 @@ export const SectionContato = ({ id, titulo, descricao, botao, children }: ISect
   } = contexto;
 
   return (
-    <Section divisao={2} className="items-center p-10">
+    <Section id={id} divisao={2} className="items-center p-10">
       <div className="w-full">
+        <TX tipo="h4" className="text-32 font-bold text-start md:text-end w-full">Contato</TX>
         <FormProvider {...contexto}>
           <Form>
             <Input
@@ -56,7 +57,7 @@ export const SectionContato = ({ id, titulo, descricao, botao, children }: ISect
         </FormProvider>
       </div>
       <div className="hidden md:inline">
-        <img src="/projeto/banner.webp" alt={titulo} className="h-fit w-fit rounded-full" />
+        <img src="/projeto/banner.webp" alt="Imagem da Empresa" className="h-fit w-fit rounded-full" />
       </div>
     </Section>
   );
@@ -64,8 +65,4 @@ export const SectionContato = ({ id, titulo, descricao, botao, children }: ISect
 
 interface ISectionContato {
   id?: string;
-  titulo?: string;
-  descricao?: string;
-  botao?: string;
-  children?: string;
 }
