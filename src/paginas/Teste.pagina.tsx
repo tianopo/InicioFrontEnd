@@ -129,10 +129,6 @@ export const Teste = () => {
   );
 };
 
-// retirar depreciation
-// CSS ficando criptografado no devtools
-// faça com que não consiga abrir o código ou copiar
-// alteração de porta
 // segurança da informação, injeção, etc
 // construir site
 // revisar com jest e outras coisas

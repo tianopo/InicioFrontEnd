@@ -6,7 +6,7 @@
   "type": "module",
   "description": "",
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "PORT=9000 react-scripts start",
     "build": "react-scripts build",
     "format": "eslint -c .eslintrc.json --fix --ext .ts,.tsx src && prettier --write 'src/**/*.+(js|jsx|ts|tsx|html|css)'"
   },
