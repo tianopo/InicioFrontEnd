@@ -1,5 +1,51 @@
 {
   "translation": {
-    
+    "contato": {
+      "botaoEnviar": "Enviar"
+    },
+    "footer": {
+      "redesSociais": "Redes Sociales",
+      "feitoPor": "Hecho por",
+      "direitoAutoral": "Derechos de Autor"
+    },
+    "layout": {
+      "inicio": "inicio",
+      "cards": "tarjetas",
+      "duvidas": "preguntas",
+      "contato": "contacto",
+      "description": "Contratar nuestra Fábrica de Software es garantizar soluciones tecnológicas innovadoras y personalizadas para impulsar su negocio."
+    },
+    "inicio": {
+      "teste": "Prueba",
+      "cardDescricao": "Esta tarjeta es solo una demostración de cómo podría ser su sitio.",
+      "bannerDescricao": "La fábrica de software es un modelo de sitio para demostrar cómo sería el sitio institucional de una página del cliente.",
+      "sectionCardDescricao": "La fábrica de software es un centro especializado que utiliza procesos industriales y metodologías ágiles para desarrollar soluciones de software innovadoras y personalizadas, atendiendo a las necesidades específicas de los clientes.",
+      "cardBotao": "Prueba tu presupuesto de sitio aquí",
+      "contatoTitulo": "Contacto"
+    },
+    "duvidas": {
+      "perguntasComuns": "Preguntas Comunes sobre la Creación de Sitios",
+      "perguntaCusto": "¿Cuánto cuesta la creación de un sitio?",
+      "respostaCusto": "El costo inicial para un sitio One Page comienza desde $99.90.",
+      "perguntaVariacao": "¿Cuál es la variación de precio?",
+      "tabelaTh1": "Servicio",
+      "tabelaTh2": "Precio",
+      "tabelaVariacao1": "Nuevo idioma en cada página",
+      "tabelaVariacao2": "Nuevo tema en cada página",
+      "tabelaVariacao3": "Nueva página solicitada",
+      "perguntaCustoTotal": "Si solicito un sitio con dos páginas y un tema personalizado, ¿cuál sería el costo total?",
+      "tabelaTotal1": "Precio Inicial",
+      "tabelaTotal2": "Adición de nueva página",
+      "tabelaTotal3": "Tema * Dos Páginas",
+      "tabelaTotal4": "Total",
+      "perguntaCustoAdicional": "¿Existen otros costos adicionales?",
+      "respostaCustoAdicional": "Al optar por contratar directamente conmigo mediante un contrato, existen opciones de costos adicionales.",
+      "tabelaAdicional1": "Hospedaje",
+      "tabelaAdicional2": "Dominio",
+      "tabelaAdicional2Mensal": "mensuales",
+      "tabelaAdicional3": "Paquete de Horas para Mantenimiento (mínimo 10 horas mensuales)",
+      "tabelaAdicional3Hora": "hora",
+      "tabelaAdicional4": "Hospedaje + dos años de dominio"
+    }
   }
 }

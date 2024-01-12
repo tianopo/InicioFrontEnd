@@ -1,5 +1,51 @@
 {
   "translation": {
-    
+    "contato": {
+      "botaoEnviar": "Sulrak"
+    },
+    "footer": {
+      "redesSociais": "Zahkrii",
+      "feitoPor": "Kein",
+      "direitoAutoral": "Alok"
+    },
+    "layout": {
+      "inicio": "Fahdon",
+      "cards": "Thu'um",
+      "duvidas": "Krosis",
+      "contato": "Lostiid",
+      "description": "Qostiid vokun, Kein Dovahsebrom, vokun vokunun ko Kein, daar laan wah dovah."
+    },
+    "inicio": {
+      "teste": "Goraan",
+      "cardDescricao": "Nii kosin, Kein viing sahvot, unlaan hi los dii ol suleyk.",
+      "bannerDescricao": "Kein Dovahsebrom, Kein ko duniin naak wah Kein los vokunsebrom.",
+      "sectionCardDescricao": "Kein Dovahsebrom, Kein los voth unslaad, ahrk Kein los vokunsebrom, daar do Kein sahvot.",
+      "cardBotao": "Lostiid duniin wah Kein sahvot",
+      "contatoTitulo": "Lostiid"
+    },
+    "duvidas": {
+      "perguntasComuns": "Sahlokein do Kein",
+      "perguntaCusto": "Kein vokunun hi los ahst okun?",
+      "respostaCusto": "Kein los hi sahvot, Kein Dovahsebrom, goraan R$99.90.",
+      "perguntaVariacao": "Kein los vokunsebrom?",
+      "tabelaTh1": "Sahlokein",
+      "tabelaTh2": "Vokun",
+      "tabelaVariacao1": "Rokun los sahvot viing",
+      "tabelaVariacao2": "Rokun los sahvot kun",
+      "tabelaVariacao3": "Rokun los sahvot, Kein do",
+      "perguntaCustoTotal": "Kein los vokunsebrom, Kein do Kein, sahvot?",
+      "tabelaTotal1": "Sahvot",
+      "tabelaTotal2": "Rokun los sahvot viing",
+      "tabelaTotal3": "Kun * Kein Vokun",
+      "tabelaTotal4": "Vokun",
+      "perguntaCustoAdicional": "Kein los vokunsebrom?",
+      "respostaCustoAdicional": "Hi los sahvot Kein, Kein Dovahsebrom, Kein pogaan.",
+      "tabelaAdicional1": "Viing",
+      "tabelaAdicional2": "Kein",
+      "tabelaAdicional2Mensal": "ahst",
+      "tabelaAdicional3": "Vokunun duniin tol, Kein sahvot",
+      "tabelaAdicional3Hora": "ahst",
+      "tabelaAdicional4": "Viing + Kein los Kein Vokun"
+    }
   }
 }

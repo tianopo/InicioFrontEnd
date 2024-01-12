@@ -1,5 +1,51 @@
 {
   "translation": {
-
+    "contato": {
+      "botaoEnviar": "Send"
+    },
+    "footer": {
+      "redesSociais": "Social Media",
+      "feitoPor": "Made by",
+      "direitoAutoral": "Copyright"
+    },
+    "layout": {
+      "inicio": "home",
+      "cards": "cards",
+      "duvidas": "questions",
+      "contato": "contact",
+      "description": "Hiring our Software Factory is ensuring innovative and personalized technological solutions to boost your business."
+    },
+    "inicio": {
+      "teste": "Test",
+      "cardDescricao": "This card is just a demonstration of how your site could look like.",
+      "bannerDescricao": "The software factory is a model site to demonstrate how the client's institutional single-page site would look like.",
+      "sectionCardDescricao": "The software factory is a specialized center that uses industrial processes and agile methodologies to develop innovative and personalized software solutions, meeting the specific needs of clients.",
+      "cardBotao": "Try your website quote here",
+      "contatoTitulo": "Contact"
+    },
+    "duvidas": {
+      "perguntasComuns": "Frequently Asked Questions about Website Creation",
+      "perguntaCusto": "How much does website creation cost?",
+      "respostaCusto": "The initial cost for a One Page site starts from $99.90.",
+      "perguntaVariacao": "What is the price variation?",
+      "tabelaTh1": "Service",
+      "tabelaTh2": "Price",
+      "tabelaVariacao1": "New language on each page",
+      "tabelaVariacao2": "New theme on each page",
+      "tabelaVariacao3": "New requested page",
+      "perguntaCustoTotal": "If I request a site with two pages and a custom theme, what would be the total cost?",
+      "tabelaTotal1": "Initial price",
+      "tabelaTotal2": "Addition of a new page",
+      "tabelaTotal3": "Theme * Two Pages",
+      "tabelaTotal4": "Total",
+      "perguntaCustoAdicional": "Are there any other additional costs?",
+      "respostaCustoAdicional": "By choosing to contract directly with me through a contract, there are choices of additional costs.",
+      "tabelaAdicional1": "Hosting",
+      "tabelaAdicional2": "Domain",
+      "tabelaAdicional2Mensal": "monthly",
+      "tabelaAdicional3": "Package of Maintenance Hours (minimum 10 hours per month)",
+      "tabelaAdicional3Hora": "hour",
+      "tabelaAdicional4": "Hosting + two years of domain"
+    }
   }
 }

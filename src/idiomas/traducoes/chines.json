@@ -1,5 +1,51 @@
 {
   "translation": {
-    
+    "contato": {
+      "botaoEnviar": "发送"
+    },
+    "footer": {
+      "redesSociais": "社交媒体",
+      "feitoPor": "制作人",
+      "direitoAutoral": "版权"
+    },
+    "layout": {
+      "inicio": "开始",
+      "cards": "卡片",
+      "duvidas": "问题",
+      "contato": "联系",
+      "description": "聘请我们的软件工厂意味着获得创新和定制的技术解决方案，推动您的业务发展。"
+    },
+    "inicio": {
+      "teste": "测试",
+      "cardDescricao": "这张卡只是演示您的网站可能看起来的样子。",
+      "bannerDescricao": "软件工厂是一个演示客户一页制度网站可能外观的模型网站。",
+      "sectionCardDescricao": "软件工厂是一个专业中心，采用工业流程和敏捷方法，开发创新和定制的软件解决方案，满足客户特定的需求。",
+      "cardBotao": "在这里尝试您的网站预算",
+      "contatoTitulo": "联系"
+    },
+    "duvidas": {
+      "perguntasComuns": "关于网站创建的常见问题",
+      "perguntaCusto": "创建网站的费用是多少？",
+      "respostaCusto": "单页网站的初始费用从99.90 R$起。",
+      "perguntaVariacao": "价格的变化范围是多少？",
+      "tabelaTh1": "服务",
+      "tabelaTh2": "价格",
+      "tabelaVariacao1": "每页新语言",
+      "tabelaVariacao2": "每页新主题",
+      "tabelaVariacao3": "新增请求的页面",
+      "perguntaCustoTotal": "如果您要求一个具有两个页面和个性化主题的网站，总费用将是多少？",
+      "tabelaTotal1": "初始价格",
+      "tabelaTotal2": "添加新页面",
+      "tabelaTotal3": "主题 * 两个页面",
+      "tabelaTotal4": "总计",
+      "perguntaCustoAdicional": "还有其他额外的费用吗？",
+      "respostaCustoAdicional": "直接与我签订合同有其他选择的额外费用。",
+      "tabelaAdicional1": "主机",
+      "tabelaAdicional2": "域",
+      "tabelaAdicional2Mensal": "每月",
+      "tabelaAdicional3": "维护的小时包（每月至少10小时）",
+      "tabelaAdicional3Hora": "每小时",
+      "tabelaAdicional4": "主机 + 两年域名"
+    }
   }
 }

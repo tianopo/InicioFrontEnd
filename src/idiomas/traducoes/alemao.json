@@ -1,5 +1,51 @@
 {
   "translation": {
-    
+    "contato": {
+      "botaoEnviar": "Senden"
+    },
+    "footer": {
+      "redesSociais": "Soziale Medien",
+      "feitoPor": "Hergestellt von",
+      "direitoAutoral": "Urheberrecht"
+    },
+    "layout": {
+      "inicio": "Start",
+      "cards": "Karten",
+      "duvidas": "Fragen",
+      "contato": "Kontakt",
+      "description": "Die Beauftragung unserer Softwarefabrik bedeutet innovative und maßgeschneiderte technologische Lösungen, um Ihr Geschäft anzukurbeln."
+    },
+    "inicio": {
+      "teste": "Test",
+      "cardDescricao": "Diese Karte ist nur eine Demonstration, wie Ihre Website möglicherweise aussehen könnte.",
+      "bannerDescricao": "Die Softwarefabrik ist eine Musterwebsite zur Demonstration, wie die One-Page-Institutionswebsite des Kunden aussehen könnte.",
+      "sectionCardDescricao": "Die Softwarefabrik ist ein spezialisiertes Zentrum, das industrielle Prozesse und agile Methoden nutzt, um innovative und maßgeschneiderte Softwarelösungen zu entwickeln, die den spezifischen Anforderungen der Kunden gerecht werden.",
+      "cardBotao": "Versuchen Sie Ihr Website-Budget hier",
+      "contatoTitulo": "Kontakt"
+    },
+    "duvidas": {
+      "perguntasComuns": "Häufig gestellte Fragen zur Website-Erstellung",
+      "perguntaCusto": "Wie viel kostet die Erstellung einer Website?",
+      "respostaCusto": "Die anfänglichen Kosten für eine One-Page-Website beginnen bei 99,90 R$.",
+      "perguntaVariacao": "Welche Preisspanne gibt es?",
+      "tabelaTh1": "Dienst",
+      "tabelaTh2": "Preis",
+      "tabelaVariacao1": "Neue Sprache auf jeder Seite",
+      "tabelaVariacao2": "Neues Design auf jeder Seite",
+      "tabelaVariacao3": "Neue angeforderte Seite",
+      "perguntaCustoTotal": "Wenn Sie eine Website mit zwei Seiten und einem individuellen Design anfordern, wie hoch wären die Gesamtkosten?",
+      "tabelaTotal1": "Anfangspreis",
+      "tabelaTotal2": "Hinzufügen einer neuen Seite",
+      "tabelaTotal3": "Design * Zwei Seiten",
+      "tabelaTotal4": "Gesamt",
+      "perguntaCustoAdicional": "Gibt es weitere zusätzliche Kosten?",
+      "respostaCustoAdicional": "Bei direkter Beauftragung über einen Vertrag gibt es zusätzliche Kostenoptionen.",
+      "tabelaAdicional1": "Hosting",
+      "tabelaAdicional2": "Domain",
+      "tabelaAdicional2Mensal": "monatlich",
+      "tabelaAdicional3": "Stundenpaket für Wartung (mindestens 10 Stunden pro Monat)",
+      "tabelaAdicional3Hora": "Stunde",
+      "tabelaAdicional4": "Hosting + zwei Jahre Domain"
+    }
   }
 }

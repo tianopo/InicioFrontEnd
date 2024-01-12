@@ -1,5 +1,51 @@
 {
   "translation": {
-
+    "contato": {
+      "botaoEnviar": "Envoyer"
+    },
+    "footer": {
+      "redesSociais": "Réseaux sociaux",
+      "feitoPor": "Fabriqué par",
+      "direitoAutoral": "Droits d'auteur"
+    },
+    "layout": {
+      "inicio": "début",
+      "cards": "cartes",
+      "duvidas": "questions",
+      "contato": "contact",
+      "description": "Engager notre Usine de Logiciels, c'est garantir des solutions technologiques innovantes et personnalisées pour stimuler votre entreprise."
+    },
+    "inicio": {
+      "teste": "Essai",
+      "cardDescricao": "Cette carte n'est qu'une démonstration de la façon dont votre site pourrait être.",
+      "bannerDescricao": "L'usine de logiciels est un modèle de site pour montrer à quoi pourrait ressembler la page institutionnelle du client en une seule page.",
+      "sectionCardDescricao": "L'usine de logiciels est un centre spécialisé utilisant des processus industriels et des méthodologies agiles pour développer des solutions logicielles innovantes et personnalisées, répondant aux besoins spécifiques des clients.",
+      "cardBotao": "Essayez votre devis de site ici",
+      "contatoTitulo": "Contact"
+    },
+    "duvidas": {
+      "perguntasComuns": "Questions fréquentes sur la création de sites",
+      "perguntaCusto": "Combien coûte la création d'un site?",
+      "respostaCusto": "Le coût initial d'un site One Page commence à partir de 99,90 €.",
+      "perguntaVariacao": "Quelle est la variation de prix?",
+      "tabelaTh1": "Service",
+      "tabelaTh2": "Prix",
+      "tabelaVariacao1": "Nouvelle langue sur chaque page",
+      "tabelaVariacao2": "Nouveau thème sur chaque page",
+      "tabelaVariacao3": "Nouvelle page demandée",
+      "perguntaCustoTotal": "Si je demande un site avec deux pages et un thème personnalisé, quel serait le coût total?",
+      "tabelaTotal1": "Prix initial",
+      "tabelaTotal2": "Ajout d'une nouvelle page",
+      "tabelaTotal3": "Thème * Deux Pages",
+      "tabelaTotal4": "Total",
+      "perguntaCustoAdicional": "Y a-t-il d'autres coûts supplémentaires?",
+      "respostaCustoAdicional": "En choisissant de me contacter directement par le biais d'un contrat, il existe des choix de coûts supplémentaires.",
+      "tabelaAdicional1": "Hébergement",
+      "tabelaAdicional2": "Domaine",
+      "tabelaAdicional2Mensal": "mensuels",
+      "tabelaAdicional3": "Forfait d'heures de maintenance (minimum 10 heures par mois)",
+      "tabelaAdicional3Hora": "heure",
+      "tabelaAdicional4": "Hébergement + deux ans de domaine"
+    }
   }
 }

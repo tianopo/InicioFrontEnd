@@ -1,5 +1,51 @@
 {
   "translation": {
-    
+    "contato": {
+      "botaoEnviar": "Invia"
+    },
+    "footer": {
+      "redesSociais": "Social Media",
+      "feitoPor": "Realizzato da",
+      "direitoAutoral": "Diritti d'Autore"
+    },
+    "layout": {
+      "inicio": "inizio",
+      "cards": "schede",
+      "duvidas": "domande",
+      "contato": "contatto",
+      "description": "Assumere la nostra Fabbrica del Software significa garantire soluzioni tecnologiche innovative e personalizzate per potenziare la tua attività."
+    },
+    "inicio": {
+      "teste": "Test",
+      "cardDescricao": "Questa scheda è solo una dimostrazione di come potrebbe apparire il tuo sito.",
+      "bannerDescricao": "La fabbrica del software è un sito modello per mostrare come apparirebbe il sito istituzionale monopagina del cliente.",
+      "sectionCardDescricao": "La fabbrica del software è un centro specializzato che utilizza processi industriali e metodologie agili per sviluppare soluzioni software innovative e personalizzate, soddisfacendo le esigenze specifiche dei clienti.",
+      "cardBotao": "Prova il preventivo per il tuo sito qui",
+      "contatoTitulo": "Contatto"
+    },
+    "duvidas": {
+      "perguntasComuns": "Domande Frequenti sulla Creazione di Siti Web",
+      "perguntaCusto": "Quanto costa la creazione di un sito web?",
+      "respostaCusto": "Il costo iniziale per un sito One Page parte da €99,90.",
+      "perguntaVariacao": "Qual è la variazione di prezzo?",
+      "tabelaTh1": "Servizio",
+      "tabelaTh2": "Prezzo",
+      "tabelaVariacao1": "Nuova lingua su ogni pagina",
+      "tabelaVariacao2": "Nuovo tema su ogni pagina",
+      "tabelaVariacao3": "Nuova pagina richiesta",
+      "perguntaCustoTotal": "Se richiedo un sito con due pagine e un tema personalizzato, qual sarebbe il costo totale?",
+      "tabelaTotal1": "Prezzo iniziale",
+      "tabelaTotal2": "Aggiunta di una nuova pagina",
+      "tabelaTotal3": "Tema * Due pagine",
+      "tabelaTotal4": "Totale",
+      "perguntaCustoAdicional": "Ci sono altri costi aggiuntivi?",
+      "respostaCustoAdicional": "Optando per contrattare direttamente con me attraverso un contratto, ci sono scelte di costi aggiuntivi.",
+      "tabelaAdicional1": "Ospitalità",
+      "tabelaAdicional2": "Dominio",
+      "tabelaAdicional2Mensal": "mensile",
+      "tabelaAdicional3": "Pacchetto di Ore di Manutenzione (minimo 10 ore al mese)",
+      "tabelaAdicional3Hora": "ora",
+      "tabelaAdicional4": "Ospitalità + due anni di dominio"
+    }
   }
 }

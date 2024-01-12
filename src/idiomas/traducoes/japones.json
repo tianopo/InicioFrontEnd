@@ -1,5 +1,51 @@
 {
   "translation": {
-    
+    "contato": {
+      "botaoEnviar": "送信"
+    },
+    "footer": {
+      "redesSociais": "ソーシャルメディア",
+      "feitoPor": "制作",
+      "direitoAutoral": "著作権"
+    },
+    "layout": {
+      "inicio": "始まり",
+      "cards": "カード",
+      "duvidas": "質問",
+      "contato": "お問い合わせ",
+      "description": "弊社のソフトウェア工場を採用することは、革新的でカスタマイズされたテクノロジーソリューションを確保し、ビジネスを促進することを意味します。"
+    },
+    "inicio": {
+      "teste": "テスト",
+      "cardDescricao": "このカードは、おそらくお客様のウェブサイトがどのようになるかのデモンストレーションです。",
+      "bannerDescricao": "ソフトウェア工場は、お客様の単一ページの企業ウェブサイトがどのようになるかを示すモデルサイトです。",
+      "sectionCardDescricao": "ソフトウェア工場は、顧客の特定のニーズに応えるために産業プロセスとアジャイルメソッドを利用する専門センターです。",
+      "cardBotao": "こちらでウェブサイトの見積もりをお試しください",
+      "contatoTitulo": "お問い合わせ"
+    },
+    "duvidas": {
+      "perguntasComuns": "ウェブサイト制作に関するよくある質問",
+      "perguntaCusto": "ウェブサイト制作の費用はいくらですか？",
+      "respostaCusto": "One Pageウェブサイトの初期費用は99.90ドルからです。",
+      "perguntaVariacao": "価格の変動はありますか？",
+      "tabelaTh1": "サービス",
+      "tabelaTh2": "価格",
+      "tabelaVariacao1": "各ページに新しい言語",
+      "tabelaVariacao2": "各ページに新しいテーマ",
+      "tabelaVariacao3": "新しいページの追加",
+      "perguntaCustoTotal": "2ページとカスタムテーマを含むウェブサイトを依頼した場合、総費用はいくらですか？",
+      "tabelaTotal1": "初期費用",
+      "tabelaTotal2": "新しいページの追加",
+      "tabelaTotal3": "テーマ * 2ページ",
+      "tabelaTotal4": "合計",
+      "perguntaCustoAdicional": "他にも追加の費用がかかりますか？",
+      "respostaCustoAdicional": "私と直接契約して選択すると、追加の費用の選択肢があります。",
+      "tabelaAdicional1": "ホスティング",
+      "tabelaAdicional2": "ドメイン",
+      "tabelaAdicional2Mensal": "毎月",
+      "tabelaAdicional3": "メンテナンス用の時間パッケージ（月間最低10時間）",
+      "tabelaAdicional3Hora": "時間",
+      "tabelaAdicional4": "ホスティング + 2年分のドメイン"
+    }
   }
 }
