@@ -1,11 +1,3 @@
-.checkbox_flex_row {
-  @apply gap-1 p-2;
-}
-
-.checkbox_input {
-  @apply h-4 w-4 outline-none focus:outline-none;
-}
-
 .checkbox_input-claro {
   @apply accent-primaria-claro;
 }

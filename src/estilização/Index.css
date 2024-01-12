@@ -5,10 +5,7 @@
 
 @import "componentes/Efeitos/Slide.css";
 
-@import "componentes/Flex/Flex.css";
-
 @import "componentes/Formulario/Checkbox.css";
-@import "componentes/Formulario/Form.css";
 @import "componentes/Formulario/Input.css";
 @import "componentes/Formulario/Label.css";
 @import "componentes/Formulario/MensagemErro.css";
@@ -22,9 +19,6 @@
 @import "componentes/Outros/Link.css";
 
 @import "componentes/Section/Section.css";
-
-@import "componentes/Tags/Conteudo.css";
-@import "componentes/Tags/Texto.css";
 
 /* # Importe de páginas */
 @import "paginas/Home.css";

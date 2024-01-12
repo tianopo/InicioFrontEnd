@@ -13,7 +13,7 @@ export const MensagemDeErro = ({ errors }: IMensagemDeErro) => {
   }
 
   return (
-    <TX tipo="span" className={`mensagem_erro label_required-${tema}`}>
+    <TX tipo="span" className={`text-12 font-normal label_required-${tema}`}>
       {errors}
     </TX>
   );

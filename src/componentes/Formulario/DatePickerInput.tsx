@@ -26,7 +26,7 @@ export const DatePickerInput = ({
   const { control } = useFormContext();
 
   return (
-    <FlexCol className="gap-1.5 p-2">
+    <FlexCol className="input_container">
       <Label titulo={titulo} palavras={palavras} required={required} />
       <Controller
         name={palavras}

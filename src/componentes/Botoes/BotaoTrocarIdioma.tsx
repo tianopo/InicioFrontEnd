@@ -48,7 +48,7 @@ export const BotaoTrocarIdioma = ({ menuBottom }: IBotaoTrocarIdioma) => {
   }, [idiomaSelecionado, i18n]);
 
   return (
-    <CX tipo="div" className="botao_trocar_idioma-div_principal">
+    <CX tipo="div" className="relative inline-block w-auto duration-300">
       <button
         type="button"
         onClick={() => setMenuAberto(!menuAberto)}
@@ -58,36 +58,54 @@ export const BotaoTrocarIdioma = ({ menuBottom }: IBotaoTrocarIdioma) => {
           }, 100)
         }
         className={`
-          botao_trocar_idioma-button_principal
-          botao_trocar_idioma-${tema}
+        z-10
+        flex
+        items-center
+        justify-between
+        rounded-6
+        border-1
+        border-solid
+        pl-1.5
+        pr-1
+        outline-none
+        botao_trocar_idioma-${tema}
         `}
       >
         <img
           src={opcoes.find((opcao) => opcao.valor === idiomaSelecionado)?.flag}
           alt={`Bandeira de ${opcoes.find((opcao) => opcao.valor === idiomaSelecionado)?.valor}`}
-          className="botao_trocar_idioma-image"
+          className="h-7 w-7"
         />
         {menuAberto ? (
-          <CaretDown className="botao_trocar_idioma-caret" />
+          <CaretDown className="h-4 w-4" />
         ) : (
-          <CaretRight className="botao_trocar_idioma-caret" />
+          <CaretRight className="h-4 w-4" />
         )}
       </button>
       {menuAberto && (
         <div
-          className={`botao_trocar_idioma-div_menu
-        ${menuBottom ? "menu_bottom" : ""}`}
+          className={`
+          absolute
+          mt-4
+          w-16
+          rounded-6
+          bg-white
+          shadow-lg
+        ${menuBottom ? "bottom-10" : ""}`}
         >
           {opcoes.map((opcao) => (
             <button
               key={opcao.valor}
               className={`
-                botao_trocar_idioma-button_menu
-                botao_trocar_idioma-${tema}
-                `}
+              flex
+              w-full
+              justify-center
+              hover:rounded-6
+              botao_trocar_idioma-${tema}
+              `}
               onClick={() => alternarIdioma(opcao.valor)}
             >
-              <img src={opcao.flag} alt={opcao.valor} className="botao_trocar_idioma-image" />
+              <img src={opcao.flag} alt={opcao.valor} className="h-7 w-7" />
             </button>
           ))}
         </div>

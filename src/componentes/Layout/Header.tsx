@@ -25,27 +25,43 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
 
   return (
     <>
-      <CX tipo="header" className={`header header-${tema}`}>
-        <FlexRow className="header_flex">
+      <CX tipo="header" className={`
+      fixed
+      z-10
+      flex
+      h-20
+      w-full
+      flex-row
+      justify-between
+      rounded-b-6
+      border-b-1
+      p-3
+      header-${tema}
+      `}>
+        <FlexRow className="gap-1">
           {imagem && (
             <img
               src={imagem}
               alt={titulo}
               className={`
-          header_imagem-${tema}
-          header_imagem
+              header_imagem-${tema}
+              h-12
+              w-10
+              rounded-20
+              border-1
+              p-0.5
           `}
             />
           )}
           {titulo && (
-            <TX tipo="h1" className="header_titulo">
+            <TX tipo="h1" className="text-20 font-bold">
               {titulo}
             </TX>
           )}
         </FlexRow>
         {navbar && (
           <>
-            <FlexRow className={`header_flex hidden md:flex`}>
+            <FlexRow className={`gap-1 hidden md:flex`}>
               {navbar.map((nav: { texto: string; rota: string }, key: number) => (
                 <LinkX key={key} rota={nav.rota}>
                   <TX tipo="p" className="p-3 text-16 font-bold">
@@ -66,16 +82,28 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
                   }
                   className={`navbar_mobile_botao-${tema} rounded-6 border-1`}
                 >
-                  <Article className={`h-7 w-7 font-bold navbar_mobile_article-${tema}`} />
+                  <Article className={`
+                  h-7
+                  w-7
+                  font-bold
+                  navbar_mobile_article-${tema}
+                  `} />
                 </button>
                 {menuAberto && (
                   <div
-                    className={`absolute right-0 w-auto rounded-6 border-1 duration-300 menu_mobile-${tema}`}
-                  >
+                    className={`
+                    absolute
+                    right-0
+                    w-auto
+                    rounded-6
+                    border-1
+                    duration-300
+                    menu_mobile-${tema}
+                    `}>
                     {navbar.map(({ texto, rota }, key: number) => (
                       <div key={key} className={`menu_navbar-${tema} p-2`}>
                         <LinkX rota={rota}>
-                          <TX tipo="p" className="navbar_texto">
+                          <TX tipo="p" className="text-24 fontbold">
                             {texto.toUpperCase()}
                           </TX>
                         </LinkX>
@@ -87,7 +115,7 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
             </FlexRow>
           </>
         )}
-        <FlexRow className="header_flex">
+        <FlexRow className="gap-1">
           {idioma && <BotaoTrocarIdioma />}
           {temaCor && <BotaoTrocarTema />}
         </FlexRow>

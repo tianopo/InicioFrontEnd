@@ -1,7 +1,3 @@
-.mensagem_erro {
-  @apply text-12 font-normal;
-}
-
 /* Cor */
 .label_required-claro {
   @apply text-erro-claro;

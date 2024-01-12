@@ -1,7 +1,3 @@
-.header {
-  @apply fixed z-10 flex h-20 w-full flex-row justify-between rounded-b-6 border-b-1 p-3;
-}
-
 .header-claro {
   @apply border-borda-claro bg-fundo-claro;
 }
@@ -18,14 +14,6 @@
   @apply border-borda-estrela bg-fundo-estrela;
 }
 
-.header_flex {
-  @apply gap-1;
-}
-
-.header_imagem {
-  @apply h-12 w-10 rounded-20 border-1 p-0.5;
-}
-
 .header_imagem-claro {
   @apply border-borda-claro bg-primaria-claro;
 }
@@ -40,10 +28,6 @@
 
 .header_imagem-nuvem {
   @apply border-borda-nuvem bg-primaria-nuvem;
-}
-
-.header_titulo {
-  @apply text-20 font-bold;
 }
 
 .navbar_texto-claro {

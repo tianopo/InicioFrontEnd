@@ -1,7 +1,0 @@
-.flex_col {
-  @apply flex flex-col;
-}
-
-.flex_row {
-  @apply flex w-full flex-row items-center;
-}

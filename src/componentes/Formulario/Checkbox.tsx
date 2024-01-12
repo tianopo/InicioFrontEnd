@@ -16,7 +16,7 @@ export const Checkbox = ({ disabled, required, errors, titulo, register }: IChec
 
   return (
     <FlexCol>
-      <FlexRow className="checkbox_flex_row">
+      <FlexRow className="gap-1 p-2">
         <input
           id={titulo}
           name={palavras}
@@ -25,7 +25,10 @@ export const Checkbox = ({ disabled, required, errors, titulo, register }: IChec
           disabled={disabled}
           {...register}
           className={`
-          checkbox_input
+          h-4
+          w-4
+          outline-none
+          focus:outline-none
           checkbox_input-${tema}
           `}
         />

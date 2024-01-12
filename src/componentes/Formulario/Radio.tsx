@@ -29,7 +29,7 @@ export const Radio = ({ disabled, errors, register, opcoes, titulo, required }: 
         const palavras = labelFormatada(opcao);
 
         return (
-          <FlexRow key={opcao} className="radio_flex_row">
+          <FlexRow key={opcao} className="w-fit gap-1.5 py-1">
             <input
               id={palavras}
               name={palavras}
@@ -38,7 +38,7 @@ export const Radio = ({ disabled, errors, register, opcoes, titulo, required }: 
               readOnly
               disabled={disabled}
               checked
-              className={`radio radio-${tema}`}
+              className={`h-5 w-5 radio-${tema}`}
               {...register}
             />
             <Label titulo={opcao} palavras={labelFormatada(opcao)} />

@@ -21,7 +21,13 @@ export const BotaoTrocarTema = () => {
     <button
       type="button"
       className={`
-        botao_trocar_tema-button
+        flex
+        h-fit
+        w-10
+        justify-center
+        rounded-6
+        border-1
+        p-1
         botao_trocar_tema-${temaSelecionado}
       `}
       onClick={() => {
