@@ -72,7 +72,9 @@ export const Inicio = () => {
         card={card}
         id="card1"
       />
-      <SectionDuvidas id="duvidas" />
+      <SectionDuvidas
+        id="duvidas"
+      />
       <SectionCard card={card2} id="card2" rota="https://wa.me/5512982435638" />
       <SectionContato id="contato" />
     </FlexCol>

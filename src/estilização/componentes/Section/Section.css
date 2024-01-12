@@ -13,3 +13,23 @@
 .section_card-nuvem {
   @apply bg-fundo_secundario-nuvem;
 }
+
+.duvidas_pergunta {
+  @apply text-24 font-semibold;
+}
+
+.duvidas_resposta {
+  @apply text-20 font-normal;
+}
+
+.duvidas_tabela {
+  @apply min-w-full divide-y m-4;
+}
+
+.duvidas_th {
+  @apply py-3 px-6 text-left text-20 font-normal text-white;
+}
+
+.duvidas_td {
+  @apply py-4 px-6 text-16 font-normal text-white;
+}
