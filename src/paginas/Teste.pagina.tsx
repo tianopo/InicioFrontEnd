@@ -131,9 +131,6 @@ export const Teste = () => {
 
 // retirar depreciation
 // CSS ficando criptografado no devtools
-// deixar apenas cores no CSS
-// arquitetura base do projeto
-// documentar o projeto
 // faça com que não consiga abrir o código ou copiar
 // alteração de porta
 // segurança da informação, injeção, etc
