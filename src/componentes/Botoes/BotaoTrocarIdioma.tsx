@@ -16,12 +16,36 @@ export const BotaoTrocarIdioma = ({ menuBottom }: IBotaoTrocarIdioma) => {
       flag: "/flags/br.svg",
     },
     {
-      valor: "en",
-      flag: "/flags/us.svg",
+      valor: "cn",
+      flag: "/flags/cn.svg",
+    },
+    {
+      valor: "de",
+      flag: "/flags/de.svg",
+    },
+    {
+      valor: "dr",
+      flag: "/flags/dr.svg",
+    },
+    {
+      valor: "es",
+      flag: "/flags/es.svg",
     },
     {
       valor: "fr",
       flag: "/flags/fr.svg",
+    },
+    {
+      valor: "it",
+      flag: "/flags/it.svg",
+    },
+    {
+      valor: "jp",
+      flag: "/flags/jp.svg",
+    },
+    {
+      valor: "us",
+      flag: "/flags/us.svg",
     },
   ];
 
