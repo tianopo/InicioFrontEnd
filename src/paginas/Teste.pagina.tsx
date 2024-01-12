@@ -129,10 +129,5 @@ export const Teste = () => {
   );
 };
 
-// segurança da informação, injeção, etc
-// construir site
-// revisar com jest e outras coisas
-// conferir vite, preços, como funciona para hospedagem e venda de dominio
-// checar em outros navegadores
 // mapear o que o cliente precisa enviar
 // checar contratos
