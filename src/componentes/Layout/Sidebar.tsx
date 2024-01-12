@@ -90,7 +90,7 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
                 <TX
                   tipo="p"
                   className={`
-                p-3
+                p-2
                 text-16
                 font-bold
                 text-white
