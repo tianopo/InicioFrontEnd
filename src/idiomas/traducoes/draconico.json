@@ -2,10 +2,11 @@
   "translation": {
     "contato": {
       "botaoEnviar": "Sulrak",
-      "name": "Gorthar",
+      "nome": "Gorthar",
       "email": "email",
-      "contact": "Roar 123",
-      "message": "Flame and Conquer!"
+      "contato": "Roar 123",
+      "mensagem": "Flame and Conquer!",
+      "mensagemPlaceholder": "Gorxix rulthok narvith"
     },
     "footer": {
       "redesSociais": "Zahkrii",

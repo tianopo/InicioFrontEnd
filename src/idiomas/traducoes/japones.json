@@ -2,10 +2,11 @@
   "translation": {
     "contato": {
       "botaoEnviar": "送信",
-      "name": "名前",
+      "nome": "名前",
       "email": "Eメール",
-      "contact": "連絡先",
-      "message": "メッセージ"
+      "contato": "連絡先",
+      "mensagem": "メッセージ",
+      "mensagemPlaceholder": "メッセージを書いてください"
     },
     "footer": {
       "redesSociais": "ソーシャルメディア",

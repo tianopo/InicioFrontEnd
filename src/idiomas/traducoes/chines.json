@@ -2,10 +2,11 @@
   "translation": {
     "contato": {
       "botaoEnviar": "发送",
-      "name": "姓名",
+      "nome": "姓名",
       "email": "电子邮件",
-      "contact": "联系方式",
-      "message": "消息"
+      "contato": "联系方式",
+      "mensagem": "消息",
+      "mensagemPlaceholder": "写下你的留言"
     },
     "footer": {
       "redesSociais": "社交媒体",

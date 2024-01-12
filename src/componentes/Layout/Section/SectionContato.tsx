@@ -51,7 +51,7 @@ export const SectionContato = ({ id, titulo }: ISectionContato) => {
             <Textarea
               titulo={t("mensagem")}
               register={register("mensagem")}
-              placeholder="Escreva a sua mensagem..."
+              placeholder={t("mensagemPlaceholder")}
               errors={errors.mensagem?.message}
               required
             />
