@@ -90,13 +90,15 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
           </FlexCol>
         )}
       </Flex>
-      <DivisorX />
-      <TX tipo="p" className="text-10 font-semibold text-white">
-        © {t("direitoAutoral")} {new Date().getFullYear()}. {t("feitoPor")}{" "}
-        <LinkX rota="https://github.com/tianopo" target="blank">
-          tianopo
-        </LinkX>
-      </TX>
+      <FlexCol className="w-full items-center px-5">
+        <DivisorX />
+        <TX tipo="p" className="text-10 font-semibold text-white">
+          © {t("direitoAutoral")} {new Date().getFullYear()}. {t("feitoPor")}{" "}
+          <LinkX rota="https://github.com/tianopo" target="blank">
+            tianopo
+          </LinkX>
+        </TX>
+      </FlexCol>
     </footer>
   );
 };
