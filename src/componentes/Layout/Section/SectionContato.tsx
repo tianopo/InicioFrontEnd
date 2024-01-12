@@ -1,5 +1,5 @@
-import { t } from "i18next";
 import { Form, FormProvider } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
 import { Input } from "src/componentes/Formulario/Input";
 import { Textarea } from "src/componentes/Formulario/Textarea";
@@ -7,8 +7,11 @@ import { TX } from "src/componentes/Tags/TextoX";
 import { useInicio } from "src/hooks";
 import { Section } from "../Section";
 
-export const SectionContato = ({ id }: ISectionContato) => {
+export const SectionContato = ({ id, titulo }: ISectionContato) => {
   const { contexto } = useInicio();
+  const { t: tradutor } = useTranslation();
+  const t = (t: string) => tradutor(`contato.${t}`);
+
   const {
     formState: { errors },
     register,
@@ -18,7 +21,7 @@ export const SectionContato = ({ id }: ISectionContato) => {
     <Section divisao={2} className="items-center p-10">
       <div className="w-full" id={id}>
         <TX tipo="h4" className="w-full text-start text-32 font-bold md:text-end">
-          Contato
+          {titulo}
         </TX>
         <FormProvider {...contexto}>
           <Form>
@@ -52,7 +55,7 @@ export const SectionContato = ({ id }: ISectionContato) => {
               errors={errors.mensagem?.message}
               required
             />
-            <BotaoSubmit className="m-10">{t("botãoEnviar")}</BotaoSubmit>
+            <BotaoSubmit className="m-10">{t("botaoEnviar")}</BotaoSubmit>
             <input type="hidden" name="_captcha" value="false"></input>
             <input type="hidden" name="_next" value={window.location.href}></input>
           </Form>
@@ -71,4 +74,5 @@ export const SectionContato = ({ id }: ISectionContato) => {
 
 interface ISectionContato {
   id?: string;
+  titulo?: string;
 }

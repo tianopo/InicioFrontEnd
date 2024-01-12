@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Outlet } from "react-router-dom";
 import { useTema } from "src/hooks";
 import { Flex } from "../Flex/Flex";
@@ -7,13 +8,15 @@ import { Sidebar } from "./Sidebar";
 
 export const Layout = () => {
   const { tema } = useTema();
+  const { t: tradutor } = useTranslation();
+  const t = (t: string) => tradutor(`layout.${t}`);
 
   const nav = [
-    { texto: "inicio", rota: "#" },
-    { texto: "Cards", rota: "#card1" },
-    { texto: "Dúvidas", rota: "#duvidas" },
-    { texto: "Cards", rota: "#card2" },
-    { texto: "contato", rota: "#contato" },
+    { texto: t("inicio"), rota: "#" },
+    { texto: t("cards"), rota: "#card1" },
+    { texto: t("duvidas"), rota: "#duvidas" },
+    { texto: t("cards"), rota: "#card2" },
+    { texto: t("contato"), rota: "#contato" },
   ];
 
   const icones = [
@@ -35,7 +38,7 @@ export const Layout = () => {
         <Outlet />
         <Footer
           titulo="Matheus Henrique de Abreu"
-          description="Contratar nossa Fábrica de Software é garantir soluções tecnológicas inovadoras e personalizadas para impulsionar seu negócio."
+          description={t("description")}
           icones={icones}
           nav={nav}
         />
