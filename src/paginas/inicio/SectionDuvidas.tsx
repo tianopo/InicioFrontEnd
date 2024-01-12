@@ -10,10 +10,10 @@ export const SectionDuvidas = ({ id }: ISectionDuvidas) => {
 
   return (
     <Section className="px-4" id={id}>
-      <TX tipo="h3" className="text-32 font-bold" style={{ textShadow: '0px 0px 10px rgba(255, 255, 255, 0.8)' }}>Dúvidas frequentes sobre a Criação de site</TX>
+      <TX tipo="h3" className="text-32 font-bold" style={{ textShadow: '0px 0px 10px rgba(255, 255, 255, 0.8)' }}>Perguntas Comuns sobre a Criação de Sites</TX>
       <CX tipo="div">
         <TX tipo="p" className="duvidas_pergunta">Quanto custa a criação de site?</TX>
-        <TX tipo="p" className="duvidas_resposta">O preço do site One Page é à partir de R$99,90</TX>
+        <TX tipo="p" className="duvidas_resposta">O custo inicial para um site One Page começa a partir de R$99,90.</TX>
       </CX>
       <CX tipo="div">
         <TX tipo="p" className="duvidas_pergunta">Qual a variação do preço?</TX>
@@ -45,7 +45,9 @@ export const SectionDuvidas = ({ id }: ISectionDuvidas) => {
         </table>
       </CX>
       <CX tipo="div">
-        <TX tipo="p" className="duvidas_pergunta">Se eu pedisse um site com duas páginas e um tema, qual seria o preço?</TX>
+        <TX tipo="p" className="duvidas_pergunta">
+          Se solicitar um site com duas páginas e um tema personalizado, qual seria o custo total?
+        </TX>
         <table className={`duvidas_tabela section_card-${tema}`}>
           <thead>
             <tr>
@@ -78,8 +80,8 @@ export const SectionDuvidas = ({ id }: ISectionDuvidas) => {
         </table>
       </CX>
       <CX tipo="div">
-        <TX tipo="p" className="duvidas_pergunta">Existem outros custos?</TX>
-        <TX tipo="p" className="text-20 font-normal">Existem custos opcionais se contratar diretamente comigo</TX>
+        <TX tipo="p" className="duvidas_pergunta">Há outros custos adicionais?</TX>
+        <TX tipo="p" className="text-20 font-normal">Ao optar por contratar diretamente comigo mediante um contrato, existem escolhas de custos adicionais.</TX>
         <table className={`duvidas_tabela section_card-${tema}`}>
           <thead>
             <tr>
