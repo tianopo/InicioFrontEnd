@@ -72,6 +72,7 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
                 font-semibold
                 hover:underline
                 md:items-center
+                pt-1
                 "
               >
                 <a key={key} href={rota}>
@@ -87,6 +88,7 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
                     {texto.toUpperCase()}
                   </TX>
                 </a>
+                <DivisorX />
               </FlexCol>
             ))}
           </Flex>
