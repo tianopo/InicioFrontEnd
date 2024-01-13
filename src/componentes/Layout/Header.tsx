@@ -8,13 +8,15 @@ import { LinkX } from "../Outros/LinkX";
 import { CX } from "../Tags/ConteudoX";
 import { TX } from "../Tags/TextoX";
 
+interface INavbar {
+  texto: string;
+  rota: string;
+}
+
 interface IHeader {
   imagem?: string;
   titulo?: string;
-  navbar?: {
-    texto: string;
-    rota: string;
-  }[];
+  navbar?: INavbar[];
   idioma?: boolean;
   temaCor?: boolean;
 }
@@ -66,12 +68,21 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
         {navbar && (
           <>
             <FlexRow className={`hidden gap-1 md:flex`}>
-              {navbar.map((nav: { texto: string; rota: string }, key: number) => (
-                <LinkX key={key} rota={nav.rota}>
-                  <TX tipo="p" className="p-3 text-16 font-bold">
-                    {nav.texto.toUpperCase()}
-                  </TX>
-                </LinkX>
+              {navbar.map(({ texto, rota }: INavbar, key: number) => (
+                <a key={key} href={rota}>
+                <TX
+                  tipo="p"
+                  className={`
+              p-2
+              text-16
+              font-bold
+              text-white
+              hover:underline
+              `}
+                >
+                  {texto.toUpperCase()}
+                </TX>
+              </a>
               ))}
             </FlexRow>
 
