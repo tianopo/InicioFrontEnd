@@ -6,3 +6,11 @@
 .divisor-escuro {
   @apply border-borda-escuro;
 }
+
+.divisor-estrela {
+  @apply border-borda-estrela;
+}
+
+.divisor-nuvem {
+  @apply border-borda-nuvem;
+}

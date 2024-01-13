@@ -128,6 +128,3 @@ export const Teste = () => {
     </FlexCol>
   );
 };
-
-// mapear o que o cliente precisa enviar
-// checar contratos

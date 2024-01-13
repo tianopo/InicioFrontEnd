@@ -6,3 +6,11 @@
 .link-escuro {
   @apply text-escrita-escuro hover:text-hover-escuro;
 }
+
+.link-estrela {
+  @apply text-escrita-estrela hover:text-hover-estrela;
+}
+
+.link-nuvem {
+  @apply text-escrita-nuvem hover:text-hover-nuvem;
+}

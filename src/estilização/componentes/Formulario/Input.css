@@ -11,6 +11,14 @@
   @apply border-borda-escuro bg-input-escuro text-escrita-escuro placeholder:text-placeholder-escuro focus:border-primaria-escuro;
 }
 
+.input-estrela {
+  @apply border-borda-estrela bg-input-estrela text-escrita-estrela placeholder:text-placeholder-estrela focus:border-primaria-estrela;
+}
+
+.input-nuvem {
+  @apply border-borda-nuvem bg-input-nuvem text-escrita-nuvem placeholder:text-placeholder-nuvem focus:border-primaria-nuvem;
+}
+
 .input_container {
   @apply gap-1.5 p-2.5;
 }

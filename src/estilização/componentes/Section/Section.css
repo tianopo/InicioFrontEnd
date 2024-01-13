@@ -6,6 +6,14 @@
   @apply bg-fundo_secundario-escuro;
 }
 
+.section_card-estrela {
+  @apply bg-fundo_secundario-estrela;
+}
+
+.section_card-nuvem {
+  @apply bg-fundo_secundario-nuvem;
+}
+
 .duvidas_pergunta {
   @apply text-24 font-semibold;
 }

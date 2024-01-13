@@ -5,3 +5,11 @@
 .footer-escuro {
   @apply border-borda-escuro bg-fundo_secundario-escuro;
 }
+
+.footer-estrela {
+  @apply border-borda-estrela bg-fundo_secundario-estrela;
+}
+
+.footer-nuvem {
+  @apply border-borda-nuvem bg-fundo_secundario-nuvem;
+}

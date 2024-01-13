@@ -6,10 +6,26 @@
   @apply border-borda-escuro bg-fundo_secundario-escuro;
 }
 
+.sidebar_bg-estrela {
+  @apply border-borda-estrela bg-fundo_secundario-estrela;
+}
+
+.sidebar_bg-nuvem {
+  @apply border-borda-nuvem bg-fundo_secundario-nuvem;
+}
+
 .sidebar_hover-claro {
   @apply hover:bg-selecionado-claro;
 }
 
 .sidebar_hover-escuro {
   @apply hover:bg-selecionado-escuro;
+}
+
+.sidebar_hover-estrela {
+  @apply hover:bg-selecionado-estrela;
+}
+
+.sidebar_hover-nuvem {
+  @apply hover:bg-selecionado-nuvem;
 }

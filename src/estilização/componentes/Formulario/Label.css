@@ -6,3 +6,11 @@
 .label-escuro {
   @apply text-escrita-escuro;
 }
+
+.label-estrela {
+  @apply text-escrita-estrela;
+}
+
+.label-nuvem {
+  @apply text-escrita-nuvem;
+}
