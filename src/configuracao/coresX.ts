@@ -19,13 +19,13 @@ export const coresX = {
   },
   fundo: {
     claro: "#F5F5F5",
-    escuro: "#333",
+    escuro: "#000",
     estrela: "#FFFAF0",
     nuvem: "#F0F8FF",
   },
   fundo_secundario: {
     claro: "#282828",
-    escuro: "#000",
+    escuro: "#333",
     estrela: "#D8C4B7",
     nuvem: "#A9C8FF",
   },
