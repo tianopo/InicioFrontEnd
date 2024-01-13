@@ -1,5 +1,5 @@
 // BotaoTrocarTema.tsx
-import { Cloud, Moon, Star, Sun } from "@phosphor-icons/react";
+import { Moon, Sun } from "@phosphor-icons/react";
 import { useTema } from "src/hooks";
 import { ITema } from "src/interfaces";
 
@@ -8,8 +8,6 @@ export const BotaoTrocarTema = () => {
   const opcoes: { tema: keyof ITema; icone: JSX.Element }[] = [
     { tema: "claro", icone: <Sun size="20px" weight="fill" className="text-icone-claro" /> },
     { tema: "escuro", icone: <Moon size="20px" weight="fill" className="text-icone-escuro" /> },
-    { tema: "estrela", icone: <Star size="20px" weight="fill" className="text-icone-estrela" /> },
-    { tema: "nuvem", icone: <Cloud size="20px" weight="fill" className="text-icone-nuvem" /> },
   ];
 
   const alternarTema = (novoTema: keyof ITema) => {

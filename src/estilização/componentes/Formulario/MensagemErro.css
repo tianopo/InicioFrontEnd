@@ -6,11 +6,3 @@
 .label_required-escuro {
   @apply text-erro-escuro;
 }
-
-.label_required-estrela {
-  @apply text-erro-estrela;
-}
-
-.label_required-nuvem {
-  @apply text-erro-nuvem;
-}

@@ -5,11 +5,3 @@
 .checkbox_input-escuro {
   @apply accent-primaria-escuro;
 }
-
-.checkbox_input-estrela {
-  @apply accent-primaria-estrela;
-}
-
-.checkbox_input-nuvem {
-  @apply accent-primaria-nuvem;
-}

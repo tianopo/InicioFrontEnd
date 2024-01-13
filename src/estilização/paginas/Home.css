@@ -5,11 +5,3 @@
 .home-escuro {
   @apply border-borda-escuro bg-fundo-escuro text-escrita-escuro;
 }
-
-.home-estrela {
-  @apply border-borda-estrela bg-fundo-estrela text-escrita-estrela;
-}
-
-.home-nuvem {
-  @apply border-borda-nuvem bg-fundo-nuvem text-escrita-nuvem;
-}

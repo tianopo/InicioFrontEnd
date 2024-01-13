@@ -6,11 +6,3 @@
 .botao_trocar_idioma-escuro {
   @apply border-borda-escuro text-icone-escuro hover:bg-selecionado-escuro;
 }
-
-.botao_trocar_idioma-estrela {
-  @apply border-borda-estrela text-icone-estrela hover:bg-selecionado-estrela;
-}
-
-.botao_trocar_idioma-nuvem {
-  @apply border-borda-nuvem text-icone-nuvem hover:bg-selecionado-nuvem;
-}

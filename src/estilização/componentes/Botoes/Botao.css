@@ -10,11 +10,3 @@
 .botao-escuro {
   @apply border-borda-escuro bg-primaria-escuro text-black;
 }
-
-.botao-estrela {
-  @apply border-borda-estrela bg-primaria-estrela text-black;
-}
-
-.botao-nuvem {
-  @apply border-borda-nuvem bg-primaria-nuvem text-black;
-}

@@ -6,11 +6,3 @@
 .botao_trocar_tema-escuro {
   @apply border-borda-escuro hover:bg-hover-escuro;
 }
-
-.botao_trocar_tema-estrela {
-  @apply border-borda-estrela hover:bg-hover-estrela;
-}
-
-.botao_trocar_tema-nuvem {
-  @apply border-borda-nuvem hover:bg-hover-nuvem;
-}

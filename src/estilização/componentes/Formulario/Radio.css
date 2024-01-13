@@ -5,11 +5,3 @@
 .radio-escuro {
   @apply accent-primaria-escuro;
 }
-
-.radio-estrela {
-  @apply accent-primaria-estrela;
-}
-
-.radio-nuvem {
-  @apply border-white accent-primaria-nuvem;
-}
