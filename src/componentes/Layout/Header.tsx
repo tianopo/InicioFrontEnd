@@ -28,18 +28,19 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
       <CX
         tipo="header"
         className={`
-      fixed
-      z-10
-      flex
-      h-20
-      w-full
-      flex-row
-      justify-between
-      rounded-b-6
-      border-b-1
-      p-3
-      header-${tema}
-      `}
+        sticky
+        top-0
+        z-10
+        flex
+        h-20
+        w-full
+        flex-row
+        justify-between
+        rounded-b-6
+        border-b-1
+        p-3
+        header-${tema}
+        `}
       >
         <FlexRow className="gap-1">
           {imagem && (
