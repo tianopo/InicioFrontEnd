@@ -71,7 +71,7 @@ export const SectionContato = ({ id, titulo }: ISectionContato) => {
     </Section>
   );
 };
-
+// colocar toastify
 interface ISectionContato {
   id?: string;
   titulo?: string;

@@ -9,32 +9,27 @@ export const Inicio = () => {
   const card = [
     {
       titulo: t("teste"),
-      descricao:
-        t("cardDescricao"),
+      descricao: t("cardDescricao"),
       imagem: "/projeto/foto.png",
     },
     {
       titulo: t("teste"),
-      descricao:
-        t("cardDescricao"),
+      descricao: t("cardDescricao"),
       imagem: "/projeto/foto.png",
     },
     {
       titulo: t("teste"),
-      descricao:
-        t("cardDescricao"),
+      descricao: t("cardDescricao"),
       imagem: "/projeto/foto.png",
     },
     {
       titulo: t("teste"),
-      descricao:
-        t("cardDescricao"),
+      descricao: t("cardDescricao"),
       imagem: "/projeto/foto.png",
     },
     {
       titulo: t("teste"),
-      descricao:
-        t("cardDescricao"),
+      descricao: t("cardDescricao"),
       imagem: "/projeto/foto.png",
     },
   ];
@@ -42,16 +37,14 @@ export const Inicio = () => {
   const card2 = [
     {
       titulo: t("teste"),
-      descricao:
-        t("cardDescricao"),
+      descricao: t("cardDescricao"),
       imagem: "/projeto/foto.png",
       botao: true,
       rota: "https://wa.me/5512982435638",
     },
     {
       titulo: t("teste"),
-      descricao:
-        t("cardDescricao"),
+      descricao: t("cardDescricao"),
       imagem: "/projeto/foto.png",
       botao: true,
       rota: "https://wa.me/5512982435638",

@@ -61,7 +61,7 @@ export const Teste = () => {
         reset();
       }
     } catch (error) {
-      console.error("Erro ao enviar o formulário:", error);
+      throw new Error(`Erro ao enviar o formulário: ${error}`);
     }
   };
   const opcoes = ["Português", "Inglês", "Espanhol", "Francês"];

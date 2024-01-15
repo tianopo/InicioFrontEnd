@@ -2,7 +2,7 @@ import { CaretDown, CaretRight } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useTema } from "src/hooks";
-import { LocalStorage } from "src/utils";
+import { LocalStorage, setLocaleYup } from "src/utils";
 import { CX } from "../Tags/ConteudoX";
 
 interface IBotaoTrocarIdioma {
@@ -69,6 +69,7 @@ export const BotaoTrocarIdioma = ({ menuBottom }: IBotaoTrocarIdioma) => {
 
   useEffect(() => {
     i18n.changeLanguage(idiomaSelecionado);
+    setLocaleYup(idiomaSelecionado);
   }, [idiomaSelecionado, i18n]);
 
   return (

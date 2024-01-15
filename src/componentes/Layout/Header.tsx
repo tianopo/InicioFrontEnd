@@ -70,19 +70,19 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
             <FlexRow className={`hidden gap-1 md:flex`}>
               {navbar.map(({ texto, rota }: INavbar, key: number) => (
                 <a key={key} href={rota}>
-                <TX
-                  tipo="p"
-                  className={`
+                  <TX
+                    tipo="p"
+                    className={`
               p-2
               text-16
               font-bold
               text-white
               hover:underline
               `}
-                >
-                  {texto.toUpperCase()}
-                </TX>
-              </a>
+                  >
+                    {texto.toUpperCase()}
+                  </TX>
+                </a>
               ))}
             </FlexRow>
 

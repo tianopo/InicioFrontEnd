@@ -68,11 +68,11 @@ export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
                 className="
                 w-full
                 items-start
+                pt-1
                 text-20
                 font-semibold
                 hover:underline
                 md:items-center
-                pt-1
                 "
               >
                 <a key={key} href={rota}>

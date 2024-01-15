@@ -123,9 +123,7 @@ export const SectionDuvidas = ({ id }: ISectionDuvidas) => {
               <td className="duvidas_td">R$30,00 + R$10,00 {t("tabelaAdicional2Mensal")}</td>
             </tr>
             <tr>
-              <td className="duvidas_td">
-                {t("tabelaAdicional3")}
-              </td>
+              <td className="duvidas_td">{t("tabelaAdicional3")}</td>
               <td className="duvidas_td">R$10,00 {t("tabelaAdicional3Hora")}</td>
             </tr>
             <tr>

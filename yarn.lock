@@ -9966,11 +9966,6 @@ yocto-queue@^0.1.0:
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-yup-locales@^1.2.20:
-  version "1.2.20"
-  resolved "https://registry.npmjs.org/yup-locales/-/yup-locales-1.2.20.tgz"
-  integrity sha512-aP8OQQreM/3n2MViLt8aODizpgxjGFnxyOcP3GcjGm+UwU9qRRwmhFsXVlNrWz+7iNql0yp0Xdu7tL57nW465g==
-
 yup@^1.3.2:
   version "1.3.2"
   resolved "https://registry.npmjs.org/yup/-/yup-1.3.2.tgz"
