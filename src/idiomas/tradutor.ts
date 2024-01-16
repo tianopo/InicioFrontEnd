@@ -11,7 +11,7 @@ import japonesJson from "./traducoes/japones.json";
 import ptbrJson from "./traducoes/ptbr.json";
 
 i18n.use(initReactI18next).init({
-  fallbackLng: "us",
+  fallbackLng: "ptbr",
   interpolation: {
     escapeValue: false,
   },
