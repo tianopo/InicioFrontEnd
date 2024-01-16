@@ -1,9 +1,9 @@
 .header-claro {
-  @apply border-borda-claro bg-fundo-claro;
+  @apply border-borda-claro bg-fundo_secundario-claro;
 }
 
 .header-escuro {
-  @apply border-borda-escuro bg-fundo-escuro;
+  @apply border-borda-escuro bg-fundo_secundario-escuro;
 }
 
 .header-nuvem {
