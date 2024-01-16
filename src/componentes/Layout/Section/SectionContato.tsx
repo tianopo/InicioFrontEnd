@@ -1,6 +1,7 @@
-import { Form, FormProvider } from "react-hook-form";
+import { FormProvider } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { BotaoSubmit } from "src/componentes/Botoes/BotaoSubmit";
+import { Form } from "src/componentes/Formulario/Form";
 import { Input } from "src/componentes/Formulario/Input";
 import { Textarea } from "src/componentes/Formulario/Textarea";
 import { TX } from "src/componentes/Tags/TextoX";
@@ -53,11 +54,11 @@ export const SectionContato = ({ id, titulo }: ISectionContato) => {
               register={register("mensagem")}
               placeholder={t("mensagemPlaceholder")}
               errors={errors.mensagem?.message}
-              required
             />
             <BotaoSubmit className="m-10">{t("botaoEnviar")}</BotaoSubmit>
             <input type="hidden" name="_captcha" value="false"></input>
             <input type="hidden" name="_next" value={window.location.href}></input>
+            <input type="hidden" name="_subject" value="Site Institucional!"></input>
           </Form>
         </FormProvider>
       </div>
