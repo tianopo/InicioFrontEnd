@@ -33,3 +33,11 @@
 .duvidas_td {
   @apply px-6 py-4 text-16 font-normal text-white;
 }
+
+.carousel-claro {
+  @apply bg-fundo_secundario-claro;
+}
+
+.carousel-escuro {
+  @apply bg-fundo_secundario-escuro;
+}
