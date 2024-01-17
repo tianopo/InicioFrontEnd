@@ -9,7 +9,7 @@ import { Section } from "../Section";
 
 export const SectionContato = ({ id, titulo }: ISectionContato) => {
   const { contexto } = useInicio();
-  const { tema } = useTema()
+  const { tema } = useTema();
   const { t: tradutor } = useTranslation();
   const t = (t: string) => tradutor(`contato.${t}`);
 
