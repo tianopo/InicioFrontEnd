@@ -31,34 +31,27 @@ export const SectionCarousel = ({ id, imagens }: ISectionCarousel) => {
     };
   }, [indiceImagem]);
 
+  const imagemAtual = imagens[indiceImagem];
+
   return (
     <Section className="relative overflow-hidden p-8">
-      <div className="relative h-96 w-full overflow-hidden" id={id}>
-        <div
-          className="flex transform transition-transform duration-500 ease-in-out"
-          style={{
-            width: `${imagens.length * 100}%`,
-            transform: `translateX(-${(indiceImagem / imagens.length) * 100}%)`,
-          }}
-        >
-          {imagens.map((imagem, index) => (
-            <img
-              key={index}
-              src={imagem}
-              alt={`Imagem ${index + 1}`}
-              className="h-96 w-full rounded-md bg-cover"
-            />
-          ))}
-        </div>
+      <div
+        className="relative h-96 w-full"
+        id={id}
+      >
+        <img
+          src={imagemAtual}
+          alt={`Imagem ${indiceImagem + 1}`}
+          className="h-96 w-full transform rounded-md object-fill"
+        />
       </div>
       <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 transform">
-        {imagens.map((_, index) => (
+        {[...Array(imagens.length)].map((_, index) => (
           <span
             key={index}
             onClick={() => selecionarImagem(index)}
-            className={`mx-1 inline-block h-4 w-4 -translate-y-5 cursor-pointer rounded-full carousel-${tema} ${
-              index === indiceImagem ? "opacity-100" : "opacity-50"
-            }`}
+            className={`mx-1 inline-block h-4 w-4 -translate-y-5 cursor-pointer rounded-full carousel-${tema} ${index === indiceImagem ? "opacity-100" : "opacity-50"
+              }`}
           />
         ))}
       </div>
