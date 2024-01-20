@@ -7,7 +7,7 @@ export interface IInicioSchema {
   nome: string;
   email: string;
   contato: string;
-  mensagem: string;
+  mensagem?: string;
 }
 
 export const useInicio = () => {
@@ -18,7 +18,7 @@ export const useInicio = () => {
     nome: Yup.string().required().min(1).label(t("nome")),
     email: Yup.string().email().required().label(t("email")),
     contato: Yup.string().required().label(t("contato")),
-    mensagem: Yup.string().required().label(t("mensagem")),
+    mensagem: Yup.string().optional().label(t("mensagem")),
   });
 
   const contexto = useForm<IInicioSchema>({
