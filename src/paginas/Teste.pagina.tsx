@@ -25,7 +25,6 @@ export const Teste = () => {
   const {
     formState: { errors },
     register,
-    handleSubmit,
     watch,
     reset,
   } = contexto;

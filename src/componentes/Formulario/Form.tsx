@@ -9,6 +9,6 @@ interface IForm extends FormHTMLAttributes<HTMLFormElement> {
 export const Form = ({ children, onSubmit }: IForm) => {
   const formContext = useFormContext();
   const { handleSubmit } = formContext || {};
-  
+
   return <form onSubmit={handleSubmit(onSubmit)}>{children}</form>;
 };

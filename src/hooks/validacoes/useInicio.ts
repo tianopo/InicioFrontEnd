@@ -21,8 +21,6 @@ export const useInicio = () => {
     mensagem: Yup.string().optional().label(t("mensagem")),
   });
 
-  type Schema = Yup.InferType<typeof validacaoSchema>;
-
   const contexto = useForm<IInicioSchema>({
     resolver: yupResolver(validacaoSchema),
     reValidateMode: "onChange",
