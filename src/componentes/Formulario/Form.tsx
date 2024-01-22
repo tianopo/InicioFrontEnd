@@ -1,18 +1,14 @@
 import { FormHTMLAttributes, ReactNode } from "react";
+import { useFormContext } from "react-hook-form";
 
 interface IForm extends FormHTMLAttributes<HTMLFormElement> {
   children: ReactNode;
-  onSubmit?: () => void;
+  onSubmit: () => void;
 }
 
 export const Form = ({ children, onSubmit }: IForm) => {
-  return (
-    <form
-      onSubmit={onSubmit}
-      method="post"
-      action="https://formsubmit.co/matheuslink18@hotmail.com"
-    >
-      {children}
-    </form>
-  );
+  const formContext = useFormContext();
+  const { handleSubmit } = formContext || {};
+  
+  return <form onSubmit={handleSubmit(onSubmit)}>{children}</form>;
 };

@@ -77,7 +77,7 @@ export const Teste = () => {
         <TX tipo="h6">tudo bem</TX>
       </FlexRow>
       <FormProvider {...contexto}>
-        <Form onSubmit={handleSubmit(onSubmit)}>
+        <Form onSubmit={onSubmit}>
           <Checkbox titulo="coisas" register={register("coisas")} errors={errors.coisas?.message} />
           <Input
             register={register("nome")}

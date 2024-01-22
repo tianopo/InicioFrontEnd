@@ -6,7 +6,9 @@
       "email": "email",
       "contato": "contato",
       "mensagem": "mensagem",
-      "mensagemPlaceholder": "Escreva a sua mensagem"
+      "mensagemPlaceholder": "Escreva a sua mensagem",
+      "toastSucesso": "Formulário enviado com sucesso",
+      "toastErro": "Erro ao enviar o formulário"
     },
     "footer": {
       "redesSociais": "Redes Sociais",

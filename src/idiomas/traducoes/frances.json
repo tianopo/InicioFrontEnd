@@ -6,7 +6,9 @@
       "email": "courriel",
       "contato": "contact",
       "mensagem": "message",
-      "mensagemPlaceholder": "Écrivez votre message"
+      "mensagemPlaceholder": "Écrivez votre message",
+      "toastSucesso": "Formulaire envoyé avec succès",
+      "toastError": "Erreur lors de la soumission du formulaire"
     },
     "footer": {
       "redesSociais": "Réseaux sociaux",

@@ -6,7 +6,9 @@
       "email": "email",
       "contato": "contatto",
       "mensagem": "messaggio",
-      "mensagemPlaceholder": "Scrivi il tuo messaggio"
+      "mensagemPlaceholder": "Scrivi il tuo messaggio",
+      "toastSucesso": "Modulo inviato con successo",
+      "toastError": "Errore durante l'invio del modulo"
     },
     "footer": {
       "redesSociais": "Social Media",

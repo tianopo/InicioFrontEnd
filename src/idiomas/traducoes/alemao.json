@@ -6,7 +6,9 @@
       "email": "E-Mail",
       "contato": "Kontakt",
       "mensagem": "Nachricht",
-      "mensagemPlaceholder": "Schreiben Sie Ihre Nachricht"
+      "mensagemPlaceholder": "Schreiben Sie Ihre Nachricht",
+      "toastSucesso": "Formular erfolgreich gesendet",
+      "toastError": "Fehler beim Absenden des Formulars"
     },
     "footer": {
       "redesSociais": "Soziale Medien",

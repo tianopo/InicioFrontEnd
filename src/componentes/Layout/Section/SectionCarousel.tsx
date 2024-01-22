@@ -35,10 +35,7 @@ export const SectionCarousel = ({ id, imagens }: ISectionCarousel) => {
 
   return (
     <Section className="relative overflow-hidden p-8">
-      <div
-        className="relative h-96 w-full"
-        id={id}
-      >
+      <div className="relative h-96 w-full" id={id}>
         <img
           src={imagemAtual}
           alt={`Imagem ${indiceImagem + 1}`}
@@ -50,8 +47,9 @@ export const SectionCarousel = ({ id, imagens }: ISectionCarousel) => {
           <span
             key={index}
             onClick={() => selecionarImagem(index)}
-            className={`mx-1 inline-block h-4 w-4 -translate-y-5 cursor-pointer rounded-full carousel-${tema} ${index === indiceImagem ? "opacity-100" : "opacity-50"
-              }`}
+            className={`mx-1 inline-block h-4 w-4 -translate-y-5 cursor-pointer rounded-full carousel-${tema} ${
+              index === indiceImagem ? "opacity-100" : "opacity-50"
+            }`}
           />
         ))}
       </div>

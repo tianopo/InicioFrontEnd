@@ -6,7 +6,9 @@
       "email": "email",
       "contato": "Roar 123",
       "mensagem": "Flame and Conquer!",
-      "mensagemPlaceholder": "Gorxix rulthok narvith"
+      "mensagemPlaceholder": "Gorxix rulthok narvith",
+      "toastSucesso": "Rr'haesho krif vokun",
+      "toastErro": "Keinun duniis los ont"
     },
     "footer": {
       "redesSociais": "Zahkrii",

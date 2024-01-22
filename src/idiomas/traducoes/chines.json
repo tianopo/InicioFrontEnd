@@ -6,7 +6,9 @@
       "email": "电子邮件",
       "contato": "联系方式",
       "mensagem": "消息",
-      "mensagemPlaceholder": "写下你的留言"
+      "mensagemPlaceholder": "写下你的留言",
+      "toastSuccesso": "表單發送成功",
+      "toastError": "提交表單時發生錯誤"
     },
     "footer": {
       "redesSociais": "社交媒体",

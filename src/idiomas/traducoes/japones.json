@@ -6,7 +6,9 @@
       "email": "Eメール",
       "contato": "連絡先",
       "mensagem": "メッセージ",
-      "mensagemPlaceholder": "メッセージを書いてください"
+      "mensagemPlaceholder": "メッセージを書いてください",
+      "toastSucesso": "フォームは正常に送信されました",
+      "toastError": "フォーム送信エラー"
     },
     "footer": {
       "redesSociais": "ソーシャルメディア",
