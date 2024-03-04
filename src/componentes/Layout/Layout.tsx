@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { Outlet } from "react-router-dom";
-import { useTema } from "src/hooks";
+import { useTheme } from "src/hooks";
 import { Flex } from "../Flex/Flex";
 import { CX } from "../Tags/ConteudoX";
 import { Footer } from "./Footer";
 import { Sidebar } from "./Sidebar";
 
 export const Layout = () => {
-  const { tema } = useTema();
+  const { tema } = useTheme();
   const { t: tradutor } = useTranslation();
   const t = (t: string) => tradutor(`layout.${t}`);
 

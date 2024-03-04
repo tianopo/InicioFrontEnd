@@ -10,16 +10,6 @@
     "postcss.config.js": true,
     ".prettierrc": false,
   },
-  "material-icon-theme.folders.associations": {
-    "componentes": "react-components",
-    "rotas": "routes",
-    "paginas": "views",
-    "configuracao": "config",
-    "documentacao": "docs",
-    "estilização": "css",
-    "validacoes": "rules",
-    "idiomas": "i18n"
-  },
   "typescript.preferences.quoteStyle": "double",
   "editor.minimap.enabled": true, // ativa o minimap
   "editor.wordWrap": "on", // ativa a quebra de linha automatica

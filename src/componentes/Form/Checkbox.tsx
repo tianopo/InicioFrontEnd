@@ -1,4 +1,4 @@
-import { useTema } from "src/hooks";
+import { useTheme } from "src/hooks";
 import { IFormUsos } from "src/interfaces";
 import { labelFormatada } from "src/utils";
 import { FlexCol } from "../Flex/FlexCol";
@@ -12,7 +12,7 @@ export interface ICheckbox extends IFormUsos {
 
 export const Checkbox = ({ disabled, required, errors, titulo, register }: ICheckbox) => {
   const palavras = labelFormatada(titulo);
-  const { tema } = useTema();
+  const { tema } = useTheme();
 
   return (
     <FlexCol>

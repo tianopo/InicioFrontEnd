@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { useTema } from "src/hooks";
+import { useTheme } from "src/hooks";
 import { Flex } from "../Flex/Flex";
 import { FlexCol } from "../Flex/FlexCol";
 import { FlexRow } from "../Flex/FlexRow";
-import { DivisorX } from "../Outros/DivisorX";
-import { LinkX } from "../Outros/LinkX";
 import { TX } from "../Tags/TextoX";
+import { DivisorX } from "../others/DivisorX";
+import { LinkX } from "../others/LinkX";
 
 interface IFooter {
   titulo?: string;
@@ -21,7 +21,7 @@ interface IFooter {
 }
 
 export const Footer = ({ titulo, description, icones, nav }: IFooter) => {
-  const { tema } = useTema();
+  const { tema } = useTheme();
   const { t: tradutor } = useTranslation();
   const t = (t: string) => tradutor(`footer.${t}`);
 

@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { CX, Section, TX } from "src/componentes";
-import { useTema } from "src/hooks";
+import { useTheme } from "src/hooks";
 
 interface ISectionDuvidas {
   id?: string;
 }
 
 export const SectionDuvidas = ({ id }: ISectionDuvidas) => {
-  const { tema } = useTema();
+  const { tema } = useTheme();
   const { t: tradutor } = useTranslation();
   const t = (t: string) => tradutor(`duvidas.${t}`);
 

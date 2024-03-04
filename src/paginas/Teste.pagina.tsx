@@ -2,8 +2,8 @@ import axios from "axios";
 import { t } from "i18next";
 import { FormProvider } from "react-hook-form";
 import {
-  BotaoOnClick,
-  BotaoSubmit,
+  ButtonOnClick,
+  ButtonSubmit,
   Checkbox,
   DatePickerInput,
   DivisorX,
@@ -16,18 +16,19 @@ import {
   TX,
   Textarea,
 } from "src/componentes";
-import { Form } from "src/componentes/Formulario/Form";
-import { useValidacaoTeste } from "src/hooks";
+import { Form } from "src/componentes/Form/Form";
+import { useTestValidation } from "src/hooks";
 import { checkboxFormatada, dataFormatada } from "src/utils";
-export const Teste = () => {
-  const { contexto } = useValidacaoTeste();
+
+export const Test = () => {
+  const { context } = useTestValidation();
 
   const {
     formState: { errors },
     register,
     watch,
     reset,
-  } = contexto;
+  } = context;
 
   const onSubmit = async () => {
     try {
@@ -67,7 +68,7 @@ export const Teste = () => {
 
   return (
     <FlexCol className="w-full">
-      <BotaoOnClick onClick={() => "oi"}> Gosto </BotaoOnClick>
+      <ButtonOnClick onClick={() => "oi"}> Gosto </ButtonOnClick>
       <DivisorX />
       <TX tipo="h1">olá</TX>
       <LinkX rota="./home"></LinkX>
@@ -75,7 +76,7 @@ export const Teste = () => {
         <TX tipo="i">tudo bem</TX>
         <TX tipo="h6">tudo bem</TX>
       </FlexRow>
-      <FormProvider {...contexto}>
+      <FormProvider {...context}>
         <Form onSubmit={onSubmit}>
           <Checkbox titulo="coisas" register={register("coisas")} errors={errors.coisas?.message} />
           <Input
@@ -121,7 +122,7 @@ export const Teste = () => {
             errors={errors.idioma?.message}
             opcoes={opcoes}
           />
-          <BotaoSubmit>{t("botãoEnviar")}</BotaoSubmit>
+          <ButtonSubmit>{t("botãoEnviar")}</ButtonSubmit>
         </Form>
       </FormProvider>
     </FlexCol>

@@ -1,4 +1,4 @@
-import { useTema } from "src/hooks";
+import { useTheme } from "src/hooks";
 import { TX } from "../Tags/TextoX";
 
 interface IMensagemDeErro {
@@ -6,7 +6,7 @@ interface IMensagemDeErro {
 }
 
 export const MensagemDeErro = ({ errors }: IMensagemDeErro) => {
-  const { tema } = useTema();
+  const { tema } = useTheme();
 
   if (!errors) {
     return <></>;

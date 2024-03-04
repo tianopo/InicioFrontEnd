@@ -1,13 +1,13 @@
 import { Article, X } from "@phosphor-icons/react";
 import { SignOut } from "@phosphor-icons/react/dist/ssr";
 import { useState } from "react";
-import { useTema } from "src/hooks";
-import { BotaoTrocarIdioma } from "../Botoes/BotaoTrocarIdioma";
-import { BotaoTrocarTema } from "../Botoes/BotaoTrocarTema";
+import { useTheme } from "src/hooks";
+import { ButtonChangeLanguage } from "../Botoes/ButtonChangeLanguage";
+import { ButtonChangeTheme } from "../Botoes/ButtonChangeTheme";
 import { FlexCol } from "../Flex/FlexCol";
 import { FlexRow } from "../Flex/FlexRow";
-import { DivisorX } from "../Outros/DivisorX";
 import { TX } from "../Tags/TextoX";
+import { DivisorX } from "../others/DivisorX";
 
 interface INavbar {
   texto: string;
@@ -24,7 +24,7 @@ interface ISidebar {
 }
 
 export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISidebar) => {
-  const { tema } = useTema();
+  const { tema } = useTheme();
   const [menuAberto, setMenuAberto] = useState(false);
 
   return (
@@ -119,8 +119,8 @@ export const Sidebar = ({ imagem, titulo, navbar, idioma, temaCor, sair }: ISide
                   <SignOut size={24} />
                 </FlexRow>
               )}
-              {temaCor && <BotaoTrocarTema />}
-              {idioma && <BotaoTrocarIdioma menuBottom />}
+              {temaCor && <ButtonChangeTheme />}
+              {idioma && <ButtonChangeLanguage menuBottom />}
             </FlexRow>
           </FlexCol>
         )}

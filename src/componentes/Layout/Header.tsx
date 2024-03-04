@@ -1,8 +1,8 @@
 import { Article } from "@phosphor-icons/react";
 import { useState } from "react";
-import { useTema } from "src/hooks";
-import { BotaoTrocarIdioma } from "../Botoes/BotaoTrocarIdioma";
-import { BotaoTrocarTema } from "../Botoes/BotaoTrocarTema";
+import { useTheme } from "src/hooks";
+import { ButtonChangeLanguage } from "../Botoes/ButtonChangeLanguage";
+import { ButtonChangeTheme } from "../Botoes/ButtonChangeTheme";
 import { FlexRow } from "../Flex/FlexRow";
 import { CX } from "../Tags/ConteudoX";
 import { TX } from "../Tags/TextoX";
@@ -22,7 +22,7 @@ interface IHeader {
 
 export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => {
   const [menuAberto, setMenuAberto] = useState(false);
-  const { tema } = useTema() ?? {};
+  const { tema } = useTheme() ?? {};
 
   return (
     <>
@@ -140,8 +140,8 @@ export const Header = ({ imagem, titulo, navbar, idioma, temaCor }: IHeader) => 
           </>
         )}
         <FlexRow className="gap-1">
-          {idioma && <BotaoTrocarIdioma />}
-          {temaCor && <BotaoTrocarTema />}
+          {idioma && <ButtonChangeLanguage />}
+          {temaCor && <ButtonChangeTheme />}
         </FlexRow>
       </CX>
     </>

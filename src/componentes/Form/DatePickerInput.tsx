@@ -2,7 +2,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { Controller, useFormContext } from "react-hook-form";
-import { useTema } from "src/hooks";
+import { useTheme } from "src/hooks";
 import { IFormUsos } from "src/interfaces";
 import { labelFormatada } from "src/utils";
 import { FlexCol } from "../Flex/FlexCol";
@@ -22,7 +22,7 @@ export const DatePickerInput = ({
   errors,
 }: IDatePickerInput) => {
   const palavras = labelFormatada(titulo);
-  const { tema } = useTema();
+  const { tema } = useTheme();
   const { control } = useFormContext();
 
   return (

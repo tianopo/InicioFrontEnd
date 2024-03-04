@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { TemaContext } from "src/configuracao";
+import { ThemeContext } from "src/configuracao";
 
-export const useTema = () => {
-  const context = useContext(TemaContext);
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
   if (!context) {
     throw new Error("useTema deve ser utilizado dentro de ProvedorTema");
   }

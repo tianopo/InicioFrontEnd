@@ -1,10 +1,10 @@
 import { PlusCircle } from "@phosphor-icons/react";
-import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
+import { ButtonOnClick } from "src/componentes/Botoes/ButtonOnClick";
 import { Flex } from "src/componentes/Flex/Flex";
 import { FlexCol } from "src/componentes/Flex/FlexCol";
 import { CX } from "src/componentes/Tags/ConteudoX";
 import { TX } from "src/componentes/Tags/TextoX";
-import { useTema } from "src/hooks";
+import { useTheme } from "src/hooks";
 import { Section } from "../Section";
 
 interface ISectionCard {
@@ -28,7 +28,7 @@ export const SectionCard = ({ id, titulo, descricao, botao, card, rota }: ISecti
   const rotaClick = () => {
     window.location.href = rota || "";
   };
-  const { tema } = useTema();
+  const { theme } = useTheme();
 
   return (
     <Section className="p-4">
@@ -40,16 +40,16 @@ export const SectionCard = ({ id, titulo, descricao, botao, card, rota }: ISecti
           </p>
         )}
         {botao && rota && (
-          <BotaoOnClick className="text-white" onClick={rotaClick}>
+          <ButtonOnClick className="text-white" onClick={rotaClick}>
             {botao}
-          </BotaoOnClick>
+          </ButtonOnClick>
         )}
       </CX>
       <Flex className="flex-wrap justify-center gap-6">
         {card?.map(({ titulo, descricao, imagem, rota, botao = false }: ICard, key) => (
           <FlexCol
             key={key}
-            className={`h-fit w-72 items-center gap-1.5 rounded-10 section_card-${tema} p-3 shadow-xl`}
+            className={`h-fit w-72 items-center gap-1.5 rounded-10 section_card-${theme} p-3 shadow-xl`}
           >
             {imagem && (
               <img src={imagem} alt={titulo} className="h-16 w-16 rounded-full bg-cover" />

@@ -1,4 +1,4 @@
-import { useTema } from "src/hooks/configuracao/useTema";
+import { useTheme } from "src/hooks/configuracao/useTema";
 import { IFormUsos } from "../../interfaces/IFormUsos";
 import { FlexRow } from "../Flex/FlexRow";
 import { TX } from "../Tags/TextoX";
@@ -9,7 +9,7 @@ interface ILabel extends IFormUsos {
 }
 
 export const Label = ({ required, titulo, palavras }: ILabel) => {
-  const { tema } = useTema();
+  const { tema } = useTheme();
 
   return (
     <FlexRow>

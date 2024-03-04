@@ -2,16 +2,16 @@ import axios from "axios";
 import { FormProvider } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
-import { Form } from "src/componentes/Formulario/Form";
-import { Input } from "src/componentes/Formulario/Input";
-import { Textarea } from "src/componentes/Formulario/Textarea";
+import { Form } from "src/componentes/Form/Form";
+import { Input } from "src/componentes/Form/Input";
+import { Textarea } from "src/componentes/Form/Textarea";
 import { TX } from "src/componentes/Tags/TextoX";
-import { useInicio, useTema } from "src/hooks";
+import { useInicio, useTheme } from "src/hooks";
 import { Section } from "../Section";
 
 export const SectionContato = ({ id, titulo }: ISectionContato) => {
   const { contexto } = useInicio();
-  const { tema } = useTema();
+  const { tema } = useTheme();
   const { t: tradutor } = useTranslation();
   const t = (t: string) => tradutor(`contato.${t}`);
 

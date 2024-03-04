@@ -1,12 +1,12 @@
-import { yupChineseLocale } from "src/idiomas/idiomasYup/yupChinese";
-import { yupDraconicLocale } from "src/idiomas/idiomasYup/yupDraconic";
-import { yupEnglishLocale } from "src/idiomas/idiomasYup/yupEnglish";
-import { yupFrenchLocale } from "src/idiomas/idiomasYup/yupFrench";
-import { yupGermanLocale } from "src/idiomas/idiomasYup/yupGerman";
-import { yupItalianLocale } from "src/idiomas/idiomasYup/yupItalian";
-import { yupJapaneseLocale } from "src/idiomas/idiomasYup/yupJapanese";
-import { yupPortugueseLocale } from "src/idiomas/idiomasYup/yupPortuguese";
-import { yupSpanishLocale } from "src/idiomas/idiomasYup/yupSpanish";
+import { yupChineseLocale } from "src/language/idiomasYup/yupChinese";
+import { yupDraconicLocale } from "src/language/idiomasYup/yupDraconic";
+import { yupEnglishLocale } from "src/language/idiomasYup/yupEnglish";
+import { yupFrenchLocale } from "src/language/idiomasYup/yupFrench";
+import { yupGermanLocale } from "src/language/idiomasYup/yupGerman";
+import { yupItalianLocale } from "src/language/idiomasYup/yupItalian";
+import { yupJapaneseLocale } from "src/language/idiomasYup/yupJapanese";
+import { yupPortugueseLocale } from "src/language/idiomasYup/yupPortuguese";
+import { yupSpanishLocale } from "src/language/idiomasYup/yupSpanish";
 import * as Yup from "yup";
 
 export const setLocaleYup = (language: string) => {

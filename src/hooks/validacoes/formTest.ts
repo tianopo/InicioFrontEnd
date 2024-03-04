@@ -2,7 +2,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import Yup from "src/utils/validacoesYup";
 
-export interface IValidacaoSchema {
+export interface ISchemaValidation {
   coisas?: boolean;
   nome: string;
   email: string;
@@ -13,8 +13,8 @@ export interface IValidacaoSchema {
   idioma?: string;
 }
 
-export const useValidacaoTeste = () => {
-  const validacaoSchema = Yup.object().shape({
+export const useTestValidation = () => {
+  const schemaValidation = Yup.object().shape({
     coisas: Yup.boolean().optional().label("Coisas"),
     nome: Yup.string().required().min(1).label("Nome"),
     email: Yup.string().email().required().label("E-mail"),
@@ -25,10 +25,10 @@ export const useValidacaoTeste = () => {
     idioma: Yup.string().optional().label("Idioma"),
   });
 
-  const contexto = useForm<IValidacaoSchema>({
-    resolver: yupResolver(validacaoSchema),
+  const context = useForm<ISchemaValidation>({
+    resolver: yupResolver(schemaValidation),
     reValidateMode: "onChange",
   });
 
-  return { contexto };
+  return { context };
 };

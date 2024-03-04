@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Section } from "src/componentes";
-import { useTema } from "src/hooks";
+import { useTheme } from "src/hooks";
 
 interface ISectionCarousel {
   id?: string;
@@ -8,7 +8,7 @@ interface ISectionCarousel {
 }
 
 export const SectionCarousel = ({ id, imagens }: ISectionCarousel) => {
-  const { tema } = useTema();
+  const { tema } = useTheme();
   const [indiceImagem, setIndiceImagem] = useState(0);
 
   const avancarImagem = useCallback(() => {
@@ -47,9 +47,8 @@ export const SectionCarousel = ({ id, imagens }: ISectionCarousel) => {
           <span
             key={index}
             onClick={() => selecionarImagem(index)}
-            className={`mx-1 inline-block h-4 w-4 -translate-y-5 cursor-pointer rounded-full carousel-${tema} ${
-              index === indiceImagem ? "opacity-100" : "opacity-50"
-            }`}
+            className={`mx-1 inline-block h-4 w-4 -translate-y-5 cursor-pointer rounded-full carousel-${tema} ${index === indiceImagem ? "opacity-100" : "opacity-50"
+              }`}
           />
         ))}
       </div>

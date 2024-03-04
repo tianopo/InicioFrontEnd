@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { FlexCol, SectionBanner, SectionCard, SectionContato } from "src/componentes";
 import { SectionDuvidas } from "./SectionDuvidas";
 
-export const Inicio = () => {
+export const Home = () => {
   const { t: tradutor } = useTranslation();
   const t = (t: string) => tradutor(`inicio.${t}`);
 
@@ -54,10 +54,10 @@ export const Inicio = () => {
   return (
     <FlexCol className="gap-32">
       <SectionBanner
-        imagem="/projeto/banner.webp"
-        titulo="Fábrica de Software"
-        descricao={t("bannerDescricao")}
-        rota="https://wa.me/5512982435638"
+        image="/projeto/banner.webp"
+        title="Fábrica de Software"
+        description={t("bannerDescricao")}
+        route="https://wa.me/5512982435638"
       />
       <SectionCard
         titulo="Fábrica de Software"

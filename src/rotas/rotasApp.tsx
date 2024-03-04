@@ -1,16 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "src/componentes";
-import { Inicio } from "src/paginas/inicio/Inicio.pagina";
-import { Teste } from "src/paginas/Teste.pagina";
+import { Home } from "src/paginas/inicio/Inicio.pagina";
+import { Test } from "src/paginas/Teste.pagina";
 
 export const browserRouter = createBrowserRouter([
   {
     element: <Layout />,
     children: [
-      { path: "/teste", element: <Teste /> },
-      { path: "/inicio", element: <Inicio /> },
+      { path: "/test", element: <Test /> },
+      { path: "/home", element: <Home /> },
 
-      { path: "*", element: <Inicio /> },
+      { path: "*", element: <Home /> },
     ],
   },
 ]);

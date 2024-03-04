@@ -1,35 +1,35 @@
 import { ReactNode } from "react";
-import { BotaoOnClick } from "src/componentes/Botoes/BotaoOnClick";
+import { ButtonOnClick } from "src/componentes/Botoes/ButtonOnClick";
 import { Section } from "../Section";
 
 export const SectionBanner = ({
   id,
   children,
-  imagem,
-  titulo,
-  descricao,
-  botao,
-  rota,
+  image,
+  title,
+  description,
+  button,
+  route,
 }: ISectionBanner) => {
   const handleButtonClick = () => {
-    window.location.href = rota || "";
+    window.location.href = route || "";
   };
 
   return (
     <Section id={id}>
-      <div className="relative h-96 bg-fixed" style={{ backgroundImage: `url('${imagem}')` }}>
+      <div className="relative h-96 bg-fixed" style={{ backgroundImage: `url('${image}')` }}>
         <div className="absolute inset-0 flex min-w-0 flex-col items-start justify-center gap-3 p-12 text-center text-white">
-          <img src="/projeto/logo.svg" alt={titulo} className="h-20 w-24" />
-          {titulo && <h1 className="mb-4 text-justify text-36 font-bold">{titulo}</h1>}
-          {descricao && (
+          <img src="/projeto/logo.svg" alt={title} className="h-20 w-24" />
+          {title && <h1 className="mb-4 text-justify text-36 font-bold">{title}</h1>}
+          {description && (
             <p className="mb-6 max-w-full overflow-hidden text-ellipsis whitespace-pre-line text-justify text-18 md:whitespace-break-spaces">
-              {descricao}
+              {description}
             </p>
           )}
-          {botao && rota && (
-            <BotaoOnClick className="text-white" onClick={handleButtonClick}>
-              {botao}
-            </BotaoOnClick>
+          {button && route && (
+            <ButtonOnClick className="text-white" onClick={handleButtonClick}>
+              {button}
+            </ButtonOnClick>
           )}
         </div>
         {children}
@@ -41,9 +41,9 @@ export const SectionBanner = ({
 interface ISectionBanner {
   id?: string;
   children?: ReactNode;
-  imagem: string;
-  titulo?: string;
-  descricao?: string;
-  botao?: string;
-  rota?: string;
+  image: string;
+  title?: string;
+  description?: string;
+  button?: string;
+  route?: string;
 }

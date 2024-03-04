@@ -1,14 +1,14 @@
 // BotaoSubmit.tsx
 import { HTMLAttributes, ReactNode } from "react";
-import { useTema } from "src/hooks";
+import { useTheme } from "src/hooks";
 
-interface IBotaoSubmit extends HTMLAttributes<HTMLDivElement> {
+interface IButtonSubmit extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
   disabled?: boolean;
 }
 
-export const BotaoSubmit = ({ className, children, disabled }: IBotaoSubmit) => {
-  const { tema } = useTema();
+export const ButtonSubmit = ({ className, children, disabled }: IButtonSubmit) => {
+  const { tema } = useTheme();
 
   return (
     <button

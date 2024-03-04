@@ -1,4 +1,4 @@
-import { useTema } from "src/hooks/configuracao/useTema";
+import { useTheme } from "src/hooks/configuracao/useTema";
 import { IFormUsos } from "src/interfaces";
 import { labelFormatada } from "src/utils";
 import { FlexCol } from "../Flex/FlexCol";
@@ -12,7 +12,7 @@ interface ISelect extends IFormUsos {
 
 export const Select = ({ disabled, required, register, errors, titulo, opcoes }: ISelect) => {
   const palavras = labelFormatada(titulo);
-  const { tema } = useTema();
+  const { tema } = useTheme();
 
   return (
     <FlexCol className="input_container">

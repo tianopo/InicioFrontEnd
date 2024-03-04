@@ -1,4 +1,4 @@
-export interface ITema {
+export interface ITheme {
   claro: string;
   escuro: string;
   estrela: string;

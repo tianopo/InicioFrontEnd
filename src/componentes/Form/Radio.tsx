@@ -1,4 +1,4 @@
-import { useTema } from "src/hooks";
+import { useTheme } from "src/hooks";
 import { IFormUsos } from "src/interfaces";
 import { labelFormatada } from "src/utils";
 import { FlexCol } from "../Flex/FlexCol";
@@ -13,7 +13,7 @@ export interface IRadio extends IFormUsos {
 }
 
 export const Radio = ({ disabled, errors, register, opcoes, titulo, required }: IRadio) => {
-  const { tema } = useTema();
+  const { tema } = useTheme();
 
   return (
     <FlexCol className="input_container">

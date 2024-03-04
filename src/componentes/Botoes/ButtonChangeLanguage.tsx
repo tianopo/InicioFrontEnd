@@ -1,85 +1,85 @@
 import { CaretDown, CaretRight } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useTema } from "src/hooks";
+import { useTheme } from "src/hooks";
 import { LocalStorage, setLocaleYup } from "src/utils";
 import { CX } from "../Tags/ConteudoX";
 
-interface IBotaoTrocarIdioma {
+interface IButtonChangeLanguage {
   menuBottom?: boolean;
 }
 
-export const BotaoTrocarIdioma = ({ menuBottom }: IBotaoTrocarIdioma) => {
-  const opcoes = [
+export const ButtonChangeLanguage = ({ menuBottom }: IButtonChangeLanguage) => {
+  const options = [
     {
-      valor: "ptbr",
+      value: "ptbr",
       flag: "/flags/br.svg",
     },
     {
-      valor: "cn",
+      value: "cn",
       flag: "/flags/cn.svg",
     },
     {
-      valor: "de",
+      value: "de",
       flag: "/flags/de.svg",
     },
     {
-      valor: "dr",
+      value: "dr",
       flag: "/flags/dr.svg",
     },
     {
-      valor: "es",
+      value: "es",
       flag: "/flags/es.svg",
     },
     {
-      valor: "fr",
+      value: "fr",
       flag: "/flags/fr.svg",
     },
     {
-      valor: "it",
+      value: "it",
       flag: "/flags/it.svg",
     },
     {
-      valor: "jp",
+      value: "jp",
       flag: "/flags/jp.svg",
     },
     {
-      valor: "us",
+      value: "us",
       flag: "/flags/us.svg",
     },
   ];
 
-  const obterIdiomaInicial = () => {
-    const idiomaSalvo = localStorage.get("idioma");
-    return idiomaSalvo || opcoes[0].valor;
+  const getStartLanguage = () => {
+    const languageSave = localStorage.get("language");
+    return languageSave || options[0].value;
   };
 
   const localStorage = new LocalStorage();
-  const { tema } = useTema();
+  const { theme } = useTheme();
   const { i18n } = useTranslation();
-  const [idiomaSelecionado, setIdiomaSelecionado] = useState(obterIdiomaInicial());
-  const [menuAberto, setMenuAberto] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState(getStartLanguage());
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const alternarIdioma = (novoIdioma: string) => {
-    setIdiomaSelecionado(novoIdioma);
+    setSelectedLanguage(novoIdioma);
     i18n.changeLanguage(novoIdioma);
-    setMenuAberto(false);
-    localStorage.set("idioma", novoIdioma);
+    setMenuOpen(false);
+    localStorage.set("language", novoIdioma);
   };
 
   useEffect(() => {
-    i18n.changeLanguage(idiomaSelecionado);
-    setLocaleYup(idiomaSelecionado);
-  }, [idiomaSelecionado, i18n]);
+    i18n.changeLanguage(selectedLanguage);
+    setLocaleYup(selectedLanguage);
+  }, [selectedLanguage, i18n]);
 
   return (
     <CX tipo="div" className="relative inline-block w-auto duration-300">
       <button
         type="button"
-        onClick={() => setMenuAberto(!menuAberto)}
+        onClick={() => setMenuOpen(!menuOpen)}
         onBlur={() =>
           setTimeout(() => {
-            setMenuAberto(false);
+            setMenuOpen(false);
           }, 100)
         }
         className={`
@@ -93,17 +93,17 @@ export const BotaoTrocarIdioma = ({ menuBottom }: IBotaoTrocarIdioma) => {
         pl-1.5
         pr-1
         outline-none
-        botao_trocar_idioma-${tema}
+        botao_trocar_idioma-${theme}
         `}
       >
         <img
-          src={opcoes.find((opcao) => opcao.valor === idiomaSelecionado)?.flag}
-          alt={`Bandeira de ${opcoes.find((opcao) => opcao.valor === idiomaSelecionado)?.valor}`}
+          src={options.find((opcao) => opcao.value === selectedLanguage)?.flag}
+          alt={`Bandeira de ${options.find((opcao) => opcao.value === selectedLanguage)?.value}`}
           className="h-7 w-7"
         />
-        {menuAberto ? <CaretDown className="h-4 w-4" /> : <CaretRight className="h-4 w-4" />}
+        {menuOpen ? <CaretDown className="h-4 w-4" /> : <CaretRight className="h-4 w-4" />}
       </button>
-      {menuAberto && (
+      {menuOpen && (
         <div
           className={`
           absolute
@@ -114,19 +114,19 @@ export const BotaoTrocarIdioma = ({ menuBottom }: IBotaoTrocarIdioma) => {
           shadow-lg
         ${menuBottom ? "bottom-10" : ""}`}
         >
-          {opcoes.map((opcao) => (
+          {options.map((option) => (
             <button
-              key={opcao.valor}
+              key={option.value}
               className={`
               flex
               w-full
               justify-center
               hover:rounded-6
-              botao_trocar_idioma-${tema}
+              botao_trocar_idioma-${theme}
               `}
-              onClick={() => alternarIdioma(opcao.valor)}
+              onClick={() => alternarIdioma(option.value)}
             >
-              <img src={opcao.flag} alt={opcao.valor} className="h-7 w-7" />
+              <img src={option.flag} alt={option.value} className="h-7 w-7" />
             </button>
           ))}
         </div>
